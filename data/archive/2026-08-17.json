@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T16:28:38.8007383Z",
+  "updatedAt": "2026-08-17T16:42:54.1890333Z",
   "items": [
     {
       "title": "GitHub Trending 周榜",
@@ -138,11 +138,22 @@
       "language": "zh"
     },
     {
+      "title": "The Defender's Window",
+      "titleZh": "防御者窗口：AI 如何重塑网络安全攻防",
+      "summary": "AI is reshaping cybersecurity for attackers and defenders alike.",
+      "summaryZh": "OpenAI 讨论 AI 对网络攻防的影响，以及安全团队当前可采取的防御措施。",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/the-defenders-window",
+      "publishedAt": "2026-08-17T05:30:00Z",
+      "score": 30,
+      "language": "en"
+    },
+    {
       "title": "No Dumb Questions: What is AI context architecture? Why not just build your own?",
       "summary": "System.Xml.XmlElement",
       "source": "Stack Overflow Blog",
       "url": "https://stackoverflow.blog/2026/08/14/ndq-ai-context-architecture-build-buy/",
-      "publishedAt": "2026-08-14T18:00:00.0000000Z",
+      "publishedAt": "2026-08-14T18:00:00Z",
       "score": 1,
       "language": "en"
     }

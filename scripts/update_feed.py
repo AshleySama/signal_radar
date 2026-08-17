@@ -25,8 +25,10 @@ ARCHIVE_INDEX = ARCHIVE_DIR / "index.json"
 NOW = datetime.now(timezone.utc)
 
 SOURCES = (
-    # Stack Overflow Blog is the only overseas publisher feed in this edition.
+    # Official sources are used only for high-impact technical primary releases.
     {"name": "Stack Overflow Blog", "url": "https://stackoverflow.blog/feed/", "weight": 10, "kind": "editorial"},
+    {"name": "OpenAI", "url": "https://openai.com/news/rss.xml", "weight": 15, "kind": "official"},
+    {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "weight": 15, "kind": "official"},
 )
 HTML_SOURCES = (
     {"name": "量子位", "url": "https://www.qbitai.com/wp-json/wp/v2/posts?per_page=24&_fields=date,link,title,excerpt", "weight": 12, "format": "wordpress"},
@@ -43,15 +45,15 @@ KEYWORDS = (
 )
 BLOCKED = (
     "election", "president", "politic", "war", "military", "weapon", "terror",
-    "violence", "sexual", "porn", "政治", "选举", "战争", "军事", "武器",
+    "violence", "sexual", "porn", "policy", "government", "politics", "政治", "选举", "战争", "军事", "武器",
     "暴力", "色情",
 )
 LOW_SIGNAL = (
-    "pixel", "game", "shopping", "travel", "music", "celebrity", "giveaway",
+    "pixel", "game", "shopping", "travel", "music", "celebrity", "giveaway", "jobs",
     "抽奖", "游戏攻略", "明星", "旅游", "购物",
 )
 MAX_AGE_DAYS = 3
-MAX_ITEMS = 16
+MAX_ITEMS = 18
 ROUTINE_RELEASE = re.compile(r"^(?:release\s+)?v?\d+\.\d+\.\d+", re.IGNORECASE)
 
 
