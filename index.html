@@ -31,7 +31,7 @@
     .section-kicker { margin:0 0 7px; color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.18em; }
     h2 { margin:0; font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:34px; font-weight:500; }
     .updated { color:var(--muted); font-size:12px; text-align:right; line-height:1.65; }
-    .reader { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr); gap:48px; }
+    .reader { display:block; }
     .items { min-height:280px; }
     .item { display:grid; width:100%; grid-template-columns:48px minmax(0,1fr) 120px 20px; align-items:center; gap:16px; padding:25px 0; color:var(--ink); border:0; border-bottom:1px solid var(--faint); background:transparent; font:inherit; text-align:left; cursor:pointer; transition:padding .24s ease,color .24s ease; }
     .item:hover,.item.active { padding-left:8px; padding-right:8px; color:var(--accent); }
@@ -41,7 +41,6 @@
     .source { color:#6e6963; font-size:12px; line-height:1.7; text-align:right; }
     .arrow { color:var(--accent); font-size:20px; font-weight:300; text-align:right; }
     .empty { padding:70px 0; color:var(--muted); font-size:14px; text-align:center; border-bottom:1px solid var(--faint); }
-    .detail { position:sticky; top:24px; align-self:start; height:calc(100vh - 48px); margin-top:1px; border-left:1px solid var(--faint); background:#fff; }.detail-frame { width:100%; height:100%; border:0; background:#fff; }.detail-empty { display:grid; height:100%; place-items:center; color:var(--muted); font-size:14px; }
     .principles { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:30px; max-width:1120px; margin:69px auto 0; padding:0 12px 68px; }
     .principles h3 { margin:0; font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:25px; font-weight:500; line-height:1.35; }
     .principle { padding-top:14px; border-top:1px solid var(--faint); }
@@ -49,7 +48,7 @@
     .principle p { margin:11px 0 0; color:var(--muted); font-size:13px; line-height:1.85; }
     footer { border-top:1px solid var(--faint); }
     .footer-inner { display:flex; justify-content:space-between; max-width:1120px; margin:auto; padding:24px 12px 32px; color:#89847e; font-size:11px; }
-    @media (max-width:720px) { .nav { padding:0 20px; } .nav-right a { display:none; } .hero { min-height:460px; padding:76px 20px 66px; } h1 { font-size:48px; } .intro { font-size:14px; } .edition { padding:52px 20px 16px; } .section-top { align-items:start; flex-direction:column; gap:12px; } .updated { text-align:left; } .reader { display:block; }.detail { position:fixed; z-index:5; right:0; bottom:0; left:0; display:none; height:72vh; margin:0; border:0; border-top:1px solid var(--faint); box-shadow:0 -16px 45px rgba(36,31,25,.12); }.detail.open { display:block; }.item { grid-template-columns:30px minmax(0,1fr) 18px; gap:10px; } .item-title { font-size:17px; } .item-summary { font-size:11px; } .source { grid-column:2; text-align:left; } .principles { grid-template-columns:1fr; gap:22px; padding:0 20px 52px; } .footer-inner { padding:22px 20px; flex-direction:column; gap:7px; } }
+    @media (max-width:720px) { .nav { padding:0 20px; } .nav-right a { display:none; } .hero { min-height:460px; padding:76px 20px 66px; } h1 { font-size:48px; } .intro { font-size:14px; } .edition { padding:52px 20px 16px; } .section-top { align-items:start; flex-direction:column; gap:12px; } .updated { text-align:left; } .item { grid-template-columns:30px minmax(0,1fr) 18px; gap:10px; } .item-title { font-size:17px; } .item-summary { font-size:11px; } .source { grid-column:2; text-align:left; } .principles { grid-template-columns:1fr; gap:22px; padding:0 20px 52px; } .footer-inner { padding:22px 20px; flex-direction:column; gap:7px; } }
   </style>
 </head>
 <body>
@@ -71,7 +70,7 @@
         <div><p class="section-kicker">THIS EDITION</p><h2 id="signals-title">本期技术拾取</h2></div>
         <div class="updated" id="updated">正在读取最新信号…</div>
       </div>
-      <div class="reader"><div class="items" id="items"><div class="empty">等待首次自动抓取。</div></div><aside class="detail" id="detail"><div class="detail-empty">从左侧选择一条信号，留在这里继续阅读。</div></aside></div>
+      <div class="reader"><div class="items" id="items"><div class="empty">等待首次自动抓取。</div></div></div>
     </section>
     <section class="principles" id="about" aria-label="筛选原则">
       <h3>信息太多，<br>真正重要的很少。</h3>
@@ -83,14 +82,13 @@
   <script>
     const items = document.querySelector("#items");
     const updated = document.querySelector("#updated");
-    const detail = document.querySelector("#detail");
     function escapeHtml(value) { const node = document.createElement("div"); node.textContent = value || ""; return node.innerHTML; }
     function dateLabel(value) { return value ? new Intl.DateTimeFormat("zh-CN", { month:"long", day:"numeric" }).format(new Date(value)) : ""; }
     fetch("./data/radar.json").then(function(response) { return response.json(); }).then(function(data) {
       const list = data.items || [];
       updated.textContent = data.updatedAt ? "更新于 " + new Date(data.updatedAt).toLocaleString("zh-CN", { dateStyle:"medium", timeStyle:"short" }) : "等待首次自动抓取";
       if (!list.length) return;
-      function showDetail(item) { detail.innerHTML = '<iframe class="detail-frame" src="' + escapeHtml(item.url) + '" title="' + escapeHtml(item.titleZh || item.title) + '"></iframe>'; detail.classList.add("open"); }
+      function openOriginal(item) { const popup = window.open(item.url, "signal-radar-reader", "popup=yes,width=1120,height=840,noopener"); if (popup) popup.focus(); }
       items.innerHTML = list.map(function(item, index) {
         const title = item.titleZh || item.title || "未命名信号";
         const summary = item.summaryZh || item.summary || "";
@@ -99,8 +97,7 @@
           '<span><span class="item-title">' + escapeHtml(title) + '</span>' + (summary ? '<span class="item-summary">' + escapeHtml(summary) + '</span>' : '') + '</span>' +
           '<span class="source">' + escapeHtml(item.source) + '<br>' + dateLabel(item.publishedAt) + '</span><span class="arrow">↗</span></button>';
       }).join("");
-      items.querySelectorAll(".item").forEach(function(button) { button.addEventListener("click", function() { items.querySelectorAll(".item").forEach(function(node) { node.classList.remove("active"); }); button.classList.add("active"); showDetail(list[Number(button.dataset.index)]); }); });
-      if (list[0]) { items.querySelector(".item").classList.add("active"); showDetail(list[0]); }
+      items.querySelectorAll(".item").forEach(function(button) { button.addEventListener("click", function() { openOriginal(list[Number(button.dataset.index)]); }); });
     }).catch(function() { updated.textContent = "数据文件尚未生成"; });
   </script>
 </body>
