@@ -1,0 +1,152 @@
+{
+  "updatedAt": "2026-08-17T14:47:00.745248Z",
+  "items": [
+    {
+      "title": "yjh051108/dsh-routing-suite",
+      "titleZh": "yjh051108/dsh-routing-suite",
+      "summary": "dsh-routing-suite — injector + router-standard kit: install the runtime injector first, then the task-aware reasoning-mode router preset (measured P1-P23).",
+      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 3,427 stars · PowerShell",
+      "source": "GitHub 开源新星",
+      "url": "https://github.com/yjh051108/dsh-routing-suite",
+      "publishedAt": "2026-08-17T14:47:23Z",
+      "score": 36,
+      "language": "code"
+    },
+    {
+      "title": "dsh-market/dsh-market",
+      "titleZh": "dsh-market/dsh-market",
+      "summary": "The plugin market inside DeepSeek Harness — browse, search, one-click install · DSH 可视化插件市场",
+      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 801 stars · TypeScript",
+      "source": "GitHub 开源新星",
+      "url": "https://github.com/dsh-market/dsh-market",
+      "publishedAt": "2026-08-17T14:44:16Z",
+      "score": 36,
+      "language": "code"
+    },
+    {
+      "title": "xiaobright/dsh-anchored-standard",
+      "titleZh": "xiaobright/dsh-anchored-standard",
+      "summary": "Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard tools (Project2 98/99)",
+      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 3,390 stars · JavaScript",
+      "source": "GitHub 开源新星",
+      "url": "https://github.com/xiaobright/dsh-anchored-standard",
+      "publishedAt": "2026-08-17T14:25:09Z",
+      "score": 36,
+      "language": "code"
+    },
+    {
+      "title": "alchaincyf/deepseek-harness-orange-book",
+      "titleZh": "alchaincyf/deepseek-harness-orange-book",
+      "summary": "DeepSeek Harness橙皮书《从开机到拆开》：完整系统提示词、129行启动清单、三份原始会话日志——官方文档没有的一手实测。PDF/EPUB/HTML免费下载",
+      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 948 stars · HTML",
+      "source": "GitHub 开源新星",
+      "url": "https://github.com/alchaincyf/deepseek-harness-orange-book",
+      "publishedAt": "2026-08-17T14:16:54Z",
+      "score": 36,
+      "language": "code"
+    },
+    {
+      "title": "ZSvirt/zsvirt",
+      "titleZh": "ZSvirt/zsvirt",
+      "summary": "Core IaaS engine and cloud infrastructure foundation of ZSvirt",
+      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 712 stars · Java",
+      "source": "GitHub 开源新星",
+      "url": "https://github.com/ZSvirt/zsvirt",
+      "publishedAt": "2026-08-17T14:46:54Z",
+      "score": 34.24,
+      "language": "code"
+    },
+    {
+      "title": "zouyuxuan122/Deepseek-Harness-EAC",
+      "titleZh": "zouyuxuan122/Deepseek-Harness-EAC",
+      "summary": "DeepSeek Harness (dsh) Windows / Linux desktop client - bundled Node.js + dsh CLI, one-click launch, 10 built-in UI skins. EAC: Embracing All Creation 揽尽万象",
+      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 698 stars · JavaScript",
+      "source": "GitHub 开源新星",
+      "url": "https://github.com/zouyuxuan122/Deepseek-Harness-EAC",
+      "publishedAt": "2026-08-17T14:41:13Z",
+      "score": 33.96,
+      "language": "code"
+    },
+    {
+      "title": "做了一个 Agent team 协作的 IM",
+      "summary": "之前看 raft 项目的几篇 blog,然后就想自己做一个 copycat 出来,这段时间断断续续的花了一些精力来搞这个,目前大概功能都实现( 抄袭 )出来了,目前实现还是比较粗糙,但是基本的功能都可用了,让 Agent 一起玩狼人杀还是没问题的. Github 地址在这 https://github.com/Ranxy/laelia 做了比较多的 IAM 权限管理相关的适配,适合部署给团队使用. 目前做了 claude,codex 和 pi 的支持,其中 pi 作为 embed 的内容集成在应用里面了,可以直接输入 apikey 使用. 常用的功能如 ",
+      "source": "V2EX 技术",
+      "url": "https://www.v2ex.com/t/1235093#reply0",
+      "publishedAt": "2026-08-17T12:06:53Z",
+      "score": 28.87,
+      "language": "zh"
+    },
+    {
+      "title": "目前的 codex、claude code 还有必要加类似 codegraph 的代码索引的软件吗?",
+      "summary": "随着模型能力的提升,比如目前最新的 gpt 5.6,我已经尽量少使用 skill 了.使用类似 superpower 的 skill 不仅对输出的效果提升不大,还更费 token,输出速度更慢 想问一下,在 agent 方面,比如 codex,是不是不需要再使用第三方(比如 codegraph)的代码索引工具了?",
+      "source": "V2EX 技术",
+      "url": "https://www.v2ex.com/t/1234902#reply10",
+      "publishedAt": "2026-08-17T02:35:16Z",
+      "score": 28.39,
+      "language": "zh"
+    },
+    {
+      "title": "想问问朋友们现在都是用的什么 Coding Agent？",
+      "summary": "我目前一直都在使用 Claude Code ，虽然电脑上也安装了 Codex ，但是 Codex 一直没跑通，因为我都是本地 Ollama 提供的接口，每次跑的时候都会提示 metadata 的相关警告，虽然不影响使用，但总觉得不舒服。另外 Codex 还有什么沙箱模式，我也没去深究。相反使用 Claude Code 还挺便捷的，用 ccSwitch 配置好接口就行。 但是 Claude Code 貌似对大陆不太友好，听说还会启用水印？会让人感觉心里不舒服，加上最近出了很多新的 Coding Agent ，还包括国产的 Zcode 、Kimi Code ",
+      "source": "V2EX 技术",
+      "url": "https://www.v2ex.com/t/1234794#reply45",
+      "publishedAt": "2026-08-16T13:25:03Z",
+      "score": 27.73,
+      "language": "zh"
+    },
+    {
+      "title": "deeptide：一个专为 DeepSeek 打造的 Mac 原生终端编码 Agent",
+      "summary": "DeepSeek 的编码 agent 生态又多了一个新玩家。 deeptide 是一个 Mac 原生的终端编码 agent，由 Paean AI 团队开发，MIT 协议开源。它用 Swift 编写，编译为 macOS 原生二进制，签名并公证，安装到 ~/.local/bin/tide。 和 Claude Code、DeepSeek Harness 这些通用 agent 不同，deeptide 的定位很明确：只做 DeepSeek 的...",
+      "source": "OSCHINA",
+      "url": "https://www.oschina.net/news/501966",
+      "publishedAt": "2026-08-17T10:37:53Z",
+      "score": 26.79,
+      "language": "zh"
+    },
+    {
+      "title": "请教一下， DSH（DeepSeek Harness）可以理解为一个开源的 AI Agent 框架吗？",
+      "summary": "最近在看 DSH 的插件生态，对它的定位有点好奇，想请教一下大家的理解。 在这个仓库看了很多插件： https://github.com/awesome-dsh-plugin/awesome-dsh-plugin 我的理解是：DSH 类似于一个开源的可运行 AI 智能体框架，而插件生态则是它的核心扩展方式。这种开源方式是不是可以让 DSH 实现成一个 AI 系统，类似 Android 。",
+      "source": "V2EX 技术",
+      "url": "https://www.v2ex.com/t/1235060#reply3",
+      "publishedAt": "2026-08-17T09:26:23Z",
+      "score": 24.73,
+      "language": "zh"
+    },
+    {
+      "title": "我开源了一个 deepseek harness 插件，解决挂接 sglang/vllm 时，角色冲突的问题",
+      "summary": "https://github.com/kop1989/dsh-localqwen-rolefix 本质来讲，就是一旦 dsh 的请求带推理强度，角色就会变成”developer“。但是 vllm 和 SGLang 是不认这个角色的。他们只认”system“、”user“这两个用户侧角色。 插件的作用，就是在保留 dsh 的推理强度选项的前提下，让 sglang 和 vllm 可以正常使用 dsh 。不会出现 400 错误。 这样既方便调整思考强度（默认 xhigh 会超长思考），又可以使用 sglang 超强的 prefill 性能。 以上。",
+      "source": "V2EX 技术",
+      "url": "https://www.v2ex.com/t/1235052#reply0",
+      "publishedAt": "2026-08-17T09:00:58Z",
+      "score": 24.71,
+      "language": "zh"
+    },
+    {
+      "title": "codex 用 apple 的 礼品卡买的 20 刀套餐，没额度了，能升级到 pro5x，马上给我增加额度吗",
+      "summary": "codex 用 apple 的 礼品卡买的 20 刀套餐，没额度了，能升级到 pro5x ，马上给我增加额度吗。 另外我的 codex 怎么没看到 5.6 的模型啊，我只有 5.5 和 5.4 的",
+      "source": "V2EX 技术",
+      "url": "https://www.v2ex.com/t/1234956#reply7",
+      "publishedAt": "2026-08-17T04:06:42Z",
+      "score": 24.47,
+      "language": "zh"
+    },
+    {
+      "title": "DeepSeek API 峰谷定价方案今日生效，高峰时段价格翻倍",
+      "summary": "今日（北京时间 2026.8.17 00:00）起，DeepSeek API 正式切换到峰谷定价模式。高峰时段价格翻倍，空闲时段价格为高峰时段价格的一半。这是 DeepSeek V4 系列模型发布后最大的价格动作。 到底涨了多少 新定价覆盖两个主力模型：DeepSeek-V4-Flash 和 DeepSeek-V4-Pro。高峰时段为北京时间 9:00 - 12:00、14:00 - 18:00（其...",
+      "source": "OSCHINA",
+      "url": "https://www.oschina.net/news/501961",
+      "publishedAt": "2026-08-17T08:13:15Z",
+      "score": 22.67,
+      "language": "zh"
+    },
+    {
+      "title": ":fire: 新增默认空间配置，新用户自动加入默认空间：开源无代码 / 低代码平台 NocoBase",
+      "summary": "汇总一周产品更新日志，最新发布可前往我们的博客查看。 NocoBase 目前更新包括三个分支：main、next 和 develop。 version.png main：截至目前最稳定的版本，推荐安装此版本。 next：包含即将发布的新功能，经过初步测试的版本，可能存在部分已知或未知问题。主要面向测试用户，用于收集反馈和进一步优化功能。适合愿意...",
+      "source": "OSCHINA",
+      "url": "https://www.oschina.net/news/501965",
+      "publishedAt": "2026-08-17T09:03:09Z",
+      "score": 20.71,
+      "language": "zh"
+    }
+  ]
+}

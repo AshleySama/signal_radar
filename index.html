@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Signal Radar - 每周三次，汇总值得关注的全球 AI、开发者与开源技术信号。">
+  <title>Signal Radar - 全球技术雷达</title>
+  <style>
+    :root { --paper:#f7f6f2; --ink:#22211f; --muted:#77736d; --faint:#dedbd4; --accent:#c75b32; }
+    * { box-sizing:border-box; }
+    html { background:var(--paper); scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; }
+    .page { overflow:hidden; }
+    .nav { height:64px; display:flex; align-items:center; justify-content:space-between; max-width:1120px; margin:auto; padding:0 12px; border-bottom:1px solid var(--faint); }
+    .brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:21px; font-weight:700; }
+    .brand-mark { display:grid; width:17px; height:17px; grid-template-columns:repeat(2,1fr); gap:2px; transform:rotate(45deg); }
+    .brand-mark i { background:var(--accent); } .brand-mark i:nth-child(2) { opacity:.7; } .brand-mark i:nth-child(3) { opacity:.45; } .brand-mark i:nth-child(4) { background:#262421; }
+    .nav-right { display:flex; align-items:center; gap:27px; color:#56524d; font-size:13px; }
+    .nav-right a { color:inherit; text-decoration:none; } .nav-right a:hover { color:var(--accent); }
+    .nav-note { color:var(--accent); font-size:12px; letter-spacing:.1em; }
+    .hero { position:relative; min-height:483px; display:grid; place-items:center; padding:96px 24px 78px; text-align:center; border-bottom:1px solid var(--faint); background:radial-gradient(ellipse 33% 47% at 50% 46%,rgba(234,194,173,.48),transparent 80%),radial-gradient(ellipse 50% 65% at 50% 42%,rgba(255,255,255,.75),transparent 86%); }
+    .hero::after { content:""; position:absolute; width:min(680px,84vw); height:1px; bottom:0; background:linear-gradient(90deg,transparent,var(--accent),transparent); opacity:.55; }
+    .eyebrow { margin:0 0 23px; color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.2em; }
+    h1 { max-width:940px; margin:0; font-family:Georgia,"Times New Roman","Noto Serif SC","Songti SC",serif; font-size:clamp(46px,6vw,82px); font-weight:500; line-height:1.16; letter-spacing:0; }
+    .accent { color:var(--accent); }
+    .intro { max-width:570px; margin:23px auto 0; color:#66615b; font-size:16px; line-height:1.9; }
+    .schedule { display:inline-flex; align-items:center; gap:10px; margin-top:28px; color:#5b5752; font-size:12px; font-weight:600; }
+    .schedule::before, .schedule::after { content:""; width:23px; height:1px; background:#c9c3ba; }
+    .edition { max-width:1120px; margin:auto; padding:66px 12px 24px; }
+    .section-top { display:flex; justify-content:space-between; align-items:end; padding-bottom:20px; border-bottom:1px solid var(--ink); }
+    .section-kicker { margin:0 0 7px; color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.18em; }
+    h2 { margin:0; font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:34px; font-weight:500; }
+    .updated { color:var(--muted); font-size:12px; text-align:right; line-height:1.65; }
+    .items { min-height:280px; }
+    .item { display:grid; grid-template-columns:48px minmax(0,1fr) 166px 24px; align-items:center; gap:20px; padding:25px 0; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--faint); transition:padding .24s ease,color .24s ease; }
+    .item:hover { padding-left:8px; padding-right:8px; color:var(--accent); }
+    .index { color:#aaa59e; font-family:Georgia,serif; font-size:13px; }
+    .item-title { font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:20px; font-weight:500; line-height:1.42; }
+    .item-summary { display:block; max-width:700px; margin-top:6px; color:var(--muted); font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; font-size:12px; line-height:1.7; }
+    .source { color:#6e6963; font-size:12px; line-height:1.7; text-align:right; }
+    .arrow { color:var(--accent); font-size:20px; font-weight:300; text-align:right; }
+    .empty { padding:70px 0; color:var(--muted); font-size:14px; text-align:center; border-bottom:1px solid var(--faint); }
+    .principles { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:30px; max-width:1120px; margin:69px auto 0; padding:0 12px 68px; }
+    .principles h3 { margin:0; font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:25px; font-weight:500; line-height:1.35; }
+    .principle { padding-top:14px; border-top:1px solid var(--faint); }
+    .principle b { color:var(--accent); font-size:12px; letter-spacing:.12em; }
+    .principle p { margin:11px 0 0; color:var(--muted); font-size:13px; line-height:1.85; }
+    footer { border-top:1px solid var(--faint); }
+    .footer-inner { display:flex; justify-content:space-between; max-width:1120px; margin:auto; padding:24px 12px 32px; color:#89847e; font-size:11px; }
+    @media (max-width:720px) { .nav { padding:0 20px; } .nav-right a { display:none; } .hero { min-height:460px; padding:76px 20px 66px; } h1 { font-size:48px; } .intro { font-size:14px; } .edition { padding:52px 20px 16px; } .section-top { align-items:start; flex-direction:column; gap:12px; } .updated { text-align:left; } .item { grid-template-columns:30px minmax(0,1fr) 18px; gap:10px; } .item-title { font-size:17px; } .item-summary { font-size:11px; } .source { grid-column:2; text-align:left; } .principles { grid-template-columns:1fr; gap:22px; padding:0 20px 52px; } .footer-inner { padding:22px 20px; flex-direction:column; gap:7px; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="./" aria-label="Signal Radar 首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Signal Radar</a>
+      <div class="nav-right"><a href="#signals">本期信号</a><a href="./archive.html">往期回顾</a><a href="#about">筛选原则</a><span class="nav-note">GLOBAL EDITION</span></div>
+    </nav>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">SAVE YOUR ATTENTION</p>
+        <h1>把注意力留给<br><span class="accent">值得打开</span>的技术。</h1>
+        <p class="intro">从全球 AI、开发者与开源社区里，留下真实、重要、有实际影响的原始信号。</p>
+        <p class="schedule">每周一、三、五 08:00 更新</p>
+      </div>
+    </header>
+    <section class="edition" id="signals" aria-labelledby="signals-title">
+      <div class="section-top">
+        <div><p class="section-kicker">THIS EDITION</p><h2 id="signals-title">本期技术拾取</h2></div>
+        <div class="updated" id="updated">正在读取最新信号…</div>
+      </div>
+      <div class="items" id="items"><div class="empty">等待首次自动抓取。</div></div>
+    </section>
+    <section class="principles" id="about" aria-label="筛选原则">
+      <h3>信息太多，<br>真正重要的很少。</h3>
+      <div class="principle"><b>01 / OFFICIAL FIRST</b><p>优先读取模型、开发工具和开源项目的官方发布源，原文链接始终保留。</p></div>
+      <div class="principle"><b>02 / SIGNAL OVER NOISE</b><p>只收录会影响 AI、开发者工作流或技术趋势的更新，并过滤敏感与低相关内容。</p></div>
+    </section>
+  </main>
+  <footer><div class="footer-inner"><span>Signal Radar · Global edition</span><span>Headlines link to original sources.</span></div></footer>
+  <script>
+    const items = document.querySelector("#items");
+    const updated = document.querySelector("#updated");
+    function escapeHtml(value) { const node = document.createElement("div"); node.textContent = value || ""; return node.innerHTML; }
+    function dateLabel(value) { return value ? new Intl.DateTimeFormat("zh-CN", { month:"long", day:"numeric" }).format(new Date(value)) : ""; }
+    fetch("./data/radar.json").then(function(response) { return response.json(); }).then(function(data) {
+      const list = data.items || [];
+      updated.textContent = data.updatedAt ? "更新于 " + new Date(data.updatedAt).toLocaleString("zh-CN", { dateStyle:"medium", timeStyle:"short" }) : "等待首次自动抓取";
+      if (!list.length) return;
+      items.innerHTML = list.map(function(item, index) {
+        const title = item.titleZh || item.title || "未命名信号";
+        const summary = item.summaryZh || item.summary || "";
+        return '<a class="item" href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer">' +
+          '<span class="index">' + String(index + 1).padStart(2, "0") + '</span>' +
+          '<span><span class="item-title">' + escapeHtml(title) + '</span>' + (summary ? '<span class="item-summary">' + escapeHtml(summary) + '</span>' : '') + '</span>' +
+          '<span class="source">' + escapeHtml(item.source) + '<br>' + dateLabel(item.publishedAt) + '</span><span class="arrow">↗</span></a>';
+      }).join("");
+    }).catch(function() { updated.textContent = "数据文件尚未生成"; });
+  </script>
+</body>
+</html>

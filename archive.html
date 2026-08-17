@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>往期回顾 - Signal Radar</title>
+  <style>
+    :root { --paper:#f7f6f2; --ink:#22211f; --muted:#77736d; --faint:#dedbd4; --accent:#c75b32; }
+    * { box-sizing:border-box; } html,body { margin:0; min-height:100%; background:var(--paper); color:var(--ink); }
+    body { font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; }
+    .nav { height:64px; display:flex; align-items:center; justify-content:space-between; max-width:1120px; margin:auto; padding:0 12px; border-bottom:1px solid var(--faint); }
+    .brand { display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:21px; font-weight:700; }
+    .mark { display:grid; width:17px; height:17px; grid-template-columns:repeat(2,1fr); gap:2px; transform:rotate(45deg); }.mark i { background:var(--accent); }.mark i:nth-child(2){opacity:.7}.mark i:nth-child(3){opacity:.45}.mark i:nth-child(4){background:var(--ink)}
+    .back { color:var(--accent); font-size:13px; text-decoration:none; }
+    .wrap { display:grid; grid-template-columns:225px minmax(0,1fr); gap:68px; max-width:1120px; margin:0 auto; padding:88px 12px 88px; }
+    .eyebrow { margin:0 0 15px; color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.18em; }.intro h1 { margin:0; font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:45px; font-weight:500; line-height:1.2; }.intro p { margin:16px 0 0; color:var(--muted); font-size:13px; line-height:1.8; }
+    .edition-nav { position:sticky; top:25px; margin-top:45px; border-top:1px solid var(--faint); }.edition-link { display:block; width:100%; padding:14px 0; color:var(--muted); border:0; border-bottom:1px solid var(--faint); background:none; font:inherit; font-size:13px; text-align:left; cursor:pointer; }.edition-link:hover,.edition-link.active { color:var(--accent); }.edition-link span { float:right; color:#aaa59e; font-size:11px; }
+    .edition-head { display:flex; justify-content:space-between; align-items:end; padding-bottom:21px; border-bottom:1px solid var(--ink); }.edition-head h2 { margin:0; font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:34px; font-weight:500; }.edition-meta { color:var(--muted); font-size:12px; }
+    .item { display:grid; grid-template-columns:45px minmax(0,1fr) 140px 20px; gap:18px; align-items:center; padding:24px 0; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--faint); }.number { color:#aaa59e; font-family:Georgia,serif; font-size:13px; }.title { font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:19px; line-height:1.45; }.summary { display:block; margin-top:6px; color:var(--muted); font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; font-size:12px; line-height:1.7; }.source { color:#6e6963; font-size:12px; line-height:1.7; text-align:right; }.arrow { color:var(--accent); font-size:19px; text-align:right; }.empty { padding:80px 0; color:var(--muted); text-align:center; font-size:14px; }
+    @media(max-width:720px) { .nav { padding:0 20px; }.wrap { display:block; padding:54px 20px; }.edition-nav { position:static; display:flex; overflow:auto; margin:27px 0 46px; border-bottom:1px solid var(--faint); }.edition-link { flex:0 0 110px; border-top:1px solid var(--faint); }.edition-head { align-items:start; flex-direction:column; gap:10px; }.item { grid-template-columns:28px minmax(0,1fr) 17px; gap:10px; }.source { grid-column:2; text-align:left; }.title { font-size:17px; } }
+  </style>
+</head>
+<body>
+  <nav class="nav"><a class="brand" href="./"><span class="mark"><i></i><i></i><i></i><i></i></span>Signal Radar</a><a class="back" href="./">返回本期 ↗</a></nav>
+  <main class="wrap">
+    <aside class="intro"><p class="eyebrow">PAST EDITIONS</p><h1>往期<br>技术拾取</h1><p>每周归档一次。这里只保留当时值得打开的原始信号。</p><div class="edition-nav" id="editionNav"></div></aside>
+    <section><div class="edition-head"><h2 id="editionTitle">加载往期中…</h2><span class="edition-meta" id="editionMeta"></span></div><div id="items"><div class="empty">正在读取归档。</div></div></section>
+  </main>
+  <script>
+    const nav = document.querySelector("#editionNav"), items = document.querySelector("#items"), title = document.querySelector("#editionTitle"), meta = document.querySelector("#editionMeta");
+    const escapeHtml = value => { const node = document.createElement("div"); node.textContent = value || ""; return node.innerHTML; };
+    const formatDate = value => new Intl.DateTimeFormat("zh-CN", { year:"numeric", month:"long", day:"numeric" }).format(new Date(value + "T00:00:00"));
+    const itemDate = value => value ? new Intl.DateTimeFormat("zh-CN", { month:"numeric", day:"numeric" }).format(new Date(value)) : "";
+    function renderItems(data) { const list = data.items || []; title.textContent = formatDate(data.updatedAt.slice(0, 10)); meta.textContent = list.length + " 条信号"; items.innerHTML = list.length ? list.map((item, index) => '<a class="item" href="' + escapeHtml(item.url) + '" target="_blank" rel="noreferrer"><span class="number">' + String(index + 1).padStart(2, "0") + '</span><span><span class="title">' + escapeHtml(item.titleZh || item.title) + '</span>' + ((item.summaryZh || item.summary) ? '<span class="summary">' + escapeHtml(item.summaryZh || item.summary) + '</span>' : '') + '</span><span class="source">' + escapeHtml(item.source) + '<br>' + itemDate(item.publishedAt) + '</span><span class="arrow">↗</span></a>').join("") : '<div class="empty">这一期没有保留条目。</div>'; }
+    function openEdition(edition) { document.querySelectorAll(".edition-link").forEach(node => node.classList.toggle("active", node.dataset.file === edition.file)); fetch("./data/archive/" + edition.file.replace("./", "")).then(response => response.json()).then(renderItems); }
+    fetch("./data/archive/index.json").then(response => response.json()).then(data => { const editions = data.editions || []; nav.innerHTML = editions.map((edition, index) => '<button class="edition-link' + (index === 0 ? ' active' : '') + '" data-file="' + edition.file + '">' + formatDate(edition.date) + '<span>' + edition.count + ' 条</span></button>').join(""); document.querySelectorAll(".edition-link").forEach((node, index) => node.addEventListener("click", () => openEdition(editions[index]))); if (editions[0]) openEdition(editions[0]); else { title.textContent = "暂无归档"; items.innerHTML = '<div class="empty">首期更新后会自动保存在这里。</div>'; } }).catch(() => { title.textContent = "归档尚未生成"; items.innerHTML = '<div class="empty">请先完成一次数据更新。</div>'; });
+  </script>
+</body>
+</html>
