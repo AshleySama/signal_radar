@@ -1,79 +1,13 @@
 {
-  "updatedAt": "2026-08-17T14:47:00.745248Z",
+  "updatedAt": "2026-08-17T15:31:27.884888Z",
   "items": [
-    {
-      "title": "yjh051108/dsh-routing-suite",
-      "titleZh": "yjh051108/dsh-routing-suite",
-      "summary": "dsh-routing-suite — injector + router-standard kit: install the runtime injector first, then the task-aware reasoning-mode router preset (measured P1-P23).",
-      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 3,427 stars · PowerShell",
-      "source": "GitHub 开源新星",
-      "url": "https://github.com/yjh051108/dsh-routing-suite",
-      "publishedAt": "2026-08-17T14:47:23Z",
-      "score": 36,
-      "language": "code"
-    },
-    {
-      "title": "dsh-market/dsh-market",
-      "titleZh": "dsh-market/dsh-market",
-      "summary": "The plugin market inside DeepSeek Harness — browse, search, one-click install · DSH 可视化插件市场",
-      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 801 stars · TypeScript",
-      "source": "GitHub 开源新星",
-      "url": "https://github.com/dsh-market/dsh-market",
-      "publishedAt": "2026-08-17T14:44:16Z",
-      "score": 36,
-      "language": "code"
-    },
-    {
-      "title": "xiaobright/dsh-anchored-standard",
-      "titleZh": "xiaobright/dsh-anchored-standard",
-      "summary": "Two-phase DeepSeek Harness preset: Minimal-aligned bootstrap, then full Standard tools (Project2 98/99)",
-      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 3,390 stars · JavaScript",
-      "source": "GitHub 开源新星",
-      "url": "https://github.com/xiaobright/dsh-anchored-standard",
-      "publishedAt": "2026-08-17T14:25:09Z",
-      "score": 36,
-      "language": "code"
-    },
-    {
-      "title": "alchaincyf/deepseek-harness-orange-book",
-      "titleZh": "alchaincyf/deepseek-harness-orange-book",
-      "summary": "DeepSeek Harness橙皮书《从开机到拆开》：完整系统提示词、129行启动清单、三份原始会话日志——官方文档没有的一手实测。PDF/EPUB/HTML免费下载",
-      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 948 stars · HTML",
-      "source": "GitHub 开源新星",
-      "url": "https://github.com/alchaincyf/deepseek-harness-orange-book",
-      "publishedAt": "2026-08-17T14:16:54Z",
-      "score": 36,
-      "language": "code"
-    },
-    {
-      "title": "ZSvirt/zsvirt",
-      "titleZh": "ZSvirt/zsvirt",
-      "summary": "Core IaaS engine and cloud infrastructure foundation of ZSvirt",
-      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 712 stars · Java",
-      "source": "GitHub 开源新星",
-      "url": "https://github.com/ZSvirt/zsvirt",
-      "publishedAt": "2026-08-17T14:46:54Z",
-      "score": 34.24,
-      "language": "code"
-    },
-    {
-      "title": "zouyuxuan122/Deepseek-Harness-EAC",
-      "titleZh": "zouyuxuan122/Deepseek-Harness-EAC",
-      "summary": "DeepSeek Harness (dsh) Windows / Linux desktop client - bundled Node.js + dsh CLI, one-click launch, 10 built-in UI skins. EAC: Embracing All Creation 揽尽万象",
-      "summaryZh": "近 5 天新建的 GitHub 开源项目 · 698 stars · JavaScript",
-      "source": "GitHub 开源新星",
-      "url": "https://github.com/zouyuxuan122/Deepseek-Harness-EAC",
-      "publishedAt": "2026-08-17T14:41:13Z",
-      "score": 33.96,
-      "language": "code"
-    },
     {
       "title": "做了一个 Agent team 协作的 IM",
       "summary": "之前看 raft 项目的几篇 blog,然后就想自己做一个 copycat 出来,这段时间断断续续的花了一些精力来搞这个,目前大概功能都实现( 抄袭 )出来了,目前实现还是比较粗糙,但是基本的功能都可用了,让 Agent 一起玩狼人杀还是没问题的. Github 地址在这 https://github.com/Ranxy/laelia 做了比较多的 IAM 权限管理相关的适配,适合部署给团队使用. 目前做了 claude,codex 和 pi 的支持,其中 pi 作为 embed 的内容集成在应用里面了,可以直接输入 apikey 使用. 常用的功能如 ",
       "source": "V2EX 技术",
-      "url": "https://www.v2ex.com/t/1235093#reply0",
+      "url": "https://www.v2ex.com/t/1235093#reply1",
       "publishedAt": "2026-08-17T12:06:53Z",
-      "score": 28.87,
+      "score": 28.83,
       "language": "zh"
     },
     {
@@ -82,7 +16,7 @@
       "source": "V2EX 技术",
       "url": "https://www.v2ex.com/t/1234902#reply10",
       "publishedAt": "2026-08-17T02:35:16Z",
-      "score": 28.39,
+      "score": 28.35,
       "language": "zh"
     },
     {
@@ -91,7 +25,7 @@
       "source": "V2EX 技术",
       "url": "https://www.v2ex.com/t/1234794#reply45",
       "publishedAt": "2026-08-16T13:25:03Z",
-      "score": 27.73,
+      "score": 27.69,
       "language": "zh"
     },
     {
@@ -100,7 +34,7 @@
       "source": "OSCHINA",
       "url": "https://www.oschina.net/news/501966",
       "publishedAt": "2026-08-17T10:37:53Z",
-      "score": 26.79,
+      "score": 26.76,
       "language": "zh"
     },
     {
@@ -109,7 +43,7 @@
       "source": "V2EX 技术",
       "url": "https://www.v2ex.com/t/1235060#reply3",
       "publishedAt": "2026-08-17T09:26:23Z",
-      "score": 24.73,
+      "score": 24.7,
       "language": "zh"
     },
     {
@@ -118,7 +52,7 @@
       "source": "V2EX 技术",
       "url": "https://www.v2ex.com/t/1235052#reply0",
       "publishedAt": "2026-08-17T09:00:58Z",
-      "score": 24.71,
+      "score": 24.67,
       "language": "zh"
     },
     {
@@ -127,7 +61,36 @@
       "source": "V2EX 技术",
       "url": "https://www.v2ex.com/t/1234956#reply7",
       "publishedAt": "2026-08-17T04:06:42Z",
-      "score": 24.47,
+      "score": 24.43,
+      "language": "zh"
+    },
+    {
+      "title": "claude code 使用的终极形态",
+      "summary": "cc switch 切换到 deepseek-v4-pro 和 kimi k3 ，这样总不会封号了吧，哈哈哈 这样再封号就无解了。 个人体感差异不大，大概能对齐 claude opus4.6 的水平，deepseek v4 pro 好像价格便宜点，kimi k3 是上个月 k3 发布前开的年度会员。",
+      "source": "V2EX 技术",
+      "url": "https://www.v2ex.com/t/1234884#reply12",
+      "publishedAt": "2026-08-17T02:02:02Z",
+      "score": 24.33,
+      "language": "zh"
+    },
+    {
+      "title": "GitHub Trending 周榜",
+      "titleZh": "GitHub Trending 周榜",
+      "summary": "Star anthropics / skills Public repository for Agent Skills",
+      "summaryZh": "本周开源热度：cathrynlavery/diagram-design（+15,600 stars） · sponsors/semantica-agi（+5,284 stars） · cactus-compute/needle（+2,950 stars） · megadose/holehe（+1,287 stars） · PrimeIntellect-ai/prime-agent（+6,435 stars）",
+      "source": "GitHub Trending",
+      "url": "https://github.com/trending?since=weekly",
+      "publishedAt": "2026-08-17T15:31:27.884888Z",
+      "score": 24,
+      "language": "zh"
+    },
+    {
+      "title": "有没有人需要 Codex 获得 1,000 额度的邀请,有 3 个名额，需要的留下邮箱",
+      "summary": "有 3 个名额，需要的留下邮箱",
+      "source": "V2EX 技术",
+      "url": "https://www.v2ex.com/t/1235140#reply0",
+      "publishedAt": "2026-08-17T15:28:56Z",
+      "score": 23.0,
       "language": "zh"
     },
     {
@@ -136,7 +99,7 @@
       "source": "OSCHINA",
       "url": "https://www.oschina.net/news/501961",
       "publishedAt": "2026-08-17T08:13:15Z",
-      "score": 22.67,
+      "score": 22.63,
       "language": "zh"
     },
     {
@@ -145,7 +108,34 @@
       "source": "OSCHINA",
       "url": "https://www.oschina.net/news/501965",
       "publishedAt": "2026-08-17T09:03:09Z",
-      "score": 20.71,
+      "score": 20.68,
+      "language": "zh"
+    },
+    {
+      "title": "DSH Desktop - 开源跨平台 DeepSeek Harness 桌面客户端",
+      "summary": "DeepSeek Harness 的开发者预览版上线不到一周，社区已经把它做成了桌面应用。 DeepSeek Harness Desktop（DSH Desktop）是一个基于 Electron 的桌面封装，支持 Windows 和 macOS 平台，由 anywhere-labs 维护，MIT 协议开源。它把 Harness 的本地 Web UI 打包成了原生桌面窗口，自动管理 Harness 服务的启动和停止，支持...",
+      "source": "OSCHINA",
+      "url": "https://www.oschina.net/news/501960/deepseek-harness-desktop",
+      "publishedAt": "2026-08-17T07:44:56Z",
+      "score": 20.61,
+      "language": "zh"
+    },
+    {
+      "title": "uBlock Origin 停止追踪 Facebook 广告拦截对抗",
+      "summary": "知名开源广告拦截器 uBlock Origin 的志愿开发团队近日宣布，将不再持续更新针对 Facebook 的广告过滤规则。这意味着当 Facebook 找到绕过现有过滤器的办法后，uBlock Origin 不会再主动修复。 这一决定源于一场持续多年的猫鼠游戏。据开发团队成员在 Reddit 上透露，Facebook 的工程师会专门观察 uBlock Origin 等开源广...",
+      "source": "OSCHINA",
+      "url": "https://www.oschina.net/news/501955/ublock-origin-stops-chasing-facebook-ads",
+      "publishedAt": "2026-08-17T06:59:00Z",
+      "score": 20.57,
+      "language": "zh"
+    },
+    {
+      "title": "Proxy-Go v15.3 发布，强化融合代理 + 内网穿透！",
+      "summary": "Proxy 是 golang 实现的高性能 http、https、websocket、tcp、udp、socks5 代理服务器，支持正向代理、反向代理、透明代理、内网穿透、TCP/UDP 端口映射、SSH 中转、TLS 加密传输、协议转换、DNS 防污染智能代理、前置 CDN/Nginx 反代、代理连接重定向、API 动态调用上级代理、限速限连接数。提供全平台的命令行版本，友...",
+      "source": "OSCHINA",
+      "url": "https://www.oschina.net/news/501950",
+      "publishedAt": "2026-08-17T05:47:01Z",
+      "score": 20.51,
       "language": "zh"
     }
   ]

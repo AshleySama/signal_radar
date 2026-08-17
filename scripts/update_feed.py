@@ -158,7 +158,7 @@ def github_trending_page_entries() -> list[dict]:
     with urllib.request.urlopen(request, timeout=25) as response:
         page = response.read().decode("utf-8", errors="replace")
     articles = re.findall(r"<article[^>]*Box-row[^>]*>(.*?)</article>", page, re.DOTALL)
-    output: list[dict] = []
+    leaders: list[str] = []
     for article in articles:
         repository = re.search(r'href="/([^"/]+/[^"/?#]+)"', article)
         if not repository:
@@ -168,18 +168,21 @@ def github_trending_page_entries() -> list[dict]:
         language = clean_text(next(iter(re.findall(r'itemprop="programmingLanguage"[^>]*>(.*?)</span>', article, re.DOTALL)), ""))
         stars_this_week = re.search(r"([\d,]+)\s+stars\s+this\s+week", article)
         stars_label = stars_this_week.group(1) if stars_this_week else "近期热门"
-        output.append({
-            "title": name,
-            "titleZh": name,
-            "summary": description,
-            "summaryZh": f"GitHub 本周热门开源项目 · 本周新增 {stars_label} stars" + (f" · {language}" if language else ""),
-            "source": "GitHub Trending",
-            "url": f"https://github.com/{name}",
-            "publishedAt": NOW.isoformat().replace("+00:00", "Z"),
-            "score": 24,
-            "language": "code",
-        })
-    return output
+        label = name + (f"（+{stars_label} stars）" if stars_label != "近期热门" else "")
+        leaders.append(label)
+    if not leaders:
+        return []
+    return [{
+        "title": "GitHub Trending 周榜",
+        "titleZh": "GitHub Trending 周榜",
+        "summary": description,
+        "summaryZh": "本周开源热度：" + " · ".join(leaders[:5]),
+        "source": "GitHub Trending",
+        "url": "https://github.com/trending?since=weekly",
+        "publishedAt": NOW.isoformat().replace("+00:00", "Z"),
+        "score": 24,
+        "language": "zh",
+    }]
 
 
 def is_chinese(text: str) -> bool:
@@ -276,17 +279,12 @@ def main() -> int:
         except Exception as error:  # One unavailable source should not stop updates.
             print(f"{source['name']}: {error}", file=sys.stderr)
     try:
-        github_items = github_rising_entries()
-        source_label = "GitHub 开源新星"
+        github_items = github_trending_page_entries()
+        source_label = "GitHub Trending"
     except Exception as error:
-        print(f"GitHub 开源新星不可用，回退 Trending 页面: {error}", file=sys.stderr)
-        try:
-            github_items = github_trending_page_entries()
-            source_label = "GitHub Trending"
-        except Exception as fallback_error:
-            print(f"GitHub Trending: {fallback_error}", file=sys.stderr)
-            github_items = []
-            source_label = "GitHub"
+        print(f"GitHub Trending: {error}", file=sys.stderr)
+        github_items = []
+        source_label = "GitHub"
     print(f"{source_label}: {len(github_items)} entries")
     all_entries.extend(github_items)
     prior_urls = previous_edition_urls()
@@ -302,7 +300,7 @@ def main() -> int:
     source_counts: dict[str, int] = {}
     for item in non_english:
         source = item["source"]
-        source_limit = 6 if source.startswith("GitHub") else 6
+        source_limit = 1 if source.startswith("GitHub") else 8
         if source_counts.get(source, 0) >= source_limit:
             continue
         source_counts[source] = source_counts.get(source, 0) + 1
@@ -315,7 +313,7 @@ def main() -> int:
         if len(items) == MAX_ITEMS or english_limit == 0:
             break
         source = item["source"]
-        source_limit = 6 if source.startswith("GitHub") else 6
+        source_limit = 1 if source.startswith("GitHub") else 8
         if source_counts.get(source, 0) >= source_limit:
             continue
         source_counts[source] = source_counts.get(source, 0) + 1
