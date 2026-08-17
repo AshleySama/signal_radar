@@ -177,16 +177,30 @@ def meta_content(page: str, names: tuple[str, ...]) -> str:
 
 
 def page_date(page: str, fallback: str = "") -> datetime | None:
-    candidates = re.findall(r"20\d{2}[-/]\d{1,2}[-/]\d{1,2}(?:[ T]\d{1,2}:\d{2}(?::\d{2})?)?", page)
+    visible_date = re.search(
+        r'class=["\'][^"\']*date-channel-detail[^"\']*["\'][^>]*>.*?\b(20\d{2}-\d{1,2}-\d{1,2})\b',
+        page,
+        re.DOTALL,
+    )
+    candidates = [visible_date.group(1)] if visible_date else []
+    candidates.extend(re.findall(r"20\d{2}[-/]\d{1,2}[-/]\d{1,2}(?:[ T]\d{1,2}:\d{2}(?::\d{2})?)?", page))
     if fallback:
         candidates.append(fallback)
+    parsed_dates: list[datetime] = []
     for value in candidates:
         normalized = value.replace("/", "-").replace(" ", "T")
         try:
-            return datetime.fromisoformat(normalized).replace(tzinfo=timezone.utc)
+            parsed_dates.append(datetime.fromisoformat(normalized).replace(tzinfo=timezone.utc))
         except ValueError:
             continue
-    return None
+    if not parsed_dates:
+        return None
+    # InfoQ serializes unrelated historical dates in page state. Prefer the
+    # visible article date; otherwise take the newest non-future candidate.
+    if visible_date:
+        return parsed_dates[0]
+    eligible = [value for value in parsed_dates if value <= NOW + timedelta(days=1)]
+    return max(eligible or parsed_dates)
 
 
 def html_source_candidates(source_name: str, page: str) -> list[tuple[str, str]]:
@@ -368,27 +382,48 @@ def main() -> int:
     english = [item for item in unique.values() if item["language"] == "en"]
     items: list[dict] = []
     source_counts: dict[str, int] = {}
+    preferred_caps = {
+        "GitHub Trending": 1,
+        "量子位": 5,
+        "AI 前线 / InfoQ 中文": 5,
+        "机器之心": 5,
+        "Stack Overflow Blog": 3,
+    }
+
+    # First make room for every professional publisher that has a fresh item.
     for item in non_english:
         source = item["source"]
-        source_limit = 1 if source.startswith("GitHub") else MAX_ITEMS - 1
+        source_limit = preferred_caps.get(source, 4)
         if source_counts.get(source, 0) >= source_limit:
             continue
         source_counts[source] = source_counts.get(source, 0) + 1
         items.append(item)
         if len(items) == MAX_ITEMS:
             break
-    # Keep English articles strictly below 20% of the final edition.
-    english_limit = max(0, (len(items) - 1) // 4)
+
+    # Reserve a small but real share for the selected overseas publisher.
+    english_limit = max(0, (MAX_ITEMS - 1) // 5)
     for item in english:
         if len(items) == MAX_ITEMS or english_limit == 0:
             break
         source = item["source"]
-        source_limit = 1 if source.startswith("GitHub") else MAX_ITEMS - 1
+        source_limit = preferred_caps.get(source, 3)
         if source_counts.get(source, 0) >= source_limit:
             continue
         source_counts[source] = source_counts.get(source, 0) + 1
         items.append(item)
         english_limit -= 1
+
+    # When a publisher is quiet, fill the remaining places with the strongest
+    # unused Chinese signals instead of publishing a short edition.
+    for item in non_english:
+        if len(items) == MAX_ITEMS:
+            break
+        if item in items or (item["source"].startswith("GitHub") and source_counts.get(item["source"], 0) >= 1):
+            continue
+        source = item["source"]
+        source_counts[source] = source_counts.get(source, 0) + 1
+        items.append(item)
     payload = {
         "updatedAt": NOW.isoformat().replace("+00:00", "Z"),
         "items": items,

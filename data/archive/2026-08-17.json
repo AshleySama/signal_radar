@@ -1,123 +1,23 @@
 {
-  "updatedAt": "2026-08-17T16:08:38.118736Z",
+  "updatedAt": "2026-08-17T16:28:38.8007383Z",
   "items": [
     {
       "title": "GitHub Trending 周榜",
       "titleZh": "GitHub Trending 周榜",
-      "summary": "Star anthropics / skills Public repository for Agent Skills",
-      "summaryZh": "本周开源热度：cathrynlavery/diagram-design（+15,600 stars） · sponsors/semantica-agi（+5,284 stars） · cactus-compute/needle（+2,950 stars） · megadose/holehe（+1,287 stars） · PrimeIntellect-ai/prime-agent（+6,435 stars）",
+      "summaryZh": "本周开源热度，查看 GitHub Trending 周榜。",
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "publishedAt": "2026-08-17T16:08:38.118736Z",
+      "publishedAt": "2026-08-17T16:28:38.8007383Z",
       "score": 100,
       "language": "zh"
     },
     {
-      "title": "终于！世界模型进入“有声时代”：24FPS画面+48kHz立体声实时生成",
-      "summary": "即将完全开源",
+      "title": "共生知行发布人形机器人赛车Demo：以卡丁车测试双足机器人的“全身智能”",
+      "summary": "8月17日，具身智能初创公司共生知行发布双足人形机器人驾驶卡丁车Demo",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/474334.html",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 23.19,
-      "language": "zh"
-    },
-    {
-      "title": "从模型能力到工程优化，海外开发者正在“榨干” Qwen3.8-27B",
-      "summary": "一个令人惊喜的模型，一群持续挖掘它潜力的开发者。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/MljtE2Xk6hVkd061LY7k",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 23.19,
-      "language": "zh"
-    },
-    {
-      "title": "当操作系统开始“理解意图”：鸿蒙 AI 如何改变开发者的工作方式",
-      "summary": "围绕 HarmonyOS 7 的新特性与 AI Agent 能力、开发工具的实际体验与局限、鸿蒙与 iOS 和 Android 的技术路线差异，以及生态发展和开发者的下一步选择，InfoQ 与资深全栈工程师、架构师、鸿蒙生态布道师刘光智展开了这次对话。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/FEdxCeBCNO8DENqbGNZ0",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 23.19,
-      "language": "zh"
-    },
-    {
-      "title": "Vibe check：你的AI产品真的能落地吗",
-      "summary": "模型和编码工具正在迅速降低产品开发门槛，做出一个原型已经不再稀缺。真正困难的事情，是找到值得长期负责的客户结果，把 AI 能力嵌入真实业务流程，并让客户愿意持续使用和付费",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/urRl1WXpPSQQd1A9hN5f",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 23.19,
-      "language": "zh"
-    },
-    {
-      "title": "Dropbox 集成 MCP 与 Dash，将安全设计与代码审查连接起来",
-      "summary": "Dropbox 推出了一套新的工程实践，通过 Model Context Protocol（MCP，模型上下文协议） 和内部知识系统 Dash，将安全设计产物直接连接到代码审查工作流中。这一方案旨在解决大型工程组织中长期存在的一个问题：安全要求通常会在设计评审阶段确敲定，但直到更后期的代码审查阶段才会真正得到验证和落实，而此时参与审查的工程师往往已经缺少完整的设计上下文。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/JEaC9PfmAENVHbijfm05",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 23.19,
-      "language": "zh"
-    },
-    {
-      "title": "盘古训练与推理通信优化实践：亲和昇腾平台的性能探索｜AICon深圳",
-      "summary": "通信开销是大模型训练和推理中不可忽视的性能瓶颈",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/jOPScUAQrlfpNwDAhaOL",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 23.19,
-      "language": "zh"
-    },
-    {
-      "title": "Netflix详述其基于Triton与vLLM的内部LLM服务平台",
-      "summary": "Netflix介绍了将LLM推理引入其内部服务平台的生产实践经验，涵盖了支持不同模型规模、硬件需求以及快速演进的推理引擎所带来的挑战。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/J9Zi9LELcpxFRe23PHdY",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 23.19,
-      "language": "zh"
-    },
-    {
-      "title": "源神启动！一张消费级显卡跑“Opus级”Agent，Qwen3.8-27B多项榜单反超Claude",
-      "summary": "推理能力还能自定义",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/473669.html",
-      "publishedAt": "2026-08-15T00:00:00Z",
-      "score": 22.79,
-      "language": "zh"
-    },
-    {
-      "title": "技术风向变了？2026 年，数据库领域国际顶会都在研究什么？",
-      "summary": "AI、大规模数据分析、Serverless 等新工作负载，正为数据库领域带来新的变化。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/UJt7EQIZJaWe1dFZkD6F",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 21.19,
-      "language": "zh"
-    },
-    {
-      "title": "npm 正式上线分阶段发布功能，软件包上架前新增人工审核环节",
-      "summary": "npm 上线分阶段发布功能，软件包对外开放安装前必须经过维护者人工审批。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/5bfbkX6WIN3iKO6FlJwO",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 21.19,
-      "language": "zh"
-    },
-    {
-      "title": "至知研究院提出大模型可解释性新路线：拆权重，数据成本不到1%",
-      "summary": "理解大模型，无需再训练一个替代网络",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/473876.html",
-      "publishedAt": "2026-08-15T00:00:00Z",
-      "score": 20.79,
-      "language": "zh"
-    },
-    {
-      "title": "根治AI音乐通病！这家国产音乐模型正面挑战SUNO",
-      "summary": "音潮API限时免费开放",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/473866.html",
-      "publishedAt": "2026-08-15T00:00:00Z",
-      "score": 20.79,
+      "url": "https://www.qbitai.com/2026/08/474537.html",
+      "publishedAt": "2026-08-17T09:30:49.0000000Z",
+      "score": 20,
       "language": "zh"
     },
     {
@@ -125,8 +25,8 @@
       "summary": "没有遥控、没人喂球",
       "source": "量子位",
       "url": "https://www.qbitai.com/2026/08/474518.html",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 19.19,
+      "publishedAt": "2026-08-17T09:04:37.0000000Z",
+      "score": 20,
       "language": "zh"
     },
     {
@@ -134,8 +34,107 @@
       "summary": "AI最近最出圈的数学突破，都在“找反例”",
       "source": "量子位",
       "url": "https://www.qbitai.com/2026/08/474381.html",
-      "publishedAt": "2026-08-17T00:00:00Z",
-      "score": 19.19,
+      "publishedAt": "2026-08-17T08:36:07.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "快讯｜范式PhanRouter上线智谱GLM-5.3，即日开放调用",
+      "summary": "智谱GLM-5.3首发上线范式PhanRouter，即日开放调用",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/474361.html",
+      "publishedAt": "2026-08-17T08:26:25.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "终于！世界模型进入“有声时代”：24FPS画面+48kHz立体声实时生成",
+      "summary": "即将完全开源",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/474334.html",
+      "publishedAt": "2026-08-17T07:39:56.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "当 AI 遇见 FinOps：Snowflake 如何为 AI 时代重新定义成本管理 | 技术趋势",
+      "summary": "在 Snowflake，我们一直在从底层重新思考成本管理，不只是为了跟上 AI 驱动工作负载的节奏，更是希望把 AI 本身变成成本治理机制的一部分，让治理变得更聪明、更快，并且让更多人都能用得起来。本文讲的就是这两件事：一方面，我们把 AI 嵌入成本管理工具，让它更强大；另一方面，我们也提供了一组治理原语，帮助你把自己的 AI 投资控制在可预期范围内。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/0MLCGOPXzzILTxB8CORk",
+      "publishedAt": "2026-08-16T16:00:00.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "技术风向变了？2026 年，数据库领域国际顶会都在研究什么？",
+      "summary": "AI、大规模数据分析、Serverless 等新工作负载，正为数据库领域带来新的变化。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/UJt7EQIZJaWe1dFZkD6F",
+      "publishedAt": "2026-08-16T16:00:00.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "npm 正式上线分阶段发布功能，软件包上架前新增人工审核环节",
+      "summary": "npm 上线分阶段发布功能，软件包对外开放安装前必须经过维护者人工审批。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/5bfbkX6WIN3iKO6FlJwO",
+      "publishedAt": "2026-08-16T16:00:00.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "我们如何使用 CoCo 和 Streamlit，让长期规划实现对话式交互 | 技术趋势",
+      "summary": "长期规划是财务团队最重要的工作之一，但它同时也是最难规模化的一项工作。于是，和很多公司一样，当业务规模超出现有工具能力时，我们做了财务团队最常做的那件事：构建了一个巨大的 Excel 模型。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/fpxjBGx9mj52yzMoZ8Ty",
+      "publishedAt": "2026-08-16T16:00:00.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "李飞飞最新访谈：AI咋能代替人呢？",
+      "summary": "AI不是替代者，而是个人能力的放大镜",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/474140.html",
+      "publishedAt": "2026-08-16T10:45:47.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "WorkSwarm：引领办公智能体新范式，让AI从一个助手，进化为一支与你并肩作战的团队",
+      "summary": "背后是四项关键能力",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/473972.html",
+      "publishedAt": "2026-08-16T05:37:39.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "牛来！A社营收暴涨1400%，最新季度入账115亿美元",
+      "summary": "将超越马斯克的SpaceX，成为史上上市估值最高的IPO。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/473947.html",
+      "publishedAt": "2026-08-16T05:28:42.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "至知研究院提出大模型可解释性新路线：拆权重，数据成本不到1%",
+      "summary": "理解大模型，无需再训练一个替代网络",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/473876.html",
+      "publishedAt": "2026-08-15T06:42:23.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "根治AI音乐通病！这家国产音乐模型正面挑战SUNO",
+      "summary": "音潮API限时免费开放",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/473866.html",
+      "publishedAt": "2026-08-15T06:36:05.0000000Z",
+      "score": 20,
       "language": "zh"
     }
   ]

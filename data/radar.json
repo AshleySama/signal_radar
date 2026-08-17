@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-08-17T16:17:56.3911314Z",
+  "updatedAt": "2026-08-17T16:28:38.8007383Z",
   "items": [
     {
       "title": "GitHub Trending 周榜",
       "titleZh": "GitHub Trending 周榜",
-      "summaryZh": "本周开源热度：sponsors/explore · trending/developers · cathrynlavery/diagram-design · sponsors/semantica-agi · semantica-agi/semantica",
+      "summaryZh": "本周开源热度，查看 GitHub Trending 周榜。",
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "publishedAt": "2026-08-17T16:17:56.3911314Z",
+      "publishedAt": "2026-08-17T16:28:38.8007383Z",
       "score": 100,
       "language": "zh"
     },
@@ -57,6 +57,42 @@
       "language": "zh"
     },
     {
+      "title": "当 AI 遇见 FinOps：Snowflake 如何为 AI 时代重新定义成本管理 | 技术趋势",
+      "summary": "在 Snowflake，我们一直在从底层重新思考成本管理，不只是为了跟上 AI 驱动工作负载的节奏，更是希望把 AI 本身变成成本治理机制的一部分，让治理变得更聪明、更快，并且让更多人都能用得起来。本文讲的就是这两件事：一方面，我们把 AI 嵌入成本管理工具，让它更强大；另一方面，我们也提供了一组治理原语，帮助你把自己的 AI 投资控制在可预期范围内。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/0MLCGOPXzzILTxB8CORk",
+      "publishedAt": "2026-08-16T16:00:00.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "技术风向变了？2026 年，数据库领域国际顶会都在研究什么？",
+      "summary": "AI、大规模数据分析、Serverless 等新工作负载，正为数据库领域带来新的变化。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/UJt7EQIZJaWe1dFZkD6F",
+      "publishedAt": "2026-08-16T16:00:00.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "npm 正式上线分阶段发布功能，软件包上架前新增人工审核环节",
+      "summary": "npm 上线分阶段发布功能，软件包对外开放安装前必须经过维护者人工审批。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/5bfbkX6WIN3iKO6FlJwO",
+      "publishedAt": "2026-08-16T16:00:00.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
+      "title": "我们如何使用 CoCo 和 Streamlit，让长期规划实现对话式交互 | 技术趋势",
+      "summary": "长期规划是财务团队最重要的工作之一，但它同时也是最难规模化的一项工作。于是，和很多公司一样，当业务规模超出现有工具能力时，我们做了财务团队最常做的那件事：构建了一个巨大的 Excel 模型。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/fpxjBGx9mj52yzMoZ8Ty",
+      "publishedAt": "2026-08-16T16:00:00.0000000Z",
+      "score": 20,
+      "language": "zh"
+    },
+    {
       "title": "李飞飞最新访谈：AI咋能代替人呢？",
       "summary": "AI不是替代者，而是个人能力的放大镜",
       "source": "量子位",
@@ -98,42 +134,6 @@
       "source": "量子位",
       "url": "https://www.qbitai.com/2026/08/473866.html",
       "publishedAt": "2026-08-15T06:36:05.0000000Z",
-      "score": 20,
-      "language": "zh"
-    },
-    {
-      "title": "源神启动！一张消费级显卡跑“Opus级”Agent，Qwen3.8-27B多项榜单反超Claude",
-      "summary": "推理能力还能自定义",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/473669.html",
-      "publishedAt": "2026-08-15T06:05:31.0000000Z",
-      "score": 20,
-      "language": "zh"
-    },
-    {
-      "title": "DeepSeek Harness插件一夜燃爆GitHub：长期记忆、电子宠物、4399小游戏全来了",
-      "summary": "大家已经给DeepSeek装上了啥",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/473597.html",
-      "publishedAt": "2026-08-15T05:53:01.0000000Z",
-      "score": 20,
-      "language": "zh"
-    },
-    {
-      "title": "对话郎咸朋：用机器人创业重做一次“百万智驾量产”",
-      "summary": "1.9万字全文实录",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/473407.html",
-      "publishedAt": "2026-08-15T04:21:09.0000000Z",
-      "score": 20,
-      "language": "zh"
-    },
-    {
-      "title": "高效低成本开发，商业增长回报高，鸿蒙元服务背后的“开发厨房”让开发者按时吃饭！",
-      "summary": "对开发者而言，ASCF带来的不仅是“按时吃饭”的从容，更是低成本投入、高效率交付、高回报增长的完整商业闭环。",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/473395.html",
-      "publishedAt": "2026-08-15T04:03:37.0000000Z",
       "score": 20,
       "language": "zh"
     }
