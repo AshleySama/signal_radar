@@ -1,78 +1,6 @@
 {
-  "updatedAt": "2026-08-17T15:31:27.884888Z",
+  "updatedAt": "2026-08-17T16:08:38.118736Z",
   "items": [
-    {
-      "title": "做了一个 Agent team 协作的 IM",
-      "summary": "之前看 raft 项目的几篇 blog,然后就想自己做一个 copycat 出来,这段时间断断续续的花了一些精力来搞这个,目前大概功能都实现( 抄袭 )出来了,目前实现还是比较粗糙,但是基本的功能都可用了,让 Agent 一起玩狼人杀还是没问题的. Github 地址在这 https://github.com/Ranxy/laelia 做了比较多的 IAM 权限管理相关的适配,适合部署给团队使用. 目前做了 claude,codex 和 pi 的支持,其中 pi 作为 embed 的内容集成在应用里面了,可以直接输入 apikey 使用. 常用的功能如 ",
-      "source": "V2EX 技术",
-      "url": "https://www.v2ex.com/t/1235093#reply1",
-      "publishedAt": "2026-08-17T12:06:53Z",
-      "score": 28.83,
-      "language": "zh"
-    },
-    {
-      "title": "目前的 codex、claude code 还有必要加类似 codegraph 的代码索引的软件吗?",
-      "summary": "随着模型能力的提升,比如目前最新的 gpt 5.6,我已经尽量少使用 skill 了.使用类似 superpower 的 skill 不仅对输出的效果提升不大,还更费 token,输出速度更慢 想问一下,在 agent 方面,比如 codex,是不是不需要再使用第三方(比如 codegraph)的代码索引工具了?",
-      "source": "V2EX 技术",
-      "url": "https://www.v2ex.com/t/1234902#reply10",
-      "publishedAt": "2026-08-17T02:35:16Z",
-      "score": 28.35,
-      "language": "zh"
-    },
-    {
-      "title": "想问问朋友们现在都是用的什么 Coding Agent？",
-      "summary": "我目前一直都在使用 Claude Code ，虽然电脑上也安装了 Codex ，但是 Codex 一直没跑通，因为我都是本地 Ollama 提供的接口，每次跑的时候都会提示 metadata 的相关警告，虽然不影响使用，但总觉得不舒服。另外 Codex 还有什么沙箱模式，我也没去深究。相反使用 Claude Code 还挺便捷的，用 ccSwitch 配置好接口就行。 但是 Claude Code 貌似对大陆不太友好，听说还会启用水印？会让人感觉心里不舒服，加上最近出了很多新的 Coding Agent ，还包括国产的 Zcode 、Kimi Code ",
-      "source": "V2EX 技术",
-      "url": "https://www.v2ex.com/t/1234794#reply45",
-      "publishedAt": "2026-08-16T13:25:03Z",
-      "score": 27.69,
-      "language": "zh"
-    },
-    {
-      "title": "deeptide：一个专为 DeepSeek 打造的 Mac 原生终端编码 Agent",
-      "summary": "DeepSeek 的编码 agent 生态又多了一个新玩家。 deeptide 是一个 Mac 原生的终端编码 agent，由 Paean AI 团队开发，MIT 协议开源。它用 Swift 编写，编译为 macOS 原生二进制，签名并公证，安装到 ~/.local/bin/tide。 和 Claude Code、DeepSeek Harness 这些通用 agent 不同，deeptide 的定位很明确：只做 DeepSeek 的...",
-      "source": "OSCHINA",
-      "url": "https://www.oschina.net/news/501966",
-      "publishedAt": "2026-08-17T10:37:53Z",
-      "score": 26.76,
-      "language": "zh"
-    },
-    {
-      "title": "请教一下， DSH（DeepSeek Harness）可以理解为一个开源的 AI Agent 框架吗？",
-      "summary": "最近在看 DSH 的插件生态，对它的定位有点好奇，想请教一下大家的理解。 在这个仓库看了很多插件： https://github.com/awesome-dsh-plugin/awesome-dsh-plugin 我的理解是：DSH 类似于一个开源的可运行 AI 智能体框架，而插件生态则是它的核心扩展方式。这种开源方式是不是可以让 DSH 实现成一个 AI 系统，类似 Android 。",
-      "source": "V2EX 技术",
-      "url": "https://www.v2ex.com/t/1235060#reply3",
-      "publishedAt": "2026-08-17T09:26:23Z",
-      "score": 24.7,
-      "language": "zh"
-    },
-    {
-      "title": "我开源了一个 deepseek harness 插件，解决挂接 sglang/vllm 时，角色冲突的问题",
-      "summary": "https://github.com/kop1989/dsh-localqwen-rolefix 本质来讲，就是一旦 dsh 的请求带推理强度，角色就会变成”developer“。但是 vllm 和 SGLang 是不认这个角色的。他们只认”system“、”user“这两个用户侧角色。 插件的作用，就是在保留 dsh 的推理强度选项的前提下，让 sglang 和 vllm 可以正常使用 dsh 。不会出现 400 错误。 这样既方便调整思考强度（默认 xhigh 会超长思考），又可以使用 sglang 超强的 prefill 性能。 以上。",
-      "source": "V2EX 技术",
-      "url": "https://www.v2ex.com/t/1235052#reply0",
-      "publishedAt": "2026-08-17T09:00:58Z",
-      "score": 24.67,
-      "language": "zh"
-    },
-    {
-      "title": "codex 用 apple 的 礼品卡买的 20 刀套餐，没额度了，能升级到 pro5x，马上给我增加额度吗",
-      "summary": "codex 用 apple 的 礼品卡买的 20 刀套餐，没额度了，能升级到 pro5x ，马上给我增加额度吗。 另外我的 codex 怎么没看到 5.6 的模型啊，我只有 5.5 和 5.4 的",
-      "source": "V2EX 技术",
-      "url": "https://www.v2ex.com/t/1234956#reply7",
-      "publishedAt": "2026-08-17T04:06:42Z",
-      "score": 24.43,
-      "language": "zh"
-    },
-    {
-      "title": "claude code 使用的终极形态",
-      "summary": "cc switch 切换到 deepseek-v4-pro 和 kimi k3 ，这样总不会封号了吧，哈哈哈 这样再封号就无解了。 个人体感差异不大，大概能对齐 claude opus4.6 的水平，deepseek v4 pro 好像价格便宜点，kimi k3 是上个月 k3 发布前开的年度会员。",
-      "source": "V2EX 技术",
-      "url": "https://www.v2ex.com/t/1234884#reply12",
-      "publishedAt": "2026-08-17T02:02:02Z",
-      "score": 24.33,
-      "language": "zh"
-    },
     {
       "title": "GitHub Trending 周榜",
       "titleZh": "GitHub Trending 周榜",
@@ -80,62 +8,134 @@
       "summaryZh": "本周开源热度：cathrynlavery/diagram-design（+15,600 stars） · sponsors/semantica-agi（+5,284 stars） · cactus-compute/needle（+2,950 stars） · megadose/holehe（+1,287 stars） · PrimeIntellect-ai/prime-agent（+6,435 stars）",
       "source": "GitHub Trending",
       "url": "https://github.com/trending?since=weekly",
-      "publishedAt": "2026-08-17T15:31:27.884888Z",
-      "score": 24,
+      "publishedAt": "2026-08-17T16:08:38.118736Z",
+      "score": 100,
       "language": "zh"
     },
     {
-      "title": "有没有人需要 Codex 获得 1,000 额度的邀请,有 3 个名额，需要的留下邮箱",
-      "summary": "有 3 个名额，需要的留下邮箱",
-      "source": "V2EX 技术",
-      "url": "https://www.v2ex.com/t/1235140#reply0",
-      "publishedAt": "2026-08-17T15:28:56Z",
-      "score": 23.0,
+      "title": "终于！世界模型进入“有声时代”：24FPS画面+48kHz立体声实时生成",
+      "summary": "即将完全开源",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/474334.html",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 23.19,
       "language": "zh"
     },
     {
-      "title": "DeepSeek API 峰谷定价方案今日生效，高峰时段价格翻倍",
-      "summary": "今日（北京时间 2026.8.17 00:00）起，DeepSeek API 正式切换到峰谷定价模式。高峰时段价格翻倍，空闲时段价格为高峰时段价格的一半。这是 DeepSeek V4 系列模型发布后最大的价格动作。 到底涨了多少 新定价覆盖两个主力模型：DeepSeek-V4-Flash 和 DeepSeek-V4-Pro。高峰时段为北京时间 9:00 - 12:00、14:00 - 18:00（其...",
-      "source": "OSCHINA",
-      "url": "https://www.oschina.net/news/501961",
-      "publishedAt": "2026-08-17T08:13:15Z",
-      "score": 22.63,
+      "title": "从模型能力到工程优化，海外开发者正在“榨干” Qwen3.8-27B",
+      "summary": "一个令人惊喜的模型，一群持续挖掘它潜力的开发者。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/MljtE2Xk6hVkd061LY7k",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 23.19,
       "language": "zh"
     },
     {
-      "title": ":fire: 新增默认空间配置，新用户自动加入默认空间：开源无代码 / 低代码平台 NocoBase",
-      "summary": "汇总一周产品更新日志，最新发布可前往我们的博客查看。 NocoBase 目前更新包括三个分支：main、next 和 develop。 version.png main：截至目前最稳定的版本，推荐安装此版本。 next：包含即将发布的新功能，经过初步测试的版本，可能存在部分已知或未知问题。主要面向测试用户，用于收集反馈和进一步优化功能。适合愿意...",
-      "source": "OSCHINA",
-      "url": "https://www.oschina.net/news/501965",
-      "publishedAt": "2026-08-17T09:03:09Z",
-      "score": 20.68,
+      "title": "当操作系统开始“理解意图”：鸿蒙 AI 如何改变开发者的工作方式",
+      "summary": "围绕 HarmonyOS 7 的新特性与 AI Agent 能力、开发工具的实际体验与局限、鸿蒙与 iOS 和 Android 的技术路线差异，以及生态发展和开发者的下一步选择，InfoQ 与资深全栈工程师、架构师、鸿蒙生态布道师刘光智展开了这次对话。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/FEdxCeBCNO8DENqbGNZ0",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 23.19,
       "language": "zh"
     },
     {
-      "title": "DSH Desktop - 开源跨平台 DeepSeek Harness 桌面客户端",
-      "summary": "DeepSeek Harness 的开发者预览版上线不到一周，社区已经把它做成了桌面应用。 DeepSeek Harness Desktop（DSH Desktop）是一个基于 Electron 的桌面封装，支持 Windows 和 macOS 平台，由 anywhere-labs 维护，MIT 协议开源。它把 Harness 的本地 Web UI 打包成了原生桌面窗口，自动管理 Harness 服务的启动和停止，支持...",
-      "source": "OSCHINA",
-      "url": "https://www.oschina.net/news/501960/deepseek-harness-desktop",
-      "publishedAt": "2026-08-17T07:44:56Z",
-      "score": 20.61,
+      "title": "Vibe check：你的AI产品真的能落地吗",
+      "summary": "模型和编码工具正在迅速降低产品开发门槛，做出一个原型已经不再稀缺。真正困难的事情，是找到值得长期负责的客户结果，把 AI 能力嵌入真实业务流程，并让客户愿意持续使用和付费",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/urRl1WXpPSQQd1A9hN5f",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 23.19,
       "language": "zh"
     },
     {
-      "title": "uBlock Origin 停止追踪 Facebook 广告拦截对抗",
-      "summary": "知名开源广告拦截器 uBlock Origin 的志愿开发团队近日宣布，将不再持续更新针对 Facebook 的广告过滤规则。这意味着当 Facebook 找到绕过现有过滤器的办法后，uBlock Origin 不会再主动修复。 这一决定源于一场持续多年的猫鼠游戏。据开发团队成员在 Reddit 上透露，Facebook 的工程师会专门观察 uBlock Origin 等开源广...",
-      "source": "OSCHINA",
-      "url": "https://www.oschina.net/news/501955/ublock-origin-stops-chasing-facebook-ads",
-      "publishedAt": "2026-08-17T06:59:00Z",
-      "score": 20.57,
+      "title": "Dropbox 集成 MCP 与 Dash，将安全设计与代码审查连接起来",
+      "summary": "Dropbox 推出了一套新的工程实践，通过 Model Context Protocol（MCP，模型上下文协议） 和内部知识系统 Dash，将安全设计产物直接连接到代码审查工作流中。这一方案旨在解决大型工程组织中长期存在的一个问题：安全要求通常会在设计评审阶段确敲定，但直到更后期的代码审查阶段才会真正得到验证和落实，而此时参与审查的工程师往往已经缺少完整的设计上下文。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/JEaC9PfmAENVHbijfm05",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 23.19,
       "language": "zh"
     },
     {
-      "title": "Proxy-Go v15.3 发布，强化融合代理 + 内网穿透！",
-      "summary": "Proxy 是 golang 实现的高性能 http、https、websocket、tcp、udp、socks5 代理服务器，支持正向代理、反向代理、透明代理、内网穿透、TCP/UDP 端口映射、SSH 中转、TLS 加密传输、协议转换、DNS 防污染智能代理、前置 CDN/Nginx 反代、代理连接重定向、API 动态调用上级代理、限速限连接数。提供全平台的命令行版本，友...",
-      "source": "OSCHINA",
-      "url": "https://www.oschina.net/news/501950",
-      "publishedAt": "2026-08-17T05:47:01Z",
-      "score": 20.51,
+      "title": "盘古训练与推理通信优化实践：亲和昇腾平台的性能探索｜AICon深圳",
+      "summary": "通信开销是大模型训练和推理中不可忽视的性能瓶颈",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/jOPScUAQrlfpNwDAhaOL",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 23.19,
+      "language": "zh"
+    },
+    {
+      "title": "Netflix详述其基于Triton与vLLM的内部LLM服务平台",
+      "summary": "Netflix介绍了将LLM推理引入其内部服务平台的生产实践经验，涵盖了支持不同模型规模、硬件需求以及快速演进的推理引擎所带来的挑战。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/J9Zi9LELcpxFRe23PHdY",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 23.19,
+      "language": "zh"
+    },
+    {
+      "title": "源神启动！一张消费级显卡跑“Opus级”Agent，Qwen3.8-27B多项榜单反超Claude",
+      "summary": "推理能力还能自定义",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/473669.html",
+      "publishedAt": "2026-08-15T00:00:00Z",
+      "score": 22.79,
+      "language": "zh"
+    },
+    {
+      "title": "技术风向变了？2026 年，数据库领域国际顶会都在研究什么？",
+      "summary": "AI、大规模数据分析、Serverless 等新工作负载，正为数据库领域带来新的变化。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/UJt7EQIZJaWe1dFZkD6F",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 21.19,
+      "language": "zh"
+    },
+    {
+      "title": "npm 正式上线分阶段发布功能，软件包上架前新增人工审核环节",
+      "summary": "npm 上线分阶段发布功能，软件包对外开放安装前必须经过维护者人工审批。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/5bfbkX6WIN3iKO6FlJwO",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 21.19,
+      "language": "zh"
+    },
+    {
+      "title": "至知研究院提出大模型可解释性新路线：拆权重，数据成本不到1%",
+      "summary": "理解大模型，无需再训练一个替代网络",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/473876.html",
+      "publishedAt": "2026-08-15T00:00:00Z",
+      "score": 20.79,
+      "language": "zh"
+    },
+    {
+      "title": "根治AI音乐通病！这家国产音乐模型正面挑战SUNO",
+      "summary": "音潮API限时免费开放",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/473866.html",
+      "publishedAt": "2026-08-15T00:00:00Z",
+      "score": 20.79,
+      "language": "zh"
+    },
+    {
+      "title": "人形机器人开始打国球了！两台机器人完整打完11分制比赛",
+      "summary": "没有遥控、没人喂球",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/474518.html",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 19.19,
+      "language": "zh"
+    },
+    {
+      "title": "菲尔兹奖得主：AI现在主要靠「抬杠」突破重大数学猜想",
+      "summary": "AI最近最出圈的数学突破，都在“找反例”",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/474381.html",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "score": 19.19,
       "language": "zh"
     }
   ]

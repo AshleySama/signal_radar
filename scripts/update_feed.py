@@ -29,7 +29,7 @@ SOURCES = (
     {"name": "Stack Overflow Blog", "url": "https://stackoverflow.blog/feed/", "weight": 10, "kind": "editorial"},
 )
 HTML_SOURCES = (
-    {"name": "量子位", "url": "https://www.qbitai.com/", "weight": 12},
+    {"name": "量子位", "url": "https://www.qbitai.com/wp-json/wp/v2/posts?per_page=24&_fields=date,link,title,excerpt", "weight": 12, "format": "wordpress"},
     {"name": "AI 前线 / InfoQ 中文", "url": "https://www.infoq.cn/", "weight": 12},
     # The public RSS endpoint currently serves a data-service page instead of articles.
     # Keep this probe visible in job logs; it can be enabled when the publisher restores it.
@@ -202,6 +202,28 @@ def html_source_candidates(source_name: str, page: str) -> list[tuple[str, str]]
 def html_source_entries(source_name: str, url: str, weight: int) -> list[dict]:
     homepage = fetch_text(url)
     output: list[dict] = []
+    if source_name == "量子位":
+        for article in json.loads(homepage):
+            title = clean_text(article.get("title", {}).get("rendered", ""))
+            summary = clean_text(article.get("excerpt", {}).get("rendered", ""))
+            published_at = parse_time(article.get("date", ""))
+            combined = f"{title} {summary}".lower()
+            if not title or published_at is None or any(term in combined for term in BLOCKED) or any(term in combined for term in LOW_SIGNAL):
+                continue
+            age_days = max((NOW - published_at).total_seconds() / 86400, 0)
+            if age_days > MAX_AGE_DAYS:
+                continue
+            keyword_score = sum(term in combined for term in KEYWORDS)
+            output.append({
+                "title": title[:180],
+                "summary": summary[:280],
+                "source": source_name,
+                "url": article.get("link", ""),
+                "publishedAt": published_at.isoformat().replace("+00:00", "Z"),
+                "score": round(weight + min(keyword_score, 5) * 2 + max(0, 8 - age_days * 1.2), 2),
+                "language": "zh",
+            })
+        return [item for item in output if item["url"]]
     for link, _ in html_source_candidates(source_name, homepage):
         article = fetch_text(link)
         title = meta_content(article, ("og:title", "twitter:title"))
@@ -348,7 +370,7 @@ def main() -> int:
     source_counts: dict[str, int] = {}
     for item in non_english:
         source = item["source"]
-        source_limit = 1 if source.startswith("GitHub") else 8
+        source_limit = 1 if source.startswith("GitHub") else MAX_ITEMS - 1
         if source_counts.get(source, 0) >= source_limit:
             continue
         source_counts[source] = source_counts.get(source, 0) + 1
@@ -361,7 +383,7 @@ def main() -> int:
         if len(items) == MAX_ITEMS or english_limit == 0:
             break
         source = item["source"]
-        source_limit = 1 if source.startswith("GitHub") else 8
+        source_limit = 1 if source.startswith("GitHub") else MAX_ITEMS - 1
         if source_counts.get(source, 0) >= source_limit:
             continue
         source_counts[source] = source_counts.get(source, 0) + 1
