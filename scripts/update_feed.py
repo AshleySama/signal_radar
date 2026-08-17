@@ -51,7 +51,7 @@ LOW_SIGNAL = (
     "抽奖", "游戏攻略", "明星", "旅游", "购物",
 )
 MAX_AGE_DAYS = 3
-MAX_ITEMS = 15
+MAX_ITEMS = 16
 ROUTINE_RELEASE = re.compile(r"^(?:release\s+)?v?\d+\.\d+\.\d+", re.IGNORECASE)
 
 
@@ -270,6 +270,7 @@ def source_entries(source_name: str, url: str, weight: int, source_kind: str) ->
     root = fetch_xml(url)
     entries = [node for node in root.iter() if local_name(node.tag) in {"item", "entry"}]
     output: list[dict] = []
+    latest_overdue_allowed = source_name == "Stack Overflow Blog"
     for node in entries:
         title = first_child_text(node, {"title"})
         link = entry_link(node)
@@ -282,7 +283,7 @@ def source_entries(source_name: str, url: str, weight: int, source_kind: str) ->
         if published_at is None:
             continue
         age_days = max((NOW - published_at).total_seconds() / 86400, 0)
-        if age_days > MAX_AGE_DAYS:
+        if age_days > MAX_AGE_DAYS and (not latest_overdue_allowed or output):
             continue
         title_lower = title.lower()
         if source_name in {"OpenAI Codex", "Claude Code", "Gemini CLI"} and (
@@ -298,7 +299,7 @@ def source_entries(source_name: str, url: str, weight: int, source_kind: str) ->
             "source": source_name,
             "url": link,
             "publishedAt": published_at.isoformat().replace("+00:00", "Z"),
-            "score": round(score, 2),
+            "score": round(score if age_days <= MAX_AGE_DAYS else 1, 2),
             "language": "zh" if is_chinese(f"{title} {summary}") else "en",
         })
     return output
