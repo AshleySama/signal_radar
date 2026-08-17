@@ -11,7 +11,6 @@ import html
 import json
 import re
 import sys
-import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -26,17 +25,15 @@ ARCHIVE_INDEX = ARCHIVE_DIR / "index.json"
 NOW = datetime.now(timezone.utc)
 
 SOURCES = (
-    # Chinese sources make the published feed readable without a paid translation API.
-    {"name": "OSCHINA", "url": "https://www.oschina.net/news/rss", "weight": 9, "kind": "editorial"},
-    {"name": "V2EX 技术", "url": "https://www.v2ex.com/feed/tab/tech.xml", "weight": 8, "kind": "community"},
-    {"name": "V2EX 程序员", "url": "https://www.v2ex.com/feed/tab/programmer.xml", "weight": 7, "kind": "community"},
-    # These feeds represent what developers are actively discussing, rather than press releases.
-    {"name": "Hacker News", "url": "https://news.ycombinator.com/rss", "weight": 10, "kind": "community"},
-    {"name": "Lobsters", "url": "https://lobste.rs/t/programming.rss", "weight": 9, "kind": "community"},
-    {"name": "DEV / AI", "url": "https://dev.to/feed/tag/ai", "weight": 8, "kind": "community"},
-    # A small official share is retained for primary-source releases with real developer impact.
-    {"name": "OpenAI", "url": "https://openai.com/news/rss.xml", "weight": 6, "kind": "official"},
-    {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "weight": 6, "kind": "official"},
+    # Stack Overflow Blog is the only overseas publisher feed in this edition.
+    {"name": "Stack Overflow Blog", "url": "https://stackoverflow.blog/feed/", "weight": 10, "kind": "editorial"},
+)
+HTML_SOURCES = (
+    {"name": "量子位", "url": "https://www.qbitai.com/", "weight": 12},
+    {"name": "AI 前线 / InfoQ 中文", "url": "https://www.infoq.cn/", "weight": 12},
+    # The public RSS endpoint currently serves a data-service page instead of articles.
+    # Keep this probe visible in job logs; it can be enabled when the publisher restores it.
+    {"name": "机器之心", "url": "https://www.jiqizhixin.com/", "weight": 12},
 )
 
 KEYWORDS = (
@@ -116,40 +113,6 @@ def fetch_xml(url: str) -> ET.Element:
     return ET.fromstring(xml_text)
 
 
-def github_rising_entries() -> list[dict]:
-    since = (NOW - timedelta(days=MAX_AGE_DAYS)).date().isoformat()
-    query = f"created:>={since} stars:>=5 fork:false archived:false"
-    url = "https://api.github.com/search/repositories?" + urllib.parse.urlencode({
-        "q": query, "sort": "stars", "order": "desc", "per_page": 12,
-    })
-    request = urllib.request.Request(url, headers={
-        "Accept": "application/vnd.github+json",
-        "User-Agent": "FuncDance-Signal-Radar/1.0",
-    })
-    with urllib.request.urlopen(request, timeout=25) as response:
-        repositories = json.load(response).get("items", [])
-
-    output: list[dict] = []
-    for repository in repositories:
-        updated_at = parse_time(repository.get("updated_at", ""))
-        if updated_at is None:
-            continue
-        stars = int(repository.get("stargazers_count", 0))
-        language = repository.get("language") or "未标注语言"
-        output.append({
-            "title": repository["full_name"],
-            "titleZh": repository["full_name"],
-            "summary": repository.get("description") or "",
-            "summaryZh": f"近 5 天新建的 GitHub 开源项目 · {stars:,} stars · {language}",
-            "source": "GitHub 开源新星",
-            "url": repository["html_url"],
-            "publishedAt": updated_at.isoformat().replace("+00:00", "Z"),
-            "score": round(20 + min(stars / 50, 16), 2),
-            "language": "code",
-        })
-    return output
-
-
 def github_trending_page_entries() -> list[dict]:
     request = urllib.request.Request(
         "https://github.com/trending?since=weekly",
@@ -180,13 +143,91 @@ def github_trending_page_entries() -> list[dict]:
         "source": "GitHub Trending",
         "url": "https://github.com/trending?since=weekly",
         "publishedAt": NOW.isoformat().replace("+00:00", "Z"),
-        "score": 24,
+        "score": 100,
         "language": "zh",
     }]
 
 
 def is_chinese(text: str) -> bool:
     return bool(re.search(r"[\u3400-\u9fff]", text))
+
+
+def fetch_text(url: str) -> str:
+    request = urllib.request.Request(url, headers={"User-Agent": "FuncDance-Signal-Radar/1.0"})
+    with urllib.request.urlopen(request, timeout=25) as response:
+        return response.read().decode("utf-8", errors="replace")
+
+
+def meta_content(page: str, names: tuple[str, ...]) -> str:
+    for name in names:
+        match = re.search(
+            rf'<meta[^>]+(?:property|name)=["\']{re.escape(name)}["\'][^>]+content=["\']([^"\']+)',
+            page,
+            re.IGNORECASE,
+        )
+        if not match:
+            match = re.search(
+                rf'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\']{re.escape(name)}["\']',
+                page,
+                re.IGNORECASE,
+            )
+        if match:
+            return clean_text(match.group(1))
+    return ""
+
+
+def page_date(page: str, fallback: str = "") -> datetime | None:
+    candidates = re.findall(r"20\d{2}[-/]\d{1,2}[-/]\d{1,2}(?:[ T]\d{1,2}:\d{2}(?::\d{2})?)?", page)
+    if fallback:
+        candidates.append(fallback)
+    for value in candidates:
+        normalized = value.replace("/", "-").replace(" ", "T")
+        try:
+            return datetime.fromisoformat(normalized).replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+    return None
+
+
+def html_source_candidates(source_name: str, page: str) -> list[tuple[str, str]]:
+    if source_name == "量子位":
+        links = re.findall(r'href=["\'](https://www\.qbitai\.com/20\d{2}/\d{2}/\d+\.html)["\']', page)
+    elif source_name == "AI 前线 / InfoQ 中文":
+        links = re.findall(r'href=["\'](https://www\.infoq\.cn/article/[A-Za-z0-9]+)["\']', page)
+    else:
+        links = []
+    return list(dict.fromkeys((link, link) for link in links))[:24]
+
+
+def html_source_entries(source_name: str, url: str, weight: int) -> list[dict]:
+    homepage = fetch_text(url)
+    output: list[dict] = []
+    for link, _ in html_source_candidates(source_name, homepage):
+        article = fetch_text(link)
+        title = meta_content(article, ("og:title", "twitter:title"))
+        summary = meta_content(article, ("og:description", "description"))
+        fallback_date = ""
+        if source_name == "量子位":
+            matched = re.search(r"/(20\d{2}/\d{2}/\d+)/", link)
+            fallback_date = matched.group(1) if matched else ""
+        published_at = page_date(article, fallback_date)
+        combined = f"{title} {summary}".lower()
+        if not title or published_at is None or any(term in combined for term in BLOCKED) or any(term in combined for term in LOW_SIGNAL):
+            continue
+        age_days = max((NOW - published_at).total_seconds() / 86400, 0)
+        if age_days > MAX_AGE_DAYS:
+            continue
+        keyword_score = sum(term in combined for term in KEYWORDS)
+        output.append({
+            "title": title[:180],
+            "summary": summary[:280],
+            "source": source_name,
+            "url": link,
+            "publishedAt": published_at.isoformat().replace("+00:00", "Z"),
+            "score": round(weight + min(keyword_score, 5) * 2 + max(0, 8 - age_days * 1.2), 2),
+            "language": "zh",
+        })
+    return output
 
 
 def source_entries(source_name: str, url: str, weight: int, source_kind: str) -> list[dict]:
@@ -274,6 +315,13 @@ def main() -> int:
     for source in SOURCES:
         try:
             fetched = source_entries(source["name"], source["url"], source["weight"], source["kind"])
+            print(f"{source['name']}: {len(fetched)} entries")
+            all_entries.extend(fetched)
+        except Exception as error:  # One unavailable source should not stop updates.
+            print(f"{source['name']}: {error}", file=sys.stderr)
+    for source in HTML_SOURCES:
+        try:
+            fetched = html_source_entries(source["name"], source["url"], source["weight"])
             print(f"{source['name']}: {len(fetched)} entries")
             all_entries.extend(fetched)
         except Exception as error:  # One unavailable source should not stop updates.
