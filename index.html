@@ -6,7 +6,7 @@
   <meta name="description" content="Signal Radar - 每周三次，汇总值得关注的全球 AI、开发者与开源技术信号。">
   <title>Signal Radar - 全球技术雷达</title>
   <style>
-    :root { --paper:#f7f6f2; --ink:#22211f; --muted:#77736d; --faint:#dedbd4; --accent:#c75b32; --hero-background:url("./assets/backgrounds/scientific-archive.png"); }
+    :root { --paper:#f7f6f2; --ink:#22211f; --muted:#77736d; --faint:#dedbd4; --accent:#c75b32; --drawer-width:470px; --hero-background:url("./assets/backgrounds/scientific-archive.png"); }
     * { box-sizing:border-box; }
     html { background:var(--paper); scroll-behavior:smooth; }
     body { margin:0; color:var(--ink); background:var(--paper); font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; }
@@ -41,6 +41,10 @@
     .item-summary { display:block; max-width:700px; margin-top:6px; color:var(--muted); font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; font-size:12px; line-height:1.7; }
     .source { color:#6e6963; font-size:12px; line-height:1.7; text-align:right; }
     .read-stamp { position:absolute; right:4px; bottom:-11px; width:43px; opacity:.56; mix-blend-mode:multiply; transform:rotate(-9deg); pointer-events:none; }
+    .drawer { position:fixed; z-index:20; top:0; right:0; display:flex; flex-direction:column; width:var(--drawer-width); height:100dvh; padding:25px 32px 30px; background:#fbfaf7; border-left:1px solid var(--faint); box-shadow:-18px 0 50px rgba(39,31,24,.08); transform:translateX(100%); opacity:0; pointer-events:none; transition:transform .48s cubic-bezier(.2,.75,.2,1), opacity .25s ease; }
+    .drawer.open { transform:translateX(0); opacity:1; pointer-events:auto; }.drawer-top { display:flex; align-items:center; justify-content:space-between; min-height:34px; }.drawer-actions { display:flex; gap:8px; }.drawer-label { color:var(--accent); font-size:10px; font-weight:700; letter-spacing:.18em; }.icon-button { display:grid; width:34px; height:34px; place-items:center; border:1px solid var(--faint); border-radius:50%; color:var(--ink); background:transparent; font:20px/1 Arial,sans-serif; text-decoration:none; cursor:pointer; }.icon-button:hover { color:var(--accent); border-color:var(--accent); }
+    .drawer-content { flex:1; overflow:auto; padding:35px 4px 26px 0; scrollbar-width:thin; scrollbar-color:#c9c3ba transparent; }.drawer-source { margin:0 0 20px; color:var(--accent); font-size:12px; letter-spacing:.08em; }.drawer-title { margin:0; font:500 33px/1.3 Georgia,"Times New Roman","Noto Serif SC",serif; }.drawer-summary { margin:23px 0 0; color:#65615c; font-size:14px; line-height:1.9; }.drawer-body { margin:28px 0 0; color:#403d39; font:16px/2 Georgia,"Times New Roman","Noto Serif SC",serif; }.drawer-body p { margin:0 0 20px; }.drawer-note { margin:28px 0 0; padding-top:15px; border-top:1px solid var(--faint); color:var(--muted); font-size:11px; line-height:1.7; }
+    body.drawer-open .edition, body.drawer-open .nav, body.drawer-open .principles, body.drawer-open .footer-inner { max-width:min(1120px, calc(100vw - var(--drawer-width) - 34px)); margin-left:max(18px, calc((100vw - 1120px) / 2)); margin-right:calc(var(--drawer-width) + 18px); }
     .arrow { color:var(--accent); font-size:20px; font-weight:300; text-align:right; }
     .empty { padding:70px 0; color:var(--muted); font-size:14px; text-align:center; border-bottom:1px solid var(--faint); }
     .principles { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:30px; max-width:1120px; margin:69px auto 0; padding:0 12px 68px; }
@@ -50,7 +54,7 @@
     .principle p { margin:11px 0 0; color:var(--muted); font-size:13px; line-height:1.85; }
     footer { border-top:1px solid var(--faint); }
     .footer-inner { display:flex; justify-content:space-between; max-width:1120px; margin:auto; padding:24px 12px 32px; color:#89847e; font-size:11px; }
-    @media (max-width:720px) { .nav { padding:0 20px; } .nav-right a { display:none; } .hero { min-height:460px; padding:76px 20px 66px; } h1 { font-size:48px; } .intro { font-size:14px; } .edition { padding:52px 20px 16px; } .section-top { align-items:start; flex-direction:column; gap:12px; } .updated { text-align:left; } .item { grid-template-columns:30px minmax(0,1fr) 18px; gap:10px; } .item-title { font-size:17px; } .item-summary { font-size:11px; } .source { grid-column:2; text-align:left; } .principles { grid-template-columns:1fr; gap:22px; padding:0 20px 52px; } .footer-inner { padding:22px 20px; flex-direction:column; gap:7px; } }
+    @media (max-width:720px) { :root { --drawer-width:min(100vw,440px); } .nav { padding:0 20px; } .nav-right a { display:none; } .hero { min-height:460px; padding:76px 20px 66px; } h1 { font-size:48px; } .intro { font-size:14px; } .edition { padding:52px 20px 16px; } .section-top { align-items:start; flex-direction:column; gap:12px; } .updated { text-align:left; } .item { grid-template-columns:30px minmax(0,1fr) 18px; gap:10px; } .item-title { font-size:17px; } .item-summary { font-size:11px; } .source { grid-column:2; text-align:left; } .principles { grid-template-columns:1fr; gap:22px; padding:0 20px 52px; } .footer-inner { padding:22px 20px; flex-direction:column; gap:7px; } body.drawer-open .edition, body.drawer-open .nav, body.drawer-open .principles, body.drawer-open .footer-inner { max-width:100%; margin-left:0; margin-right:0; filter:blur(1.5px); } .drawer { padding:23px 24px; }.drawer-title { font-size:29px; } }
   </style>
 </head>
 <body>
@@ -80,10 +84,15 @@
       <div class="principle"><b>02 / SIGNAL OVER NOISE</b><p>只收录会影响 AI、开发者工作流或技术趋势的更新，并过滤敏感与低相关内容。</p></div>
     </section>
   </main>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-top"><span class="drawer-label">READING EXTRACT</span><span class="drawer-actions"><a class="icon-button" id="source-link" href="#" target="_blank" rel="noopener" aria-label="在原站查看原文">↗</a><button class="icon-button" id="close-drawer" type="button" aria-label="关闭阅读抽屉">×</button></span></div>
+    <div class="drawer-content"><p class="drawer-source" id="drawer-source"></p><h2 class="drawer-title" id="drawer-title"></h2><p class="drawer-summary" id="drawer-summary"></p><div class="drawer-body" id="drawer-body"></div><p class="drawer-note">本站保留来源页面的短篇可读节选，原始出处始终可追溯。</p></div>
+  </aside>
   <footer><div class="footer-inner"><span>Signal Radar · Global edition</span><span>Headlines link to original sources.</span></div></footer>
   <script>
     const items = document.querySelector("#items");
     const updated = document.querySelector("#updated");
+    const drawer = document.querySelector("#drawer");
     const readKey = "signal-radar-read-urls";
     const readUrls = new Set(JSON.parse(localStorage.getItem(readKey) || "[]"));
     function escapeHtml(value) { const node = document.createElement("div"); node.textContent = value || ""; return node.innerHTML; }
@@ -93,7 +102,22 @@
       if (data.background) document.documentElement.style.setProperty("--hero-background", 'url("' + data.background + '")');
       updated.textContent = data.updatedAt ? "更新于 " + new Date(data.updatedAt).toLocaleString("zh-CN", { dateStyle:"medium", timeStyle:"short" }) : "等待首次自动抓取";
       if (!list.length) return;
-      function openOriginal(item) { const popup = window.open(item.url, "signal-radar-reader", "popup=yes,width=1120,height=840,noopener"); if (popup) popup.focus(); }
+      let currentItem = null;
+      function closeDrawer() { document.body.classList.remove("drawer-open"); drawer.classList.remove("open"); drawer.setAttribute("aria-hidden", "true"); }
+      function openDrawer(item, button) {
+        currentItem = item;
+        items.querySelectorAll(".item").forEach(function(node) { node.classList.remove("active"); }); button.classList.add("active");
+        document.querySelector("#drawer-source").textContent = item.source + "  /  " + dateLabel(item.publishedAt);
+        document.querySelector("#drawer-title").textContent = item.titleZh || item.title || "";
+        document.querySelector("#drawer-summary").textContent = item.summaryZh || item.summary || "";
+        document.querySelector("#drawer-body").innerHTML = "";
+        document.querySelector("#source-link").href = item.url;
+        document.body.classList.add("drawer-open"); drawer.classList.add("open"); drawer.setAttribute("aria-hidden", "false");
+        if (!item.readerFile) return;
+        fetch(item.readerFile, { cache:"force-cache" }).then(function(response) { return response.json(); }).then(function(reader) { if (item !== currentItem) return; document.querySelector("#drawer-body").innerHTML = (reader.paragraphs || []).map(function(paragraph) { return "<p>" + escapeHtml(paragraph) + "</p>"; }).join(""); }).catch(function() {});
+      }
+      document.querySelector("#close-drawer").addEventListener("click", closeDrawer);
+      document.addEventListener("keydown", function(event) { if (event.key === "Escape") closeDrawer(); });
       items.innerHTML = list.map(function(item, index) {
         const title = item.titleZh || item.title || "未命名信号";
         const summary = item.summaryZh || item.summary || "";
@@ -102,7 +126,7 @@
           '<span class="item-body"><span class="item-title">' + escapeHtml(title) + '</span>' + (summary ? '<span class="item-summary">' + escapeHtml(summary) + '</span>' : '') + (readUrls.has(item.url) ? '<img class="read-stamp" src="./assets/read-stamp.jpeg" alt="已阅">' : '') + '</span>' +
           '<span class="source">' + escapeHtml(item.source) + '<br>' + dateLabel(item.publishedAt) + '</span><span class="arrow">↗</span></button>';
       }).join("");
-      items.querySelectorAll(".item").forEach(function(button) { button.addEventListener("click", function() { const item = list[Number(button.dataset.index)]; readUrls.add(item.url); localStorage.setItem(readKey, JSON.stringify(Array.from(readUrls))); if (!button.querySelector(".read-stamp")) button.querySelector(".item-body").insertAdjacentHTML("beforeend", '<img class="read-stamp" src="./assets/read-stamp.jpeg" alt="已阅">'); openOriginal(item); }); });
+      items.querySelectorAll(".item").forEach(function(button) { button.addEventListener("click", function() { const item = list[Number(button.dataset.index)]; readUrls.add(item.url); localStorage.setItem(readKey, JSON.stringify(Array.from(readUrls))); if (!button.querySelector(".read-stamp")) button.querySelector(".item-body").insertAdjacentHTML("beforeend", '<img class="read-stamp" src="./assets/read-stamp.jpeg" alt="已阅">'); openDrawer(item, button); }); });
     }).catch(function() { updated.textContent = "数据文件尚未生成"; });
   </script>
 </body>

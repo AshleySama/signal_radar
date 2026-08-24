@@ -1,0 +1,25 @@
+{
+  "title": "Dispatches from O'Reilly: The right amount of spec for agentic development",
+  "source": "Stack Overflow Blog",
+  "publishedAt": "2026-08-21T14:00:00Z",
+  "url": "https://stackoverflow.blog/2026/08/21/dispatches-from-o-reilly-the-right-amount-of-spec-for-agentic-development/",
+  "paragraphs": [
+    "When code gets cheap, the hard part is deciding what “correct” means and building a reliable way to check it.",
+    "I keep seeing the same idea in conversations about agents: Detailed specs are old-world overhead now. Give the model a rough goal, let it explore, fix what comes back, move on. It sounds efficient but it also hides the cost.",
+    "A simple prompt looks cheap and tempting because it gets implementation started right away. Then the correction loops start. You review output, clarify intent, ask for changes, rerun tests, find the next gap, and do it again. Someone still has to decide whether the result matches the real goal. That person becomes the oracle.",
+    "At the other extreme, full formal specification is obviously expensive up front. Writing acceptance criteria, contract tests, or behavior-driven development (BDD) scenarios takes real effort. But the downstream cost is different because more of the oracle is executable. A test checks the same condition every time. It doesn’t get tired, rushed, or optimistic five minutes before lunch.",
+    "That is the actual trade-off. The question is not whether specification is good or bad. It’s where the minimum total cost sits. For most agentic work, it’s somewhere in the middle: enough structure to constrain the work, enough examples to make intent concrete, and enough executable checks that review does not turn into guessing.",
+    "Zero spec is not intelligent and lean; it’s just costly vibe-coding.",
+    "Software engineering was never mainly about typing or even producing code. It was about deciding what should exist, what should never happen, which trade-offs matter, and what “done” means once the problem touches the real world.",
+    "For years, teams discovered missing specification through human friction. A reviewer noticed an edge case, QA found the path nobody described, a senior engineer carried half the real requirements in his head and translated them one meeting at a time. None of that was elegant, but it did force ambiguity into the open.",
+    "Agents change that fundamentally. They make implementation much cheaper and much faster. It also means an underspecified idea can turn into a plausible system before anyone has really agreed on what the system is supposed to mean.",
+    "In the old world, vague requirements ran into human slowness. In the agent world, vague requirements run into machine speed.",
+    "That’s why specification suddenly feels important again. It was always important. We just used implementation cost as a crude forcing function and called the result process.",
+    "This is the part I see people skip most often. They talk as if the sequence is simple: write the spec, then let the agent implement it. The missing step is the expensive one.",
+    "Even a careful spec can fail in familiar ways. It can contradict itself or cover the happy path and say nothing useful about retries, rate limits, or partial failure. It can describe behavior that sounds precise but cannot actually be verified. And sometimes it is precise in exactly the wrong way: it says what you wrote, not what you meant.",
+    "When an agent executes a flawed spec faithfully, the failure gets harder to diagnose. The implementation may look coherent. It may even pass the checks you provided. But the real problem lives upstream, in the spec, so fixing it means unwinding code and reasoning together.",
+    "That’s why I think spec validation deserves its own line item. Before implementation starts, someone needs to ask a few plain questions. Is this internally consistent? Is it complete enough for this task? Which parts are testable? Where are we still depending on human judgment? Which failure modes are missing because everyone silently assumed them?",
+    "Agents can help here, but only if we use them for something more useful than “write requirements.” That prompt usually produces polished fog. A better prompt is much more specific:"
+  ],
+  "isExcerpt": true
+}

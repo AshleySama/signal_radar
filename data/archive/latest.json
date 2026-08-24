@@ -8,8 +8,7 @@
       "url": "https://www.qbitai.com/2026/08/478191.html",
       "publishedAt": "2026-08-23T17:56:12Z",
       "score": 25.65,
-      "language": "zh",
-      "readerFile": "./data/readers/7d712fc4f927d91e.json"
+      "language": "zh"
     },
     {
       "title": "亚马逊云科技开源 Dogwood：给 AI 智能体的工具调用立规矩",
@@ -18,8 +17,7 @@
       "url": "https://www.infoq.cn/article/cwj5Ikvhqu5mKH22zKsO",
       "publishedAt": "2026-08-23T00:00:00Z",
       "score": 22.75,
-      "language": "zh",
-      "readerFile": "./data/readers/cdeec5d38ec70d1e.json"
+      "language": "zh"
     },
     {
       "title": "Cloudflare 推出 Agent Tracing：支持截断限制，不同框架的 Payload 默认记录策略存在差异",
@@ -28,8 +26,7 @@
       "url": "https://www.infoq.cn/article/IBYDTeu3rse9tH3549wf",
       "publishedAt": "2026-08-22T00:00:00Z",
       "score": 21.55,
-      "language": "zh",
-      "readerFile": "./data/readers/8d56403411f84e19.json"
+      "language": "zh"
     },
     {
       "title": "从世界模型到现实生产力，无界动力深度参与WRC主论坛及多场同期活动",
@@ -38,8 +35,7 @@
       "url": "https://www.qbitai.com/2026/08/478007.html",
       "publishedAt": "2026-08-23T15:12:22Z",
       "score": 21.51,
-      "language": "zh",
-      "readerFile": "./data/readers/48166e5156f04ea3.json"
+      "language": "zh"
     },
     {
       "title": "从模型到生产力：星海图与产业朋友圈共探具身智能的下一站",
@@ -48,8 +44,7 @@
       "url": "https://www.qbitai.com/2026/08/476930.html",
       "publishedAt": "2026-08-22T16:41:41Z",
       "score": 20.38,
-      "language": "zh",
-      "readerFile": "./data/readers/b0142376bad2a567.json"
+      "language": "zh"
     },
     {
       "title": "前保安杀进了AI决赛，高中生拿走25万！这AI比赛办得有点绝",
@@ -58,8 +53,7 @@
       "url": "https://www.qbitai.com/2026/08/478358.html",
       "publishedAt": "2026-08-24T07:19:06Z",
       "score": 20.0,
-      "language": "zh",
-      "readerFile": "./data/readers/74672017506334d2.json"
+      "language": "zh"
     },
     {
       "title": "WRC唯一真「人机共生」展台，是家沉浸式机器人咖啡店",
@@ -68,8 +62,7 @@
       "url": "https://www.qbitai.com/2026/08/478319.html",
       "publishedAt": "2026-08-23T21:20:00Z",
       "score": 19.81,
-      "language": "zh",
-      "readerFile": "./data/readers/b097b7b4bcd9011f.json"
+      "language": "zh"
     },
     {
       "title": "npm 终于动手了：默认封杀 postinstall 脚本",
@@ -78,8 +71,7 @@
       "url": "https://www.infoq.cn/article/fPGPEF2hwCKtz3PTg69C",
       "publishedAt": "2026-08-22T00:00:00Z",
       "score": 19.55,
-      "language": "zh",
-      "readerFile": "./data/readers/cfa22b955ccacfb6.json"
+      "language": "zh"
     },
     {
       "title": "JetBrains详细阐述了控制AI支出快速增长的首批举措",
@@ -88,8 +80,7 @@
       "url": "https://www.infoq.cn/article/CQhb4TOREpEZshtqWZMy",
       "publishedAt": "2026-08-22T00:00:00Z",
       "score": 19.55,
-      "language": "zh",
-      "readerFile": "./data/readers/7f7e2ffa5702c72f.json"
+      "language": "zh"
     },
     {
       "title": "向量数据库要被取代？DynamoDB 开始原生支持 AI 搜索",
@@ -98,8 +89,7 @@
       "url": "https://www.infoq.cn/article/9YicfQysexJdmx11xG4m",
       "publishedAt": "2026-08-23T00:00:00Z",
       "score": 18.75,
-      "language": "zh",
-      "readerFile": "./data/readers/f5d616c1dcc4f840.json"
+      "language": "zh"
     },
     {
       "title": "Dispatches from O'Reilly: The right amount of spec for agentic development",
@@ -108,8 +98,7 @@
       "url": "https://stackoverflow.blog/2026/08/21/dispatches-from-o-reilly-the-right-amount-of-spec-for-agentic-development/",
       "publishedAt": "2026-08-21T14:00:00Z",
       "score": 19.05,
-      "language": "en",
-      "readerFile": "./data/readers/5326052fa9a2d964.json"
+      "language": "en"
     },
     {
       "title": "Get rid of your CAPTCHA, the future of the web is bots",
@@ -118,8 +107,7 @@
       "url": "https://stackoverflow.blog/2026/08/21/get-rid-of-your-captcha-the-future-of-the-web-is-bots/",
       "publishedAt": "2026-08-21T07:40:00Z",
       "score": 18.73,
-      "language": "en",
-      "readerFile": "./data/readers/509ebc167a081f7b.json"
+      "language": "en"
     },
     {
       "title": "具身创业里的香港教授们",
@@ -128,8 +116,7 @@
       "url": "https://www.qbitai.com/2026/08/478289.html",
       "publishedAt": "2026-08-23T19:20:13Z",
       "score": 19.72,
-      "language": "zh",
-      "readerFile": "./data/readers/c6d1afef5b758b20.json"
+      "language": "zh"
     },
     {
       "title": "他给了王兴兴第一个200万，现在给下一个「宇树」当董事长",
@@ -138,8 +125,7 @@
       "url": "https://www.qbitai.com/2026/08/478234.html",
       "publishedAt": "2026-08-23T19:17:22Z",
       "score": 19.71,
-      "language": "zh",
-      "readerFile": "./data/readers/64ecf93cfdbfcb11.json"
+      "language": "zh"
     },
     {
       "title": "英伟达AI服务器将涨价15%！1GW数据中心成本激增50亿美元",
@@ -148,8 +134,7 @@
       "url": "https://www.qbitai.com/2026/08/478164.html",
       "publishedAt": "2026-08-23T17:51:49Z",
       "score": 19.64,
-      "language": "zh",
-      "readerFile": "./data/readers/6710d8a10dac2fd9.json"
+      "language": "zh"
     },
     {
       "title": "全球首次！机器人迎战网球运动员，极限救球，摔倒光速弹起",
@@ -158,8 +143,7 @@
       "url": "https://www.qbitai.com/2026/08/478093.html",
       "publishedAt": "2026-08-23T17:45:27Z",
       "score": 19.64,
-      "language": "zh",
-      "readerFile": "./data/readers/68285ee4b6b37218.json"
+      "language": "zh"
     },
     {
       "title": "不做硅谷follower：几个读博的年轻人，押注双足人形的一体化大脑",
@@ -168,8 +152,7 @@
       "url": "https://www.qbitai.com/2026/08/478020.html",
       "publishedAt": "2026-08-23T17:29:59Z",
       "score": 19.62,
-      "language": "zh",
-      "readerFile": "./data/readers/ec2d347d13ea9df4.json"
+      "language": "zh"
     },
     {
       "title": "你的第一个个人机器人开启预订！上纬新材拉开家庭机器人消费时代序幕",
@@ -178,9 +161,7 @@
       "url": "https://www.qbitai.com/2026/08/478017.html",
       "publishedAt": "2026-08-23T15:17:41Z",
       "score": 19.51,
-      "language": "zh",
-      "readerFile": "./data/readers/266e441d0c74f371.json"
+      "language": "zh"
     }
-  ],
-  "background": "./assets/backgrounds/paper-signal.png"
+  ]
 }

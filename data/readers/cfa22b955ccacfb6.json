@@ -1,0 +1,21 @@
+{
+  "title": "npm 终于动手了：默认封杀 postinstall 脚本",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-08-22T00:00:00Z",
+  "url": "https://www.infoq.cn/article/fPGPEF2hwCKtz3PTg69C",
+  "paragraphs": [
+    "由 GitHub 维护并随 Node.js 一同提供的软件包管理器 npm 发布了 npm 12 。该版本更改了 npm install 的一系列安全相关默认行为，同时弃用可以绕过双因素认证的细粒度访问令牌。",
+    "npm 12 将此前自动执行的三种安装行为改为需要开发者明确选择启用。这些更改于 今年 6 月首次公布 ，并从 npm 11.16.0 开始通过警告形式提供，以便团队在升级前做好准备。",
+    "最重要的变化是 allowScripts 现在默认为关闭。依赖项的 preinstall、install 和 postinstall 脚本不再运行，除非项目明确允许它们运行。这也包括任何包含 binding.gyp 文件的软件包隐式执行的 node-gyp 构建，即使该软件包并未声明安装脚本。来自 Git、文件和链接依赖项的 prepare 脚本也会以相同方式被阻止。开发者可以审查等待运行的脚本，批准自己信任的脚本，然后将生成的允许列表提交到 package.json 中。",
+    "另外两项默认设置针对非注册表来源。--allow-git 现在默认为 none，关闭了一条代码执行路径：在这条路径中，即使设置了 --ignore-scripts，Git 依赖项自己的 .npmrc 仍可以覆盖 Git 可执行文件。--allow-remote 也默认为 none，用于阻止 HTTPS tarball 依赖项。相关的 --allow-file 和 --allow-directory 标志保持不变。",
+    "GitHub 的 迁移讨论 建议首先允许依赖树中已经存在的内容，然后再逐步收紧限制，并提供了针对原生模块、Cypress、Playwright、Puppeteer、Electron 和 Husky 的配置方法。全局安装和 npx 无法使用 approve-scripts，需要改用配置，例如 npm config set allow-scripts=canvas,sharp --location=user。完整细节可参阅 npm approve-scripts 、 npm deny-scripts 和 allow-scripts 配置 文档。讨论中的评论者指出，现有的 ignore-scripts=true 设置具有更高优先级，会在没有提示的情况下使允许列表失效；新安装的软件包还会造成一个先有鸡还是先有蛋的问题，因为 npm approve-scripts 会从 node_modules 中读取信息，如果软件包尚未安装，就会报告 ENOMATCH 错误。",
+    "社区的整体反应较为支持。 Hacker News 上的讨论 获得了 484 分和 200 多条评论，atraac 写道：",
+    "postinstall 脚本早就应该被移除了，它就是 NPM 软件包的毒瘤。依赖深处存在大量不受控制的 postinstall，只要拉取一些东西，它们就会随机运行，简直荒谬。我不知道当初怎么会有人认为这是一个好主意。",
+    "其他人则没有那么信服。gear54rus 指出了 patch-package 等合理使用场景，cookiengineer 则认为允许列表“没有作用域”，导致“你的依赖项所依赖的任何软件包是否需要脚本都变得不可预测”。",
+    "安全研究人员认为，更大的风险在于审批疲劳。OpenSourceMalware 的一位分析师在 文章 中指出，esbuild、sharp、core-js、puppeteer 和 bcrypt 都依赖生命周期脚本，并警告反复出现的构建失败会让默认拒绝机制变成“一个直接点过去的提示框”，同时把攻击者的活动推向可见性更低的攻击面。 JFrog 报告称，在过去一年观察到的恶意 npm 攻击中，这三种攻击途径涉及的事件约占 53%。",
+    "npm 也是最后一个采用这些控制措施的主流软件包管理器。pnpm 多年来一直提供安装脚本允许列表。在冷却期机制方面，pnpm 10.16 引入了 minimumReleaseAge，Yarn 4.10.0 增加了 npmMinimalAgeGate，Bun 随后在 1.3 版本中跟进，这些都早于 npm 自己在 11.10.0 中推出的 min-release-age。",
+    "npm 是 Node.js 的默认软件包管理器，由 GitHub 维护。它托管着全球最大的软件注册表，为开发者提供命令行客户端和注册表，用于安装、共享和发布可复用的 JavaScript 与 TypeScript 软件包。作为更广泛的 Node.js 生态系统的基础组成部分，npm 被广泛用于前端和后端项目，以管理依赖项、运行脚本，并大规模分发开源代码。",
+    "原文链接： https://www.infoq.com/news/2026/08/npm-12-released/"
+  ],
+  "isExcerpt": true
+}

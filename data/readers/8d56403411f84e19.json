@@ -1,0 +1,25 @@
+{
+  "title": "Cloudflare 推出 Agent Tracing：支持截断限制，不同框架的 Payload 默认记录策略存在差异",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-08-22T00:00:00Z",
+  "url": "https://www.infoq.cn/article/IBYDTeu3rse9tH3549wf",
+  "paragraphs": [
+    "Cloudflare 推出了 Cloudflare Agents 的首个组件， Agent Tracing （Agent 追踪），可提供用于集中查看已经部署的 Agent 会话的统一 Dashboard。此次发布在现有 Workers Tracing 的基础上增加了 Agent 级别的 Span，同时也伴随着明确的收费时间表：Beta 期间免费，2026 年 10 月 1 日起将纳入 Workers Observability 的计费体系。",
+    "这一功能真正要解决的问题值得关注。一个 Agent 即使返回 HTTP 200，也不意味着它运行正常。它可能选择了错误的工具，将过时的上下文交给 Subagent，或者在重试循环中不断消耗 Token。而应用层遥测通常只能告诉你发生了一次 API 请求或数据库查询，却无法解释究竟是什么 Agent 行为导致了这些问题。",
+    "此前， Workers Tracing 已经能够对基础设施层进行追踪，包括 Fetch 调用、KV 读取和 D1 查询等。但直到现在，在 Workers 上运行的 Agent，其 Trace 中只有这些基础设施 Span，缺少 Agent 自身行为的信息。Agent Tracing 新增了 Agent 调用、模型调用、工具执行和审批等 Span，并将模型信息和 Token 使用量作为元数据附加到其中。每一轮交互都会生成一条 Trace：",
+    "invoke_agent {agent class } ├── chat {model} └── execute_tool {tool} └── tool_approval {tool} 复制代码",
+    "Subagent 的工作会嵌套在调用它的操作之下。因此，如果一个父 Agent 将任务交给 Subagent，而 Subagent 又调用模型、执行工具、查询 D1 并写入 KV，那么整个过程就会以一条完整的瀑布流呈现出来，覆盖两个层级。有三个字段用于将 Span 与 Dashboard 中的 Agent 对应起来：Agent name 用于标识逻辑实现，Agent ID 用于标识具体实例，Conversation ID 则用于标识会话。Cloudflare 特别提醒，不要根据请求或用户标识符动态生成 Agent name，否则 Dashboard 中会出现大量不同的 Agent。",
+    "这种关联方式正是开发者对这一功能感兴趣的地方。在 Cloudflare 的 X 平台公告 下，Mykyta Pavlenko 留言称：",
+    "我想在 Hermes 上试试这个功能，就为了看 Trace 瀑布流——能够直接看到模型调用下面紧接着出现一个错误的工具参数，这正是我想要的调试视图。",
+    "不过，Approval Span 本身存在一个值得注意的限制。 文档 指出，这类 Span 表示 Worker invocation 内部的生命周期事件，并不会记录用户跨多个 invocation 进行响应时所等待的时间。换句话说，Human-in-the-loop 延迟（或许是审批流程中最值得关注的指标）并不是这个 Span 所记录的内容。",
+    "除了 Trace 视图之外，Session Replay 还可以跨多个交互轮次重新组合已经记录的会话，包括消息、推理过程、带参数和结果的工具调用，以及 Subagent 活动。Cloudflare 明确指出，这一功能只是重放已经记录的数据，并不会重新执行 Agent。",
+    "真正需要团队特别关注的是 Payload 记录，因为不同开发框架的默认行为并不一致。Think 默认不会保存消息或工具 Payload，除非在 Agent class 中设置 storeMessages 和 storeTools ； wrapAISDK() 的行为也相同。而 Flue 默认会保存消息、系统指令、工具定义、参数和结果，需要设置 content: false 才能停止记录。也就是说，同一平台提供的这一功能，根据团队所使用的 Harness 不同，默认隐私策略可能完全相反。而消息 Payload 中又经常包含个人数据或 Secret。",
+    "文档列出的限制同样值得关注。Cloudflare 明确表示，Trace 并不是完整且无损的会话记录；Payload 数据受到 Span 大小限制，因此较长的消息、推理过程、工具参数和工具结果都可能被截断。此外，Session Replay 不会显示图片。如果团队把 Replay 当作审计记录，而不仅仅是调试工具，那么这些限制意味着它可能无法完全胜任。",
+    "具体配置方式取决于使用的技术栈。Think 和 Flue v2 及更高版本会自动对每轮交互进行埋点。直接调用 AI SDK 时，则需要使用 wrapAISDK() 进行封装。它支持 v6 和 v7，并要求在每次调用中提供身份字段，因为此时不存在可以自动提供这些信息的 Agent 实例。",
+    "自定义 Harness 则需要使用 Workers Custom Spans API，并遵循 OpenTelemetry 的 GenAI 参考实现，因为 Workers 目前还不直接支持 OpenTelemetry API。Cloudflare 表示，他们正在开发这项支持。完成后，能够生成标准 Span 的框架就可以直接接入，而无需手动埋点。",
+    "Span 属性遵循 OpenTelemetry 的生成式 AI 语义约定 ，Trace 则可以导出到任意 OTLP Endpoint。",
+    "计费细节也值得仔细阅读，因为实际计费单位与 Agents 视图中显示的内容并不完全相同。每个 Span 都会计为一次 Observability Event，包括 SDK 内部产生的 Span，以及其他 Worker 层面的操作，即使这些内容并不会显示在 Agents 视图中。从 2026 年 10 月 1 日开始，Workers Free 每天包含 20 万次 Event，保留期为 3 天；Workers Paid 每月包含 2000 万次 Event，保留期为 7 天，超出部分按每 100 万次 0.60 美元计费。因此，一个产生大量 Span 的复杂 Harness，其实际成本可能高于 Dashboard 给人的直观印象。而对于需要追踪长期趋势、而不仅仅是排查单次事故的团队来说，3 到 7 天的保留期也相对有限。",
+    "这一发布与本季度多个厂商呈现出的趋势一致。微软的 Agent Framework Harness 默认启用了 OpenTelemetry；Azure API Management 的 AI Gateway 层也可以将 Token 指标导出到 Application Insights、Datadog 和 Grafana。虽然各家厂商采取的路径不同，但最终得出的结论基本一致：Agent Runtime 需要自己的遥测层，仅靠基础设施 Span 无法解释 Agent 究竟做了什么。"
+  ],
+  "isExcerpt": true
+}

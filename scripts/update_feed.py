@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "radar.json"
 ARCHIVE_DIR = ROOT / "data" / "archive"
 ARCHIVE_INDEX = ARCHIVE_DIR / "index.json"
+LATEST_ARCHIVE = ARCHIVE_DIR / "latest.json"
 READER_DIR = ROOT / "data" / "readers"
 NOW = datetime.now(timezone.utc)
 
@@ -370,7 +371,10 @@ def write_archive(payload: dict) -> None:
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
     edition_date = NOW.strftime("%Y-%m-%d")
     archive_file = ARCHIVE_DIR / f"{edition_date}.json"
-    archive_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    archive_payload = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+    archive_file.write_text(archive_payload, encoding="utf-8")
+    # Lets the archive page request its initial edition alongside the index.
+    LATEST_ARCHIVE.write_text(archive_payload, encoding="utf-8")
 
     existing = {"editions": []}
     if ARCHIVE_INDEX.exists():
