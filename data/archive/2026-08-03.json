@@ -1,0 +1,97 @@
+{
+  "updatedAt": "2026-08-03T00:00:00.0000000Z",
+  "items": [
+    {
+      "title": "这个新生图模型有点夯：4K直出的，国产的，开源的！",
+      "summary": "商汤预览了SenseNova U1.5 Lite",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/465673.html",
+      "publishedAt": null,
+      "score": 2,
+      "language": "zh"
+    },
+    {
+      "title": "阿里Qwen3.8正式发布，编程与办公再进化，推理更快更稳定",
+      "summary": "阿里巴巴正式发布新一代基座大模型Qwen3.8，整体性能处于全球大模型第一梯队。Qwen3.8-Max预计下周开源，同时还将开源 Qwen3.8-27B。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/465215.html",
+      "publishedAt": null,
+      "score": 2,
+      "language": "zh"
+    },
+    {
+      "title": "AI不再用完即忘：华为诺亚开源MindMemOS，记忆和Skill一起进化",
+      "summary": "面向AI Agent的可迁移、自演进记忆操作层MindMemOS",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/464835.html",
+      "publishedAt": null,
+      "score": 2,
+      "language": "zh"
+    },
+    {
+      "title": "刚刚，阿里Qwen3.8-Max来了！冲进全球第一梯队，模型表现直逼Claude",
+      "summary": "编程、专业工作、长程任务、多模态分析统统梭哈",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/465226.html",
+      "publishedAt": null,
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "阿里“千问办公”开启公测",
+      "summary": "阿里巴巴旗下“千问办公”（QwenWork）开启公测，个人和企业用户均可体验。用户可在“千问办公”体验阿里最新旗舰模型Qwen3.8。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/465211.html",
+      "publishedAt": null,
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "年薪百万抢电工，Meta急到自己办技校",
+      "summary": "电工短缺已经成为我们在美国扩建数据中心的头号障碍",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/465223.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "当品牌开始争夺AI的答案：翰智GEO入场",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/465662.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "2026中国科创投资夏季峰会暨陕西科创产业生态大会圆满落幕",
+      "summary": "由融中财经和秦创原科技创新投资集团主办的2026（第十二届）中国科创投资夏季峰会暨陕西科创产业生态大会圆满落下帷幕。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/465361.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "Demo的高估值时代结束了，具身智能开始按生产力重新算账",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/465225.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "赛博义父Tibo爆料：谷歌早一年就做出了ChatGPT，硬是没敢发！",
+      "summary": "终究还是喜提了「美国豆包」",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/465176.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    }
+  ],
+  "background": "./assets/backgrounds/scientific-archive.png",
+  "historical": true
+}

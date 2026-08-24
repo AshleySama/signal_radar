@@ -1,0 +1,97 @@
+{
+  "updatedAt": "2026-08-10T00:00:00.0000000Z",
+  "items": [
+    {
+      "title": "PDF当死，ARA该立！论文是时候Agent原生了",
+      "summary": "以后论文的第一读者不是人，而是AI？",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469721.html",
+      "publishedAt": null,
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "模型路线趋同之后，Physical AI的胜负手变了",
+      "summary": "物理AI新瓶颈已出现",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469544.html",
+      "publishedAt": null,
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "3B模型碾压英伟达谷歌后，Om AI端侧原生VLX模型：小参数实现物理世界精准感知",
+      "summary": "从云计算到云原生，产业真正的跃迁从来不是简单堆算力，而是找到更适合新世界的架构。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469076.html",
+      "publishedAt": null,
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "AI倒查论文100年！99.2%的顶刊都有问题…",
+      "summary": "科研人快来啊，天上掉选题了",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469795.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "对话郎咸朋：具身也会有“蔚小理”，靠融资实现不了物理AGI",
+      "summary": "“我们90天就成了独角兽”",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469520.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "Claude Code倒计时5天默认自动模式，多花的钱A社自己掏",
+      "summary": "会话越长，人的表现越差",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469500.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "Meoo秒悟团队版全量上线， 接入Qwen-3.8-Max、即日起可直接订阅",
+      "summary": "从面向个人的AI创作工具，扩展为可供组织使用的生产力平台",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469493.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "苹果开测长鑫存储！百度、千问也一起挤进苹果供应链",
+      "summary": "先解决这轮内存荒！",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469475.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "墨芯成立稀疏计算产学研联盟，以生态协同突破产业化壁垒",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469454.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "魔幻灵巧手：半年200亿热钱，3大路线，贵到几十万一只",
+      "summary": "全球灵巧手企业约50%在中国，且绝大多数将筹码押在了「五指」上。 需求、资本和创业者正在快速推动，但从技术成熟、规模化量产到商业落地，中间仍隔着巨大的工程鸿沟。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/469213.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    }
+  ],
+  "background": "./assets/backgrounds/paper-signal.png",
+  "historical": true
+}

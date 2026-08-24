@@ -1,0 +1,88 @@
+{
+  "updatedAt": "2026-06-26T00:00:00.0000000Z",
+  "items": [
+    {
+      "title": "两个月连获两轮数亿元融资 深度机智以全栈自主路线加速国产物理AI基座模型落地",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/438887.html",
+      "publishedAt": null,
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "英伟达MoE新开源：一行import，微调加速3.7倍",
+      "summary": "在Transformers v5的基础上，增加了专家并行、DeepEP和TransformerEngine",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/438703.html",
+      "publishedAt": null,
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "谷歌「推理之王」也跑路Meta了，当年还是李飞飞挖来的",
+      "summary": "Coding为王",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/438848.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "Claude Fable 5分批重新上线！GPT-5.6秒跟",
+      "summary": "这不能是营销计划的一部分吧？",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/438789.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "从需求到设计到代码，一个软件全搞定！TRAE Work Design实测来了",
+      "summary": "精准识别设计系统",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/438750.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "华勤技术与正行创新达成战略合作，加速机器人“走进工厂、走上产线”",
+      "summary": "共建工业物理智能“数据底座与智能大脑”",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/438741.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "让机器人学会“预判接触”：它石智航牵头四大顶尖机构发布TacForeSight，破解精细操作难题",
+      "summary": "提前200毫秒预判",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/438701.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "WAVES 2026：今年盛夏，在创投浪潮里，做迎风而立的少数人！",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/438698.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "库克临走给苹果涨价！电脑iPad全线上调，iPhone 18也跑不了",
+      "summary": "Macbook涨了2500元",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/438690.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    }
+  ],
+  "background": "./assets/backgrounds/paper-signal.png",
+  "historical": true
+}

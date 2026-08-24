@@ -8,7 +8,9 @@ republishing the source articles.
 from __future__ import annotations
 
 import html
+import hashlib
 import json
+import random
 import re
 import sys
 import urllib.request
@@ -22,6 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "radar.json"
 ARCHIVE_DIR = ROOT / "data" / "archive"
 ARCHIVE_INDEX = ARCHIVE_DIR / "index.json"
+READER_DIR = ROOT / "data" / "readers"
 NOW = datetime.now(timezone.utc)
 
 SOURCES = (
@@ -54,6 +57,12 @@ LOW_SIGNAL = (
 )
 MAX_AGE_DAYS = 3
 MAX_ITEMS = 18
+MAX_READER_CHARS = 6000
+MAX_READER_PARAGRAPHS = 16
+BACKGROUND_ASSETS = (
+    "./assets/backgrounds/paper-signal.png",
+    "./assets/backgrounds/scientific-archive.png",
+)
 ROUTINE_RELEASE = re.compile(r"^(?:release\s+)?v?\d+\.\d+\.\d+", re.IGNORECASE)
 
 
@@ -145,7 +154,7 @@ def github_trending_page_entries() -> list[dict]:
         "source": "GitHub Trending",
         "url": "https://github.com/trending?since=weekly",
         "publishedAt": NOW.isoformat().replace("+00:00", "Z"),
-        "score": 100,
+        "score": 18,
         "language": "zh",
     }]
 
@@ -158,6 +167,56 @@ def fetch_text(url: str) -> str:
     request = urllib.request.Request(url, headers={"User-Agent": "FuncDance-Signal-Radar/1.0"})
     with urllib.request.urlopen(request, timeout=25) as response:
         return response.read().decode("utf-8", errors="replace")
+
+
+def reader_paragraphs(page: str, fallback: str) -> list[str]:
+    """Keep a short on-site reading extract, not a mirrored full article."""
+    page = re.sub(r"<(?:script|style|svg|noscript)[^>]*>.*?</(?:script|style|svg|noscript)>", " ", page, flags=re.DOTALL | re.IGNORECASE)
+    candidates = [clean_text(value) for value in re.findall(r"<p[^>]*>(.*?)</p>", page, re.DOTALL | re.IGNORECASE)]
+    output: list[str] = []
+    used: set[str] = set()
+    length = 0
+    for paragraph in candidates:
+        key = paragraph.lower()
+        if len(paragraph) < 55 or key in used:
+            continue
+        if length + len(paragraph) > MAX_READER_CHARS:
+            break
+        output.append(paragraph)
+        used.add(key)
+        length += len(paragraph)
+        if len(output) == MAX_READER_PARAGRAPHS:
+            break
+    return output or ([fallback] if fallback else ["该来源暂未生成可读节选。"])
+
+
+def cache_reader_items(items: list[dict]) -> None:
+    READER_DIR.mkdir(parents=True, exist_ok=True)
+    for item in items:
+        digest = hashlib.sha256(item["url"].encode("utf-8")).hexdigest()[:16]
+        filename = f"{digest}.json"
+        fallback = item.get("summaryZh") or item.get("summary") or ""
+        if item["source"] == "GitHub Trending":
+            paragraphs = [fallback]
+        else:
+            try:
+                paragraphs = reader_paragraphs(fetch_text(item["url"]), fallback)
+            except Exception as error:
+                print(f"Reader cache {item['source']}: {error}", file=sys.stderr)
+                paragraphs = [fallback] if fallback else ["该来源暂未生成可读节选。"]
+        reader_payload = {
+            "title": item.get("titleZh") or item.get("title", ""),
+            "source": item["source"],
+            "publishedAt": item["publishedAt"],
+            "url": item["url"],
+            "paragraphs": paragraphs,
+            "isExcerpt": True,
+        }
+        (READER_DIR / filename).write_text(
+            json.dumps(reader_payload, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        item["readerFile"] = f"./data/readers/{filename}"
 
 
 def meta_content(page: str, names: tuple[str, ...]) -> str:
@@ -430,10 +489,12 @@ def main() -> int:
     payload = {
         "updatedAt": NOW.isoformat().replace("+00:00", "Z"),
         "items": items,
+        "background": random.choice(BACKGROUND_ASSETS),
     }
     if not items:
         print("No qualifying items; keeping the previous published edition.", file=sys.stderr)
         return 1
+    cache_reader_items(items)
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     write_archive(payload)

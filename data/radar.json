@@ -163,5 +163,6 @@
       "score": 19.51,
       "language": "zh"
     }
-  ]
+  ],
+  "background": "./assets/backgrounds/paper-signal.png"
 }

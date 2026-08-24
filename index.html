@@ -6,7 +6,7 @@
   <meta name="description" content="Signal Radar - 每周三次，汇总值得关注的全球 AI、开发者与开源技术信号。">
   <title>Signal Radar - 全球技术雷达</title>
   <style>
-    :root { --paper:#f7f6f2; --ink:#22211f; --muted:#77736d; --faint:#dedbd4; --accent:#c75b32; }
+    :root { --paper:#f7f6f2; --ink:#22211f; --muted:#77736d; --faint:#dedbd4; --accent:#c75b32; --hero-background:url("./assets/backgrounds/scientific-archive.png"); }
     * { box-sizing:border-box; }
     html { background:var(--paper); scroll-behavior:smooth; }
     body { margin:0; color:var(--ink); background:var(--paper); font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; }
@@ -18,7 +18,7 @@
     .nav-right { display:flex; align-items:center; gap:27px; color:#56524d; font-size:13px; }
     .nav-right a { color:inherit; text-decoration:none; } .nav-right a:hover { color:var(--accent); }
     .nav-note { color:var(--accent); font-size:12px; letter-spacing:.1em; }
-    .hero { position:relative; min-height:483px; display:grid; place-items:center; padding:96px 24px 78px; text-align:center; border-bottom:1px solid var(--faint); background:radial-gradient(ellipse 33% 47% at 50% 46%,rgba(234,194,173,.48),transparent 80%),radial-gradient(ellipse 50% 65% at 50% 42%,rgba(255,255,255,.75),transparent 86%); }
+    .hero { position:relative; min-height:483px; display:grid; place-items:center; padding:96px 24px 78px; text-align:center; border-bottom:1px solid var(--faint); background-color:#f7f6f2; background-image:var(--hero-background); background-position:center; background-size:cover; }
     .hero::after { content:""; position:absolute; width:min(680px,84vw); height:1px; bottom:0; background:linear-gradient(90deg,transparent,var(--accent),transparent); opacity:.55; }
     .eyebrow { margin:0 0 23px; color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.2em; }
     h1 { max-width:940px; margin:0; font-family:Georgia,"Times New Roman","Noto Serif SC","Songti SC",serif; font-size:clamp(46px,6vw,82px); font-weight:500; line-height:1.16; letter-spacing:0; }
@@ -36,9 +36,11 @@
     .item { display:grid; width:100%; grid-template-columns:48px minmax(0,1fr) 120px 20px; align-items:center; gap:16px; padding:25px 0; color:var(--ink); border:0; border-bottom:1px solid var(--faint); background:transparent; font:inherit; text-align:left; cursor:pointer; transition:padding .24s ease,color .24s ease; }
     .item:hover,.item.active { padding-left:8px; padding-right:8px; color:var(--accent); }
     .index { color:#aaa59e; font-family:Georgia,serif; font-size:13px; }
+    .item-body { position:relative; display:block; min-width:0; }
     .item-title { font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:20px; font-weight:500; line-height:1.42; }
     .item-summary { display:block; max-width:700px; margin-top:6px; color:var(--muted); font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; font-size:12px; line-height:1.7; }
     .source { color:#6e6963; font-size:12px; line-height:1.7; text-align:right; }
+    .read-stamp { position:absolute; right:4px; bottom:-11px; width:43px; opacity:.56; mix-blend-mode:multiply; transform:rotate(-9deg); pointer-events:none; }
     .arrow { color:var(--accent); font-size:20px; font-weight:300; text-align:right; }
     .empty { padding:70px 0; color:var(--muted); font-size:14px; text-align:center; border-bottom:1px solid var(--faint); }
     .principles { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:30px; max-width:1120px; margin:69px auto 0; padding:0 12px 68px; }
@@ -82,10 +84,13 @@
   <script>
     const items = document.querySelector("#items");
     const updated = document.querySelector("#updated");
+    const readKey = "signal-radar-read-urls";
+    const readUrls = new Set(JSON.parse(localStorage.getItem(readKey) || "[]"));
     function escapeHtml(value) { const node = document.createElement("div"); node.textContent = value || ""; return node.innerHTML; }
     function dateLabel(value) { return value ? new Intl.DateTimeFormat("zh-CN", { month:"long", day:"numeric" }).format(new Date(value)) : ""; }
     fetch("./data/radar.json").then(function(response) { return response.json(); }).then(function(data) {
       const list = data.items || [];
+      if (data.background) document.documentElement.style.setProperty("--hero-background", 'url("' + data.background + '")');
       updated.textContent = data.updatedAt ? "更新于 " + new Date(data.updatedAt).toLocaleString("zh-CN", { dateStyle:"medium", timeStyle:"short" }) : "等待首次自动抓取";
       if (!list.length) return;
       function openOriginal(item) { const popup = window.open(item.url, "signal-radar-reader", "popup=yes,width=1120,height=840,noopener"); if (popup) popup.focus(); }
@@ -94,10 +99,10 @@
         const summary = item.summaryZh || item.summary || "";
         return '<button class="item" type="button" data-index="' + index + '">' +
           '<span class="index">' + String(index + 1).padStart(2, "0") + '</span>' +
-          '<span><span class="item-title">' + escapeHtml(title) + '</span>' + (summary ? '<span class="item-summary">' + escapeHtml(summary) + '</span>' : '') + '</span>' +
+          '<span class="item-body"><span class="item-title">' + escapeHtml(title) + '</span>' + (summary ? '<span class="item-summary">' + escapeHtml(summary) + '</span>' : '') + (readUrls.has(item.url) ? '<img class="read-stamp" src="./assets/read-stamp.jpeg" alt="已阅">' : '') + '</span>' +
           '<span class="source">' + escapeHtml(item.source) + '<br>' + dateLabel(item.publishedAt) + '</span><span class="arrow">↗</span></button>';
       }).join("");
-      items.querySelectorAll(".item").forEach(function(button) { button.addEventListener("click", function() { openOriginal(list[Number(button.dataset.index)]); }); });
+      items.querySelectorAll(".item").forEach(function(button) { button.addEventListener("click", function() { const item = list[Number(button.dataset.index)]; readUrls.add(item.url); localStorage.setItem(readKey, JSON.stringify(Array.from(readUrls))); if (!button.querySelector(".read-stamp")) button.querySelector(".item-body").insertAdjacentHTML("beforeend", '<img class="read-stamp" src="./assets/read-stamp.jpeg" alt="已阅">'); openOriginal(item); }); });
     }).catch(function() { updated.textContent = "数据文件尚未生成"; });
   </script>
 </body>

@@ -1,0 +1,79 @@
+{
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "items": [
+    {
+      "title": "蚂蚁集团推出海外AI支付解决方案 商户可实现全球智能体运营",
+      "summary": "协助用户与商家判断智能体可信赖程度",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/432587.html",
+      "publishedAt": "2026-06-08T10:40:55Z",
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "大模型看Coding，具身看Picking！原力灵机已抢先入局",
+      "summary": "轻视它就会错过整个时代",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/432417.html",
+      "publishedAt": "2026-06-08T06:30:23Z",
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "高德发布ABot-Earth0.5：跨越2D蒸馏模式，以3D原生驱动高一致性场景生成",
+      "summary": "ABot-Earth0.5正式开放内测",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/432489.html",
+      "publishedAt": "2026-06-08T09:00:20Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "难上热搜的高考数学，我拿ChatGPT和豆包PK了一把！",
+      "summary": "豆包硬刚ChatGPT",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/432425.html",
+      "publishedAt": "2026-06-08T08:28:48Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "AI创业者集结！“2026新一代人工智能（深圳）创业创新大赛”正式启动",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/432581.html",
+      "publishedAt": "2026-06-08T08:09:25Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "马斯克SpaceX路演PPT：60页，值1.77万亿美元",
+      "summary": "最值得看的不是火箭是AI",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/432084.html",
+      "publishedAt": "2026-06-08T05:02:40Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "让矩阵归模拟，让逻辑归数字！这家中国团队重新定义了计算机",
+      "summary": "黄仁勋要算一万步，这家公司的芯片只需一步",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/432062.html",
+      "publishedAt": "2026-06-08T04:36:03Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "高通点赞广汽埃安N60智驾大赛获亚军，文远知行WRD 3.0亮相高通峰会",
+      "summary": "文远知行携L2++ 一段式端到端方案WRD 3.0参展",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/432055.html",
+      "publishedAt": "2026-06-08T03:17:35Z",
+      "score": 0,
+      "language": "zh"
+    }
+  ],
+  "background": "./assets/backgrounds/scientific-archive.png",
+  "historical": true
+}

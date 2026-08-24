@@ -1,0 +1,34 @@
+{
+  "updatedAt": "2026-06-19T00:00:00.0000000Z",
+  "items": [
+    {
+      "title": "我把昨晚的梦输入AI，它居然直接把我拉进去玩儿了一把？！",
+      "summary": "创作者的终极玩具来了",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/436864.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "GPT发AI原创新成果了",
+      "summary": "AI实现药物全自动研发，还远吗？",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/436842.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "全球首个人形机器人通用小脑来了！全球最大规模2万小时人类动作数据，实现零样本泛化",
+      "summary": "人形机器人正式迈入“GPT时代”",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/06/436813.html",
+      "publishedAt": null,
+      "score": 0,
+      "language": "zh"
+    }
+  ],
+  "background": "./assets/backgrounds/scientific-archive.png",
+  "historical": true
+}

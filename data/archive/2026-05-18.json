@@ -1,0 +1,88 @@
+{
+  "updatedAt": "2026-05-18T00:00:00Z",
+  "items": [
+    {
+      "title": "8B模型做生物实验：实验步骤顺序不乱、剂量无幻觉｜ICLR 2026",
+      "summary": "超越GPT-4o",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/05/419386.html",
+      "publishedAt": "2026-05-18T06:52:11Z",
+      "score": 1,
+      "language": "zh"
+    },
+    {
+      "title": "重塑主流PC，第三代英特尔酷睿开启全民AI轻薄本时代",
+      "summary": "芯片与系统级双重创新",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/05/419585.html",
+      "publishedAt": "2026-05-18T13:16:45Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "AI水论文封一年，署名连坐！arXiv最严新规来了，陶哲轩附议",
+      "summary": "生成论文远比消化容易",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/05/419528.html",
+      "publishedAt": "2026-05-18T12:18:30Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "华为“养”出半个具身智能创业圈",
+      "summary": "正在经历一次罕见的人才外溢。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/05/419414.html",
+      "publishedAt": "2026-05-18T08:54:30Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "上交x创智x瑞金联合发布CX-Mind：胸片诊断进入“可验证推理”时代",
+      "summary": "五项维度全部排名第一",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/05/419396.html",
+      "publishedAt": "2026-05-18T06:57:10Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "信通院&清华提出FedRE：用「纠缠」搞定联邦学习三难困境 | CVPR 26",
+      "summary": "隐私和性能我全都要",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/05/419373.html",
+      "publishedAt": "2026-05-18T06:44:04Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "黄仁勋北京必吃榜我们都尝了！后海酒吧老板：他答应以后每年来一次",
+      "summary": "老黄严选北京游",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/05/419278.html",
+      "publishedAt": "2026-05-18T06:03:53Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "LeCun炮轰Hinton：他认可LLM就是想摆烂退休了！",
+      "summary": "Lecun这次是真跟Hinton爆了……",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/05/419272.html",
+      "publishedAt": "2026-05-18T05:59:37Z",
+      "score": 0,
+      "language": "zh"
+    },
+    {
+      "title": "30万奖金池，这道汉语方言对话题等你来解丨第十一届信也科技杯全球AI算法大赛",
+      "summary": "更有NLPCC2026直通名额",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/05/419256.html",
+      "publishedAt": "2026-05-18T05:08:22Z",
+      "score": 0,
+      "language": "zh"
+    }
+  ],
+  "background": "./assets/backgrounds/scientific-archive.png",
+  "historical": true
+}
