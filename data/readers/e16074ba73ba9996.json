@@ -1,0 +1,21 @@
+{
+  "title": "Next.js 16.3 发布：即时导航、开发内存最高降低 90%，构建速度大幅提升",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-08-24T00:00:00Z",
+  "url": "https://www.infoq.cn/article/NedlVNN6E9uWbIE3WV07",
+  "paragraphs": [
+    "Vercel 正式发布 Next.js 16.3 版本，这是该框架自去年 11 月发布 16.0 版本以来最大的一次更新：在为所有现有应用带来性能提升的同时，还提供了一个可选的工具集，叫作 Instant Navigations（即时导航）。",
+    "本次更新主要聚焦于开发体验。得益于默认启用的磁盘缓存和全新的内存回收功能，Turbopack 在 next dev 开发模式下的内存占用最高可减少 90%。Vercel 报告称，其自身仪表盘的内存占用从 21.5GB 降至 2GB； The Register 也提到一位早期使用者的内存使用量从约 4GB 降至 1.5GB，评价称 “内存占用终于回归正常水平”。磁盘缓存机制也加速了 next build ，在 CI 环境中重复构建速度最高可提升 5.5 倍。",
+    "类型检查速度也更快了。在升级本地依赖后， next build 可以运行 TypeScript 7 ，微软官方宣称这个原生移植版本的速度大约提升十倍：",
+    "服务端渲染基于原生 Node.js 流进行了重构，不再使用 Web 流。Vercel 表示，无需修改任何代码即可在高负载下多处理最高 22% 的请求。 Heise 报道称，随着向 Node 技术栈迁移，边缘运行时已正式废弃。",
+    "本次更新新增的核心功能是 Instant Navigations。这是一个可选工具集， 能在不放弃服务端架构模式的前提下将客户端单页应用的响应速度带到 Next.js 中。该功能基于去年 11 月推出的 use cache 指令构建，可通过两个配置标志开启：",
+    "const nextConfig: NextConfig = { cacheComponents: true , partialPrefetching: true , }; 复制代码",
+    "部分预取（Partial Prefetching）会将多个小型预取请求合并，为每条路由生成一份可复用的外壳（Shell）模板。 Roboto Studio 对此做过形象演示：侧边栏的 20 个链接原本会触发 20 次请求，现在只需要一次缓存外壳请求即可完成。全新的开发工具 Instant Insights 会自动找出所有无法实现即时跳转的导航行为；同时新增 Playwright 的 instant() 辅助方法，方便开发团队在上线前提前捕获性能退化问题。",
+    "Reddit 上的开发者已经对内存占用降低 90% 的说法进行了实测，不过这些新增功能开关也存在一些注意事项。 GitHub 的反馈讨论帖 列出了几个问题：静态导出与部分预取功能不兼容、全局 styled-jsx 样式可能在路由间泄漏、在 SST 上自托管时启用 cacheComponents 可能导致服务端渲染完全失败。 Appwrite 建议现在就可以升级，以便享受新版本带来的优化，但 Instant Navigations 应当按路由逐步接入。",
+    "新项目可以使用 npm install next@latest 直接安装默认版本；现有项目则可以先参考 迁移至 Cache Components 的指南 ，再启用新行为——该功能预计将在未来的主要版本中成为默认设置。",
+    "Next.js 正在回应长期以来的诟病——与单页应用相比，Server Components 的体验略显迟缓。它借鉴了单页应用即时加载外壳的思路，同时保留了服务端驱动的渲染模式。此外，它还进一步面向 AI 智能体驱动开发做了增强，为代码智能体生成版本匹配的 AGENTS.md 配置块，而 Astro 和 TanStack Start 等轻量级框架早已在该领域展开竞争。",
+    "Next.js 是由 Vercel 开发和维护的开源 React 框架。它在 React 的基础上扩展了基于文件的路由、服务端渲染，以及 App Router 的服务端组件等能力，广泛应用于各类项目，从小型静态网站到大型动态应用均有使用。",
+    "查看英文原文： https://www.infoq.com/news/2026/08/vercel-next-js-16-3/"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,20 @@
+{
+  "title": "“我们破坏了你们所有的应用”：React Router v8 引发争议，有开发者转向 TanStack Router",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-08-24T00:00:00Z",
+  "url": "https://www.infoq.cn/article/yEKcMO03wXvuyZpj1C1d",
+  "paragraphs": [
+    "React Router 是广泛使用的 React 路由库，如今也是 Remix 框架的基础。该项目已 发布 React Router v8 ，新版本于 2026 年 6 月 17 日推出，刻意将破坏性变更控制在较小范围内，更新了基准版本，并承诺采用可预测的年度发布节奏。",
+    "React Router v8 更新了最低版本要求，改为仅提供 ESM 构建，默认启用中间件，并将多项未来标志转为标准行为。该版本还标志着 React Router v6 和 Remix v2 进入生命周期终止阶段，二者都将不再获得安全更新。",
+    "开发者关系经理 Brooks Lybrand 在 Remix 博客 上撰文，将该版本描述为有意保持波澜不惊，并解释说，团队过去几个主要版本的目标一直是让发布“尽可能平淡”。他还表示，“如果什么都没破坏，那就不算主要版本”，同时强调，v8 中的每一项破坏性变更，开发者都已经可以在 v7 中通过未来标志提前采用。",
+    "新的基准版本要求为 Node 22.22.0+、React 19.2.7+ 和 Vite 7+。为了对该库进行现代化改造，React Router 现在仅以 ESM 模块形式发布，tsconfig 的 target 和 lib 字段也已更新至 ES2022。包括 v8_middleware 和 v8_viteEnvironmentApi 在内的四个未来标志已被移除，其行为成为默认设置； splitRouteModules 则变为一个默认启用的顶层配置选项。",
+    "中间件成为基准能力引起了格外关注。在一篇题为《React Router v8 将中间件变为基准能力》的文章中， Roman Fedyskyi 写道 ，这项变化推动前端团队“集中管理身份验证、日志和标头”，并认为“许多前端事故其实都是策略事故”。但并非所有报道都令人安心。byteiota 警告称 ，对于一个每周 npm 下载量超过 5000 万次的软件包来说，“三项破坏性变更会让团队措手不及”。",
+    "Lybrand 在 《React Router v8 及未来》 演讲中开玩笑说，他们“破坏了你们所有的应用，而且这样做只是为了惹你们生气”，以此回应 Reddit 上的质疑。一些开发者已经开始寻找其他选择。据 The New Stack 报道，在 Remix 与 React Router 合并后， 部分开发者正在转向 TanStack Router 。TanStack Router 仍是主要竞争者，其卖点包括端到端类型安全和内置的 stale-while-revalidate 缓存；与此同时，Next.js 在 React Server Components 的成熟度方面继续领先。",
+    "迁移流程被设计得较为简单。 官方升级指南 建议开发者在安装之前更新对等依赖项、采用未来标志并移除已弃用的 API。一项关键的弃用变更是移除 react-router-dom 软件包：",
+    "- import { Link, useLocation } from \"react-router-dom\" ; + import { Link, useLocation } from \"react-router\" ; 复制代码",
+    "DOM 专用 API 现在改为从 react-router/dom 导入。Netlify 和 Sentry SDK 已经支持 React Router v8，自发布以来，该项目还陆续推出了最高至 v8.3.0 的多个次要版本。",
+    "React Router 是一个采用开放治理模式进行开发的开源库，由 Shopify 团队维护，升级说明可在 reactrouter.com 上获取。",
+    "原文链接： https://www.infoq.com/news/2026/08/react-route-v8/"
+  ],
+  "isExcerpt": true
+}

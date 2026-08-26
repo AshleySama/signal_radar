@@ -1,167 +1,186 @@
 {
-  "updatedAt": "2026-08-24T01:02:08.049917Z",
+  "updatedAt": "2026-08-26T01:02:35.262782Z",
   "items": [
     {
-      "title": "匿名牛来大模型被扒出智谱血缘，也有人怀疑Cursor拿开源GLM训的",
-      "summary": "Tokenizer、视频编码、API报错全扒一遍",
+      "title": "从开源走向共建：范式联合优必选等十余家具身巨头发布PhanthyMotus新计划",
+      "summary": "近日，范式正式举办 PhanthyMotus 生态社区共建计划发布会，宣布其首个通用具身Agent底座从“开源”迈入“多方共建”新阶段。",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478191.html",
-      "publishedAt": "2026-08-23T17:56:12Z",
-      "score": 25.65,
-      "language": "zh"
+      "url": "https://www.qbitai.com/2026/08/479314.html",
+      "publishedAt": "2026-08-25T17:31:16Z",
+      "score": 25.62,
+      "language": "zh",
+      "readerFile": "./data/readers/8c33a971bd00309d.json"
     },
     {
-      "title": "亚马逊云科技开源 Dogwood：给 AI 智能体的工具调用立规矩",
-      "summary": "亚马逊云科技开源 Dogwood，将 Cedar 扩展至智能体工具调用序列治理。",
+      "title": "WRC 2026｜生数科技发布最新研究成果，提出通用世界模型五级发展路线",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/478690.html",
+      "publishedAt": "2026-08-25T09:46:56Z",
+      "score": 25.24,
+      "language": "zh",
+      "readerFile": "./data/readers/a86e252355be7ba3.json"
+    },
+    {
+      "title": "开源国产8B模型，比肩闭源Image 2了！",
+      "summary": "SenseNova U1.5 Lite",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/479192.html",
+      "publishedAt": "2026-08-25T14:53:26Z",
+      "score": 23.49,
+      "language": "zh",
+      "readerFile": "./data/readers/e8b2e3f2a8936bda.json"
+    },
+    {
+      "title": "Grafana 正式发布 gcx 和 MCP 服务器，助力基于遥测的智能代理开发",
+      "summary": "Grafana Labs 宣布正式上线两款工具 gcx CLI 和 Grafana MCP 服务器，使 AI 编码代理能够在开发过程中实时查询可观测性数据。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/cwj5Ikvhqu5mKH22zKsO",
-      "publishedAt": "2026-08-23T00:00:00Z",
+      "url": "https://www.infoq.cn/article/9UoCxEhRcFG5ovFxTkXS",
+      "publishedAt": "2026-08-25T00:00:00Z",
       "score": 22.75,
-      "language": "zh"
+      "language": "zh",
+      "readerFile": "./data/readers/30b74f139bb2bad3.json"
     },
     {
-      "title": "Cloudflare 推出 Agent Tracing：支持截断限制，不同框架的 Payload 默认记录策略存在差异",
-      "summary": "Cloudflare 推出了 Cloudflare Agents 的首个组件，Agent Tracing（Agent 追踪），可提供用于集中查看已经部署的 Agent 会话的统一 Dashboard。此次发布在现有 Workers Tracing 的基础上增加了 Agent 级别的 Span，同时也伴随着明确的收费时间表：Beta 期间免费，2026 年 10 月 1 日起将纳入 Workers Observability 的计费体系。",
+      "title": "Cloudflare 将 CI 管道转变为 TypeScript 工作流",
+      "summary": "Cloudflare 发布了一个 CI SDK，允许开发者使用 TypeScript 而不是 YAML 定义持续集成（CI）管道，并将每个步骤作为持久化的 Cloudflare Workflow 来运行。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/IBYDTeu3rse9tH3549wf",
-      "publishedAt": "2026-08-22T00:00:00Z",
+      "url": "https://www.infoq.cn/article/xIctLq7L5cK9dIrVVCvd",
+      "publishedAt": "2026-08-25T00:00:00Z",
+      "score": 22.75,
+      "language": "zh",
+      "readerFile": "./data/readers/27370a3413d405a8.json"
+    },
+    {
+      "title": "单芯片到万卡集群体系化突破 中诚华隆HL200推理芯片及超节点集群重磅发布",
+      "summary": "定义国产推理算力新范式 赋能万卡级AI推理算力规模化落地",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/478469.html",
+      "publishedAt": "2026-08-24T15:04:36Z",
+      "score": 22.3,
+      "language": "zh",
+      "readerFile": "./data/readers/12a0a6ae25624625.json"
+    },
+    {
+      "title": "Next.js 16.3 发布：即时导航、开发内存最高降低 90%，构建速度大幅提升",
+      "summary": "Vercel 推出 Next.js 16.3，为 16.0 之后的最大版本更新，既为已有应用带来性能优化，也新增可选的即时导航工具集。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/NedlVNN6E9uWbIE3WV07",
+      "publishedAt": "2026-08-24T00:00:00Z",
       "score": 21.55,
-      "language": "zh"
+      "language": "zh",
+      "readerFile": "./data/readers/e16074ba73ba9996.json"
     },
     {
-      "title": "从世界模型到现实生产力，无界动力深度参与WRC主论坛及多场同期活动",
-      "summary": "",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478007.html",
-      "publishedAt": "2026-08-23T15:12:22Z",
-      "score": 21.51,
-      "language": "zh"
-    },
-    {
-      "title": "从模型到生产力：星海图与产业朋友圈共探具身智能的下一站",
-      "summary": "让具身智能技术真正落地千行万业。",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/476930.html",
-      "publishedAt": "2026-08-22T16:41:41Z",
-      "score": 20.38,
-      "language": "zh"
-    },
-    {
-      "title": "前保安杀进了AI决赛，高中生拿走25万！这AI比赛办得有点绝",
-      "summary": "Tim和胡彦斌亲自颁奖",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478358.html",
-      "publishedAt": "2026-08-24T07:19:06Z",
-      "score": 20.0,
-      "language": "zh"
-    },
-    {
-      "title": "WRC唯一真「人机共生」展台，是家沉浸式机器人咖啡店",
-      "summary": "玩的就是真实",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478319.html",
-      "publishedAt": "2026-08-23T21:20:00Z",
-      "score": 19.81,
-      "language": "zh"
-    },
-    {
-      "title": "npm 终于动手了：默认封杀 postinstall 脚本",
-      "summary": "npm 12 发布：默认关闭安装脚本，软件包注册表转向显式信任。",
+      "title": "多个 AI 智能体“同住”一台 EC2：AgentCore 推出持久计算",
+      "summary": "Bedrock AgentCore 为多智能体协作引入持久计算。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/fPGPEF2hwCKtz3PTg69C",
-      "publishedAt": "2026-08-22T00:00:00Z",
-      "score": 19.55,
-      "language": "zh"
+      "url": "https://www.infoq.cn/article/2IBWc7BuB2qoGao5tlQT",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "score": 21.55,
+      "language": "zh",
+      "readerFile": "./data/readers/0c60e4946b792e86.json"
     },
     {
-      "title": "JetBrains详细阐述了控制AI支出快速增长的首批举措",
-      "summary": "JetBrains描述了在开发相关支出在六个月内大约增长十倍后，如何开始集中管理AI的使用。公司没有强制工程师仅使用少数已批准的工具，而是构建了一个共享的访问与记账层，既保留工具选择，又为团队提供更好的消耗可见性与控制能力。",
+      "title": "“我们破坏了你们所有的应用”：React Router v8 引发争议，有开发者转向 TanStack Router",
+      "summary": "React Router v8：一次刻意保持平淡的发布，仅支持 ESM 构建并默认启用中间件。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/CQhb4TOREpEZshtqWZMy",
-      "publishedAt": "2026-08-22T00:00:00Z",
-      "score": 19.55,
-      "language": "zh"
+      "url": "https://www.infoq.cn/article/yEKcMO03wXvuyZpj1C1d",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "score": 21.55,
+      "language": "zh",
+      "readerFile": "./data/readers/30aa26d97ade3885.json"
     },
     {
-      "title": "向量数据库要被取代？DynamoDB 开始原生支持 AI 搜索",
-      "summary": "亚马逊云科技为 DynamoDB 引入原生向量搜索。",
+      "title": "赛博义父Tibo最新访谈：专门实体按钮搞重置，“我想重置就重置”",
+      "summary": "下一代Agent天然会走向云端和更大规模的计算资源",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/478996.html",
+      "publishedAt": "2026-08-25T13:20:50Z",
+      "score": 21.42,
+      "language": "zh",
+      "readerFile": "./data/readers/52d0f2b317006a68.json"
+    },
+    {
+      "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
+      "summary": "Use the Admin plugin for ChatGPT Work and Codex to analyze workspace usage, manage members and permissions, adjust limits, and act on admin requests.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-admin-plugin",
+      "publishedAt": "2026-08-25T00:00:00Z",
+      "score": 25.75,
+      "language": "en",
+      "readerFile": "./data/readers/33eae878317d27dc.json"
+    },
+    {
+      "title": "The full stack behind abundant intelligence",
+      "summary": "OpenAI CFO Sarah Friar explains how advances across chips, compute, models, and products compound to deliver more useful intelligence at greater scale and lower cost.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
+      "publishedAt": "2026-08-25T07:05:00Z",
+      "score": 24.1,
+      "language": "en",
+      "readerFile": "./data/readers/51cfe3db04ed0bd3.json"
+    },
+    {
+      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "summary": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/jalapeno-first-results",
+      "publishedAt": "2026-08-25T07:00:00Z",
+      "score": 24.1,
+      "language": "en",
+      "readerFile": "./data/readers/b9406ae170bd9133.json"
+    },
+    {
+      "title": "Netflix 开源了一个用于因果推理的智能代理工作流",
+      "summary": "Netflix 开源了一个用于观察性因果推断（OCI）的智能代理工作流。该工作流可以减轻因果分析中的繁琐工作。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/9YicfQysexJdmx11xG4m",
-      "publishedAt": "2026-08-23T00:00:00Z",
-      "score": 18.75,
-      "language": "zh"
+      "url": "https://www.infoq.cn/article/4h2jb2eOcBrP5AG5hLYt",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "score": 21.55,
+      "language": "zh",
+      "readerFile": "./data/readers/e475a88fa141cdc0.json"
     },
     {
-      "title": "Dispatches from O'Reilly: The right amount of spec for agentic development",
-      "summary": "When code gets cheap, the hard part is deciding what “correct” means and building a reliable way to check it.",
-      "source": "Stack Overflow Blog",
-      "url": "https://stackoverflow.blog/2026/08/21/dispatches-from-o-reilly-the-right-amount-of-spec-for-agentic-development/",
-      "publishedAt": "2026-08-21T14:00:00Z",
-      "score": 19.05,
-      "language": "en"
-    },
-    {
-      "title": "Get rid of your CAPTCHA, the future of the web is bots",
-      "summary": "Ryan chats with Brian Alvey, CTO at WordPress VIP, about how AI agents are changing the business models of the web, what parts of how we build our sites won’t survive our current digital evolution, and why your site will always need structured content.",
-      "source": "Stack Overflow Blog",
-      "url": "https://stackoverflow.blog/2026/08/21/get-rid-of-your-captcha-the-future-of-the-web-is-bots/",
-      "publishedAt": "2026-08-21T07:40:00Z",
-      "score": 18.73,
-      "language": "en"
-    },
-    {
-      "title": "具身创业里的香港教授们",
-      "summary": "香港的大学里冒出了一批很特别的人",
+      "title": "人民教育音像数字出版社与小猿达成合作 “中小学课本学习智能体”首落小猿AI学习机",
+      "summary": "2026年8月21日，小猿学习机在京举办“中小学课本学习智能体”首发上线活动。",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478289.html",
-      "publishedAt": "2026-08-23T19:20:13Z",
-      "score": 19.72,
-      "language": "zh"
+      "url": "https://www.qbitai.com/2026/08/478839.html",
+      "publishedAt": "2026-08-25T12:08:21Z",
+      "score": 21.35,
+      "language": "zh",
+      "readerFile": "./data/readers/2f34d28d2bae2dc8.json"
     },
     {
-      "title": "他给了王兴兴第一个200万，现在给下一个「宇树」当董事长",
-      "summary": "多多支持像王兴兴这样优秀的具身机器人创业者",
+      "title": "具身大满贯还全开源！原力灵机DM0.5登顶RoboDojo，且clone且珍惜",
+      "summary": "机器人大脑新SOTA",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478234.html",
-      "publishedAt": "2026-08-23T19:17:22Z",
-      "score": 19.71,
-      "language": "zh"
+      "url": "https://www.qbitai.com/2026/08/478791.html",
+      "publishedAt": "2026-08-25T10:22:01Z",
+      "score": 21.27,
+      "language": "zh",
+      "readerFile": "./data/readers/e43f4e1ab9970809.json"
     },
     {
-      "title": "英伟达AI服务器将涨价15%！1GW数据中心成本激增50亿美元",
-      "summary": "内存成本飙升逼涨硬件",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478164.html",
-      "publishedAt": "2026-08-23T17:51:49Z",
-      "score": 19.64,
-      "language": "zh"
+      "title": "主要前沿模型提供商采用水印技术以满足欧盟法规要求",
+      "summary": "自 2026 年 8 月 2 日起，《欧盟人工智能法案》第 50 条规定的监管措施在各成员国正式生效。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/4mIQfr4w5gPLXSIW7YST",
+      "publishedAt": "2026-08-25T00:00:00Z",
+      "score": 20.75,
+      "language": "zh",
+      "readerFile": "./data/readers/1add62774ad9d3b6.json"
     },
     {
-      "title": "全球首次！机器人迎战网球运动员，极限救球，摔倒光速弹起",
-      "summary": "AstraTennis时刻背后的硬核技术",
+      "title": "阿里达摩院推出肝癌AI模型，精准识别1厘米微小肿瘤",
+      "summary": "8月24日消息，阿里巴巴达摩院联合中国医科大学附属盛京医院等机构研发出肝癌诊断AI模型DAMO LiON",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478093.html",
-      "publishedAt": "2026-08-23T17:45:27Z",
-      "score": 19.64,
-      "language": "zh"
-    },
-    {
-      "title": "不做硅谷follower：几个读博的年轻人，押注双足人形的一体化大脑",
-      "summary": "机器人开卡丁车连续过弯，一镜到底全自主",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478020.html",
-      "publishedAt": "2026-08-23T17:29:59Z",
-      "score": 19.62,
-      "language": "zh"
-    },
-    {
-      "title": "你的第一个个人机器人开启预订！上纬新材拉开家庭机器人消费时代序幕",
-      "summary": "",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478017.html",
-      "publishedAt": "2026-08-23T15:17:41Z",
-      "score": 19.51,
-      "language": "zh"
+      "url": "https://www.qbitai.com/2026/08/478473.html",
+      "publishedAt": "2026-08-24T16:07:59Z",
+      "score": 20.35,
+      "language": "zh",
+      "readerFile": "./data/readers/c051738f5138b686.json"
     }
-  ]
+  ],
+  "background": "./assets/backgrounds/scientific-archive.png"
 }
