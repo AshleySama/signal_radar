@@ -1,0 +1,25 @@
+{
+  "title": "Gemini Omni 1.1 Flash lets you build with more control",
+  "source": "Google DeepMind",
+  "publishedAt": "2026-08-27T16:11:32Z",
+  "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+  "paragraphs": [
+    "Omni now delivers studio-quality video production, including the ability to extend a scene, first and last frame interpolation, crisp 4K upscaling, faster prototyping, and more.",
+    "We are introducing Gemini Omni 1.1 Flash, a production-ready update for developers that offers improved control over generative video. You can now extend scenes, specify start and end frames for smooth transitions, and generate high-resolution 4K output. Start building today by accessing the model through Google AI Studio or the Gemini Enterprise Agent Platform.",
+    "Google just released Gemini Omni 1.1 Flash, which gives developers better tools to create and edit videos with AI. It lets you extend video clips, control camera movements, and make high-quality 4K footage. Developers can also create quick, low-resolution drafts to test their ideas faster and cheaper. It’s a big step forward for anyone building creative video software.",
+    "Today, we’re introducing Gemini Omni 1.1 Flash, a new suite of creative controls and generative video capabilities to support developers. Gemini Omni brought real-world reasoning to generative creation, and today’s updates make Omni 1.1 production-ready for professional use via the Gemini API in Google AI Studio. Whether you’re building generative video workflows, creative tools, or media editing software, these updates make generative video more controllable, faster to iterate on, and polished for real-world deployment. Here’s a look at what’s new:",
+    "Scene extension allows you to take an existing video and continue generating footage seamlessly from where it left off.",
+    "With Omni 1.1, the model can now analyze up to 10 seconds of prior context — a leap from previous models that only referenced the final second. The result is improved visual consistency and narrative adherence, letting you build longer stories or branch into new creative directions. You can extend videos in 10-second increments up to a total cumulative length of 40 seconds.",
+    "Prompt 1: Camera slightly pans and we now see she is talking to a man with curly hair, we see man’s back, he says “I see it too” dramatic music score",
+    "Prompt 2: Camera slowly pulls out, forgotten dusty catacombs, dramatic music score. Prompt 3: Camera slowly pulls out, a vast library where shelves and books float weightlessly in a dusty void, dramatic music score.",
+    "Prompt 1: Continue the video. Execute a cinematic optical dolly-zoom shot. The camera dollies forward while simultaneously zooming out, keeping the character's frozen shocked face locked at the exact same size. The long corridor of stone pillars in the background dramatically stretches and deepens with intense optical perspective distortion. Clean architecture, continuous unbroken shot.",
+    "Prompt 2: Continue the video. The camera executes a fast mechanical snap-zoom directly into the character's wide eyes. Stylized cinematic camera control.",
+    "Prompt 3: Continue the video. Time completely freezes into a static moment: the character, their windblown coat. The camera performs a smooth, high-speed 360-degree orbital rotation around the frozen character, showcasing dramatic 3D depth and parallax across the colonnade. Flawless continuity.",
+    "Prompt 1: The man in the blue sweater replies: \"Did your father go out on the boat too?\"",
+    "Prompt 2: The camera pulls back in one continuous movement as he continues his story: \"He used to say that this harbour had a soul. And that the boats were a part of us.\" The music swells.",
+    "Prompt 1: The looks directly at the camera and talks about what the final chapter will end with!",
+    "Prompt 2: He then stands up walks around the desk to the camera and says \"what would you choose?\"",
+    "Here’s how you can extend your scene with the Gemini API:"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,14 @@
+{
+  "title": "When you keep AI Lean, you keep AI correct",
+  "source": "Stack Overflow Blog",
+  "publishedAt": "2026-08-28T07:40:00Z",
+  "url": "https://stackoverflow.blog/2026/08/28/when-you-keep-ai-lean-you-keep-ai-correct/",
+  "paragraphs": [
+    "Ryan chats with Leo de Moura, Senior Principal Applied Scientist at AWS and the creator of the Lean language, about proving correctness in AI agents with the Lean language, how automated reasoning complements probabilistic AI models, and the use of AI for continuous code optimization.",
+    "Lean is a functional programming language and proof assistant that allows developers to write programs and verify their mathematical correctness within the exact same system.",
+    "Connect with Leo on LinkedIn and check out his many badges on Stack Overflow .",
+    "Congrats to Populist badge winner Peter Lawrey for winning the badge on their answer to Check two float/double values for exact equality .",
+    "Get The Stack Overflow Podcast at your favorite listening service."
+  ],
+  "isExcerpt": true
+}

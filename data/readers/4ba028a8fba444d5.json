@@ -1,0 +1,22 @@
+{
+  "title": "S3 兼容不代表具备 S3 级别的安全性",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-08-28T00:00:00Z",
+  "url": "https://www.infoq.cn/article/xr3L0bkiFZGzYmtZwscB",
+  "paragraphs": [
+    "Wiz 的安全研究人员近期对六家热门新云（neocloud）提供的 S3 兼容对象存储服务 进行了研究，发现与 Amazon S3 相比，这些服务存在明显的安全能力缺口。S3 已经成为事实上的对象存储标准，但大多数兼容服务并没有 AWS 所提供的多项安全防护能力。",
+    "报告对比了 Nebius 、 Crusoe 、 Vultr 、 Lambda Labs 、 Cloudflare R2 和 DigitalOcean 提供的托管服务与 Amazon S3 在安全能力上的差异。Wiz 首席云安全研究员 Scott Piper 指出，使用 S3 兼容服务的组织不能直接套用 AWS 的安全假设，而必须考虑其防护能力缩水以及最小权限控制能力受限的问题。Piper 认为，S3 兼容性可能制造一种危险的“可移植性错觉”：",
+    "AWS S3 及其相关的服务（例如 S3 Tables、S3 Vectors、S3 Express 等）涉及近 300 个 API。在其存在超过 20 年的时间里，S3 不断增加各种专用功能，目前已经存储了数万亿个对象和数百 EB 的数据。不出所料，不是所有这些功能都得到了复制，一些 S3 兼容服务的工作方式也出人意料。",
+    "根据这项研究，各家 S3 兼容服务在公共 Bucket 的处理方式上存在明显差异。Crusoe 和 Lambda Labs 不支持公开访问，而其他服务提供的防护和控制能力也低于 AWS S3 Block Public Access 。例如，Nebius 和 Cloudflare R2 允许创建公共 Bucket，但不允许匿名列出对象；DigitalOcean 支持公开列出 Bucket 中的对象，而 Vultr 则同时支持通过 ACL 和 Bucket Policy 控制公共访问。",
+    "在访问密钥方面，S3 兼容服务通常缺少 AWS 所提供的结构化 Access Key 格式以及 Secret Scanning 支持，因此安全团队以及 GitHub 等工具 对这些凭据进行检测。Piper 解释道：",
+    "GitHub 的 Secret Scanning 也能检测 DigitalOcean 和 Cloudflare 的其他凭据，但检测不到这些 S3 兼容服务的凭据，其他的密钥检测也很难检测得到这些凭据，部分原因在于，其中一些凭据没有可用于检测的特征规律。",
+    "不同 S3 兼容实现之间的 IAM 能力和语义也存在很大差异。行业内多起安全漏洞事故已经让这个问题得到了充分的曝光，比如 MinIO 的一项漏洞 会导致未经授权的权限提升， RustFS 近期的一项漏洞 则会破坏租户隔离和授权语义。",
+    "The Duckbill Group 首席云经济学家 Corey Quinn 在自己的 Newsletter 中这样总结：",
+    "每家新云都提供 S3 兼容 Endpoint，但无论 API 的实际行为是否一致，你都会下意识地沿用自己熟悉的操作方式。Wiz 对 Nebius、Crusoe、Vultr 等 S3 兼容服务进行了测试。不过其中一家服务在执行 delete-bucket-policy 后，删除的竟然是整个 Bucket。在大家直接假定存在公开访问限制之前，值得先读一读这份报告。",
+    "由于 S3 兼容服务沿用了 S3 API 中的预签名 URL ，而这些服务又都支持这一能力，因此他们也就继承了相关的安全影响。Wiz 高级解决方案工程师 Rishi Raj Singh 在 领英 上写道：",
+    "如果要在新云环境中使用 S3 兼容存储，务必先确保团队实实在在地审查 API 的实际行为，验证权限模型，并确认标准 AWS 工具与这些 Endpoint 交互时究竟会发生什么。",
+    "Wiz 的这次评估并未覆盖其他一些主流 S3 兼容实现，包括 Backblaze B2 、 Wasabi 和 谷歌云存储 。目前， S3 兼容存储服务目录 列出了 90 多家服务商；而 Awesome Object Storage 则从超大规模云厂商、替代方案、边缘/CDN 原生、自托管和去中心化等类别，对 21 家服务商进行了比较。",
+    "查看英文原文： S3 Compatibility Doesn't Guarantee S3-Level Security"
+  ],
+  "isExcerpt": true
+}

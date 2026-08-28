@@ -1,0 +1,23 @@
+{
+  "title": "Cloudflare 发布 Kitesurf，一款面向 AI 智能智能体的浏览器引擎",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-08-28T00:00:00Z",
+  "url": "https://www.infoq.cn/article/JDYKJmiY9vTRSw47t15a",
+  "paragraphs": [
+    "Cloudflare 最近推出了 Kitesurf ，一款专为自动化工作负载构建的轻量级浏览器。Kitesurf 在 Cloudflare Workers 上隔离的 WebAssembly/Rust 环境中运行浏览器组件，并支持 Chrome DevTools 协议，允许 Playwright 和 Puppeteer 等工具以低于完整 Chromium 浏览器的资源开销来驱动它。",
+    "Kitesurf 专为截图和 HTML 提取等任务而设计，在长生命周期的 Dynamic Worker 中运行每个页面或跨进程 iframe（OOPIF），每个实例都拥有独立的 JavaScript 环境与 DOM，实现环境隔离。Kitesurf 使用了基于 Rust 的 Blitz 渲染引擎和 Firefox 的 Stylo CSS 解析器。",
+    "Kitesurf 目前还不能替代 Chromium，它尚不支持视频、WebGL、真实环境下基于 TLS 的机器人验证，也不支持长时效已认证会话。虽然智能体需要浏览器来执行许多任务，但 Celso Martinho 、 Ruskin Constant 、 Rui Figueira 和 Luís Duarte 认为：",
+    "Chromium 这类浏览器引擎是为人类用户而非智能体设计的，附带了 AI 模型根本不需要的性能开销。这类引擎内存与计算资源消耗巨大，要为每一个智能体单独分配实例，成本高到难以承受。这就导致网络上大量内容仅能供那些复杂度最高、成本昂贵、参数量更大的 AI 模型访问，许多其他智能体类应用则被挡在门外。",
+    "Cloudflare 认为，AI 智能体应当优先考量词元消耗、可扩展性、性能、成本、结构化内容以及工具安全性，而非视觉还原度以及标签页、扩展程序、同步功能这类特性。",
+    "PageRenderer 是 Kitesurf 的组件，负责将页面的 DOM 和样式渲染为图片或 PDF。它会获取字体与图片资源，借助 Blitz Paint 和 Parley 对页面场景做光栅化处理，再通过 Workers RPC 将处理完成的数据缓冲区回传给引擎。Martinho、Constant、Figueira 和 Duarte 补充道：",
+    "Kitesurf 非常适合那些需要渲染页面但能够接受不使用完整功能、像素级精准 Chromium 浏览器的 AI 智能体。可以将 Kitesurf 视为一个短暂的、完全隔离的、无状态的引擎，其设计目的仅在于在任务持续期间存在，并且能够很好地扩展，以便应对突发的、AI 驱动的工作负载。",
+    "在 Hacker News 上，不少网友对这家运营全球最大 CDN 网络、同时还提供 DDoS 防护与网络安全产品的公司提出了潜在利益冲突的质疑，用户 QuantumNomad 问道：",
+    "身为 CDN 服务商的 Cloudflare 是否会允许这些浏览器实例绕过自家的反机器人防护机制？还是说，Cloudflare CDN 会像拦截来自其他服务商的爬虫机器人一样同样拦截这些实例？",
+    "在 Reddit 上，行业从业者对 Kitesurf 的技术思路持谨慎乐观态度，同时也提出两点疑问：为何该项目代码尚未开源，以及相关改动为何没有向上游合并到 Blitz 项目中。用户 seventeencups 评论 道：",
+    "Cloudflare 一边开发工具方便 AI 抓取各家网站，一边又售卖 “SaaS 产品帮用户阻止 AI 爬取自己网站”，这是我近期见过最赤裸裸的两头通吃行为。",
+    "这是基于 Blitz 构建的：一个我过去两年半一直在构建的新模块化（开源）浏览器引擎。我没有参与 Kitesurf 的开发，但我获悉他们计划将相关补丁开源，并向上游提交。",
+    "该项目仍处于实验阶段，重要的兼容性工作以及 CDP/WPT 支持尚待完成。Cloudflare 表示计划很快将该项目开源，但现阶段尚未公开任何代码。",
+    "查看英文原文： https://www.infoq.com/news/2026/08/cloudflare-kitesurf-browser/"
+  ],
+  "isExcerpt": true
+}

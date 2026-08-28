@@ -1,185 +1,185 @@
 {
-  "updatedAt": "2026-08-26T01:02:35.262782Z",
+  "updatedAt": "2026-08-28T08:48:08.426006Z",
   "items": [
     {
-      "title": "从开源走向共建：范式联合优必选等十余家具身巨头发布PhanthyMotus新计划",
-      "summary": "近日，范式正式举办 PhanthyMotus 生态社区共建计划发布会，宣布其首个通用具身Agent底座从“开源”迈入“多方共建”新阶段。",
+      "title": "高德发布首个无长程依赖的万帧级流式3D重建模型ABot-Recon，以12帧重建万帧3D场景",
+      "summary": "8月28日，阿里巴巴集团旗下高德正式发布首个无长程依赖的万帧级流式3D重建模型ABot-Recon。",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/479314.html",
-      "publishedAt": "2026-08-25T17:31:16Z",
-      "score": 25.62,
+      "url": "https://www.qbitai.com/2026/08/480208.html",
+      "publishedAt": "2026-08-28T11:45:45Z",
+      "score": 24.0,
       "language": "zh",
-      "readerFile": "./data/readers/8c33a971bd00309d.json"
+      "readerFile": "./data/readers/dacc3dc08036df0f.json"
     },
     {
-      "title": "WRC 2026｜生数科技发布最新研究成果，提出通用世界模型五级发展路线",
+      "title": "全球首款专为iPhone用户打造的Agent耳机正式发布，有道AI耳机让声音变成生产力",
+      "summary": "8月27日，网易有道正式发布OpenPods有道AI耳机。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/480083.html",
+      "publishedAt": "2026-08-28T10:48:37Z",
+      "score": 24.0,
+      "language": "zh",
+      "readerFile": "./data/readers/410d4a6aab1fc1fb.json"
+    },
+    {
+      "title": "Cloudflare 发布 Kitesurf，一款面向 AI 智能智能体的浏览器引擎",
+      "summary": "Cloudflare 推出面向自动化任务的轻量浏览器 Kitesurf，可供 Playwright、Puppeteer 调用，资源消耗比完整 Chromium 更低。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/JDYKJmiY9vTRSw47t15a",
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "score": 23.56,
+      "language": "zh",
+      "readerFile": "./data/readers/1d95304f90f34bf3.json"
+    },
+    {
+      "title": "工业Agent不是“套壳”大模型！西门子百年经验灌进工业AI",
+      "summary": "西门子Xcelerator与普通软件货架最本质的区别。货架解决的是「把产品卖出去」，西门子Xcelerator要解决的是「让产品在真实工业场景中持续生长」。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/480005.html",
+      "publishedAt": "2026-08-27T10:46:35Z",
+      "score": 22.9,
+      "language": "zh",
+      "readerFile": "./data/readers/db66216d96b95b51.json"
+    },
+    {
+      "title": "千问办公首发上线Qwen3.8-Flash，生成速度提升100%，Token消耗减少75%",
+      "summary": "8月26日晚，千问办公首发上线刚刚发布的Qwen3.8-Flash模型，同时推出标准模式。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/480001.html",
+      "publishedAt": "2026-08-27T09:45:08Z",
+      "score": 22.85,
+      "language": "zh",
+      "readerFile": "./data/readers/b171fe257b3b766b.json"
+    },
+    {
+      "title": "大模型推理加速全链路：内存管理、编译优化、量化与并行策略",
+      "summary": "“通过技术手段把大模型对底层硬件算力的需求打破、压低，让推理变得更高效、更普惠。”",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/AN2AuAT58V9fe8KXD2zi",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "score": 22.36,
+      "language": "zh",
+      "readerFile": "./data/readers/d964bac2f4e34212.json"
+    },
+    {
+      "title": "Azure DevOps Remote MCP 服务器正式发布，暂不支持 Claude、ChatGPT 及 Cursor",
+      "summary": "微软正式推出 Azure DevOps 远程 MCP 服务器，提供托管端点，AI 助手无需部署本地服务即可访问工作项、PR、代码仓库与流水线。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/SvTBvljtvGctvWPQRqr7",
+      "publishedAt": "2026-08-27T00:00:00Z",
+      "score": 22.36,
+      "language": "zh",
+      "readerFile": "./data/readers/9dc542c26da0a0c7.json"
+    },
+    {
+      "title": "Łukasz Kaiser领衔，2026 奇点智能技术大会北京站正式官宣",
+      "summary": "11 月 20 -21 日，由奇点智能研究院与 CSDN 联合主办的「奇点智能大会北京站」正式举行",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/480482.html",
+      "publishedAt": "2026-08-28T14:22:20Z",
+      "score": 22.0,
+      "language": "zh",
+      "readerFile": "./data/readers/f1d93c5817c2b332.json"
+    },
+    {
+      "title": "大模型和硬件之间，长出了一层新生意",
+      "summary": "造 AI 硬件，正在变得和搭乐高一样简单",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/IROW9KWVs4zSCByU8wQE",
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "score": 21.56,
+      "language": "zh",
+      "readerFile": "./data/readers/602470c933a18b07.json"
+    },
+    {
+      "title": "规模化 AI 代码审查：LinkedIn 的多智能体方案",
+      "summary": "LinkedIn 自研多智能体 AI 代码审查平台，强调理解组织代码上下文、按生产级基础设施运营，并减少幻觉与低价值反馈。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/A0CMcU7UVsMQreKPcKOw",
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "score": 21.56,
+      "language": "zh",
+      "readerFile": "./data/readers/d115eeaf33b2361a.json"
+    },
+    {
+      "title": "When you keep AI Lean, you keep AI correct",
+      "summary": "Ryan chats with Leo de Moura, Senior Principal Applied Scientist at AWS and the creator of the Lean language, about proving correctness in AI agents with the Lean language, how automated reasoning complements probabilistic AI models, and the use of AI for continuous code optimiza",
+      "source": "Stack Overflow Blog",
+      "url": "https://stackoverflow.blog/2026/08/28/when-you-keep-ai-lean-you-keep-ai-correct/",
+      "publishedAt": "2026-08-28T07:40:00Z",
+      "score": 25.94,
+      "language": "en",
+      "readerFile": "./data/readers/53454cc31f800ca9.json"
+    },
+    {
+      "title": "Gemini Omni 1.1 Flash lets you build with more control",
       "summary": "",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478690.html",
-      "publishedAt": "2026-08-25T09:46:56Z",
-      "score": 25.24,
-      "language": "zh",
-      "readerFile": "./data/readers/a86e252355be7ba3.json"
-    },
-    {
-      "title": "开源国产8B模型，比肩闭源Image 2了！",
-      "summary": "SenseNova U1.5 Lite",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/479192.html",
-      "publishedAt": "2026-08-25T14:53:26Z",
-      "score": 23.49,
-      "language": "zh",
-      "readerFile": "./data/readers/e8b2e3f2a8936bda.json"
-    },
-    {
-      "title": "Grafana 正式发布 gcx 和 MCP 服务器，助力基于遥测的智能代理开发",
-      "summary": "Grafana Labs 宣布正式上线两款工具 gcx CLI 和 Grafana MCP 服务器，使 AI 编码代理能够在开发过程中实时查询可观测性数据。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/9UoCxEhRcFG5ovFxTkXS",
-      "publishedAt": "2026-08-25T00:00:00Z",
-      "score": 22.75,
-      "language": "zh",
-      "readerFile": "./data/readers/30b74f139bb2bad3.json"
-    },
-    {
-      "title": "Cloudflare 将 CI 管道转变为 TypeScript 工作流",
-      "summary": "Cloudflare 发布了一个 CI SDK，允许开发者使用 TypeScript 而不是 YAML 定义持续集成（CI）管道，并将每个步骤作为持久化的 Cloudflare Workflow 来运行。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/xIctLq7L5cK9dIrVVCvd",
-      "publishedAt": "2026-08-25T00:00:00Z",
-      "score": 22.75,
-      "language": "zh",
-      "readerFile": "./data/readers/27370a3413d405a8.json"
-    },
-    {
-      "title": "单芯片到万卡集群体系化突破 中诚华隆HL200推理芯片及超节点集群重磅发布",
-      "summary": "定义国产推理算力新范式 赋能万卡级AI推理算力规模化落地",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478469.html",
-      "publishedAt": "2026-08-24T15:04:36Z",
-      "score": 22.3,
-      "language": "zh",
-      "readerFile": "./data/readers/12a0a6ae25624625.json"
-    },
-    {
-      "title": "Next.js 16.3 发布：即时导航、开发内存最高降低 90%，构建速度大幅提升",
-      "summary": "Vercel 推出 Next.js 16.3，为 16.0 之后的最大版本更新，既为已有应用带来性能优化，也新增可选的即时导航工具集。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/NedlVNN6E9uWbIE3WV07",
-      "publishedAt": "2026-08-24T00:00:00Z",
-      "score": 21.55,
-      "language": "zh",
-      "readerFile": "./data/readers/e16074ba73ba9996.json"
-    },
-    {
-      "title": "多个 AI 智能体“同住”一台 EC2：AgentCore 推出持久计算",
-      "summary": "Bedrock AgentCore 为多智能体协作引入持久计算。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/2IBWc7BuB2qoGao5tlQT",
-      "publishedAt": "2026-08-24T00:00:00Z",
-      "score": 21.55,
-      "language": "zh",
-      "readerFile": "./data/readers/0c60e4946b792e86.json"
-    },
-    {
-      "title": "“我们破坏了你们所有的应用”：React Router v8 引发争议，有开发者转向 TanStack Router",
-      "summary": "React Router v8：一次刻意保持平淡的发布，仅支持 ESM 构建并默认启用中间件。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/yEKcMO03wXvuyZpj1C1d",
-      "publishedAt": "2026-08-24T00:00:00Z",
-      "score": 21.55,
-      "language": "zh",
-      "readerFile": "./data/readers/30aa26d97ade3885.json"
-    },
-    {
-      "title": "赛博义父Tibo最新访谈：专门实体按钮搞重置，“我想重置就重置”",
-      "summary": "下一代Agent天然会走向云端和更大规模的计算资源",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478996.html",
-      "publishedAt": "2026-08-25T13:20:50Z",
-      "score": 21.42,
-      "language": "zh",
-      "readerFile": "./data/readers/52d0f2b317006a68.json"
-    },
-    {
-      "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
-      "summary": "Use the Admin plugin for ChatGPT Work and Codex to analyze workspace usage, manage members and permissions, adjust limits, and act on admin requests.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/introducing-admin-plugin",
-      "publishedAt": "2026-08-25T00:00:00Z",
-      "score": 25.75,
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+      "publishedAt": "2026-08-27T16:11:32Z",
+      "score": 24.17,
       "language": "en",
-      "readerFile": "./data/readers/33eae878317d27dc.json"
+      "readerFile": "./data/readers/74b1125af8681de1.json"
     },
     {
-      "title": "The full stack behind abundant intelligence",
-      "summary": "OpenAI CFO Sarah Friar explains how advances across chips, compute, models, and products compound to deliver more useful intelligence at greater scale and lower cost.",
+      "title": "Expanding OpenAI’s presence in Brazil",
+      "summary": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
       "source": "OpenAI",
-      "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
-      "publishedAt": "2026-08-25T07:05:00Z",
-      "score": 24.1,
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "publishedAt": "2026-08-27T03:00:00Z",
+      "score": 23.51,
       "language": "en",
-      "readerFile": "./data/readers/51cfe3db04ed0bd3.json"
+      "readerFile": "./data/readers/fe23f369e01db08d.json"
     },
     {
-      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
-      "summary": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/jalapeno-first-results",
-      "publishedAt": "2026-08-25T07:00:00Z",
-      "score": 24.1,
-      "language": "en",
-      "readerFile": "./data/readers/b9406ae170bd9133.json"
+      "title": "Claude开始接管物理世界！能用机械臂阻拦5000万美元打款了",
+      "summary": "Claude觉醒超体",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/480487.html",
+      "publishedAt": "2026-08-28T14:13:59Z",
+      "score": 22.0,
+      "language": "zh",
+      "readerFile": "./data/readers/ba08aaada8b981ce.json"
     },
     {
-      "title": "Netflix 开源了一个用于因果推理的智能代理工作流",
-      "summary": "Netflix 开源了一个用于观察性因果推断（OCI）的智能代理工作流。该工作流可以减轻因果分析中的繁琐工作。",
+      "title": "HuggingFace被曝卖身英伟达：129亿美元！全球最大AI开源平台改姓黄",
+      "summary": "Hugging Face这把是真全员财富自由了啊o(╥﹏╥)o",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/480186.html",
+      "publishedAt": "2026-08-28T09:40:22Z",
+      "score": 22.0,
+      "language": "zh",
+      "readerFile": "./data/readers/0c008bd52c179a19.json"
+    },
+    {
+      "title": "Falcon TST 2.0获世界权威测评第一名，推动时间序列基础模型从通用预测走向金融应用",
+      "summary": "蚂蚁国际日前正式发布自研时序AI预测大模型“鹰序TST”2.0版。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/08/479631.html",
+      "publishedAt": "2026-08-26T11:25:00Z",
+      "score": 21.73,
+      "language": "zh",
+      "readerFile": "./data/readers/b2ab8d3e6303ef56.json"
+    },
+    {
+      "title": "从方案走向运行｜世界人工智能开源大赛（GOAI）复赛作品提交正式开启",
+      "summary": "8月28日至9月3日，赛道一“新智基座”、赛道二“无界应用”、赛道三“前沿探索”将进入复赛作品提交阶段。赛道四“具身未来”晋级团队则将分阶段推进总决赛线下调试——巡逻赛题调试期为8⽉28⽇⾄9⽉21⽇，双臂赛题调试期为9月19日至9月21日。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/4h2jb2eOcBrP5AG5hLYt",
-      "publishedAt": "2026-08-24T00:00:00Z",
-      "score": 21.55,
+      "url": "https://www.infoq.cn/article/REPGvBlF661I4hRmvV8J",
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "score": 21.56,
       "language": "zh",
-      "readerFile": "./data/readers/e475a88fa141cdc0.json"
+      "readerFile": "./data/readers/f526cd04137ed7d8.json"
     },
     {
-      "title": "人民教育音像数字出版社与小猿达成合作 “中小学课本学习智能体”首落小猿AI学习机",
-      "summary": "2026年8月21日，小猿学习机在京举办“中小学课本学习智能体”首发上线活动。",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478839.html",
-      "publishedAt": "2026-08-25T12:08:21Z",
-      "score": 21.35,
-      "language": "zh",
-      "readerFile": "./data/readers/2f34d28d2bae2dc8.json"
-    },
-    {
-      "title": "具身大满贯还全开源！原力灵机DM0.5登顶RoboDojo，且clone且珍惜",
-      "summary": "机器人大脑新SOTA",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478791.html",
-      "publishedAt": "2026-08-25T10:22:01Z",
-      "score": 21.27,
-      "language": "zh",
-      "readerFile": "./data/readers/e43f4e1ab9970809.json"
-    },
-    {
-      "title": "主要前沿模型提供商采用水印技术以满足欧盟法规要求",
-      "summary": "自 2026 年 8 月 2 日起，《欧盟人工智能法案》第 50 条规定的监管措施在各成员国正式生效。",
+      "title": "S3 兼容不代表具备 S3 级别的安全性",
+      "summary": "Wiz 的安全研究人员近期对六家热门新云（neocloud）提供的 S3 兼容对象存储服务进行了研究，发现与 Amazon S3 相比，这些服务存在明显的安全能力缺口。S3 已经成为事实上的对象存储标准，但大多数兼容服务并没有 AWS 所提供的多项安全防护能力。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/4mIQfr4w5gPLXSIW7YST",
-      "publishedAt": "2026-08-25T00:00:00Z",
-      "score": 20.75,
+      "url": "https://www.infoq.cn/article/xr3L0bkiFZGzYmtZwscB",
+      "publishedAt": "2026-08-28T00:00:00Z",
+      "score": 21.56,
       "language": "zh",
-      "readerFile": "./data/readers/1add62774ad9d3b6.json"
-    },
-    {
-      "title": "阿里达摩院推出肝癌AI模型，精准识别1厘米微小肿瘤",
-      "summary": "8月24日消息，阿里巴巴达摩院联合中国医科大学附属盛京医院等机构研发出肝癌诊断AI模型DAMO LiON",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/478473.html",
-      "publishedAt": "2026-08-24T16:07:59Z",
-      "score": 20.35,
-      "language": "zh",
-      "readerFile": "./data/readers/c051738f5138b686.json"
+      "readerFile": "./data/readers/4ba028a8fba444d5.json"
     }
   ],
   "background": "./assets/backgrounds/scientific-archive.png"
