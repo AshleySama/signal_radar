@@ -1,0 +1,25 @@
+{
+  "title": "Agent 时代，为什么有人开始重新造 Google？",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-08-29T00:00:00Z",
+  "url": "https://www.infoq.cn/article/KbbHdAQFxQM7AJIYMLqR",
+  "paragraphs": [
+    "Keenable 由前 Yandex 和 Amazon AGI 核心成员创立，专注构建面向 AI Agent 的新型 Web 搜索基础设施，已完成 2600 万美元种子轮融资。其自建索引覆盖超 1000 亿文档，p95 延迟低于 250ms，千次请求最低 1 美元。API 已接入多家 AI Labs 与推理服务商的训练及运行时生产环境。",
+    "AI Agent 需专用搜索基础设施，通用搜索引擎无法满足低延迟、高吞吐与语义对齐需求；自建 Web Index 是支撑可靠 RAG 与在线检索的关键底座；面向 AI 的搜索正从“人查网页”转向“模型查结构化事实”。",
+    "前 Yandex 搜索、AI 和云业务负责人 Andrey Styskin 的 答案 是：有必要。只不过这一次，搜索引擎最重要的用户可能不再是人。",
+    "近日，一家名为 Keenable 的创业公司正式走出隐身状态，同时宣布完成 2600 万美元种子轮融资，由 Accel 领投。Styskin 是这家公司的联合创始人兼 CEO，在 Yandex 工作近二十年后，他曾进入 Amazon AGI 负责 Web 基础设施；另一位联合创始人 Matthias Petri 同样来自 Amazon AGI，此前参与 Alexa 背后的 Web grounding 基础设施建设。",
+    "这是一支只有约 15 名工程师组成的团队，但干的事情相当“重”：重新爬取互联网，建立自己的 Web Index，再把它变成专门服务 AI Agent 的搜索基础设施。",
+    "据 Keenable 官网 披露，其索引已经覆盖超过 1000 亿份文档 ，在美国东部的查询延迟低于 250ms（p95）；面向 100 RPS 以上的大规模客户，价格最低可以做到每千次请求 1 美元。更值得注意的是，它声称 API 已经进入数家 AI Labs 和推理服务提供商的生产环境，同时用于模型训练和运行时检索，但并未披露具体客户名称。",
+    "Keenable 和今天已经很常见的 AI 搜索产品有所不同。它不想再做一个面向普通用户的 AI 搜索框，也不是简单在 Google 或 Bing Search API 上套一层大模型。Keenable 从底层重新做抓取（Crawl）、索引（Index）、检索（Retrieval）和排序（Ranking），再通过 REST API、MCP Server 和 CLI 把搜索能力交给 Agent。公司甚至直言，当前 Agent 使用的是一套“为人类优化”的 Web 访问工具，而它希望让 Agent 访问 Web 知识便宜到近似调用模型自身知识，不再因为成本和延迟而“舍不得搜索”。",
+    "Styskin 在接受 TechCrunch 采访 时解释，扫描整个互联网的服务成本非常高，如果索引结构没有针对具体任务优化，成本很快就会失控。真正的技术问题之一，是能否针对一次 Query 足够快地缩小搜索空间。他甚至用“painfully expensive”来形容构建巨大 Web Index 的成本。",
+    "因此，传统搜索长期围绕人类行为优化：哪个结果最值得排在前面，用户更可能点击什么，找到答案之后是否还会继续搜索。",
+    "接到 Task → Search → Fetch → Read → 发现信息缺口 → 修改 Query → 再 Search → 交叉验证 → 最终 Action。",
+    "一个 Research Agent 为了回答一个复杂问题，可以连续执行几十次搜索；Coding Agent 需要不断寻找最新文档、Issue、GitHub 仓库和 Changelog；销售 Agent 为了判断一个客户是否值得跟进，可能同时查询公司官网、融资新闻、招聘信息和高管动态。对这些 Agent 来说，“搜索”已经不再是用户主动点击一次按钮产生的动作，而是任务执行循环中的一个步骤。",
+    "这也意味着 Agent 没必要像人一样面对“十个蓝色链接”。它真正需要的是足够完整、足够新、来源可信，同时又尽可能精简、方便模型继续推理的上下文。",
+    "Styskin 因此认为，Agent 会形成一套不同于 Google 从人类点击行为中学习出来的反馈飞轮。传统搜索关注点击、排序和用户满意度，Agent Search 则会越来越关心 Recall、Freshness、Latency、QPS、机器可读性、Token Efficiency、Provenance ，以及最终完成一个任务究竟花了多少钱。",
+    "换句话说，搜索引擎过去优化的是“帮人找到网页”；Agent Search 要解决的，则更接近“用尽可能低的成本，找到足够完成任务的信息”。",
+    "Keenable 最直接的竞争对手 Exa 已经拥有同样量级的独立 Web Index。根据 Exa 官方数据 ，目前其向量数据库已经覆盖 1000 亿份文档 ，跟踪约 1.4 万亿个 URL ，每天抓取数十亿份文档，平台开发者已经超过 50 万。Cursor、AWS、Groq 等都出现在其客户列表中，Devin 背后的 Cognition 联合创始人 Walden Yan 也公开表示，传统搜索方案无法满足需求，Exa 已经被用于 Devin 的多个环节。",
+    "今年 5 月，Exa 又完成了 2.5 亿美元 C 轮融资 ，估值达到 22 亿美元。它甚至预测，今年 AI Agent 发起的 Web Search 数量就会超过人类，并认为未来几年 LLM 产生的搜索量可能达到今天 Google 搜索量的千倍。后一个数字显然属于公司的前瞻性判断，但资本已经开始为这种可能性下注。"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,25 @@
+{
+  "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
+  "source": "量子位",
+  "publishedAt": "2026-08-29T21:11:08Z",
+  "url": "https://www.qbitai.com/2026/08/481372.html",
+  "paragraphs": [
+    "即使是同一张显卡，一毛一样的权重， 推理软件栈的微小差异就让模型在关键位置输出完全不同的token ，甚至导致工具调用彻底失败。",
+    "Level1Techs论坛用户thr3e做了一系列实验，用Qwen3.6-27B在RTX PRO 6000 Blackwell显卡上完成了超过10万token的全量logit捕获测试。",
+    "关键在于Logits是纯粹的数学产物，矩阵乘法、注意力计算、激活函数层层叠加后的浮点数结果。如果两套系统跑同一份权重和同一段输入，理论上应该算出完全相同的logits。",
+    "vLLM为Qwen3.6-27B提供了三种可选的全注意力后端：FlashAttention 2、Flash Inference和Triton Attention。",
+    "thr3e特别强调，这段数据不出现在任何公开基准或训练集中，没有人能针对它做过benchmark优化或量化校准。",
+    "比如具体追踪一个出错案例，模型执行一个工具调用，目标是Cisco 路由器上的一个接口GigabitEthernet0/0/1.201。",
+    "FlashAttention 2搞错了，导致接口变成了GigabitEthernet0/1/4，随后模型又在两次后续工具调用中执行了错误的命令。",
+    "thr3e同时做了同后端多次运行的重复性对照，仅仅是切换了vLLM的一个配置项，同一块GPU、同一份操作系统和驱动、同一份权重、同一段prompt，每一个隐藏状态的logit在多次运行间都是逐位相同的。",
+    "接下来的实验设置成保持权重为BF16不动，注意力后端固定为Triton，仅改变KV缓存的量化精度，分别测试BF16、INT8和INT4三种配置。",
+    "结果INT4 KV缓存在长上下文中的Top-1翻转率急剧攀升，最终导致工具调用无法恢复。INT8 KV缓存虽然也出现了翻转，但模型最终设法回到了正确轨道。 只有BF16 KV缓存全程保持稳定 。",
+    "BF16正常完成所有调用，INT8在出错后“最终挣扎着恢复了”，而INT4则彻底偏离了，工具调用失败且无法自我纠正。",
+    "在短上下文中你可能感知不到差异，但一旦对话或agent工作流拉长到几万token，累积的数值漂移足以让模型做出致命错误决策。",
+    "参赛选手包括：Qwen官方BF16基线、Qwen官方FP8（W8A8）、TheHouseOfTheDude发布的INT8（W8A16，无校准数据集的一次性量化）、英伟达官方NVFP4、以及cyankiwi发布的AWQ INT4（W4A16，使用STEM和Agentic数据集校准）。",
+    "五种方案各自调用不同的CUDA核函数完成矩阵运算。BF16走标准torch线性层，FP8走CUTLASS的FP8分块缩放核，INT8和AWQ都走Marlin核。",
+    "NVFP4则是混合路径，208个目标走FlashInfer的FP8缩放核，193个MLP投影走Marlin的NvFp4核。",
+    "在这次测试的vLLM nightly版本中，GPU路径被判定为不支持原生FP4运算，NVFP4实际执行的是通过Marlin内核的仅权重FP4解压缩，而非真正的FP4运算。"
+  ],
+  "isExcerpt": true
+}

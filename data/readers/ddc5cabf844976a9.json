@@ -1,0 +1,25 @@
+{
+  "title": "OpenClaw：红过，爱过，散了",
+  "source": "量子位",
+  "publishedAt": "2026-08-29T20:00:51Z",
+  "url": "https://www.qbitai.com/2026/08/480855.html",
+  "paragraphs": [
+    "什么全民养龙虾、抢Mac mini、付费上门部署，朋友圈一夜之间人均赛博养殖户，那个现象级出圈的盛况还历历在目。",
+    "结果这才过去半年左右的时间，大家已经集体转头研究Claude Code、Codex、Skills和Harness了。。。",
+    "你可以把它直接装进Mac、Windows甚至树莓派里，再接上Claude、GPT、Gemini、DeepSeek这些模型。",
+    "在Discord、Telegram里扔过去一句话，它就能自己读邮件、查资料、写代码、跑脚本，甚至继续给自己装新工具。",
+    "从2025年11月底上线，到2026年3月3日，差不多100天，OpenClaw直接冲到25万+Star，顺手还把React给超了。",
+    "到3月底，龙虾的Star甚至已经进一步冲到33万+，一度成为GitHub历史上增长最快的开源项目之一，还有统计显示，它最高曾在48小时里狂揽超过3.4万个Star。",
+    "到了8月，OpenClaw的Star已经一路冲到38万+，Fork超过8万；X上相关产品更新也没停，项目依旧有人开发、有人折腾、有人养虾。",
+    "网易有道也搞出了LobsterAI，支持本地个人Agent、跨平台运行，以及Skills、MCP、IM远程控制。",
+    "智谱推出的AutoClaw，支持本地一键部署OpenClaw，预装Skills、接入飞书，后面又开始往「自进化」上卷。",
+    "OpenAI今年更新Agents SDK时，就明确把文件操作、命令执行、长任务、沙箱运行这些能力塞进了一套model-native harness；Codex本身也已经形成自己的完整Harness。",
+    "当时「养龙虾」顺手带火了一波Token焦虑，尤其这种24小时在线的Agent，会不停维护上下文、调用模型、调用工具、失败重试，是真烧Token。",
+    "这件事之所以吓人，也正好戳中了个人Agent最核心的矛盾——你越想让它像贾维斯，就越得给它更多权限；权限越大，一次失控的代价也越大。",
+    "就比如怎么让AI拥有手脚，又别让它乱伸手；怎么让它24小时干活，又别24小时烧钱；怎么给它足够自由，又能在出事时把它拽回来。",
+    "今年2月，Peter Steinberger正式加入OpenAI，方向也很明确，继续折腾他最上头的那件事——个人AI Agent。",
+    "让一群Agent自己写代码、测试、修Bug、继续迭代，人主要负责定目标和验收，甚至他还试过让Codex围着一个任务，连续跑上一周。",
+    "他和Dropbox联合创始人Drew Houston一起，各自掏了100万美元，成为Omacom Foundation的新Founding Patron。"
+  ],
+  "isExcerpt": true
+}

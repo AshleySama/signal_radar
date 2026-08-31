@@ -1,0 +1,20 @@
+{
+  "title": "20ms把PDF变成Markdown！开源OCR神器快了近300倍",
+  "source": "量子位",
+  "publishedAt": "2026-08-29T20:26:49Z",
+  "url": "https://www.qbitai.com/2026/08/481075.html",
+  "paragraphs": [
+    "其联合创始人兼CTO Nicolas Camara宣布，他们最新开发的 OCR It 可以 在20ms内 将一份不可复制的PDF文件内的所有文字内容提炼完，并将其转化成清晰的Markdown格式，AI读完马上就能看懂。",
+    "Nicolas Camara骄傲地表示， 在处理质量与Docling旗鼓相当的前提下，OCR It的处理速度比Docling快了近300倍！",
+    "你只需框选一次区域，之后每按一次快捷键（或开启自动模式），它就能把整本书或整个文档变成完整且可编辑的纯文本，方便你直接喂给AI进行总结或提问。",
+    "期间， OCR It会默认在连续识别到两张相同页面、无法继续翻页、OCR失败或达到300页上限时自动停止 ，避免在末页无限重复抓取。",
+    "具体而言，手动和自动档可以分别按以下的几个步骤操作： （注：用Windows和Linux的小伙伴们需将option键替换为Alt）",
+    "完成第一步框选文字区域之后，按一次Option+Shift+S，OCR It就会开始识别当前页面，并在识别完成后会自动翻到下一页。",
+    "如果你希望进一步节省时间的话， 你也可以一边翻页一边在每一页按一次Option+Shift+S，系统会立即截图并在后台自动排队执行识别任务。",
+    "自动挡的话就简单多了，你只需要按下 Option+Shift+A或点击Start auto-run ，OCR It便会自动循环执行“截图—OCR—翻页”，直至文档结束。",
+    "此外，OCR It仓库界面显示， 它既不需要API Key、联网、安装时也不需要索取任何网站权限，它只会在需要自动运行或操作跨域iframe时才按需申请当前站点的权限。",
+    "OCR It目前可以相当顺手地处理版式简单、文字清晰的PDF文档，但它 还不太能处理一些标题、脚注、表格、数学公式和正文段落混排的复杂页面 ，所以它还有不小的提升空间。",
+    "参考链接： [1]https://x.com/nickscamara_/status/2083295265793212827 [2]https://github.com/thiagotigaz/ocr-it [3]https://www.firecrawl.dev/about"
+  ],
+  "isExcerpt": true
+}
