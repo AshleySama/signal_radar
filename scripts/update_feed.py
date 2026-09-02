@@ -81,6 +81,14 @@ def clean_text(value: str | None) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def clean_reader_text(value: str | None) -> str:
+    text = html.unescape(value or "")
+    text = re.sub(r"\\u([0-9a-fA-F]{4})", lambda match: chr(int(match.group(1), 16)), text)
+    text = text.replace("\\/", "/").replace("\\\"", "\"").replace("\\n", "\n").replace("\\t", " ")
+    text = re.sub(r"<\s*\\?/?\s*[A-Za-z][^>]*>", " ", text)
+    return clean_text(text)
+
+
 def first_child_text(node: ET.Element, names: set[str]) -> str:
     for child in node:
         if local_name(child.tag) in names:
@@ -208,7 +216,7 @@ def reader_paragraphs(page: str, fallback: str) -> list[str]:
     candidates = structured_page_text(page)
     page = re.sub(r"<(?:script|style|svg|noscript)[^>]*>.*?</(?:script|style|svg|noscript)>", " ", page, flags=re.DOTALL | re.IGNORECASE)
     candidates.extend(re.findall(r"<p[^>]*>(.*?)</p>", page, re.DOTALL | re.IGNORECASE))
-    candidates = [clean_text(value) for value in candidates]
+    candidates = [clean_reader_text(value) for value in candidates]
     output: list[str] = []
     used: set[str] = set()
     length = 0
