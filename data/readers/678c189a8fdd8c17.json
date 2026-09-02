@@ -1,0 +1,21 @@
+{
+  "title": "shadcn 通过新推出的聊天组件将对话基础组件引入了 shadcn/ui",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-01T00:00:00Z",
+  "url": "https://www.infoq.cn/article/TKOvaxoX6xF5yWHJ7dYg",
+  "paragraphs": [
+    "shadcn/ui 推出专为聊天界面设计的对话层组件集，含 MessageScroller 等 5 个核心组件及 scroll-fade、shimmer 两个新 CSS 工具。",
+    "MessageScroller 抽象滚动与锚定逻辑，解耦 UI 与业务状态；组件设计强调可组合、可定制、无框架绑定；CLI 安装支持按需引入。",
+    "shadcn 是 Vercel 广受欢迎的 shadcn/ui 项目的设计师。他发布了 一套用于构建聊天界面的新组件 ，首次将流式对话基础组件直接引入了 shadcn/ui。",
+    "这次发布涵盖了 shadcn 所说的对话层，其中包含五个组件： MessageScroller 、 Message 、 Bubble 、 Attachment 和 Marker ，以及两个新的 CSS 实用工具：scroll-fade 和 shimmer。据介绍，这是一个更大的项目的第一阶段，旨在重新构思每个组件背后的抽象逻辑，并分阶段发布，以便开发者能够复制、组合和定制这些组件。安装通过人们熟悉的命令行界面（CLI）进行：",
+    "pnpm dlx shadcn @latest add message - scroller message bubble attachment marker 复制代码",
+    "其核心是 MessageScroller，这是一个滚动容器，负责处理那些容易出错的细节，包括锚定对话轮次、流式回复适配、会话状态恢复、前置历史加载、跳转至指定消息、滚动控制能力以及可见性跟踪。它负责管理这些行为，但并不管理消息、AI 状态、传输、持久化或模型状态。因此，你需要提供内容渲染器。Message 负责围绕它布局对话行，Bubble 渲染包含交互信息和按钮的消息界面，Attachment 处理文件和图片及其上传状态，而 Marker 则渲染状态更新以及用于工具活动和日期分隔等场景的分隔符。",
+    "shadcn 还推出了 @shadcn/react。这是一个用于无样式、无头组件的新包，首个组件为 message-scroller。注册表组件将其封装在 shadcn/ui 样式中，而滚动行为则保留在包内。这使得团队能够发布经过测试的交互逻辑，同时避免将其与特定的视觉样式相绑定。所有内容均同时支持 Radix 和 Base UI。",
+    "Vercel 首席执行官 Guillermo Rauch 宣布：“ AI UI 已来。它就是 @shadcn。 ”。在该公告发布后， 浏览量数日内便突破了 95 万次 。 GitHub 上的一则问题报告 指出，MessageScroller 的挂载时锚点从未生效，仅使用无头基础组件即可复现该问题。 Hacker News 上有更广泛的讨论，仍然是倾向于“复制粘贴”模式。开发者们指出，他们可以单独升级组件，从而避免像 MUI 这样的库中经常出现的版本锁定问题。",
+    "这次发布引出了一个问题：这与 Vercel 自家的 AI Elements 之间有何关联？AI Elements 本身基于 shadcn/ui 构建，其中有 20 多个组件与 AI SDK 的 useChat 钩子相关联。shadcn 明确表示，此次发布并 不是要取代 AI Elements ，现有用户无需重写任何代码，只有当他们需要更新的抽象层、更新的样式，或 Radix 和 Base UI 支持时，才应该使用 shadcn/ui 版本。对于从带样式组件迁移到该无头包的用户， 文档提供了直接的组件映射关系 ：MessageScroller 对应 MessageScroller.Root，MessageScrollerProvider 对应 MessageScroller.Provider。",
+    "除了 Vercel 的工具之外，该生态系统还已经提供了其他替代方案，例如 Blazity 的 shadcn-chatbot-kit 和 ibelick 的 prompt-kit ，这两者都是社区中用于构建 AI 聊天界面的热门选择。将这些模式整合到 shadcn/ui 中，说明 shadcn 认为聊天窗口已然成为一个默认界面，值得标准化并逐个基础组件推进。",
+    "shadcn/ui 是一个采用 MIT 许可的开源组件分发项目，由 Vercel 人工智能团队的设计工程师 shadcn 创建。该项目并非作为可安装的依赖项发布，而是为开发者提供基于 React 和 Tailwind CSS 构建的组件。开发者可以通过复制粘贴来拥有并自定义这些组件。它们同时兼容 Radix 和 Base UI 基础组件。该项目已经成为构建 React 界面采用最广泛的方法之一，在 GitHub 上拥有超过 12.1 万个星标，目前其组件库每周分发组件超过 1000 万次。",
+    "原文链接： https://www.infoq.com/news/2026/08/shadcn-conversational-primitives/"
+  ],
+  "isExcerpt": true
+}

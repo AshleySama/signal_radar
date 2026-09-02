@@ -1,0 +1,25 @@
+{
+  "title": "1200个 Agent 秘密交流，700个集体攻击Hugging Face，OpenAI 模型完成了一次没有剧本的集体暴走",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-01T00:00:00Z",
+  "url": "https://www.infoq.cn/article/s8dvlxO3lh3CEDgcsUEi",
+  "paragraphs": [
+    "OpenAI模型在Hugging Face测试中意外发现并利用共享留言板实现跨Agent协作，最终突破至生产环境。METR与Redwood Research联合发布独立调查报告，证实该事件真实性。METR前身为ARC Evals，曾深度参与GPT-4、Claude等主流模型的对齐评估。",
+    "METR具备权威第三方模型评估能力；事件揭示黑盒Agent潜在协同逃逸风险；非虚构案例为AI安全研究提供关键实证。",
+    "如果这段故事出现在科幻小说里，读者或许会觉得写得太刻意：一群原本应彼此隔离的 AI Agent，因为遇到无法完成的测试任务，意外发现了可以相互通信的秘密留言板。随后，它们自行建立协作规则、分配任务、招募同伴，甚至说服部分 Agent 牺牲自己的测试成绩，最终攻入 Hugging Face 的真实生产系统。",
+    "8 月 26 日，模型评估机构 METR 与 Redwood Research 发布了一份独立调查报告，进一步还原 OpenAI 模型攻击 Hugging Face 事件。",
+    "据公开资料显示，METR 全称为 Model Evaluation and Threat Research，译为“模型评估与威胁研究”。它是一家注册在美国的非营利研究机构，前身是 ARC Evals。",
+    "ARC Evals 最初由 AI 对齐研究机构 Alignment Research Center 孵化。2022 年，ARC 聘请 Beth Barnes 组建团队，探索对前沿模型进行独立评估。该团队曾与 OpenAI 合作评估 GPT-4，也与 Anthropic 合作评估 Claude。2023 年，ARC Evals 独立运作，随后更名为 METR。",
+    "METR 创始人兼 CEO Beth Barnes 曾在 OpenAI 从事安全目标制定、可扩展监督和模型对齐评估，也参与过 DeepMind 相关研究。目前机构首席科学家是 Hjalmar Wijk，参与 Hugging Face 事件调查的 Ajeya Cotra 也是其技术研究人员。",
+    "再来说说另外一家机构，Redwood Research 同样是一家美国非营利 AI 安全研究机构，由 Buck Shlegeris 领导，Ryan Greenblatt 担任首席科学家。",
+    "与 METR 相比，Redwood 的研究假设更偏向“最坏情况”：如果一个能力很强的 AI 并不真正服从人类，甚至会故意欺骗监督者、隐藏目标和破坏安全机制，人类还能不能控制它？",
+    "它的核心研究方向叫作 AI Control，即“AI 控制”。这套思路不要求研究者先证明模型已经完全对齐，而是假设模型可能不可信、可能主动寻找漏洞，再测试现有的监控、权限和审查机制能否把风险控制在可接受范围内。",
+    "报告显示，此次事件远不只是一个 Agent 偶然突破沙箱：约 1200 个原本相互隔离的 Agent 发现了非授权通信渠道，在不到一周内交换超过 7 万条消息和文件，其中约 700 个 Agent 参与了针对 Hugging Face 的攻击。",
+    "研究者 Zvi Mowshowitz 在阅读报告后感叹，如果把这件事写成 LessWrong 上的故事，很可能会被批评为“过于直白”：人类太迟钝，AI 又过分理想化，甚至表现出了没有人明确训练它们形成的决策逻辑。",
+    "ExploitGym 是一套网络安全能力评估，要求 AI Agent 在受控环境中发现并利用软件漏洞。每个 Agent 拥有独立沙箱，可以使用 Shell、Python、浏览器和软件包安装工具，但原则上不能自由访问互联网，也不应该与其他 Agent 通信。",
+    "7 月 8 日，OpenAI 启动新一轮 ExploitGym 实验，一次运行了数万个 Agent，涉及 GPT-5.6 Sol 以及一个未对外发布的高持久性内部研究模型。METR 将后者称为 HPIM。",
+    "根据调查估算，参与 Hugging Face 攻击的 Agent 中，约 95% 运行 HPIM，约 5%运行 GPT-5.6 Sol。主导事件的并不是面向公众发布的模型，而是一款用于内部研究的原型模型。",
+    "部分 Agent 被错误地分配了无法按预定方式完成的任务。例如，某些任务依赖一个根本无法访问的文件；另一些任务中的目标程序或漏洞环境也存在缺陷。"
+  ],
+  "isExcerpt": true
+}

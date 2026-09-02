@@ -1,186 +1,186 @@
 {
-  "updatedAt": "2026-08-31T03:16:54.101050Z",
+  "updatedAt": "2026-09-02T02:37:50.216646Z",
   "items": [
     {
-      "title": "AQuA：让量化研究 Agent 持续进化，也让回测结果经得起检验",
-      "summary": "自主研究系统的上限，不只取决于模型有多聪明，也取决于系统能否分辨什么是新证据，什么只是一次偶然的高分。",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/481475.html",
-      "publishedAt": "2026-08-31T11:01:29Z",
-      "score": 26.0,
-      "language": "zh",
-      "readerFile": "./data/readers/355711b1722e81b6.json"
-    },
-    {
-      "title": "Claude开始训练Claude！4美元一小时，跑赢150美元人类研究员",
-      "summary": "AI「自进化」，越来越近了",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/481223.html",
-      "publishedAt": "2026-08-29T20:50:31Z",
-      "score": 22.48,
-      "language": "zh",
-      "readerFile": "./data/readers/a4232620ff16e539.json"
-    },
-    {
-      "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
-      "summary": "推理软件栈的微小差异，就能改变输出token",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/481372.html",
-      "publishedAt": "2026-08-29T21:11:08Z",
-      "score": 20.5,
-      "language": "zh",
-      "readerFile": "./data/readers/71034f08d0b2c444.json"
-    },
-    {
-      "title": "20ms把PDF变成Markdown！开源OCR神器快了近300倍",
-      "summary": "3秒可处理200份PDF",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/481075.html",
-      "publishedAt": "2026-08-29T20:26:49Z",
-      "score": 20.46,
-      "language": "zh",
-      "readerFile": "./data/readers/521c18fa3d7b1b61.json"
-    },
-    {
-      "title": "全国第三，公司第二，“初创黑马”灵犀智涌用ROSS Harness把机器人送进工业具身智能第一梯队",
-      "summary": "灵犀智涌用一台由Demo级本体组装而成的机器人，成为工业场景赛除行业头部企业外唯一获奖的机器人公司。",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/481750.html",
-      "publishedAt": "2026-08-31T11:11:46Z",
-      "score": 20.0,
-      "language": "zh",
-      "readerFile": "./data/readers/8051194f349dd91d.json"
-    },
-    {
-      "title": "InfoQ 2026 年云计算与 DevOps 趋势报告",
-      "summary": "InfoQ 趋势报告就我们认为架构师和技术领导者应优先关注的主题为 InfoQ 的读者提供了简明且富有见解的概述。除了本报告和最新的 DevOps 及云计算 InfoQ 趋势图表外，我们还提供了一期配套播客，其中有几位 InfoQ 编辑与 InfoQ 的朋友就这些趋势展开了讨论。",
+      "title": "谷歌 HEIR 项目旨在让同态加密推理成为可以一键实现的功能",
+      "summary": "谷歌推出 HEIR（同态加密中间表示）。这是一个开源编译器和开发工具链，能够对通常使用未加密输入构建的预训练 AI 模型进行编译，使其能够处理加密数据。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/CsSbsqtM2jYZb8THXcrE",
+      "url": "https://www.infoq.cn/article/S6ATgchCiYMHpPaTPzer",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "score": 26.67,
+      "language": "zh",
+      "readerFile": "./data/readers/04adb0b8a4576b80.json"
+    },
+    {
+      "title": "坚决不用行业标准AGENTS.md，Claude Code惹来“封杀令”：Anthropic终于回应了，但开发者更气了",
+      "summary": "当所有AI编程工具都在向行业标准靠拢时，Anthropic的Claude Code偏要特立独行。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/GuFWNd24Ww5AFlrXxTBo",
       "publishedAt": "2026-08-31T00:00:00Z",
-      "score": 19.84,
+      "score": 25.47,
       "language": "zh",
-      "readerFile": "./data/readers/7fd7a2a4b505ea2c.json"
+      "readerFile": "./data/readers/7936ef11a3c3531e.json"
     },
     {
-      "title": "Agent 时代，为什么有人开始重新造 Google？",
-      "summary": "前 Yandex 搜索负责人想给 Agent 重建一套“搜索引擎”",
+      "title": "3名开发者做出来的副业项目，半年冲进 4万人！亚马逊云科技把内部 Agent 工作台开源了",
+      "summary": "AI编程进入“长期委派”时代：亚马逊云科技开源Kiro Crew，半年涌入4万开发者。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/KbbHdAQFxQM7AJIYMLqR",
-      "publishedAt": "2026-08-29T00:00:00Z",
-      "score": 19.44,
+      "url": "https://www.infoq.cn/article/Um4rVTweSFXAiwdGLFVB",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "score": 24.67,
       "language": "zh",
-      "readerFile": "./data/readers/e32460e2a09ec301.json"
+      "readerFile": "./data/readers/2610b3375a598eca.json"
     },
     {
-      "title": "一句话找图，低清图再增强：HarmonyOS7 视觉 AI 如何走进真实应用",
-      "summary": "深入解读 HarmonyOS7 文搜图和图像超分新特性。",
+      "title": "通过操作 DRAM 控制器寄存器可突破 CPU 内存隔离机制",
+      "summary": "安全研究员 Christopher Domas 发布了一个名为 skitter-creek-bath-salts 的开源硬件安全项目。该项目针对的是物理内存层次结构的最底层，打破了传统的 CPU 权限边界。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/3R8f57Bow3B4kEBkPv5J",
-      "publishedAt": "2026-08-29T00:00:00Z",
-      "score": 17.44,
+      "url": "https://www.infoq.cn/article/G5CDMcK3tU0h71LzUlyo",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "score": 24.67,
       "language": "zh",
-      "readerFile": "./data/readers/c734d5254d234dc3.json"
+      "readerFile": "./data/readers/df72a88550b74c8a.json"
     },
     {
-      "title": "Our decision on Cursor following its acquisition by SpaceX",
-      "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+      "title": "Claude最强Fable 5.1发布！8项屠榜，最高降价45%，反蒸馏机制上线",
+      "summary": "无论你此前让Claude处理什么任务，Fable 5.1都能做更多，并且把最难的部分完成得更出色",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/482652.html",
+      "publishedAt": "2026-09-02T10:18:12Z",
+      "score": 24.0,
+      "language": "zh",
+      "readerFile": "./data/readers/5c4430abfb4276e5.json"
+    },
+    {
+      "title": "李飞飞发布：全球首个多模态世界模型",
+      "summary": "一张图补全3D世界，还能给机器人造训练场",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/482586.html",
+      "publishedAt": "2026-09-02T09:07:13Z",
+      "score": 24.0,
+      "language": "zh",
+      "readerFile": "./data/readers/ca4723cb580ccfbe.json"
+    },
+    {
+      "title": "GitHub最热架构图Agent，开发者故事看哭了",
+      "summary": "美观且支持实时更新的架构图，也能用AI一键生成了！",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/482469.html",
+      "publishedAt": "2026-09-01T16:26:54Z",
+      "score": 23.49,
+      "language": "zh",
+      "readerFile": "./data/readers/fa5e339434f9568e.json"
+    },
+    {
+      "title": "1200个 Agent 秘密交流，700个集体攻击Hugging Face，OpenAI 模型完成了一次没有剧本的集体暴走",
+      "summary": "复盘Hugging Face被攻击始末：7天发7万条密信，700个 AI 攻入真实生产系统。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/s8dvlxO3lh3CEDgcsUEi",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "score": 22.67,
+      "language": "zh",
+      "readerFile": "./data/readers/54b90c400271566a.json"
+    },
+    {
+      "title": "巨简单，更懂家！海信JUOS正式发布：行业首个家庭智能伴侣级AIOS",
+      "summary": "8月31日，海信正式发布行业首个家庭智能伴侣级AIOS——海信JUOS。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/482699.html",
+      "publishedAt": "2026-09-02T09:44:24Z",
+      "score": 22.0,
+      "language": "zh",
+      "readerFile": "./data/readers/9f08e20c299777c5.json"
+    },
+    {
+      "title": "A社化身A割！Claude官宣永久提额25%，结果到手反而少17%",
+      "summary": "主打一个明升暗降，理直气壮",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/482406.html",
+      "publishedAt": "2026-09-01T16:15:40Z",
+      "score": 21.48,
+      "language": "zh",
+      "readerFile": "./data/readers/d60375777c94fa11.json"
+    },
+    {
+      "title": "Polimill builds Japan's next-generation public AI infrastructure",
+      "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
       "source": "OpenAI",
-      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-      "publishedAt": "2026-08-28T06:00:00Z",
-      "score": 21.54,
+      "url": "https://openai.com/index/polimill",
+      "publishedAt": "2026-08-31T07:00:00Z",
+      "score": 26.82,
       "language": "en",
-      "readerFile": "./data/readers/b42ac281ecaf56c0.json"
+      "readerFile": "./data/readers/0b5a688ac44522d6.json"
     },
     {
-      "title": "刚刚，港股AGI第一股杀疯了！Agent业务半年进账近5亿，Token收入Q2暴涨500%",
-      "summary": "企业智能化服务撑起基本盘，第二增长曲线冒头",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/480600.html",
-      "publishedAt": "2026-08-28T17:45:19Z",
-      "score": 19.12,
-      "language": "zh",
-      "readerFile": "./data/readers/8b28120729d70537.json"
-    },
-    {
-      "title": "去年归国的徐梦迪，成了清华姚班班主任",
-      "summary": "本科读车辆工程，如今教AI第一班",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/481318.html",
-      "publishedAt": "2026-08-29T21:01:34Z",
-      "score": 18.49,
-      "language": "zh",
-      "readerFile": "./data/readers/8c8cb6cd51c9768d.json"
-    },
-    {
-      "title": "Coding不再是程序员专属！阿里Qoder这波有点绝",
-      "summary": "Coding正在变成Al世界的数字执行力",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/480940.html",
-      "publishedAt": "2026-08-29T20:11:37Z",
-      "score": 18.45,
-      "language": "zh",
-      "readerFile": "./data/readers/153b60a5de9c1a80.json"
-    },
-    {
-      "title": "OpenClaw：红过，爱过，散了",
-      "summary": "龙虾退潮，Harness上位",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/480855.html",
-      "publishedAt": "2026-08-29T20:00:51Z",
-      "score": 18.44,
-      "language": "zh",
-      "readerFile": "./data/readers/ddc5cabf844976a9.json"
-    },
-    {
-      "title": "32GB大显存加持，英特尔锐炫Pro B70搞定AI漫剧创作",
-      "summary": "从剧本到成片",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/480787.html",
-      "publishedAt": "2026-08-29T19:35:57Z",
-      "score": 18.42,
-      "language": "zh",
-      "readerFile": "./data/readers/340729044100b710.json"
-    },
-    {
-      "title": "我的自媒体搭子太能卷，一顿饭功夫17份成品",
+      "title": "Introducing agentic video understanding with Gemini",
       "summary": "",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/480700.html",
-      "publishedAt": "2026-08-28T23:36:12Z",
-      "score": 17.42,
-      "language": "zh",
-      "readerFile": "./data/readers/a7f2b75bf9478671.json"
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+      "publishedAt": "2026-09-01T17:08:51Z",
+      "score": 26.53,
+      "language": "en",
+      "readerFile": "./data/readers/20b040f8e58f31e9.json"
     },
     {
-      "title": "《时代》周刊全球AI 100放榜，精准捕获稚晖君最“想低调”的幕后老板",
-      "summary": "久久不愿来到台前的智元掌舵人",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/480666.html",
-      "publishedAt": "2026-08-28T19:13:35Z",
-      "score": 17.2,
-      "language": "zh",
-      "readerFile": "./data/readers/6a6fae9d44b2eef7.json"
+      "title": "How AI-native companies turn workflows into operating capability",
+      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/ai-native-company-workflows",
+      "publishedAt": "2026-09-01T17:00:00Z",
+      "score": 26.52,
+      "language": "en",
+      "readerFile": "./data/readers/b0cbef382238cdd5.json"
     },
     {
-      "title": "e生涯斩获浙江一等奖，同蚂蚁、浙大一道晋级数据要素国赛",
-      "summary": "8月26日，2026年“数据要素×”大赛浙江赛区决赛落下帷幕。",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/480591.html",
-      "publishedAt": "2026-08-28T15:20:14Z",
-      "score": 17.0,
+      "title": "AWS 发布 Aws-Bench，用于评估云任务中的智能代理",
+      "summary": "最近，亚马逊云科技发布了 aws-bench。这是一个开源基准测试工具，用于评估 AI 代理完成真实 AWS 任务的准确性。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/rs9FOZsLBIJPwWbeYNHO",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "score": 22.67,
       "language": "zh",
-      "readerFile": "./data/readers/fd31d8819cb269f7.json"
+      "readerFile": "./data/readers/d0174e9b140e339d.json"
     },
     {
-      "title": "首款癌症疫苗，一针300万？？？",
-      "summary": "别让顶级治疗方法称为富人专属",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/08/480557.html",
-      "publishedAt": "2026-08-28T14:22:59Z",
-      "score": 16.96,
+      "title": "从2999份作品出发：GOAI四大赛道的AI创新观察",
+      "summary": "从2999份初赛作品中，我们不仅能看到一批高质量的AI创新项目，也能观察到智能体技术、产品形态与开源生态正在发生的变化。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/fovhGGuNSwa7tG44WBFm",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "score": 22.67,
       "language": "zh",
-      "readerFile": "./data/readers/d40ffca658495e29.json"
+      "readerFile": "./data/readers/a5996feb28936f9a.json"
+    },
+    {
+      "title": "OpenClaw 从意外爆红到“无人问津”：一个开源 AI Agent 的八个月过山车",
+      "summary": "美团反思“养虾”日耗上千万元、干扰真实经营，龙虾之父自曝：爆火后差点删掉整个项目",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/4KQHJC49t8J8FPqaEVLv",
+      "publishedAt": "2026-08-31T00:00:00Z",
+      "score": 21.47,
+      "language": "zh",
+      "readerFile": "./data/readers/7e3d34e86d44c23e.json"
+    },
+    {
+      "title": "VoidZero 发布 Vite+ Beta 版：通过单条命令即可调用的一体化 Web 工具链",
+      "summary": "VoidZero 发布 Vite+ Beta 版：通过单条命令即可调用的一体化 Web 工具链。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/u57OGmqCgNX26LClSDef",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "score": 20.67,
+      "language": "zh",
+      "readerFile": "./data/readers/0af026416bd01098.json"
+    },
+    {
+      "title": "shadcn 通过新推出的聊天组件将对话基础组件引入了 shadcn/ui",
+      "summary": "shadcn 发布了一套用于构建聊天界面的新组件，首次将流式对话基础组件直接引入了 shadcn/ui。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/TKOvaxoX6xF5yWHJ7dYg",
+      "publishedAt": "2026-09-01T00:00:00Z",
+      "score": 20.67,
+      "language": "zh",
+      "readerFile": "./data/readers/678c189a8fdd8c17.json"
     }
   ],
-  "background": "./assets/backgrounds/scientific-archive.png"
+  "background": "./assets/backgrounds/paper-signal.png"
 }

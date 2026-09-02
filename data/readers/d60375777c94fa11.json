@@ -1,0 +1,19 @@
+{
+  "title": "A社化身A割！Claude官宣永久提额25%，结果到手反而少17%",
+  "source": "量子位",
+  "publishedAt": "2026-09-01T16:15:40Z",
+  "url": "https://www.qbitai.com/2026/09/482406.html",
+  "paragraphs": [
+    "刚刚，Claude宣布，从9月14日开始，也就是大概两周后，将 永久提高Claude Code 25%的标准周额度 ，覆盖Pro、Max、Team以及按席位计费的Enterprise等付费档位。",
+    "这么算下来，总的额度从150直接降到125。所以官方说是“永久提高25%”，但里外里，用到手反而少了大约17%。",
+    "当然，Claude也表示，他们正在做一些新的优化，希望之后让大家“感觉从Claude获得了更多价值”，同时增加对usage的可见性和控制能力。",
+    "小模型比如 Luna，有时会自己调用更强、更贵的 sub-agent；甚至主模型没开 /fast，子 Agent 却自己跑 /fast。",
+    "Memory、Compaction、Subagent、Automation、Computer History、MCP……",
+    "所以OpenAI后续计划把这些后台浪费系统性地堵掉，同时直接在App里告诉用户你的usage，到底花到哪儿去了。",
+    "Claude Code现在可能就是用户太多、算力压力太大；反过来Codex还在抢用户，所以一个在往回收，一个还在猛猛送。",
+    "但反过来说，怎么解释自己的策略、怎么和用户沟通、怎么维持一个良好的社区氛围，本来就应该是任何一家AI公司的必修课。",
+    "有一说一，我还真问过好几个国内做开发的同学。因为Claude众所周知的“不当人”，不少人编程主力几乎都已经转向Codex了。",
+    "[2] https://x.com/thsottiaux/status/2093801758665715784"
+  ],
+  "isExcerpt": true
+}

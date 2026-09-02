@@ -1,0 +1,25 @@
+{
+  "title": "坚决不用行业标准AGENTS.md，Claude Code惹来“封杀令”：Anthropic终于回应了，但开发者更气了",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-08-31T00:00:00Z",
+  "url": "https://www.infoq.cn/article/GuFWNd24Ww5AFlrXxTBo",
+  "paragraphs": [
+    "当所有 AI 编程工具都在向行业标准靠拢时，Anthropic 的 Claude Code 偏要特立独行。它拒绝支持已被超 6 万个开源项目采用的 AGENTS.md 格式，固执地守着自家 CLAUDE.md 不放。",
+    "这份“特立独行”终于踢到了铁板。全球电商巨头 Shopify 的 CEO Tobi Lütke 公开威胁：要么支持 AGENTS.md，要么在 Shopify 内部全面禁用 Claude Code。",
+    "Shopify CEO Tobi Lütke 认为，Claude Code 拒绝读取 AGENTS.md，迫使大型研发团队承担了一笔本可避免的“复杂度税”。",
+    "“我正在考虑在 Shopify 禁用 Claude Code，直到他们改变主意，愿意读取 AGENTS.md、.agents/skills 等文件。”Lütke 在 X 上写道。",
+    "这看起来只是一场围绕 AI 编程工具配置方式的小争议，但放到 Shopify 这样的大型研发组织里，一处格式差异很快就会演变成平台工程问题。",
+    "Shopify 有数千名开发者共同维护一个庞大的单体代码库（monorepo），使用的 AI 编程工具却不尽相同。每个智能体都需要根据当前处理的代码，读取相应目录中的项目指令。一旦某款工具没有读到与其他工具相同的指令，开发者使用的智能体就可能遵循不同的规则。",
+    "Lütke 随后在另一篇帖子中解释道：“AGENTS.md 和 CLAUDE.md 都会沿目录树递归生效。数千名开发者共同维护一个 monorepo，难免会有某个目录漏掉其中一份文件，结果就是一部分开发者用上了‘被切掉一块脑子’的智能体。”",
+    "Shopify 已经通过自动化机制弥补了这种差异，但 Lütke 认为，公司的工程师原本就不该为此额外投入精力。",
+    "近一年来，开发者一直在要求 Anthropic 支持 AGENTS.md， 其中，2025 年 8 月提交的主要功能请求已经获得近 5000 个 GitHub 用户点赞，成为 Claude Code 社区反响最强烈的兼容性诉求之一。然而，相关 issue 接连在没有充分回应社区质疑的情况下被关闭，“不予修复”成了 Anthropic 留给数千名开发者的答案。",
+    "开发者随后把要求推进到大型代码库最需要的递归加载：让 Claude Code 自动查找根目录及各级子目录中的 AGENTS.md ，按照距离当前代码最近的文件优先生效，同时显示本次任务究竟读取了哪些指令。这样一来，根目录可以保存全局规则，子项目再定义各自的构建命令、测试规范和操作边界，团队无需在整棵目录树中复制一套 CLAUDE.md。这项请求最终同样被关闭，并标记为“暂无计划”。",
+    "直到 Shopify CEO Tobi Lütke 公开放话要在公司内部禁用 Claude Code，沉默近一年的 Anthropic 才终于作出回应。",
+    "随着编程智能体的能力越来越强，工程团队也需要一种能够长期保存项目指令的方式。AGENTS.md 和 CLAUDE.md 等文件正是在这样的背景下出现的。",
+    "开发者可以把构建命令、测试要求和编码规范等内容直接写进代码仓库中的指令文件。智能体工作时会自动读取这些信息，无需开发者每次重新说明。麻烦在于，各家编程工具至今没有采用统一的文件格式。",
+    "OpenAI 于 2025 年 8 月推出 AGENTS.md，用于向编程智能体提供项目级指令。到当年 12 月，OpenAI 表示，已有超过 6 万个开源项目和智能体框架采用这种格式，支持它的工具包括 Codex、Cursor、Gemini CLI、GitHub Copilot、Jules 和 VS Code。此后，OpenAI 将这一格式移交给 Linux 基金会旗下的 Agentic AI Foundation。",
+    "Claude Code 走了另一条路。它使用 CLAUDE.md 保存项目指令，并且能够在处理代码时读取仓库不同目录中的 CLAUDE.md。它目前不会原生读取 AGENTS.md，虽然开发者已经多次要求 Anthropic 增加这项能力。",
+    "Anthropic 提供了一些变通方案，例如通过 CLAUDE.md 导入 AGENTS.md，或者为文件创建符号链接。"
+  ],
+  "isExcerpt": true
+}
