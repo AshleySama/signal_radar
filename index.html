@@ -6,7 +6,7 @@
   <meta name="description" content="Signal Radar - 每周三次，汇总值得关注的全球 AI、开发者与开源技术信号。">
   <title>Signal Radar - 全球技术雷达</title>
   <style>
-    :root { --paper:#f7f6f2; --ink:#22211f; --muted:#77736d; --faint:#dedbd4; --accent:#c75b32; --drawer-width:470px; --hero-background:url("./assets/backgrounds/scientific-archive.png"); }
+    :root { --paper:#f7f6f2; --ink:#22211f; --muted:#77736d; --faint:#dedbd4; --accent:#c75b32; --drawer-width:min(640px,50vw); --hero-background:url("./assets/backgrounds/scientific-archive.png"); }
     * { box-sizing:border-box; }
     html { background:var(--paper); scroll-behavior:smooth; }
     body { margin:0; color:var(--ink); background:var(--paper); font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; }
@@ -41,10 +41,10 @@
     .item-summary { display:block; max-width:700px; margin-top:6px; color:var(--muted); font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif; font-size:12px; line-height:1.7; }
     .source { color:#6e6963; font-size:12px; line-height:1.7; text-align:right; }
     .read-stamp { position:absolute; right:4px; bottom:-11px; width:43px; opacity:.56; mix-blend-mode:multiply; transform:rotate(-9deg); pointer-events:none; }
-    .drawer { position:fixed; z-index:20; top:0; right:0; display:flex; flex-direction:column; width:var(--drawer-width); height:100dvh; padding:25px 32px 30px; background:#fbfaf7; border-left:1px solid var(--faint); box-shadow:-18px 0 50px rgba(39,31,24,.08); transform:translateX(100%); opacity:0; pointer-events:none; transition:transform .48s cubic-bezier(.2,.75,.2,1), opacity .25s ease; }
-    .drawer.open { transform:translateX(0); opacity:1; pointer-events:auto; }.drawer-top { display:flex; align-items:center; justify-content:space-between; min-height:34px; }.drawer-actions { display:flex; gap:8px; }.drawer-label { color:var(--accent); font-size:10px; font-weight:700; letter-spacing:.18em; }.icon-button { display:grid; width:34px; height:34px; place-items:center; border:1px solid var(--faint); border-radius:50%; color:var(--ink); background:transparent; font:20px/1 Arial,sans-serif; text-decoration:none; cursor:pointer; }.icon-button:hover { color:var(--accent); border-color:var(--accent); }
-    .drawer-content { flex:1; overflow:auto; padding:35px 4px 26px 0; scrollbar-width:thin; scrollbar-color:#c9c3ba transparent; }.drawer-source { margin:0 0 20px; color:var(--accent); font-size:12px; letter-spacing:.08em; }.drawer-title { margin:0; font:500 33px/1.3 Georgia,"Times New Roman","Noto Serif SC",serif; }.drawer-body { margin:28px 0 0; color:#403d39; font:16px/2 Georgia,"Times New Roman","Noto Serif SC",serif; }.drawer-body p { margin:0 0 20px; }.drawer-note { margin:28px 0 0; padding-top:15px; border-top:1px solid var(--faint); color:var(--muted); font-size:11px; line-height:1.7; }
-    body.drawer-open .edition, body.drawer-open .nav, body.drawer-open .principles, body.drawer-open .footer-inner { max-width:min(1120px, calc(100vw - var(--drawer-width) - 34px)); margin-left:max(18px, calc((100vw - 1120px) / 2)); margin-right:calc(var(--drawer-width) + 18px); }
+    .drawer { position:fixed; z-index:20; top:0; right:0; display:flex; flex-direction:column; width:var(--drawer-width); height:100dvh; padding:28px 42px 32px; background:#fbfaf7; border-left:1px solid var(--faint); box-shadow:-18px 0 50px rgba(39,31,24,.08); transform:translateX(100%); opacity:0; pointer-events:none; transition:transform .48s cubic-bezier(.2,.75,.2,1), opacity .25s ease; }
+    .drawer.open { transform:translateX(0); opacity:1; pointer-events:auto; }.drawer-top { display:flex; align-items:center; justify-content:space-between; min-height:34px; }.drawer-actions { display:flex; gap:8px; }.drawer-label { color:var(--accent); font-size:10px; font-weight:700; letter-spacing:.18em; }.icon-button { position:relative; display:grid; width:34px; height:34px; place-items:center; border:1px solid var(--faint); border-radius:50%; color:var(--ink); background:transparent; font:20px/1 Arial,sans-serif; text-decoration:none; cursor:pointer; }.icon-button:hover { color:var(--accent); border-color:var(--accent); }.icon-button[data-tooltip]::after { position:absolute; top:calc(100% + 9px); right:0; z-index:2; width:max-content; max-width:220px; padding:7px 9px; border:1px solid var(--faint); color:var(--ink); background:#fffefa; box-shadow:0 8px 18px rgba(39,31,24,.1); content:attr(data-tooltip); font:11px/1.35 "Noto Sans SC","Microsoft YaHei",Arial,sans-serif; opacity:0; pointer-events:none; transform:translateY(-3px); transition:opacity .16s ease,transform .16s ease; }.icon-button[data-tooltip]:hover::after,.icon-button[data-tooltip]:focus-visible::after { opacity:1; transform:translateY(0); }
+    .drawer-content { flex:1; overflow:auto; padding:42px 5px 28px 0; scrollbar-width:thin; scrollbar-color:#c9c3ba transparent; }.drawer-source { margin:0 0 21px; color:var(--accent); font-size:12px; letter-spacing:.08em; }.drawer-title { margin:0; font:500 36px/1.28 Georgia,"Times New Roman","Noto Serif SC",serif; }.drawer-body { max-width:560px; margin:30px 0 0; color:#403d39; font:17px/2 Georgia,"Times New Roman","Noto Serif SC",serif; }.drawer-body p { margin:0 0 22px; }.drawer-loading { color:var(--muted); font-size:13px; }.drawer-note { max-width:560px; margin:30px 0 0; padding-top:16px; border-top:1px solid var(--faint); color:var(--muted); font-size:11px; line-height:1.7; }
+    body.drawer-open .edition, body.drawer-open .nav, body.drawer-open .principles, body.drawer-open .footer-inner { width:min(1380px, calc(100vw - var(--drawer-width) - 48px)); max-width:none; margin-left:max(24px, calc((100vw - var(--drawer-width) - 1380px) / 2)); margin-right:calc(var(--drawer-width) + 24px); }
     .arrow { color:var(--accent); font-size:20px; font-weight:300; text-align:right; }
     .empty { padding:70px 0; color:var(--muted); font-size:14px; text-align:center; border-bottom:1px solid var(--faint); }
     .principles { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:30px; max-width:1120px; margin:69px auto 0; padding:0 12px 68px; }
@@ -85,7 +85,7 @@
     </section>
   </main>
   <aside class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawer-top"><span class="drawer-label">READING EXTRACT</span><span class="drawer-actions"><a class="icon-button" id="source-link" href="#" target="_blank" rel="noopener" aria-label="在原站查看原文">↗</a><button class="icon-button" id="close-drawer" type="button" aria-label="关闭阅读抽屉">×</button></span></div>
+    <div class="drawer-top"><span class="drawer-label">READING EXTRACT</span><span class="drawer-actions"><a class="icon-button" id="source-link" href="#" target="_blank" rel="noopener" aria-label="跳转至原始出处" data-tooltip="跳转至原始出处">↗</a><button class="icon-button" id="close-drawer" type="button" aria-label="关闭阅读抽屉">×</button></span></div>
     <div class="drawer-content"><p class="drawer-source" id="drawer-source"></p><h2 class="drawer-title" id="drawer-title"></h2><div class="drawer-body" id="drawer-body"></div><p class="drawer-note">本站保留来源页面的短篇可读节选，原始出处始终可追溯。</p></div>
   </aside>
   <footer><div class="footer-inner"><span>Signal Radar · Global edition</span><span>Headlines link to original sources.</span></div></footer>
@@ -109,11 +109,16 @@
         items.querySelectorAll(".item").forEach(function(node) { node.classList.remove("active"); }); button.classList.add("active");
         document.querySelector("#drawer-source").textContent = item.source + "  /  " + dateLabel(item.publishedAt);
         document.querySelector("#drawer-title").textContent = item.titleZh || item.title || "";
-        document.querySelector("#drawer-body").innerHTML = "";
-        document.querySelector("#source-link").href = item.url;
+        document.querySelector("#drawer-body").innerHTML = '<p class="drawer-loading">正在载入可读节选…</p>';
+        const sourceLink = document.querySelector("#source-link");
+        const sourceHint = "跳转至：" + item.source;
+        sourceLink.href = item.url;
+        sourceLink.dataset.tooltip = sourceHint;
+        sourceLink.title = sourceHint;
+        sourceLink.setAttribute("aria-label", sourceHint);
         document.body.classList.add("drawer-open"); drawer.classList.add("open"); drawer.setAttribute("aria-hidden", "false");
-        if (!item.readerFile) return;
-        fetch(item.readerFile, { cache:"force-cache" }).then(function(response) { return response.json(); }).then(function(reader) { if (item !== currentItem) return; document.querySelector("#drawer-body").innerHTML = (reader.paragraphs || []).map(function(paragraph) { return "<p>" + escapeHtml(paragraph) + "</p>"; }).join(""); }).catch(function() {});
+        if (!item.readerFile) { document.querySelector("#drawer-body").innerHTML = '<p>本条暂未生成可读节选，请在原始出处继续阅读。</p>'; return; }
+        fetch(item.readerFile, { cache:"no-cache" }).then(function(response) { if (!response.ok) throw new Error("reader unavailable"); return response.json(); }).then(function(reader) { if (item !== currentItem) return; const paragraphs = reader.paragraphs || []; document.querySelector("#drawer-body").innerHTML = paragraphs.length ? paragraphs.map(function(paragraph) { return "<p>" + escapeHtml(paragraph) + "</p>"; }).join("") : '<p>本条暂未生成可读节选，请在原始出处继续阅读。</p>'; }).catch(function() { if (item === currentItem) document.querySelector("#drawer-body").innerHTML = '<p>可读节选暂时加载失败。请刷新后重试，或在原始出处继续阅读。</p>'; });
       }
       document.querySelector("#close-drawer").addEventListener("click", closeDrawer);
       document.addEventListener("keydown", function(event) { if (event.key === "Escape") closeDrawer(); });

@@ -30,16 +30,16 @@ NOW = datetime.now(timezone.utc)
 
 SOURCES = (
     # Official sources are used only for high-impact technical primary releases.
-    {"name": "Stack Overflow Blog", "url": "https://stackoverflow.blog/feed/", "weight": 10, "kind": "editorial"},
-    {"name": "OpenAI", "url": "https://openai.com/news/rss.xml", "weight": 15, "kind": "official"},
-    {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "weight": 15, "kind": "official"},
+    {"name": "Stack Overflow Blog", "url": "https://stackoverflow.blog/feed/", "weight": 10, "kind": "editorial", "track": "developer"},
+    {"name": "OpenAI", "url": "https://openai.com/news/rss.xml", "weight": 15, "kind": "official", "track": "regular"},
+    {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "weight": 15, "kind": "official", "track": "regular"},
 )
 HTML_SOURCES = (
-    {"name": "量子位", "url": "https://www.qbitai.com/wp-json/wp/v2/posts?per_page=24&_fields=date,link,title,excerpt", "weight": 12, "format": "wordpress"},
-    {"name": "AI 前线 / InfoQ 中文", "url": "https://www.infoq.cn/", "weight": 12},
+    {"name": "量子位", "url": "https://www.qbitai.com/wp-json/wp/v2/posts?per_page=24&_fields=date,link,title,excerpt", "weight": 12, "format": "wordpress", "track": "regular"},
+    {"name": "AI 前线 / InfoQ 中文", "url": "https://www.infoq.cn/", "weight": 12, "track": "developer"},
     # The public RSS endpoint currently serves a data-service page instead of articles.
     # Keep this probe visible in job logs; it can be enabled when the publisher restores it.
-    {"name": "机器之心", "url": "https://www.jiqizhixin.com/", "weight": 12},
+    {"name": "机器之心", "url": "https://www.jiqizhixin.com/", "weight": 12, "track": "regular"},
 )
 
 KEYWORDS = (
@@ -57,7 +57,11 @@ LOW_SIGNAL = (
     "抽奖", "游戏攻略", "明星", "旅游", "购物",
 )
 MAX_AGE_DAYS = 3
-MAX_ITEMS = 18
+REGULAR_MAX_ITEMS = 20
+DEVELOPER_MIN_ITEMS = 5
+DEVELOPER_MAX_ITEMS = 10
+ENGLISH_MAX_ITEMS = 2
+FALLBACK_SOURCE_LIMIT = 7
 MAX_READER_CHARS = 6000
 MAX_READER_PARAGRAPHS = 16
 BACKGROUND_ASSETS = (
@@ -157,6 +161,7 @@ def github_trending_page_entries() -> list[dict]:
         "publishedAt": NOW.isoformat().replace("+00:00", "Z"),
         "score": 18,
         "language": "zh",
+        "track": "developer",
     }]
 
 
@@ -170,10 +175,40 @@ def fetch_text(url: str) -> str:
         return response.read().decode("utf-8", errors="replace")
 
 
+def structured_page_text(page: str) -> list[str]:
+    values: list[str] = []
+    for raw in re.findall(r"<script\b[^>]*application/ld\+json[^>]*>(.*?)</script>", page, re.DOTALL | re.IGNORECASE):
+        try:
+            payload = json.loads(html.unescape(raw).strip())
+        except (TypeError, ValueError, json.JSONDecodeError):
+            continue
+
+        def visit(value: object) -> None:
+            if isinstance(value, dict):
+                for key in ("articleBody", "description"):
+                    if isinstance(value.get(key), str):
+                        values.append(value[key])
+                for child in value.values():
+                    visit(child)
+            elif isinstance(value, list):
+                for child in value:
+                    visit(child)
+
+        visit(payload)
+    values.extend(re.findall(
+        r'<meta[^>]+(?:name|property)=["\'](?:description|og:description|twitter:description)["\'][^>]+content=["\']([^"\']+)',
+        page,
+        re.IGNORECASE,
+    ))
+    return values
+
+
 def reader_paragraphs(page: str, fallback: str) -> list[str]:
     """Keep a short on-site reading extract, not a mirrored full article."""
+    candidates = structured_page_text(page)
     page = re.sub(r"<(?:script|style|svg|noscript)[^>]*>.*?</(?:script|style|svg|noscript)>", " ", page, flags=re.DOTALL | re.IGNORECASE)
-    candidates = [clean_text(value) for value in re.findall(r"<p[^>]*>(.*?)</p>", page, re.DOTALL | re.IGNORECASE)]
+    candidates.extend(re.findall(r"<p[^>]*>(.*?)</p>", page, re.DOTALL | re.IGNORECASE))
+    candidates = [clean_text(value) for value in candidates]
     output: list[str] = []
     used: set[str] = set()
     length = 0
@@ -417,6 +452,8 @@ def main() -> int:
     for source in SOURCES:
         try:
             fetched = source_entries(source["name"], source["url"], source["weight"], source["kind"])
+            for item in fetched:
+                item["track"] = source.get("track", "regular")
             print(f"{source['name']}: {len(fetched)} entries")
             all_entries.extend(fetched)
         except Exception as error:  # One unavailable source should not stop updates.
@@ -424,6 +461,8 @@ def main() -> int:
     for source in HTML_SOURCES:
         try:
             fetched = html_source_entries(source["name"], source["url"], source["weight"])
+            for item in fetched:
+                item["track"] = source.get("track", "regular")
             print(f"{source['name']}: {len(fetched)} entries")
             all_entries.extend(fetched)
         except Exception as error:  # One unavailable source should not stop updates.
@@ -444,52 +483,50 @@ def main() -> int:
             continue
         unique.setdefault(item["url"], item)
 
-    non_english = [item for item in unique.values() if item["language"] != "en"]
-    english = [item for item in unique.values() if item["language"] == "en"]
+    regular = [item for item in unique.values() if item.get("track") != "developer"]
+    developer = [item for item in unique.values() if item.get("track") == "developer"]
     items: list[dict] = []
     source_counts: dict[str, int] = {}
-    preferred_caps = {
-        "GitHub Trending": 1,
-        "量子位": 5,
-        "AI 前线 / InfoQ 中文": 5,
-        "机器之心": 5,
-        "Stack Overflow Blog": 3,
-    }
+    english_count = 0
 
-    # First make room for every professional publisher that has a fresh item.
-    for item in non_english:
+    def add_item(item: dict, source_cap: int) -> bool:
+        nonlocal english_count
         source = item["source"]
-        source_limit = preferred_caps.get(source, 4)
-        if source_counts.get(source, 0) >= source_limit:
-            continue
+        if item in items or source_counts.get(source, 0) >= source_cap:
+            return False
+        if item["language"] == "en" and english_count >= ENGLISH_MAX_ITEMS:
+            return False
         source_counts[source] = source_counts.get(source, 0) + 1
         items.append(item)
-        if len(items) == MAX_ITEMS:
-            break
+        if item["language"] == "en":
+            english_count += 1
+        return True
 
-    # Reserve a small but real share for the selected overseas publisher.
-    english_limit = max(0, (MAX_ITEMS - 1) // 5)
-    for item in english:
-        if len(items) == MAX_ITEMS or english_limit == 0:
-            break
-        source = item["source"]
-        source_limit = preferred_caps.get(source, 3)
-        if source_counts.get(source, 0) >= source_limit:
-            continue
-        source_counts[source] = source_counts.get(source, 0) + 1
-        items.append(item)
-        english_limit -= 1
+    def fill_pool(pool: list[dict], maximum: int, source_cap: int, chinese_only: bool = False) -> int:
+        picked = 0
+        for item in pool:
+            if picked >= maximum:
+                break
+            if chinese_only and item["language"] == "en":
+                continue
+            if add_item(item, source_cap):
+                picked += 1
+        return picked
 
-    # When a publisher is quiet, fill the remaining places with the strongest
-    # unused Chinese signals instead of publishing a short edition.
-    for item in non_english:
-        if len(items) == MAX_ITEMS:
-            break
-        if item in items or (item["source"].startswith("GitHub") and source_counts.get(item["source"], 0) >= 1):
-            continue
-        source = item["source"]
-        source_counts[source] = source_counts.get(source, 0) + 1
-        items.append(item)
+    # Regular editorial signals and hands-on developer posts are two independent
+    # pools: a full technical-post selection never consumes the 20 regular places.
+    regular_count = fill_pool(regular, REGULAR_MAX_ITEMS, source_cap=4, chinese_only=True)
+    developer_count = fill_pool(developer, DEVELOPER_MAX_ITEMS, source_cap=4, chinese_only=True)
+
+    # Fill remaining capacity from trusted sources when a publisher is quiet.
+    if regular_count < REGULAR_MAX_ITEMS:
+        regular_count += fill_pool(regular, REGULAR_MAX_ITEMS - regular_count, FALLBACK_SOURCE_LIMIT)
+    if developer_count < DEVELOPER_MAX_ITEMS:
+        developer_count += fill_pool(developer, DEVELOPER_MAX_ITEMS - developer_count, FALLBACK_SOURCE_LIMIT)
+
+    # Keep the limited overseas signals together at the tail of every edition.
+    items.sort(key=lambda item: (item["language"] == "en", -item["score"], item["publishedAt"]), reverse=False)
+    print(f"Selected {regular_count} regular + {developer_count} developer signals (target {DEVELOPER_MIN_ITEMS}-{DEVELOPER_MAX_ITEMS}); English: {english_count}/{ENGLISH_MAX_ITEMS}")
     payload = {
         "updatedAt": NOW.isoformat().replace("+00:00", "Z"),
         "items": items,
