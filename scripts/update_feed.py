@@ -76,15 +76,19 @@ def local_name(tag: str) -> str:
 
 
 def clean_text(value: str | None) -> str:
-    text = html.unescape(value or "")
-    text = re.sub(r"<[^>]*>", " ", text)
+    text = decode_escaped_text(value)
+    text = re.sub(r"<\s*\\?/?\s*[A-Za-z][^>]*>", " ", text)
     return re.sub(r"\s+", " ", text).strip()
 
 
-def clean_reader_text(value: str | None) -> str:
+def decode_escaped_text(value: str | None) -> str:
     text = html.unescape(value or "")
     text = re.sub(r"\\u([0-9a-fA-F]{4})", lambda match: chr(int(match.group(1), 16)), text)
-    text = text.replace("\\/", "/").replace("\\\"", "\"").replace("\\n", "\n").replace("\\t", " ")
+    return text.replace("\\/", "/").replace("\\\"", "\"").replace("\\n", "\n").replace("\\t", " ")
+
+
+def clean_reader_text(value: str | None) -> str:
+    text = decode_escaped_text(value)
     text = re.sub(r"<\s*\\?/?\s*[A-Za-z][^>]*>", " ", text)
     return clean_text(text)
 
