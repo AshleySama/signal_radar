@@ -28,6 +28,7 @@
     .schedule::before, .schedule::after { content:""; width:23px; height:1px; background:#c9c3ba; }
     .edition { max-width:1120px; margin:auto; padding:66px 12px 24px; }
     .section-top { display:flex; justify-content:space-between; align-items:end; padding-bottom:20px; border-bottom:1px solid var(--ink); }
+    .edition-heading { display:flex; align-items:baseline; gap:22px; }.archive-link { color:var(--accent); font-size:12px; font-weight:700; letter-spacing:.12em; text-decoration:none; white-space:nowrap; }.archive-link:hover { color:var(--ink); }
     .section-kicker { margin:0 0 7px; color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.18em; }
     h2 { margin:0; font-family:Georgia,"Times New Roman","Noto Serif SC",serif; font-size:34px; font-weight:500; }
     .updated { color:var(--muted); font-size:12px; text-align:right; line-height:1.65; }
@@ -61,7 +62,7 @@
   <main class="page">
     <nav class="nav" aria-label="主导航">
       <a class="brand" href="./" aria-label="Signal Radar 首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Signal Radar</a>
-      <div class="nav-right"><a href="#signals">本期信号</a><a href="./archive.html">往期回顾</a><a href="#about">筛选原则</a><span class="nav-note">GLOBAL EDITION</span></div>
+      <div class="nav-right"><a href="#signals">本期信号</a><a href="#about">筛选原则</a><span class="nav-note">GLOBAL EDITION</span></div>
     </nav>
     <header class="hero">
       <div>
@@ -73,7 +74,7 @@
     </header>
     <section class="edition" id="signals" aria-labelledby="signals-title">
       <div class="section-top">
-        <div><p class="section-kicker">THIS EDITION</p><h2 id="signals-title">本期技术拾取</h2></div>
+        <div><p class="section-kicker">THIS EDITION</p><div class="edition-heading"><h2 id="signals-title">本期技术拾取</h2><a class="archive-link" href="./archive.html">往期回顾 ↗</a></div></div>
         <div class="updated" id="updated">正在读取最新信号…</div>
       </div>
       <div class="reader"><div class="items" id="items"><div class="empty">等待首次自动抓取。</div></div></div>
