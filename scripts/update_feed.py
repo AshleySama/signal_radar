@@ -37,6 +37,20 @@ SOURCES = (
 HTML_SOURCES = (
     {"name": "量子位", "url": "https://www.qbitai.com/wp-json/wp/v2/posts?per_page=24&_fields=date,link,title,excerpt", "weight": 12, "format": "wordpress", "track": "regular"},
     {"name": "AI 前线 / InfoQ 中文", "url": "https://www.infoq.cn/", "weight": 12, "track": "developer"},
+    {
+        "name": "InfoQ 中文 · 架构与云原生",
+        "url": "https://www.infoq.cn/topic/architecture",
+        "weight": 12,
+        "track": "developer",
+        "include_keywords": ("架构", "云原生", "微服务", "平台工程", "DevOps", "可观测", "系统设计", "AI", "开源", "安全"),
+    },
+    {
+        "name": "腾讯云开发者社区 · 软件架构",
+        "url": "https://developer.cloud.tencent.com/tag/17420",
+        "weight": 8,
+        "track": "developer",
+        "include_keywords": ("架构", "云原生", "微服务", "Serverless", "Kubernetes", "数据库", "系统设计", "性能", "安全", "开源", "Rust", "AI"),
+    },
     # The public RSS endpoint currently serves a data-service page instead of articles.
     # Keep this probe visible in job logs; it can be enabled when the publisher restores it.
     {"name": "机器之心", "url": "https://www.jiqizhixin.com/", "weight": 12, "track": "regular"},
@@ -45,7 +59,8 @@ HTML_SOURCES = (
 KEYWORDS = (
     "model", "reasoning", "agent", "api", "codex", "claude", "gemini",
     "release", "open source", "benchmark", "research", "developer", "code",
-    "模型", "推理", "智能体", "开发", "发布", "开源", "研究",
+    "模型", "推理", "智能体", "开发", "发布", "开源", "研究", "架构", "云原生",
+    "微服务", "平台工程", "devops", "可观测", "系统设计", "数据库", "黑客松", "训练营",
 )
 BLOCKED = (
     "election", "president", "politic", "war", "military", "weapon", "terror",
@@ -55,6 +70,7 @@ BLOCKED = (
 LOW_SIGNAL = (
     "pixel", "game", "shopping", "travel", "music", "celebrity", "giveaway", "jobs",
     "抽奖", "游戏攻略", "明星", "旅游", "购物",
+    "产品推荐官", "厂家直供", "技术选型服务", "扫码咨询", "商务合作",
 )
 MAX_AGE_DAYS = 3
 REGULAR_MAX_ITEMS = 20
@@ -315,14 +331,16 @@ def page_date(page: str, fallback: str = "") -> datetime | None:
 def html_source_candidates(source_name: str, page: str) -> list[tuple[str, str]]:
     if source_name == "量子位":
         links = re.findall(r'href=["\'](https://www\.qbitai\.com/20\d{2}/\d{2}/\d+\.html)["\']', page)
-    elif source_name == "AI 前线 / InfoQ 中文":
+    elif source_name in {"AI 前线 / InfoQ 中文", "InfoQ 中文 · 架构与云原生"}:
         links = re.findall(r'href=["\'](https://www\.infoq\.cn/article/[A-Za-z0-9]+)["\']', page)
+    elif source_name == "腾讯云开发者社区 · 软件架构":
+        links = re.findall(r'href=["\'](https://developer\.cloud\.tencent\.com/article/\d+[^"\']*)["\']', page)
     else:
         links = []
     return list(dict.fromkeys((link, link) for link in links))[:24]
 
 
-def html_source_entries(source_name: str, url: str, weight: int) -> list[dict]:
+def html_source_entries(source_name: str, url: str, weight: int, include_keywords: tuple[str, ...] = ()) -> list[dict]:
     homepage = fetch_text(url)
     output: list[dict] = []
     if source_name == "量子位":
@@ -331,7 +349,9 @@ def html_source_entries(source_name: str, url: str, weight: int) -> list[dict]:
             summary = clean_text(article.get("excerpt", {}).get("rendered", ""))
             published_at = parse_time(article.get("date", ""))
             combined = f"{title} {summary}".lower()
-            if not title or published_at is None or any(term in combined for term in BLOCKED) or any(term in combined for term in LOW_SIGNAL):
+            if (not title or published_at is None or any(term in combined for term in BLOCKED)
+                    or any(term in combined for term in LOW_SIGNAL)
+                    or (include_keywords and not any(term.lower() in combined for term in include_keywords))):
                 continue
             age_days = max((NOW - published_at).total_seconds() / 86400, 0)
             if age_days > MAX_AGE_DAYS:
@@ -357,7 +377,9 @@ def html_source_entries(source_name: str, url: str, weight: int) -> list[dict]:
             fallback_date = matched.group(1) if matched else ""
         published_at = page_date(article, fallback_date)
         combined = f"{title} {summary}".lower()
-        if not title or published_at is None or any(term in combined for term in BLOCKED) or any(term in combined for term in LOW_SIGNAL):
+        if (not title or published_at is None or any(term in combined for term in BLOCKED)
+                or any(term in combined for term in LOW_SIGNAL)
+                or (include_keywords and not any(term.lower() in combined for term in include_keywords))):
             continue
         age_days = max((NOW - published_at).total_seconds() / 86400, 0)
         if age_days > MAX_AGE_DAYS:
@@ -472,7 +494,9 @@ def main() -> int:
             print(f"{source['name']}: {error}", file=sys.stderr)
     for source in HTML_SOURCES:
         try:
-            fetched = html_source_entries(source["name"], source["url"], source["weight"])
+            fetched = html_source_entries(
+                source["name"], source["url"], source["weight"], tuple(source.get("include_keywords", ()))
+            )
             for item in fetched:
                 item["track"] = source.get("track", "regular")
             print(f"{source['name']}: {len(fetched)} entries")
