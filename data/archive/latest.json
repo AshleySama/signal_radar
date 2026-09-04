@@ -1,186 +1,182 @@
 {
-  "updatedAt": "2026-09-02T02:37:50.216646Z",
+  "updatedAt": "2026-09-04T02:41:15.608693Z",
   "items": [
     {
-      "title": "谷歌 HEIR 项目旨在让同态加密推理成为可以一键实现的功能",
-      "summary": "谷歌推出 HEIR（同态加密中间表示）。这是一个开源编译器和开发工具链，能够对通常使用未加密输入构建的预训练 AI 模型进行编译，使其能够处理加密数据。",
+      "title": "人人都能整个“自己的DeepSeek Harness”，那我们为啥还在给Claude Code们充会员？",
+      "summary": "模型已经卷不动了，Harness 也卷不动了，Coding Agent 还能卷什么？",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/S6ATgchCiYMHpPaTPzer",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "score": 26.67,
+      "url": "https://www.infoq.cn/article/6Jc130IN2OaXqsPDIzmJ",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "score": 27.87,
       "language": "zh",
-      "readerFile": "./data/readers/04adb0b8a4576b80.json"
+      "track": "developer",
+      "readerFile": "./data/readers/262dedce08f3f3d5.json"
     },
     {
-      "title": "坚决不用行业标准AGENTS.md，Claude Code惹来“封杀令”：Anthropic终于回应了，但开发者更气了",
-      "summary": "当所有AI编程工具都在向行业标准靠拢时，Anthropic的Claude Code偏要特立独行。",
+      "title": "谷歌云发布 AI 智能体，简化数据库生命周期管理",
+      "summary": "谷歌云推出 AI 驱动的数据库运维智能体，包含上线智能体与可观测性智能体：前者简化数据库部署配置，后者实现故障排查、性能优化与调优自动化。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/GuFWNd24Ww5AFlrXxTBo",
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "score": 25.47,
+      "url": "https://www.infoq.cn/article/iV0rsPyO5XZDJ7797hLJ",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "score": 27.87,
       "language": "zh",
-      "readerFile": "./data/readers/7936ef11a3c3531e.json"
+      "track": "developer",
+      "readerFile": "./data/readers/b2e8552a6fc7a7e0.json"
     },
     {
-      "title": "3名开发者做出来的副业项目，半年冲进 4万人！亚马逊云科技把内部 Agent 工作台开源了",
-      "summary": "AI编程进入“长期委派”时代：亚马逊云科技开源Kiro Crew，半年涌入4万开发者。",
+      "title": "向总决赛进发｜GOAI复赛评审正式启动",
+      "summary": "今日，世界人工智能开源大赛（GOAI）「新智基座 Agent Infra」、「无界应用 Boundless Agents」、「前沿探索 AI for Research」三大赛道复赛评审正式启动。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/Um4rVTweSFXAiwdGLFVB",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "score": 24.67,
+      "url": "https://www.infoq.cn/article/bOI6y8Tdr714CWa5CcxR",
+      "publishedAt": "2026-09-04T00:00:00Z",
+      "score": 25.87,
       "language": "zh",
-      "readerFile": "./data/readers/2610b3375a598eca.json"
+      "track": "developer",
+      "readerFile": "./data/readers/38b3b9d4c887070c.json"
     },
     {
-      "title": "通过操作 DRAM 控制器寄存器可突破 CPU 内存隔离机制",
-      "summary": "安全研究员 Christopher Domas 发布了一个名为 skitter-creek-bath-salts 的开源硬件安全项目。该项目针对的是物理内存层次结构的最底层，打破了传统的 CPU 权限边界。",
+      "title": "当 AI 开始重写负载，数据库该如何重新设计？",
+      "summary": "在腾讯云数据库 DBTalk“顶会三连击：2026 国际顶会论文权威解读”中，中国人民大学张峰教授、浙江大学李环研究员、华东师范大学杨程程研究员，分别从系统演进、云原生数据基础设施、测试与测评三个方向，给出了最新观察。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/G5CDMcK3tU0h71LzUlyo",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "score": 24.67,
+      "url": "https://www.infoq.cn/article/rhKVS8RAdp4aVPZD0vZu",
+      "publishedAt": "2026-09-02T00:00:00Z",
+      "score": 23.47,
       "language": "zh",
-      "readerFile": "./data/readers/df72a88550b74c8a.json"
+      "track": "developer",
+      "readerFile": "./data/readers/96b44b2de5f123be.json"
     },
     {
-      "title": "Claude最强Fable 5.1发布！8项屠榜，最高降价45%，反蒸馏机制上线",
-      "summary": "无论你此前让Claude处理什么任务，Fable 5.1都能做更多，并且把最难的部分完成得更出色",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/09/482652.html",
-      "publishedAt": "2026-09-02T10:18:12Z",
-      "score": 24.0,
-      "language": "zh",
-      "readerFile": "./data/readers/5c4430abfb4276e5.json"
-    },
-    {
-      "title": "李飞飞发布：全球首个多模态世界模型",
-      "summary": "一张图补全3D世界，还能给机器人造训练场",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/09/482586.html",
-      "publishedAt": "2026-09-02T09:07:13Z",
-      "score": 24.0,
-      "language": "zh",
-      "readerFile": "./data/readers/ca4723cb580ccfbe.json"
-    },
-    {
-      "title": "GitHub最热架构图Agent，开发者故事看哭了",
-      "summary": "美观且支持实时更新的架构图，也能用AI一键生成了！",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/09/482469.html",
-      "publishedAt": "2026-09-01T16:26:54Z",
-      "score": 23.49,
-      "language": "zh",
-      "readerFile": "./data/readers/fa5e339434f9568e.json"
-    },
-    {
-      "title": "1200个 Agent 秘密交流，700个集体攻击Hugging Face，OpenAI 模型完成了一次没有剧本的集体暴走",
-      "summary": "复盘Hugging Face被攻击始末：7天发7万条密信，700个 AI 攻入真实生产系统。",
+      "title": "李飞飞首个多模态世界模型 Atlas 正式发布：从零开始预训练，几张图就能构建世界",
+      "summary": "这支团队为什么执着于“造世界”？",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/s8dvlxO3lh3CEDgcsUEi",
-      "publishedAt": "2026-09-01T00:00:00Z",
+      "url": "https://www.infoq.cn/article/9YiEhb3hAFtUlxOpMdGC",
+      "publishedAt": "2026-09-03T00:00:00Z",
       "score": 22.67,
       "language": "zh",
-      "readerFile": "./data/readers/54b90c400271566a.json"
+      "track": "developer",
+      "readerFile": "./data/readers/c37ef4f9526b91f5.json"
     },
     {
-      "title": "巨简单，更懂家！海信JUOS正式发布：行业首个家庭智能伴侣级AIOS",
-      "summary": "8月31日，海信正式发布行业首个家庭智能伴侣级AIOS——海信JUOS。",
+      "title": "Omdia最新市场研究报告：OceanBase位居亚太分布式数据库市场第一",
+      "summary": "从中国市场走向亚太，OceanBase 打开全球化第二增长空间.",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/dICPOgXYkvE9HcA1KpUv",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "score": 22.67,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/2c4b0e8b40f32f21.json"
+    },
+    {
+      "title": "Diagrid Catalyst 2.0 发布，为 AI 智能体新增持久化、可验证的执行能力",
+      "summary": "Diagrid Catalyst 2.0 将基于 Dapr 的恢复机制、签名的工作流历史与执行证明，应用于多个智能体框架。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/ofYabQL5uvxdaIY7B31f",
+      "publishedAt": "2026-09-03T00:00:00Z",
+      "score": 22.67,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/c3e00b98d9850512.json"
+    },
+    {
+      "title": "刚刚，GPT-6正式发布！OpenAI：欢迎来到AGI时代",
+      "summary": "全球最强C",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/09/482699.html",
-      "publishedAt": "2026-09-02T09:44:24Z",
+      "url": "https://www.qbitai.com/2026/09/483898.html",
+      "publishedAt": "2026-09-04T05:50:07Z",
       "score": 22.0,
       "language": "zh",
-      "readerFile": "./data/readers/9f08e20c299777c5.json"
+      "track": "regular",
+      "readerFile": "./data/readers/9f1eee242fac4904.json"
     },
     {
-      "title": "A社化身A割！Claude官宣永久提额25%，结果到手反而少17%",
-      "summary": "主打一个明升暗降，理直气壮",
+      "title": "新版GPT Image 2.5已经能伪造GPT-6发布会了",
+      "summary": "改进GPT Image 2的噪点问题",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/09/482406.html",
-      "publishedAt": "2026-09-01T16:15:40Z",
-      "score": 21.48,
+      "url": "https://www.qbitai.com/2026/09/483948.html",
+      "publishedAt": "2026-09-04T05:57:08Z",
+      "score": 22.0,
       "language": "zh",
-      "readerFile": "./data/readers/d60375777c94fa11.json"
+      "track": "regular",
+      "readerFile": "./data/readers/dd5a4c8715ab83bd.json"
     },
     {
-      "title": "Polimill builds Japan's next-generation public AI infrastructure",
-      "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/polimill",
-      "publishedAt": "2026-08-31T07:00:00Z",
-      "score": 26.82,
-      "language": "en",
-      "readerFile": "./data/readers/0b5a688ac44522d6.json"
+      "title": "陈大年复出，入局大模型",
+      "summary": "首秀逼近DeepSeek万亿旗舰",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/483600.html",
+      "publishedAt": "2026-09-03T18:13:24Z",
+      "score": 21.58,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/77feae189ded89ee.json"
     },
     {
-      "title": "Introducing agentic video understanding with Gemini",
+      "title": "世界生成模型来了3D头部玩家，可进入生产管线的场景级生成时代来临！",
+      "summary": "单图直出场景，顶会最佳论文落地",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/483189.html",
+      "publishedAt": "2026-09-03T18:18:36Z",
+      "score": 21.58,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/1f68b41809eb838c.json"
+    },
+    {
+      "title": "一个模型场景通吃！它石智航AWE3.7的泛化能力有点狠",
+      "summary": "从工厂一路干到家庭",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/483565.html",
+      "publishedAt": "2026-09-03T11:16:43Z",
+      "score": 21.23,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/d437f4c2dc59be9b.json"
+    },
+    {
+      "title": "神秘具身团队又放出一连串很炸的Demo视频…自进化模型，技术路线曝光",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/483552.html",
+      "publishedAt": "2026-09-03T09:31:45Z",
+      "score": 21.14,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/2f75c2e772769edb.json"
+    },
+    {
+      "title": "还在为大模型洗数据熬夜？蚂蚁拿下VLDB工业最佳论文，一套宽表搞定35PB语料，效率狂飙5.6倍",
+      "summary": "蚂蚁集团推出统一宽表系统OmniTable，论文获评VLDB 2026工业赛道最佳论文",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/09/483104.html",
+      "publishedAt": "2026-09-02T14:20:17Z",
+      "score": 20.18,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/b689f1be23ed6417.json"
+    },
+    {
+      "title": "Introducing WeatherNext 3, our most advanced and accurate global weather AI model",
       "summary": "",
       "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
-      "publishedAt": "2026-09-01T17:08:51Z",
-      "score": 26.53,
+      "url": "https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/",
+      "publishedAt": "2026-09-03T15:02:08Z",
+      "score": 24.42,
       "language": "en",
-      "readerFile": "./data/readers/20b040f8e58f31e9.json"
+      "track": "regular",
+      "readerFile": "./data/readers/2b0379511ea05114.json"
     },
     {
-      "title": "How AI-native companies turn workflows into operating capability",
-      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
       "source": "OpenAI",
-      "url": "https://openai.com/index/ai-native-company-workflows",
-      "publishedAt": "2026-09-01T17:00:00Z",
-      "score": 26.52,
+      "url": "https://openai.com/index/path-to-astra",
+      "publishedAt": "2026-09-01T13:00:00Z",
+      "score": 23.92,
       "language": "en",
-      "readerFile": "./data/readers/b0cbef382238cdd5.json"
-    },
-    {
-      "title": "AWS 发布 Aws-Bench，用于评估云任务中的智能代理",
-      "summary": "最近，亚马逊云科技发布了 aws-bench。这是一个开源基准测试工具，用于评估 AI 代理完成真实 AWS 任务的准确性。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/rs9FOZsLBIJPwWbeYNHO",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "score": 22.67,
-      "language": "zh",
-      "readerFile": "./data/readers/d0174e9b140e339d.json"
-    },
-    {
-      "title": "从2999份作品出发：GOAI四大赛道的AI创新观察",
-      "summary": "从2999份初赛作品中，我们不仅能看到一批高质量的AI创新项目，也能观察到智能体技术、产品形态与开源生态正在发生的变化。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/fovhGGuNSwa7tG44WBFm",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "score": 22.67,
-      "language": "zh",
-      "readerFile": "./data/readers/a5996feb28936f9a.json"
-    },
-    {
-      "title": "OpenClaw 从意外爆红到“无人问津”：一个开源 AI Agent 的八个月过山车",
-      "summary": "美团反思“养虾”日耗上千万元、干扰真实经营，龙虾之父自曝：爆火后差点删掉整个项目",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/4KQHJC49t8J8FPqaEVLv",
-      "publishedAt": "2026-08-31T00:00:00Z",
-      "score": 21.47,
-      "language": "zh",
-      "readerFile": "./data/readers/7e3d34e86d44c23e.json"
-    },
-    {
-      "title": "VoidZero 发布 Vite+ Beta 版：通过单条命令即可调用的一体化 Web 工具链",
-      "summary": "VoidZero 发布 Vite+ Beta 版：通过单条命令即可调用的一体化 Web 工具链。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/u57OGmqCgNX26LClSDef",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "score": 20.67,
-      "language": "zh",
-      "readerFile": "./data/readers/0af026416bd01098.json"
-    },
-    {
-      "title": "shadcn 通过新推出的聊天组件将对话基础组件引入了 shadcn/ui",
-      "summary": "shadcn 发布了一套用于构建聊天界面的新组件，首次将流式对话基础组件直接引入了 shadcn/ui。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/TKOvaxoX6xF5yWHJ7dYg",
-      "publishedAt": "2026-09-01T00:00:00Z",
-      "score": 20.67,
-      "language": "zh",
-      "readerFile": "./data/readers/678c189a8fdd8c17.json"
+      "track": "regular",
+      "readerFile": "./data/readers/f2694bfa96c49e91.json"
     }
   ],
-  "background": "./assets/backgrounds/paper-signal.png"
+  "background": "./assets/backgrounds/scientific-archive.png"
 }

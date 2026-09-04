@@ -1,0 +1,25 @@
+{
+  "title": "人人都能整个“自己的DeepSeek Harness”，那我们为啥还在给Claude Code们充会员？",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-04T00:00:00Z",
+  "url": "https://www.infoq.cn/article/6Jc130IN2OaXqsPDIzmJ",
+  "paragraphs": [
+    "“你如果不能在几个小时内重建 Cursor，下次面试会非常艰难——那不过是 300 行代码的一个 while 循环。”",
+    "Ralph Loop 创造者 Geoffrey Huntley 把软件工程师的底线划在 300 行。看似离谱，但大家发现，他可能是对的。",
+    "过去一年，Claude Code、Codex、Antigravity 等大厂产品底层路径越来越相似：Agent Loop 读写上下文、调用工具、反复执行，用测试和权限兜底。上下文、工具、Loop、记忆和多 Agent，逐渐成为一套公开的标准牌面。",
+    "如今已经拥有庞大社区的 Pi 和 Aider，也都是从个人项目起步：Pi 由 41 岁的奥地利软件工程师 Mario Zechner 独立开发，Aider 由约 54 岁的加拿大软件工程师 Paul Gauthier 一人发起。面向 DeepSeek 优化的 Reasonix，则由游戏引擎开发者 YHH 个人发起，随后迅速发展成拥有数万 Star 的社区项目。",
+    "DeepSeek 宣布招募 Harness 内测后，评论区很快变成了一场“个人 Harness 展销会”。社区整理了帖子下的上千条回复，其中有数百个开源仓库，覆盖 Coding Agent、记忆、Skills、评测和安全等方向。几乎每个人都带着自己搭建的 Harness 前来自荐。",
+    "世界就是这么奇妙：几个月前大家的差异还在“AI 辅助开发者生产力提升 2 倍还是 100 倍”，现在的差异已经变成“能不能写一套自己的 Harness”。",
+    "但当模型可以替换、Harness 可以复刻、常见组件已经趋同，连个人开发者都能拼出一套可用系统时，Coding Agent 还能靠什么打出差距？为此，我们采访了 TiDB 唐刘、腾讯研究院茹炳晟、Floatboat Harness 架构师 Remy，以及字节 Trae 天猪。",
+    "Amp联合创始人Thorsten Ball说 ：“模型已经死了。”近距离管理单个模型的行为，回报已经越来越低。我们不需要再不断调整、试验不同模型——它们最终都会发展到“按下按钮，就能得到一个 John Carmack”的水平。",
+    "OpenCode联合创始人Dax Raad的感受类似 ：模型公司在可用性方面找到了某种完美区域，用过更新的模型，再回头看这一代，会觉得它们彼此都差不多，“用哪个都一样”。",
+    "Pi 创始人 Mario Zechner认为如今模型不仅到顶峰了 ，新版本能力甚至还会倒退。能力越强，厂商越难保证旧能力不退化——真实世界的用例太多，评测根本覆盖不完。所以模型厂商会选择推自家 Harness，因为 Harness 是唯一能控制的部分，至少能把变化锁住。",
+    "几个月前，有国内 Coding 工具专家对 InfoQ 说过一句话：“（国产）模型不行，就只能靠工具补。模型负责决策，真正的编码、调试和重构，交给 Harness 里的工具完成。”",
+    "但现在情况变了。模型已经能应付大多数日常工作的复杂度。当日常任务根本触及不到模型的能力上限时，谁的上限更高，也就没有之前那么重要了。",
+    "Harness 不是新东西。早在 2022 年 ChatGPT 刚问世时，4000 Token 的上下文窗口逼着开发者用工具调用、MCP、RAG 来管理上下文——Cursor、Windsurf、Cline、Aider 都是那个时期的产物。后来上下文窗口大了，任务也长了，Agent 跑几个小时就开始压缩总结、遗漏关键信息。有人引入 Sub-agent，有人搞 Agent Swarm，本质上都在做同一件事：为底层模型搭一个更好的运行环境。",
+    "最内层的 Agent Loop ，负责模型循环、文件读写、上下文管理和安全控制， 可以只有约 200 行代码 。Amp 联合创始人 Thorsten Ball 则用 315 行 Go 代码 从零写出了一个能够在终端读取、搜索和编辑文件的 Coding Agent。",
+    "虽然核心只有几百行代码，但一套完整的 Harness 仍要向外叠加大量组件。Planner、Coder、Reviewer、Search、Edit、Shell、Sub-agent、MCP——TiDB 团队唐刘列了一串名字，然后说：“这些东西慢慢都会变成标准部件。”",
+    "他拿数据库打了个比方：MySQL、TiDB、PostgreSQL、Snowflake 都有 SQL，都有 Optimizer，都有 Storage Engine，但没有人会觉得它们一样。真正的差距从来不在“有没有这个组件”，而在于这些组件怎么组成一个真正能解决问题的系统。"
+  ],
+  "isExcerpt": true
+}
