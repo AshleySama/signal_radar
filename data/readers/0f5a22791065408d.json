@@ -1,0 +1,20 @@
+{
+  "title": "蓝牙耳机总断连？开发者顺藤摸瓜，竟发现阿里全球速卖通在“播放静音”",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-06T00:00:00Z",
+  "url": "https://www.infoq.cn/article/ufMvEqDPiwm92btRahrP",
+  "paragraphs": [
+    "阿里速卖通首页通过静默 Web Audio 处理图生成设备指纹，利用 FPU、指令集与驱动差异提取硬件级唯一特征。该行为由 AWSC 反机器人套件触发，不依赖用户交互或可听音频输出。",
+    "Web Audio API 被用于非预期的设备识别场景，暴露其安全模型在硬件侧信道层面的盲区；音频处理图经零增益输出仍绑定真实硬件，规避常规音频拦截；浮点计算路径差异构成稳定指纹源，不受浏览器指纹混淆策略影响。",
+    "蓝牙 音频 多点连接 的一项硬件副作用，暴露出 阿里全球速卖通（AliExpress） 首页在悄然执行 设备指纹识别 程序。",
+    "开发者 Matt Callaghan 发现 ，阿里巴巴的购物网站会维持一条活动音频流，却不播放人耳可以感知的声音。当时，他正在调试为什么多点连接耳机始终无法将音频焦点从桌面浏览器切换到智能手机。对页面资源进行反混淆后，他发现阿里巴巴的 AWSC 反机器人套件中嵌入了跟踪程序，这再次引发了人们对 Web Audio API 安全模型在架构层面的担忧。",
+    "包括 collina.js 和 fireyejs.js 在内的相关脚本，会构建一个合成的 Web Audio 处理图，用于捕获依赖硬件的执行特征。音频指纹识别的工作方式，是让一个已知波形通过多个数学变换节点。由于 数字信号处理 程序会在不同的 浮点运算单元（FPU） 、指令集（例如 AVX 或 ARM NEON )、操作系统混音引擎和厂商驱动上执行，最终得到的频域输出会呈现细微的数值差异，而这些差异是用户特定软硬件环境所独有的。",
+    "const ctx = new ( window .AudioContext || window .webkitAudioContext)(); const osc = ctx.createOscillator(); const compressor = ctx.createDynamicsCompressor(); const analyser = ctx.createAnalyser(); const gain = ctx.createGain(); gain.gain.value = 0.0; osc. type = \"triangle\" ; osc.frequency.setValueAtTime(10000, ctx.currentTime); osc.connect(compressor); compressor.connect(analyser); compressor.connect(gain); gain.connect(ctx.destination); osc.start(0); const buffer = new Float32Array (analyser.frequencyBinCount); analyser.getFloatFrequencyData(buffer); 复制代码",
+    "通过将零增益的 GainNode 连接到 ctx.destination ，脚本在平台层启动了一条未静音的音频流，使主机操作系统无法进入空闲状态，并锁定了蓝牙多点连接的音频路由。",
+    "注重隐私保护的浏览器厂商针对这起事件作出了回应，并对比了各自采用的防御模型。 Brave 公开讨论了 这种跟踪技术，称“AliExpress 并没有录制用户的声音，而是播放一段静音音频，再测量用户的特定设备如何处理这段音频，从而识别用户的设备指纹”。Brave 通过“ 扰动（farbling） ”缓解这种风险。这种方法会在音频渲染缓冲区中动态注入确定性的 伪随机噪声 ，从而确保提取出的频率数据在不同浏览器会话之间发生无法预测的变化，同时不影响能够发出声音的 Web 应用。相比之下，Firefox 会在其高级 反指纹识别配置 （privacy.resistFingerprinting）下采用数学分桶和规范化处理，将音频处理结果限制在标准化的精度区间内，以消除浮点运算单元层面的差异。",
+    "这起事件凸显了现代 W3C 规范 中长期存在的一处结构性权限缺口。不同于 getUserMedia 或 地理位置 API 等敏感的浏览器接口，初始化 AudioContext 并渲染音频合成图，无需经过任何明确的权限提示。此外，当活动音频图以零振幅输出采样数据时，浏览器也不会显示地址栏扬声器图标之类的可视化提示。",
+    "这一架构盲区给企业安全工程带来了更复杂的问题。电商平台会部署客户端风险评分脚本，以防范账户接管、优惠券滥用和自动化凭据填充攻击。然而，如果反欺诈遥测缺少正式的能力控制或标准化隔离机制，被动式反机器人防御就可能干扰物理设备的状态，并损害用户对基本隐私保护的合理预期。",
+    "原文链接： https://www.infoq.com/news/2026/08/alibaba-audio-fingerprinting/"
+  ],
+  "isExcerpt": true
+}

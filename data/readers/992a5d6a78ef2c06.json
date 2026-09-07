@@ -1,0 +1,23 @@
+{
+  "title": "姚班校友主导，Claude攻克费马大定理首个完整形式化证明",
+  "source": "量子位",
+  "publishedAt": "2026-09-05T09:17:56Z",
+  "url": "https://www.qbitai.com/2026/09/484551.html",
+  "paragraphs": [
+    "Wiles又花了大约一年时间和Richard Taylor一起修补，最终在1994年完成证明，到这里，困扰数学界350多年的命题才终于被攻克。。。",
+    "数学家或者AI负责把定理、定义和证明一步一步写成Lean能够理解的形式；Lean则负责检查，每一个推导到底有没有从前面的公理和定理合法地走出来。",
+    "到2024年，帝国理工学院Kevin Buzzard等人才正式启动一个多年社区项目，准备使用Lean完成费马大定理形式化，光项目第一阶段的技术蓝图，就写了86页。",
+    "作为早年是信息学竞赛尖子，Tianyi Peng曾获全国青少年信息学奥赛选拔赛第八名，2017年从 清华姚班 本科毕业，2023年获MIT博士学位。",
+    "有的负责补数学定义，有的专门攻中间引理，有的沿着已有成果继续往更高层定理推进，还有Agent负责把不同部分重新拼回整个证明体系。",
+    "Anthropic对此也表示，完整证明只依赖Lean三个标准公理，而且他们还专门通过比较程序确认，Claude最终证明的定理陈述，与Mathlib里的费马大定理完全一致。",
+    "Anthropic透露，早期Agent虽然很快拿下了一些结果，但随着工程规模扩大，它们逐渐跟不上整个项目的状态，也越来越难有效协作。",
+    "同时，平台还会把定理陈述和证明分开管理、加速Lean编译，并给每个定理保留自然语言描述，方便不同Agent搜索和复用已有结果。",
+    "而Anthropic最后使用的，则是 Prove2Me+基于Claude Code的multi-agent harness。",
+    "最后整个项目消耗约60亿个输出Token，内部使用的通用研究模型能力大致相当于Claude Fable 5.1。",
+    "如果这样规模、这样依赖复杂度的现代数学成果，都开始能够被AI自动搬进形式化系统，那么过去极度依赖人工、推进速度缓慢的数学文献形式化，可能第一次真正具备了大规模提速的条件。",
+    "其中GPT-6 Pro面向Pro、Business和Enterprise计划推出，Pro用户还可以在Chat、Work和Codex里使用Astra。",
+    "[1]https://x.com/search?q=%E8%B4%B9%E9%A9%AC%E5%A4%A7%E5%AE%9A%E7%90%86&src=typed_query",
+    "[2]https://www.anthropic.com/research/formalizing-fermats-last-theorem"
+  ],
+  "isExcerpt": true
+}
