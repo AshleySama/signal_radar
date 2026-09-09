@@ -1,0 +1,23 @@
+{
+  "title": "Cohere 发布 Parse 5，可以从复杂的文档中高效地提取多模态信息",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-08T00:00:00Z",
+  "url": "https://www.infoq.cn/article/C8WbrpalJEjLfSh2xJJj",
+  "paragraphs": [
+    "Cohere 正式发布 Parse 5（parse-v5.0），这是一款专有多模态基础模型，专为解决开发者长期面临的难题——从复杂的企业文档中提取结构化数据——而设计。",
+    "Parse 5 是 Cohere 推出的 23 亿参数多模态 VLM，专为高精度、高吞吐的企业级文档结构化而设计，支持 PDF 到 Markdown 转换及视觉定位。",
+    "采用 North-Micro-Vision-Instruct 架构；视觉编码器基于 SigLIP 2 SO400M，引入 2D RoPE 保留空间结构；DeepStack 方法实现多层级视觉特征注入语言模型浅层。",
+    "Cohere 正式发布 Parse 5（parse-v5.0），这是一款专有多模态基础模型，专为解决开发者长期面临的难题——从复杂的企业文档中提取结构化数据——而设计。 该模型于 2026 年 8 月 27 日发布 ，是一款拥有 23 亿参数的视觉语言模型（VLM），能够将财务报告和科学论文等视觉信息丰富的 PDF 文档转换为规范的 Markdown 格式，同时还能输出精准的边界框坐标，为视觉定位场景提供底层支撑。",
+    "在架构方面，Parse 5 针对高吞吐量的企业级工作负载进行了优化，具备 8K 令牌的上下文窗口，可以同时处理多样化的文本和视觉输入。该模型基于 Cohere Labs 的开放权重架构 North-Micro-Vision-Instruct 构建，依赖于一条高效的工作流。它还采用了一个经过定制训练的、拥有 4 亿参数的原生分辨率 视觉编码器 （基于 SigLIP 2 SO400M 初始化）。该编码器运用 2D 旋转位置嵌入（RoPE）和学习得到的 1D 位置嵌入来保留文档的空间结构。一个专用的 Projector 将提取的这些视觉特征直接映射到语言模型的嵌入空间中。",
+    "核心推理引擎是一款基于 Cohere Command A+ 架构 的、拥有 20 亿参数的自研语言模型（North Micro LLM）。该系统采用了 Integration (\"DeepStack\") 方法，将视觉编码器多个层级输出的补丁嵌入特征，注入到语言模型的浅层网络中，让语言模型能够同时访问多个抽象层级的视觉表征信息。通过直接输出结构良好的 Markdown 格式内容，该模型有望彻底替代此前稳定性差、完全依赖硬编码规则的传统 OCR 处理过程。",
+    "为了量化该模型的准确性，Cohere 使用 ParseBench 对 Parse 5 进行了评估。ParseBench 是一个严格的、基于规则的基准测试数据集，包含 2000 多个经人工验证的企业网页，涵盖保险、金融和政府等领域。该评估测试了表格提取、内容保真度和语义格式化等关键能力维度，在使用传统解析器处理时，这些环节往往会导致生产工作流中断。在这些基准测试中，Cohere Parse 5 在表格提取、内容保真度和语义格式化方面的平均得分为 79.2。这一表现使其在当前的工具生态系统中极具竞争力。尽管像 LlamaParse Agentic Plus 这样的高端配置以 90.20 的总分领跑 ParseBench 排行榜，但 Parse 5 的表现仍然超越了其他值得关注的替代方案，包括 Mistral OCR 和 Google Gemini 3 Flash（Thinking High），后者的得分为 75.05。",
+    "对于开发人员而言，在 Markdown 输出中同时包含边界框坐标，可以确保下游应用将提取出的数据在视觉层面精准溯源回原始文档的对应位置。对于需要严格审计追踪和验证的受监管行业而言，这一功能至关重要。",
+    "import cohere # Initialize the Cohere V2 Client co = cohere.ClientV2( \"YOUR_COHERE_API_KEY\" ) # Open your complex enterprise PDF with open ( \"quarterly_earnings_report.pdf\" , \"rb\" ) as file: document_content = file. read () # Call the Parse API for Markdown extraction response = co.models.parse( model= \"parse-v5.0\" , document =document_content, output_format= \"markdown\" ) # Access the structured output print ( \"Extracted Markdown: \" , response.text) # Bounding boxes for visual grounding print ( \"Layout Elements: \" , response.bounding_boxes) 复制代码 cURL：",
+    "curl --request POST \\ --url https: //api.cohere.com/v2/parse \\ --header 'Authorization: Bearer YOUR_COHERE_API_KEY' \\ --header 'Content-Type: multipart/form-data' \\ --form 'model=parse-v5.0' \\ --form 'document=@quarterly_earnings_report.pdf' \\ --form 'output_format=markdown' 复制代码",
+    "该 API 可以通过 Cohere 平台 、 Microsoft Azure AI Foundry 以及 AWS 上的 Amazon SageMaker 访问，为开发检索增强生成（RAG）或自主代理系统的团队提供了无缝的集成路径。对于希望在全面集成前评估该工具的开发者，可以通过以下方式测试该模型：在 Cohere 的 API 仪表盘上进行测试；通过免费的 Hugging Face Space 基于用户界面进行测试；以及在 Hugging Face 上使用开放权重基础模型 North-Micro-Vision-Instruct 在本地进行测试。",
+    "Reddit 等在线社区中的讨论表明，人们对 Cohere Parse 的技术能力及实际应用表现出了浓厚的兴趣。在 r/Rag 版块的一场讨论中，一位正在构建数据采集技术栈的用户（其当前方案依赖于 pypdf 并采用 Mistral OCR 作为备用方案）特别强调了 Cohere Parse 在表格提取、阅读顺序优化、图像描述以及定价方面的优势。不过，该用户也指出了集成方面的问题，询问了 OpenRouter 的可用性 ，并请求支持原生 PDF 文件输入，以避免在将 PDF 文件传递给 API 之前需要逐页渲染。此外，在 r/LocalLLaMA 版块中，用户对开放权重模型 North-Micro-Vision-Instruct 的发布反响积极，认为这是一款极具潜力的 OCR 模型，并且指出，该模型是一个仅有 24 亿参数的紧凑模型，其设计正符合原型开发和针对特定任务的微调。该工具的发布同样在 r/AIDeveloperNews 版块受到了关注，因其能够将包含表格和嵌入式图像的复杂文件转换为干净的 Markdown 格式。",
+    "随着 Parse 5 的推出，Cohere 进一步巩固了其向纯文本处理以外的领域进行拓展的战略。这是一款功能强大且经济高效的多模态工具，专为企业文档分析的复杂需求量身定制。通过优先确保输出可靠的格式并保持低延迟，该公司继续致力于服务那些需要现实世界中处理杂乱无章的非结构化数据的开发者。",
+    "原文链接： https://www.infoq.com/news/2026/09/cohere-multimodal-parse/"
+  ],
+  "isExcerpt": true
+}
