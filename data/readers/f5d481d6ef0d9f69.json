@@ -1,0 +1,25 @@
+{
+  "title": "1300 Star！开源文档框架 Blume 冲上 GitHub 趋势榜：零配置、免脚手架，一键生成文档网站",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-11T00:00:00Z",
+  "url": "https://www.infoq.cn/article/DtxID7YaDp3o3QRcOTYj",
+  "paragraphs": [
+    "Blume 是基于 Astro 和 Vite 的零配置 Markdown 文档框架，通过 CLI 自动生成隐藏 Astro 项目实现开箱即用的文档站点构建。",
+    "GitHub 开源（MIT），Node.js 22.12+ 即可启动，已获 1300+ Star 并跻身 TS 趋势榜 Top 7。",
+    "零配置即开即用；配置可选且由 defineConfig 类型校验；构建过程自动生成 .blume/ 下的 Astro 项目。",
+    "Hayden Bleasel 已将其作为开源项目发布，并将其定位为“一款适用于你所发布的一切内容的世界级文档框架”：支持零配置设置、自动 SEO 和 AEO，提供 30 多个组件，而且无须编写应用程序样板代码。Blume 基于 Astro 和 Vite 构建，在 GitHub 上采用 MIT 许可证，目前已获得超过 1300 个 Star，并在 GitHub TypeScript 趋势榜中升至第七位。",
+    "其核心主张是：框架本身就是模板，因此无须克隆任何内容。CLI 会加载 blume.config.ts，扫描内容并构建成图，然后在 .blume/ 下生成一个隐藏的 Astro 项目，用于开发和构建。根据快速入门指南，仅需 Node.js 22.12 或更高版本以及一个 Markdown 文件即可开始使用。",
+    "import { defineConfig } from \"blume\" ; export default defineConfig({ title: \"Acme Docs\" , deployment: { site : \" \" }, }); 复制代码",
+    "网站会生成 llms.txt 和 llms-full.txt，通过任意 .md URL 提供原始 Markdown，还可以开放托管的 MCP 服务器。与此同时，blume eval 可以将文档转变为测试套件：一个智能体仅使用文档回答用户问题，由评判器对答案评分；如果文档无法回答问题，CI 就会失败。",
+    "在 GitHub 上，TimonVS 为设计系统文档提出了基于路由的页面标签页需求，并指出，使用 Starlight 曾迫使他“对 PageTitle 组件进行难看的组件覆盖”。Bleasel 在一天内推出了基于查询参数的标签页：",
+    "因此，查询参数版本可以满足“可共享的标签页 URL”和“每个页面包含多个标签页组”，但无法提供“每个标签页对应一个单独的可索引 URL”。",
+    "其他 Issue 报告了客户端导航过程中深色模式元素闪烁，以及越南语文本的字体回退不正确等问题。Blume 自己的常见问题页面记录了一个受到关注的 Markdown 格式化问题：oxfmt 会将 :::note 指令折叠到一行中，导致其被渲染为纯文本。这是一个继承自 Prettier Markdown 打印器的上游缺陷，目前的解决方法是使用固定补丁。",
+    "更新日志介绍了内置的 blume-migrate 技能，可用于从 Mintlify、Docusaurus、Fumadocs、Nextra 和 Starlight 迁移。该技能会将源配置转换为 blume.config.ts，把内容重组为从文件系统结构派生的导航，并为每条发生移动的路由设置重定向；它还会将提示框重写为 ::: 指令，将图标转换为 Lucide，并让生成的 API 参考文档指向 openapi.sources。此外也有第三方实践分享：PunGrumpy 撰文介绍了如何将 Logixlysia 从 Fumadocs 迁移到 Blume。",
+    "与竞争对手相比，Blume 的对比表将 Mintlify 描述为一个核心闭源的托管平台，将 Fumadocs、Nextra 和 Docusaurus 描述为“库加应用”的模式，用户需要搭建应用，然后在 React 运行时上对其进行维护。Blume 声称自己走的是中间路线：它是开源的，可以托管在任何地方；用户只需要维护 Markdown，其核心主题不包含任何客户端框架 JavaScript。其扩展出口包括组件覆盖和 blume eject，后者可以将生成的运行时转变为一个独立的 Astro 应用。",
+    "Blume 在发布后不久以 304 票位列 Product Hunt 当日第二名，MarkTechPost 也在 7 月对其进行了报道。在 Product Hunt 的发布页面上，有人问道：",
+    "很好奇这里的“AI 就绪”具体是什么意思——它是在底层生成类似 llms.txt 的东西，还是更多地指 Markdown 已经被清晰地分块和结构化，以便进行检索？",
+    "它包含很多方面——llms.txt、通过内容协商标头提供原始 Markdown、MCP 服务器、智能体可读性和技能。所有这些都是为了让智能体更容易阅读你的文档。可以在这里查看： https://useblume.dev/docs/configuration/ai",
+    "Blume 是一个采用 MIT 许可证分发的开源文档框架，由澳大利亚设计工程师 Hayden Bleasel 维护，他的其他项目还包括 Ultracite 和 Files SDK。Blume 基于 Astro 和 Vite，将 Markdown 文件夹渲染为静态 HTML，其核心主题不包含客户端框架 JavaScript。该框架已发布至 npm，文档可在 useblume.dev 查看。"
+  ],
+  "isExcerpt": true
+}
