@@ -1,0 +1,22 @@
+{
+  "title": "‌FreeCORE：TrueNAS 衍生分支，在 FreeBSD 系统上维护与之深度整合的虚拟化、Jails 容器与 OpenZFS 文件系统‌",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-13T00:00:00Z",
+  "url": "https://www.infoq.cn/article/TDav5ojS854dZKyfJmhI",
+  "paragraphs": [
+    "当上游维护者 iXsystems 将其工程资源完全转向基于 Debian Linux 的 TrueNAS SCALE 项目时，现有用户便面临着架构被弃用的困境。作为一个新推出的、由社区驱动的衍生项目，FreeCORE 将 TrueNAS CORE 13.3 的基线直接升级至 FreeBSD 15.0，有望填补这一空白。",
+    "FreeCORE 是社区驱动的 TrueNAS CORE 衍生项目，基于 FreeBSD 15.0 升级原 13.3 基线，提供就地升级路径并恢复 Jails、bhyve 和原生插件等被弃用的 FreeBSD 虚拟化能力。",
+    "保留深度集成的 FreeBSD 虚拟化栈（Jails/bhyve/插件），延续原有运维范式；提供从 CORE 13.3 到 15.0-U1 的稳定就地升级路径；填补 iXsystems 转向 Linux 后的开源 FreeBSD 存储维护空白。",
+    "适合存储系统管理员、依赖 FreeBSD Jails/bhyve 构建生产环境的 DevOps 工程师、ZFS 高级用户阅读。",
+    "多年来，TrueNAS CORE 一直是开源存储设备的公认标准，它基于 FreeBSD 和 OpenZFS 构建，其稳定性被一些人誉为“坚如磐石”。然而，当上游维护者 iXsystems 将其工程资源完全转向基于 Debian Linux 的 TrueNAS SCALE 项目时，现有用户便面临着架构被弃用的困境。作为一个新推出的、由社区驱动的衍生项目， FreeCORE 将 TrueNAS CORE 13.3 的基线直接升级至 FreeBSD 15.0，有望填补这一空白。",
+    "FreeCORE 15.0-U1 目前处于稳定状态，并提供了一条从 13.3 基础版本无缝升级至 15.0 的就地升级路径。按照计划，下一版本将是 15.1。从技术角度来看，该分支具有重要的意义，因为它恢复了深度集成的虚拟化生态系统——特别是 FreeBSD Jails 、原生插件和 bhyve 虚拟机——在上游 Linux 转换期间，这些功能曾经被标记为已过时。通过保留这些功能，FreeCORE 直接满足了那些围绕 FreeBSD 生态系统构建了庞大基础设施的管理员的需求。",
+    "这种架构上的差异突显了 FreeBSD Jails 与 Linux 容器在安全模型上的显著差异。FreeBSD Jails 提供了深度集成的操作系统级内核隔离，其成熟度之高，使得许多存储工程师认为，与 TrueNAS SCALE 中广泛使用的基于命名空间的 Linux 容器（LXC/Docker）隔离相比，它能提供远为优越的安全边界。此外，存储管理员必须仔细权衡 OpenZFS 原生加密的现状。正如社区讨论中所指出的那样，目前原生加密缺乏专职的上游维护者，这导致一些专业人士倾向于使用 Linux LUKS，除非原生 ZFS 功能是绝对的运行要求。",
+    "技术论坛上的讨论呈现出高度两极分化的态势。在 Reddit 的 r/freebsd 版块中，这次发布赢得了那些曾经对将关键任务存储池迁移至 Linux 持犹豫态度的管理员们的极大感谢。用户们热切地分享着自己的迁移经历；例如，管理员 ink_13 指出，尽管一年前已经将旧系统迁移至 SCALE，但他们内心深处依然怀念 FreeBSD 环境。",
+    "然而，在 Hacker News 和 TechStacks 等平台上正在进行的热烈讨论中，围绕开源治理的争论愈演愈烈。一个重要的分歧点在于上游移除了构建脚本。一些评论者认为，这是对开源社会契约的背叛；而另一些人则强调，宽松的 BSD 许可明确允许此类行为，并将其视为实现商业可持续性的必要步骤。",
+    "可持续性仍然是这一新项目最紧迫的关切。FreeCORE 目前由一名维护者主导，该维护者大量利用大语言模型进行快速开发。在 Reddit 上的一篇详细而坦率的回复中，该 维护者 直接回应了这些具体的关切：",
+    "最初是因为我需要为我们自己的 TrueNAS CORE 部署找到一条可行的 FreeBSD 路径，而不是将其迁移到 Linux。在实现和代码审查过程中，我广泛使用了 AI 编码代理，同时由我来主导这项工作、在真实系统上进行验证，并负责版本发布。",
+    "虽然有人赞赏这种透明度和现代化的做法，但也有怀疑论者警告称，由人工智能辅助、仅由单一维护者负责的分支，极易在关键存储环境中引入灾难性漏洞。因此，越来越多的资深管理员主张彻底摒弃专用一体机设备模式，转而采用纯净的 FreeBSD 或 Debian 搭配原生 OpenZFS，从而永久地摆脱供应商锁定。归根结底，FreeCORE 为 FreeBSD 的忠实用户提供了一条至关重要的生命线，但其长期可行性对企业而言仍然是一个悬而未决的问题。",
+    "原文链接： https://www.infoq.com/news/2026/09/freecore-truenas-fork/"
+  ],
+  "isExcerpt": true
+}

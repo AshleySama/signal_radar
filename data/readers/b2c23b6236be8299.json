@@ -1,0 +1,25 @@
+{
+  "title": "(Re)introducing Developer Story",
+  "source": "Stack Overflow Blog",
+  "publishedAt": "2026-09-10T18:01:54Z",
+  "url": "https://stackoverflow.blog/2026/09/10/re-introducing-developer-story/",
+  "paragraphs": [
+    "For the past few years, we’ve been looking at ways to bring a little more of the individual developer back to Stack.",
+    "I won’t bury the good news here: Stack Overflow is bringing back the <!--[-->Developer Story<!--]--> .",
+    "Time for a short history lesson: once upon a time, we had a feature called Developer Story (“Dev Story”)—think of it as a resume or a CV on steroids. It tracked a developer’s career, added inflection points such as new jobs or languages learned, and was generally an all-around useful function to have.",
+    "Then, about five years ago, we deprecated this much-loved feature. Many of the most dedicated developers on the site (and on the internet!) expressed their frustration with that choice.",
+    "For the past few years, we’ve been looking at ways to bring a little more of the individual developer back to Stack. In short, we've done a great job showcasing your knowledge, but not the people creating that knowledge.",
+    "We realize that people don’t need to come directly to Stack Overflow anymore in order to get answers to their programming questions—the chatbots have that covered. Most LLMs have been trained on our datasets, providing a quick interface to our answers.",
+    "But we believe creators should derive value from their work.",
+    "It’s a smarter tool built to showcase your true expertise.",
+    "Right now, on day 1, we’re supporting what we’re calling “specialties”—these are areas where you have proven expertise, distilled and pulled forward for everyone to see. But we also give you the control over which specialties are highlighted.",
+    "Soon, we will also display and report out your non-SO contributions (from integrations with other sites that have verified data about you, as well as from other sites in our own network).",
+    "And we’re building it in a privacy-centric way—we won’t be displaying any private info that you don’t EXPLICITLY tell us to display.",
+    "And the part that truly excites me: Dev Story will be at the heart of your profile on Stack Overflow, acting as a much fuller picture of your technical identity.",
+    "This suite of tools is what we’re referring to as “Stack Identity”. It will be the verified developer proof-of-work layer to the internet.",
+    "The core concept: your technical contributions should speak for themselves.",
+    "You will use Stack Identity to prove and showcase your skills and career. Anyone can list languages on a CV, but your work here, and in places that work with Stack Identity, reveal your true expertise.",
+    "Stack Overflow is uniquely suited to deliver this level of verification."
+  ],
+  "isExcerpt": true
+}

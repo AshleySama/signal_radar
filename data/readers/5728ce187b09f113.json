@@ -1,0 +1,24 @@
+{
+  "title": "Java 近期新闻：TornadoVM 6、JReleaser、LangChain4j、Java Operator SDK、JHipster、Yupiik Fusion",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-14T00:00:00Z",
+  "url": "https://www.infoq.cn/article/VIjBCuNElpg2H4bLywVc",
+  "paragraphs": [
+    "本文为 Java 近期新闻，内容涉及：TornadoVM 6、JReleaser、LangChain4j、Java Operator SDK、JHipster、Yupiik Fusion。",
+    "JDK 27 EA Build 35 与 JDK 28 EA Build 14 同步发布，均支持通过 Java Bug 数据库提交反馈；TornadoVM 6.0.0 全面迁移至外部函数与内存 API，弃用 JVMCI，统一元数据获取路径并扩展 CUDA 后端；Micronaut Framework 5.1.3 基于 Core 5.1.13 发布，对 SQL、Micrometer、OpenAPI 等 8 个关键模块完成补丁更新。",
+    "TornadoVM 彻底替换 JNI 为外部函数与内存 API；JVMCI 被移除，元数据获取路径统一为反射+ASM+Unsafe；Micronaut 多模块同步补丁覆盖可观测性、数据访问与云集成。",
+    "Build 35 仍然是 JDK 27 早期访问构建 的当前版本 。要了解关于这个构建的更多细节，请参阅 发布说明 。",
+    "JDK 28 的 早期访问构建 Build 14 发布，它是 Build 13 的 升级 ，修复了各种 问题 。要了解关于这个构建的更多细节，请参阅 发布说明 。",
+    "TornadoVM 6.0.0 发布 ，带来 Bug 修复、文档改进、依赖项升级以及以下新功能：在后端和库任务中，完全用更现代的“ 外部函数与内存 API ”取代了 Java 本机接口 （JNI）； 移除了实验性的 JVM 编译器接口 （JVMCI），转而“通过反射 + ASM + Unsafe 层获取所有编译器元数据，所有受支持的 JDK（21、25、26、27）都会将此作为唯一的统一路径”；扩展了 CUDA 后端 。有关该版本的更多详细信息，请参阅 发布说明 。InfoQ 随后将发布一篇更详细的新闻报道。",
+    "Micronaut 基金会 发布 了基于 Micronaut Core 5.1.13 的 Micronaut Framework 5.1.3 版本。该版本对以下模块进行了补丁更新： Micronaut SQL Libraries 、 Micronaut Micrometer 、 Micronaut OpenAPI/Swagger 、 Micronaut OpenSearch 、 Micronaut Email 、 Micronaut Reactor 、 Micronaut Data 以及 Micronaut AWS 。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "Oracle Labs 发布 Graal Development Kit （GDK）5.1.3 版本。该版本与前文介绍的 Micronaut 5.1.3 保持了兼容。在使用 GDK Launcher 和 GDK CLI 创建应用时，该版本支持通过 JDK 25 生成和构建 GDK 应用。Graal Development Kit for Micronaut（前身为 Graal Cloud Native ）提供了一套精选的 Micronaut 框架模块，可以简化云应用程序的开发。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "JReleaser 1.26.0 发布 ，带来 Bug 修复、文档改进、依赖项升级以及以下新功能：通过在生成的 snapcraft.yml 文件中添加 platforms 节点，增强对 Snapcraft 的支持；弃用 SnapPackager 类中定义的 runOn() 方法，并建议改用 buildFor() 方法； 新增一个选项，可以跳过 JBang 打包器存储库标签设置，从而解决 JBang 标签可能出现错误的问题。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "LangChain4j 1.20.0 正式发布（连同第 30 个测试版），提供了 Bug 修复、文档改进、依赖项升级以及以下新功能：实验性支持非阻塞和响应式模式；针对整个交互调用单个线程的 AI 服务方法，现在改为返回 CompletableFuture 和 Flow.Publisher ；新增针对 Jackson 3 JSON SPI 的可选支持。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "Java Operator SDK 5.6.0 发布 ，带来了以下值得注意的变更：新增 InformerPool 接口，控制器和事件源现在共享 Informer，而非每个事件源各自拥有一个 Informer；此外， EventRecorder 接口的配置方式也发生了变化，从原有的 RegisteredController 接口改为使用 ConfigurationService 接口中定义的 eventRecorder() 方法。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "JHipster 9.3.0 发布 ，带来 Bug 修复、依赖项升级以及以下新功能：全面支持 Spring Boot 4、Jackson 3 和 Angular 22；响应式应用程序现在使用 Vite 构建；在使用 Testcontainers 进行集成测试时，统一使用 Spring Boot 的 @ServiceConnection 注解。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "JetBrains 团队 发布 Kotlin Toolchain 0.12.0。该工具链是进入 Kotlin 编程语言的统一入口。除了 Bug 修复和依赖项升级外，还包括以下新功能：扩展已发布的 Kotlin 库（最初仅限于 JVM 库），现在已涵盖多平台库；支持使用 kotlin run 命令执行 Wasm 应用；改进终端 UI 和 IDE 。要了解有关该版本的更多详细信息（包括破坏性变更），请参阅 发布说明 。",
+    "Yupiik Fusion （一款用于构建微服务和 API 的轻量级 Java 技术栈） 1.1.0 版本发布，提供了 Bug 修复、依赖项升级以及以下新功能：一个新的 JsonSchemaService 类，该类实现了 Draft 2020-12 JSON Schema 规范；一个新的 CurlLoggerListener 类，旨在强制记录所有的交互；新增快照部署工作流。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "原文链接： https://www.infoq.com/news/2026/09/java-news-roundup-aug31-2026/"
+  ],
+  "isExcerpt": true
+}
