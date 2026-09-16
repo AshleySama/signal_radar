@@ -1,0 +1,25 @@
+{
+  "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+  "source": "Google DeepMind",
+  "publishedAt": "2026-09-15T17:05:57Z",
+  "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+  "paragraphs": [
+    "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking are our most advanced live dialogue models yet, built for natural conversation.",
+    "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+    "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking are our most advanced live dialogue models yet. Major upgrades in intelligence and parallel reasoning make them more intuitive to collaborate with and use to execute complex tasks using your voice.",
+    "Member of Technical Staff, on behalf of the Gemini Audio Team",
+    "We are launching Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking to make voice interactions more natural, fluid, and intelligent. These models handle complex reasoning, real-time visual context, and background task execution without interrupting your conversation. You can start using these features today through the Gemini API, Google Workspace, and the Gemini app.",
+    "Google just launched two new AI models that make talking to your devices feel way more natural. They can handle interruptions, switch between languages, and even explain their thought process while they work. Whether you're solving a complex problem or just chatting, the AI now feels like it's actually listening and thinking along with you. It’s a big step toward making AI feel like a real conversation partner.",
+    "Today, we’re introducing two new models that bring advancements in near real-time reasoning to more effectively enable voice agents and make conversing with AI feel more intuitive and intelligent.",
+    "For developers and enterprises, these models deliver the building blocks for reliable, production-ready voice agents. They also make speaking with Gemini across the Gemini app, Google Workspace, and Search more fluid and collaborative — helping you tackle complex tasks using just your voice.",
+    "Gemini 3.8 Live Extended Thinking provides enterprise-grade task completion and intelligence, capturing the #1 overall spot on Artificial Analysis' Speech to Speech Quality Index (82.6), and leads in agentic task completion with 68.6% on τ -Voice and 35.1% on Sierra’s τ -Voice-banking benchmark. It also provides strong reasoning capabilities, scoring 97.7% on Big Bench Audio, while maintaining a highly competitive price point compared to other frontier models.",
+    "Gemini 3.8 Live has shown a high preference among users, securing a second place in the Speech Agent Arena . In addition to this performance, it remains highly cost-effective — providing developers and enterprises with a capable and efficient model built for scale.",
+    "On ServiceNow’s EVA-Bench , a benchmark for evaluating voice agents, our models push the Pareto Frontier for complex workflows by successfully balancing accuracy with conversational quality.",
+    "Note: This was run on the Live API on Gemini Enterprise Agent Platform.",
+    "Gemini 3.8 Live processes visual inputs in near real-time, enriching conversations with context for more helpful responses. It automatically detects and transitions between 97 supported languages mid-conversation. It executes tools and API calls in the background while continuing the conversation, so the model can acknowledge requests and keep chatting while tasks finish in the background.",
+    "Gemini 3.8 Live guides employee onboarding in real time, using visual context to answer live questions.",
+    "Watch Gemini 3.8 Live play chess in near real-time using visual context, reasoning, and natural conversational flow.",
+    "For tasks that require deeper reasoning, 3.8 Live Extended Thinking reasons and speaks simultaneously. It delivers increased intelligence for complex workflows while maintaining an uninterrupted conversational flow — using early verbal cues like “Let me check that…” to acknowledge prompts naturally, and live progress narration to walk users through multi-step background tasks as they progress."
+  ],
+  "isExcerpt": true
+}

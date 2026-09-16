@@ -1,0 +1,22 @@
+{
+  "title": "Cloudflare将每天90亿次请求的JavaScript CDN迁移到其开发者平台",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-16T00:00:00Z",
+  "url": "https://www.infoq.cn/article/J5iJdjq6bIeRZHZF8fXO",
+  "paragraphs": [
+    "Cloudflare已经将cdnjs（用于JavaScript和CSS库的开源CDN）迁移到其开发者平台。新的架构使用Workers、R2、KV、Workflows、Queues、Durable Objects和Containers，整合了发布与交付基础设施，同时在每天90亿次请求的规模下保留了包内容、URL和SRI哈希。",
+    "Cloudflare完成cdnjs全栈迁移，以Workers、R2等原生平台组件替代原有跨云架构，R2成为包文件唯一权威源，完全兼容现有URL、内容与SRI哈希。服务现承载日均90亿请求，缓存命中率98.6%，覆盖约12%网站。此举是其开发者平台在超大规模公共服务场景下的深度dogfooding验证。",
+    "采用R2作为包文件唯一权威存储；Workers+KV实现无源服务与高命中缓存；预压缩Brotli/gzip显著提升传输效率。",
+    "Cloudflare 已经将 cdnjs 完整迁移到其开发者平台，用 Workers、R2、Workflows、Queues、Durable Objects、KV 和 Containers 替换了分布在 Cloudflare 与 Google Cloud Platform 上的发布基础设施。迁移还将 R2 设置为已发布包文件的权威来源，同时保留了现有的 URL、包内容和子资源完整性（Subresource Integrity，SRI）哈希。",
+    "Cloudflare 表示 ，cdnjs 当前大约每天处理 90 亿次请求，平均在超过 330 个 Cloudflare 数据中心中每秒约 108,000 次请求。该服务报告缓存命中率为 98.6%，约 12%的网站使用 cdnjs。Cloudflare 将此次迁移描述为在广泛使用的公共服务规模上对其开发者平台进行 内部验证（dogfooding） 的示例。",
+    "此次迁移基于 2020 年的一次架构调整，Cloudflare 当时将 cdnjs 的文件服务迁移到了 Workers 和 Workers KV ，在常规流量下替代了专用源服务器，同时保留外部源作为回退方案。Cloudflare 还引入了预压缩的 Brotli 和 gzip 资源以提高传输效率。",
+    "然而，发布路径一直保持着分散的状态：Google Cloud Functions 定期检查 npm 以获取发布包、Google Cloud Storage 存储包、Pub/Sub 负责消息传递，并且有一台运行 git-sync 的虚拟机同步仓库内容。系统使用 26 个按字母分片的 Cloud Functions 来监控包更新。与此同时，GitHub 仓库的 packed 存储已超过 1.1 TB，而已发布的文件在 GitHub 和 KV 中都有表述。",
+    "新架构将 Cloudflare R2 作为已发布文件的权威来源。KV 存储包的元数据、版本和 SRI 哈希，Worker 负责请求处理， Workers Cache 提供缓存层。如果 R2 无法提供文件，已发布内容还会镜像到 DigitalOcean Spaces 作为回退方案。",
+    "包摄取现在由 Cloudflare Workflows 进行编排。一个定时工作流会检查 npm 和 GitHub 的发布，将包下载到 R2，并为单个文件启动处理工作流。处理流水线提取包内容、进行代码压缩与压缩存储处理结果到 R2、更新 KV 中的元数据，并刷新 Algolia 搜索索引。工作流状态允许在失败后从上次完成的步骤恢复处理。",
+    "采用 R2、Workers、KV 与 Workflows 的新 cdnjs 架构。（来源： Cloudflare博客 ）",
+    "压缩处理存在一定限制，因为现有的处理算法需要将整个库缓冲到内存中。因此，Cloudflare 使用 Containers 来完成压缩工作，而不是直接在 Workers 中运行。Cloudflare 表示正在探索流式支持，未来可能将此处理迁移到 Workers。",
+    "保持包字节不变至关重要，因为对混淆或压缩的更改可能会改变 SRI 哈希。迁移还暴露了平台限制，促使 Cloudflare 将 Worker 子请求限制从 1,000 提高到 1,000 万，并将 Workflow 步骤从 1,024 提升到 10,000，可配置上限为 25,000。最终的架构使用 R2 存储制品、KV 存储元数据、Workers 负责交付、Workflows 负责发布。",
+    "查看英文原文： Cloudflare Migrates JavaScript CDN Serving 9B Requests a Day to Its Developer Platform"
+  ],
+  "isExcerpt": true
+}

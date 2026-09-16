@@ -1,0 +1,22 @@
+{
+  "title": "OpenAI 发布适用于编程和计算机应用的 GPT-6 Astra",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-15T00:00:00Z",
+  "url": "https://www.infoq.cn/article/IfxYoy1PPkFQUpjWVBVr",
+  "paragraphs": [
+    "OpenAI 发布了 GPT-6 Astra，这是一个专注于计算机应用、编程、专业工作流程、科学和网络安全的新模型。",
+    "GPT-6 Astra 是 OpenAI 推出的新一代多模态智能体模型，聚焦编程、专业工作流与GUI交互任务，支持跨上下文状态保留与屏幕级问题诊断。",
+    "Astra 首次实现端到端软件操作能力，在 OSWorld 2.0 达 72.6% 准确率；编程基准 Terminal-Bench 4.0 和 DeepSWE v1.1 分别达 57.9% 与 74.1%；引入实验性跨窗口上下文笔记机制。",
+    "OpenAI 发布了 GPT-6 Astra ，这是一个专注于计算机应用、编程、专业工作流程、科学和网络安全的新模型。该模型最初仅向部分组织开放，目前正逐步向 ChatGPT Plus、Pro、Business 和 Enterprise 用户，以及 OpenAI API 、Microsoft Azure 和 AWS Bedrock 用户推出。",
+    "Astra 将 OpenAI 的模型应用范围从生成响应扩展到了直接在软件中执行多步骤任务。它能够与图形界面交互，可以填写表单、更新 CRM 记录、进行研究、创建网站、分析数据、安装和测试软件，以及排查可以从屏幕上看出来的问题。在 OSWorld 2.0 测试中，OpenAI 报告的得分达到 72.6%，而 GPT-5.6 Sol 的得分则为 65.7%。",
+    "编程是本次发布的另一个重点。OpenAI 报告称，该模型在 Terminal-Bench 4.0 上的得分达到 57.9%，在 DeepSWE v1.1 上的得分达到 74.1%。Astra 还在 Codex 中引入了一种 实验性的上下文机制 ，使智能体能够在不同的上下文窗口之间保留笔记，而不再仅仅依赖于压缩机制。之前的上下文窗口仍然可以搜索，这使得模型在长时间运行的编程任务中能够检索早期需求、测试结果和工具输出。",
+    "在 OpenAI 公布的 MRCR 评估 中，该模型支持长达 100 万个令牌的长上下文，在 512K 至 1M 的上下文范围内得分达到 96.3%。OpenAI 还报告称，该模型在数据库迁移、CAD 生成、数据科学、浏览器研究和科学工作流等专业任务方面也取得了进步。",
+    "在网络安全方面，与 OpenAI 此前的模型相比，该模型发生了重大变化。根据 OpenAI 的 Preparedness Framework ，Astra 是首个被归类为“关键网络安全能力”级的模型。OpenAI 表示，在未启用生产环境安全防护措施的测试中，该模型发现了两个此前未知的漏洞并加以利用，同时展示了针对经过强化防护的浏览器和操作系统开发漏洞利用程序的能力。生产版本限制了高级攻击任务，而 OpenAI 计划通过其 Daybreak 计划提供更广泛的防御能力。",
+    "OpenAI 还报告称，在其内部评估中，Astra 的幻觉率较低，为 4.2%，而 GPT-5.6 Sol 则为 12.2%。不过，在旨在测试模型是否会掩盖其推理过程的测试中，该公司发现 Astra 的书面推理比其前代模型更难监控。OpenAI 表示，提高可监控性仍然是当前的研究重点。",
+    "GPT-6 Astra，在 10 万多块 NVIDIA Grace Blackwell NVLink72 上完成训练。从 ChatGPT 到 o1 再到 Astra，仅用了 4 年时间。通用人工智能（AGI）的时代已经到来。祝贺 @OpenAI 团队。接下来将有 40 万块 GPU 投入使用。",
+    "另一位社区代表 Alex Finn 同样聚焦于此次发布所体现的 AGI 框架，并就当前时期的特征做了如下分享：",
+    "Astra 的竞争对象包括 Anthropic Claude Fable 5.1 和谷歌的 Gemini 3.8 Flash 等模型。OpenAI 公布的评估结果显示，各模型在不同的任务中表现各不相同：在 Terminal-Bench 4.0 以及多项计算机使用评估中，Astra 领先于其他模型；而在 Humanity's Last Exam 测试中，Claude Fable 5.1 的得分更高；此外，谷歌的 Gemini 3.8 Flash 支持原生视频和音频输入，而 Astra 则不支持。",
+    "原文链接： https://www.infoq.com/news/2026/09/openai-gpt6-astra/"
+  ],
+  "isExcerpt": true
+}

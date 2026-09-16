@@ -1,0 +1,25 @@
+{
+  "title": "Java新闻汇总：Simple JSON API、GlassFish、Jakarta EE、JNoSQL和Open Liberty、LangChain4j",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-16T00:00:00Z",
+  "url": "https://www.infoq.cn/article/BAafGhU4GTtbxrRrSEPW",
+  "paragraphs": [
+    "本期的Java新闻速览涵盖了如下主要内容，将Simple JSON API提升为JDK 28的Proposed to Target状态、Jakarta EE 12的最新进展、2026年8月版的Open Liberty、LangChain4j发布小版本、Eclipse JNoSQL与GraalVM Native Build Tools的维护性发布、GlassFish 9.0的第三个里程碑发行，以及Groovy 6.0第二个beta发布。",
+    "JDK 28 将正式推进两项关键变更：弃用 macOS/x64 端口以适配苹果架构演进，同时将 Simple JSON API（孵化中）提升为待目标特性，提供标准轻量级 JSON 处理能力。",
+    "弃用 macOS/x64 端口，响应苹果终止支持；Simple JSON API 成为 JDK 内置标准方案，替代已撤回的 JEP 198；两项 JEP 均进入 Proposed to Target 阶段，标志落地路径明确。",
+    "本期的 Java 新闻速览涵盖了如下主要内容，将 Simple JSON API 提升为 JDK 28 的 Proposed to Target 状态、Jakarta EE 12 的最新进展、2026 年 8 月版的 Open Liberty、LangChain4j 发布小版本、Eclipse JNoSQL 与 GraalVM Native Build Tools 的维护性发布、GlassFish 9.0 的第三个里程碑发行，以及 Groovy 6.0 第二个 beta 发布。",
+    "JEP 541， Deprecate the macOS/x64 Port for Removal ，已经从 Candidate 提升为 JDK 28 的 Proposed to Target 状态。该 JEP 建议弃用 macOS/x64 端口，因为苹果公司不再支持该架构。与 JEP 449， Deprecate the Windows 32-bit x86 Port for Removal 类似，目标是在未来版本中移除该端口以节省维护成本。",
+    "JEP 540， Simple JSON API (Incubator) ，也已经从 Candidate 提升为 JDK 28 的 Proposed to Target 状态。该 JEP 定义了一个简单的标准 API，用于解析与生成 JSON 文档，无需外部库。此功能实现了 RFC 8259， The JavaScript Object Notation (JSON) Data Interchange Format ，并取代了已关闭并撤回的 JEP 198， Light-Weight JSON API 。",
+    "Build 11 为 JDK 28 早期访问构建 发布，包含来自 Build 10 的 更新 ，修复了一些 问题 。更多细节见 发行说明 。",
+    "在 Hashtag Jakarta EE 博客中，Eclipse 基金会的 Jakarta EE 开发倡导者 Ivar Grimstad 对 Jakarta EE 12 提供了 更新 ，他描述说：",
+    "以 Jakarta EE 12 为目标的规范正在持续产生里程碑。如我 之前 所述， Jakarta CDI 5.0 正在进行发布评审。 Jakarta JSON Binding 3.1 的 M1 版本已经发布一段时间了，M2 正在形成。 Jakarta JSON Processing 2.2 计划很快发布 M1。对于 Jakarta RESTful Web Services 5.0 ，团队正在等待三个必要的审查通过以合并 pull request，随后才能生成 M1。如果你是该规范项目的提交者，请审查 PR #1340 。",
+    "在 2025 年 11 月初获批创建的 Jakarta Agentic AI 1.0 规范，近期发布了 M1 版本并上线了新的 项目网站 。",
+    "GlassFish 9.0.0 的第三个里程碑发布提供了如下特性：对 Jakarta Security 5.0-M2 、 Jakarta Faces 5.0-M5 和 Contexts and Dependency Injection 5.0-RC1 的完整实现，对 Jakarta Servlet 6.2-M2 的部分实现，以及对 Jakarta Concurrency 3.2-M3 的初始支持（尚无实现）。此次发布还首次对在 Jakarta RESTful Web Services 端点与 Jakarta Security 集成中应用 Jakarta 注解 @RolesAllowed 注解提供了第一等的支持，并进行了扩展以包含模板路径。更多细节见 发行说明 。",
+    "GraalVM Native Build Tools 1.1.9 发布，带来了一些重要变更，例如，默认输出更简洁的仓库测试结果，将单元测试与 native-maven-plugin 模块及远程引导任务解耦，以及将 Native Image 层从实验性、二进制范围的 Gradle 特性提升为具有一等 Gradle 和 Maven 支持的共享模型。更多细节参见 发行说明 。",
+    "Eclipse JNoSQL 1.1.16（ 兼容Jakarta NoSQL规范的实现 ）发布，提供了缺陷修复和新特性，例如，支持 Valkey 这一开源键值存储以补充支持的数据库列表，改进对 Oracle NoSQL 的集成，并更新了包括 MongoDB、DynamoDB、Couchbase、OrientDB 与 Elasticsearch 在内的多个数据库驱动与依赖。更多细节见 发行说明 。",
+    "CVE-2026-50645 ：在使用 Apache CXF 反序列化消息时，对附件头数量没有限制，可能导致资源消耗失控。",
+    "LangChain4j 1.19.0 正式发布（同时伴随第 29 个 beta 发布），包含了缺陷修复、文档改进、依赖升级以及新功能，例如，新增的 AnthropicBatchChatModel 类，实现了 Anthropic Message Batches API ，以及在 ToolExecutionResult 类的 attributes() 方法中，新增了将来自 MCP 服务器的 _meta 对象映射为应用所需数据通道的功能。更多细节见 发行说明 。",
+    "Apache Groovy 6.0.0 的 第二个beta发布 ，提供了缺陷修复、依赖升级和改进，例如，支持在 JDK 15 中引入的 JEP 371， Hidden Classes ，以支持大量短生命周期的运行期合成类，在 DefaultGroovyMethods 中新增的 findingResults(Iterator) 方法，返回非空值的迭代器以避免 NullPointerException ，以及新增的 GeneratedDispatcher 接口，以便 Packed Closures 在生成原生镜像时可以正常运行。更多细节见 发行说明 。"
+  ],
+  "isExcerpt": true
+}
