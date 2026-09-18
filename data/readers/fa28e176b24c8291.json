@@ -1,0 +1,23 @@
+{
+  "title": ".NET 11 Preview 7为MAUI添加了Passkeys、增量XAML热重载和Shell路由模板",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-17T00:00:00Z",
+  "url": "https://www.infoq.cn/article/UI8Js3eFwYNOGTIszfe8",
+  "paragraphs": [
+    "微软发布了.NET 11 Preview 7，带来大量MAUI更新，包括跨平台Passkeys认证、新的增量XAML热重载实现、Shell路由模板以及更多AOT安全的绑定。该版本继续推动MAUI从传统渲染器向handlers迁移，并改进了Android与苹果平台的开发体验。",
+    ".NET 11 Preview 7 发布，重点增强 MAUI 跨平台能力，尤其引入原生 Passkeys API 支持 WebAuthn 认证流程。",
+    "Passkeys API 封装平台侧 WebAuthn 实现，但要求应用自行处理服务端 challenge 生成与断言验证；需配置 Associated Domains 或 Digital Asset Links 实现跨域信任；增量 XAML 热重载与 Shell 路由模板提升开发效率。",
+    "微软 发布了.NET 11 Preview 7 ，包含大量.NET MAUI 更新，主要包括跨平台的 Passkeys 认证、新的增量 XAML 热重载（Hot Reload）实现、Shell 路由模板以及额外的 AOT 安全绑定。该发布版本同时继续推动 MAUI 从传统渲染器向 handlers 迁移，并改善在 Android 和苹果平台上的开发工作流。",
+    "其中最显著的新增特性是 MAUI Essentials 中的 Passkeys API 。它在 Android 14 及更高版本、iOS 与 Mac Catalyst 16 及更高版本以及受支持的 Windows 10 版本上会驱动原生的 Passkey 体验。应用可以使用 Passkeys.CreateAsync 注册凭证，使用 Passkeys.AssertAsync 进行认证， Passkeys.IsSupported 用于检测底层平台是否支持该 API。",
+    "该 API 负责处理平台侧的 WebAuthn 流程，但刻意将服务器端的责任留给了应用程序。依赖方（relying-party）服务器仍需生成 challenge、提供标准 WebAuthn 选项并验证返回的断言（assertion）或证明（attestation）。应用还需要适当的信任配置，包括苹果平台上的 Associated Domains 和 Apple App Site Association 文件，或 Android 上的 Digital Asset Links 。",
+    "Preview 7 还将 XAML增量热重载（Hot Reload） 作为预览功能引入，并在 Debug 构建中默认启用。该实现通过源生成器与 MetadataUpdateHandler 结合，对已创建的页面进行修改，而无需整体重建 XAML。它能处理属性变化、添加或移除子项、结构重排序、附加属性、标记扩展、绑定以及 ResourceDictionary 的更改，同样适用于 dotnet watch 。开发者可通过 EnableMauiIncrementalHotReload 禁用该功能并回退到现有的热重载路径。",
+    "Shell 导航获得了基于 ASP.NET Core 和 Blazor 路由概念的 路由模板 。路由现在可以包含必需、可选、默认、约束、catch-all 和混合段，例如， product/{sku} 。参数值通过现有的 QueryProperty 和 IQueryAttributable 机制传递。不过，模板路由目前仅支持绝对导航，不支持相对导航。",
+    "XAML 源生成器在 AOT 方面的工作也得到了扩展 。 当 MAUI 能够在编译时解析 Ancestor 类型时， {RelativeSource AncestorType=...} 绑定现在可以编译为对裁剪安全的 TypedBinding 实例，避免基于反射的字符串路径在裁剪时导致成员丢失。一些绑定形式，包括 Self 和 TemplatedParent ，仍然使用运行时路径。",
+    "此外，Preview 7 暴露了面向第三方平台后端的 扩展点 。 OnPlatform 现在能够识别 GTK、macOS 和 WPF，同时 alert、gesture、Resizetizer、SingleProject 以及 BlazorWebView 基础设施公开了外部后端可以通过 NuGet 包实现的契约，而无需对 MAUI 本身维护补丁。",
+    "在苹果平台上，渲染器（renderer）到 handler 的迁移仍在继续。在 iOS 和 Mac Catalyst 上， NavigationPage 和 TabbedPage 现在默认使用handlers ，以替代旧的渲染器实现。兼容性的渲染器仍然会作为手动回退方案提供，因此使用自定义渲染器或做了大量页面级自定义的应用在广泛采用 Preview 7 之前应该要进行测试。",
+    "平台特定更新包括 Window.StatusBarTheme 、直接将捕获媒体保存到系统相册的选项，以及 Windows 上的单实例激活支持。Android 开发默认采用新的 FastDeploy2 策略，而 dotnet watch 现在可以通过 USB 或 Wi-Fi 对运行在物理 iOS 和 tvOS 设备上的应用进行热重载。",
+    ".NET 11 Preview 7 于 2026 年 8 月 11 日发布。开发者可以通过 .NET 11 Preview SDK 安装，并在微软的 公告 以及 MAUI Preview 7发布说明 中找到完整的特性列表、平台说明、迁移细节和相关实现问题的链接。",
+    "查看英文原文： .NET 11 Preview 7 Adds Passkeys, Incremental XAML Hot Reload, and Shell Route Templates to MAUI"
+  ],
+  "isExcerpt": true
+}

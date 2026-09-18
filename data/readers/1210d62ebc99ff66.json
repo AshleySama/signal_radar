@@ -1,0 +1,19 @@
+{
+  "title": "刚刚，Claude Code大重构！内部3万Agent管理技术免费开放",
+  "source": "量子位",
+  "publishedAt": "2026-09-18T08:34:34Z",
+  "url": "https://www.qbitai.com/2026/09/491711.html",
+  "paragraphs": [
+    "最新亮相的Claude Code Projects重构版，彻底终结了把Projects当「静态资料夹」的时代。",
+    "这次重构直接把形态变成了「以对话为驱动的协作中心」，架构核心是一个名为 Coordinator （协调器）的大脑。",
+    "开发者不需要再手把手教AI每一步怎么走，只要在主对话框下达一个高阶目标，比如「把整个鉴权模块重构为OAuth 2.0并补齐自动化测试」。",
+    "这样，Claude就可以记住系统将发布时间改到了周五，为什么导出功能被取消了，以及在访问账单服务之前需要联系谁。",
+    "AL0是纯人类操作，AL3是深度人机协作，AL4代表AI能凭一个高阶指令端到端完成任务，AL5才是完全脱离人类干预的自主闭环。",
+    "截至今年8月，A社的内部研发平台上，常态化并发运行着多达 30000个AI Agent， 在云端没日没夜地写代码、跑实验、改架构，单月触发的决策量就 超过了10亿次 。",
+    "从内部26%的自主研发率，到外部重构的多线程Projects，本以为折腾得差不多了的Coding，如今似乎又往前推了一步。",
+    "以往一个中级工程师在终端里一次只能死磕一个特性，现在你一个人就是一个技术小组，底下带着一群Claude Code同时开工。",
+    "9月10日，Cursor发布Projects beta，主打的同样是Coordinator Agent，一个不写代码的协调者，向下派发数千个子Agent，项目上下文云端共享，合上笔记本也照跑。",
+    "参考链接： [1] https://claude.com/blog/projects-redesigned [2] https://www.anthropic.com/institute/measuring-pace-of-ai-development"
+  ],
+  "isExcerpt": true
+}

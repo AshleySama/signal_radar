@@ -1,0 +1,10 @@
+{
+  "title": "Our framework for reporting model misalignment",
+  "source": "OpenAI",
+  "publishedAt": "2026-09-16T17:00:00Z",
+  "url": "https://openai.com/index/model-misalignment-reporting-framework",
+  "paragraphs": [
+    "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior."
+  ],
+  "isExcerpt": true
+}
