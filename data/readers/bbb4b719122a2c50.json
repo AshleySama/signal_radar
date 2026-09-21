@@ -1,0 +1,17 @@
+{
+  "title": "瞄准 AI 编程、金融等场景，单次成本仅为Opus 5 的1/8！这款国产旗舰模型跻身 AA 榜单全球前三",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-20T00:00:00Z",
+  "url": "https://www.infoq.cn/article/9jw1St7ULZijG8XNCWkW",
+  "paragraphs": [
+    "在最新的全球权威榜单Artificial Analysis Intelligence Index（AA综合智能指数）中，阶跃Step 5 Preview跻身全球开源前三。",
+    "阶跃星辰发布Step 5 Preview，600B稀疏MoE模型，激活参数仅27B，支持100万Token上下文及多模态输入，在AI编程、金融等Agentic任务中实现智能与成本的帕累托前沿突破。",
+    "单任务成本为Claude Opus 5的1/8；Artificial Analysis AA指数全球开源模型前三；原生支持文本+视觉输入，专为可持续复杂任务设计。",
+    "9 月 20 日，阶跃星辰发布新一代旗舰基座模型 Step 5 Preview，重点面向 AI 编程、软件工程、专业知识工作、金融等场景，提升模型在真实世界 Agentic 任务中的综合表现，并进一步拓展智能与成本之间的最优边界。在最新的全球权威榜单 Artificial Analysis Intelligence Index（AA 综合智能指数）中，阶跃 Step 5 Preview 跻身全球开源前三。值得关注的是，该模型单任务成本仅为 Claude Opus 5 的 1/8。据官方透露，该模型将于 10 月 15 日正式开源。",
+    "Step 5 Preview 采用稀疏 MoE 架构，总参数量 600B、激活参数仅 27B，支持 100 万 Token 上下文窗口，原生支持文本与视觉输入，在软件工程、专业工作流和金融等场景表现突出。",
+    "在能力、成本、效率与场景覆盖之间寻求最大化平衡，是 Step 5 Preview 的核心卖点。模型面向真实世界的智能体任务，其定位是可持续处理复杂任务的主力工作模型。在能力与成本的权衡中，常用“帕累托前沿”描述当前能够达到的最优边界。前沿越向外推，意味着同样的成本可以买到更强的智能。而 Step 5 Preview 将 Intelligence Index 与单任务成本之间的平衡进一步逼近更优解。",
+    "在公开和内部评估中，Step 5 Preview 在复杂的软件工程任务（包括长期规划任务）以及专业知识工作和金融领域的基准测试中均表现出色。",
+    "阶跃认为，过去大模型 Scaling 的核心，是用更多计算换取更强智能；但随着模型规模扩大、智能体任务复杂度提升，计算成本也在快速攀升。因此下一阶段模型 Scaling 的关键，是提升计算转化为智能的效率。从 Step 3.5 Flash、Step 3.7 Flash 到 Step 5 Preview，阶跃连续三代基座模型都延续了对这一问题的探索。"
+  ],
+  "isExcerpt": true
+}

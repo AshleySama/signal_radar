@@ -1,0 +1,24 @@
+{
+  "title": "微软开源 TauGrid，简化 Kubernetes AI 工作负载管理",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-20T00:00:00Z",
+  "url": "https://www.infoq.cn/article/3FdzSfrzlb3vMDwsC1Ny",
+  "paragraphs": [
+    "TauGrid 是微软开源的云原生 AI 工作负载平台，基于 Kubernetes 构建，提供端到端 GPU 任务管理能力，支持从数据准备、训练、微调到推理的全生命周期。",
+    "统一集成 Kueue、KubeRay、GPU 健康监控与可观测性，通过 Helm 一键部署，消除多组件拼装与胶水代码。",
+    "面向工程团队提供工作区、队列、计算配置等抽象能力；面向研究人员屏蔽 Kubernetes 复杂性，支持 CLI 快速提交任务。",
+    "微软开源 TauGrid ，一个云原生平台，用于在搭载 GPU 的 Kubernetes 集群上对 AI 工作负载进行管理、调度与监控。",
+    "在 Kubernetes 上运行 AI 工作负载通常需要平台团队组装和维护多个开源项目、自定义脚本和运维工具。这其中还包括这些组件之间的“粘合剂”：提交脚本、队列封装器、健康检查和结果检索。",
+    "微软表示， TauGrid 面向工程团队和研究团队设计 ，提供了一套统一的技术栈。平台团队可以使用工作区、队列、计算配置文件、存储、身份认证和可观测性等高级功能，而研究人员无需学习 Kubernetes 即可提交工作负载。",
+    "微软称，TauGrid 为 AI 工作负载提供端到端管理，涵盖从初始数据准备到分布式训练、微调和推理的所有环节。它基于 Kubernetes 构建，采用专门的队列和拓扑感知调度技术，高效管理高强度的 GPU 工作负载。",
+    "除了 tau 命令行工具之外，TauGrid 还集成了 Kueue （用于工作负载排队和资源管理）、 KubeRay （用于编排）、GPU 节点健康监控以及可观测性能力。",
+    "TauGrid 无需分别构建和维护这些组件及组件之间的集成，通过一次 Helm 安装即可提供所有功能，并具有清晰的权责边界。",
+    "TauGrid 使用 yaml 配置文件来定义工作负载，可通过 tau run 提交。该命令会验证配置并创建 Kubernetes Job 或 KubeRay RayJob，然后由 Kueue 根据剩余配额和优先级进行排队。执行时，TauGrid 会跟踪工作负载状态、日志和检查点。它还会收集和存储实验证据，以便日后复现实验和诊断故障。以下是在单个 A100 GPU 上运行 PyTorch 训练作业的 tau.yaml 配置示例：",
+    "schema_version: 1 name: aks-gpu-quickstart run: entrypoint: train.py workload_kind: rayjob compute: gpus: 1 workers: 1 cpus: 16 memory: 64Gi runtime: image: mcr.microsoft.com/aks/ai-runtime/ray:py3.12-ray2.56.0-cuda13.0 pip: - torch>=2.4.0 复制代码",
+    "TauGrid 仍在开发当中， 路线图 中列出了一系列规划中的功能，包括多租户工作区、RBAC 和配额、对 PyTorch DDP/FSDP、DeepSpeed 和 LoRA/QLoRA 工作流的支持、数据集生命周期管理、多集群/多云执行等。",
+    "TauGrid 代码库 主要用 Go 语言编写，相关开发与贡献管理在 Azure 生态内以开源方式开展。运行 TauGrid 需要具备 GPU 节点的 Kubernetes 集群（版本 1.30+）、 kubectl 以及 Helm 3.0 或更高版本。",
+    "TauGrid 并非目前唯一基于 Kubernetes 的 AI 工作负载平台。同类方案包括 Kubeflow （正作为“成熟、可用于生产环境的 ML 系统” 朝着 CNCF 毕业级别迈进 ）、 Nvidia Run:AI 等。",
+    "查看英文原文： https://www.infoq.com/news/2026/09/microsoft-taugrid-open-source/"
+  ],
+  "isExcerpt": true
+}
