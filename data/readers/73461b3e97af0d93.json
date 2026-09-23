@@ -1,0 +1,25 @@
+{
+  "title": "Introducing GPT-6 Sol and Luna",
+  "source": "OpenAI",
+  "publishedAt": "2026-09-22T18:00:00Z",
+  "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+  "paragraphs": [
+    "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.",
+    "More ways to bring frontier intelligence into the work you do every day.",
+    "Earlier this month, we introduced GPT‑6 Astra , the most intelligent and aligned model in the world. While the most demanding and important projects still call for Astra’s full depth, work happens at different scales, rhythms, and budgets.",
+    "That’s why we’re expanding the GPT‑6 universe with GPT‑6 Sol and GPT‑6 Luna. GPT‑6 Astra introduced a new generation of intelligence—these models help distribute the benefits of that intelligence by advancing the frontier on cost efficiency. We trained GPT‑6 Sol and Luna with similar methods as GPT‑6 Astra, bringing the advances behind Astra’s state-of-the-art performance in professional work, factuality, coding, computer use, and alignment to faster, more affordable models.",
+    "The GPT‑6 models lead across the cost–intelligence curve, combining exceptional capabilities at every tier with infrastructure that delivers them efficiently at scale. Improvements in caching and inference let us serve these models at lower cost, and we’re passing those savings directly on to users and customers by reducing API prices for Sol and Luna by 50% compared with their GPT‑5.6 promotional pricing. Together, these improvements make advanced AI practical for more everyday tasks and applications at scale.",
+    "GPT‑6 Astra continues to be our best model across the board. Choose it when you want the best results and an uncompromising experience.",
+    "GPT‑6 Sol and Luna bring intelligence upgrades and cost efficiency to the models you already know and use across capabilities most useful for getting complex work done.",
+    "GPT‑6 Sol can take on difficult work tasks while giving you more room to iterate with higher usage limits and lower cost, offering more intelligence and better results versus similarly priced competitor models.",
+    "On AutomationBench, a test of business workflows across apps, GPT‑6 Sol at xhigh effort outperforms Claude Opus 5 at max effort at just 9% of Opus 5’s cost per task. At high effort, GPT‑6 Luna improves on its predecessor by 5.4 percentage points at 58% lower cost per task.",
+    "In AutomationBench 1.0.6 ⁠ (opens in a new window) , AI agents are tested on end-to-end workflows using 47 tools across sales, marketing, operations, support, finance, and HR. The datapoint for Claude Fable 5.1 understates its actual cost, as it omits the cost of the Opus 5 fallbacks, which occurred on ~40% of tasks.",
+    "GPT‑6 Sol also exceeds Claude Fable 5.1 at far lower cost, and even bests low-effort GPT‑6 Astra.",
+    "On Agents’ Last Exam , which evaluates agents on complex professional workflows, GPT‑6 Sol at max effort scores 56.4%, above Claude Opus 5’s highest score in the evaluation at 60% lower cost per task.",
+    "In Agents’ Last Exam V1 ⁠ (opens in a new window) , AI agents are evaluated on long-horizon, economically valuable tasks spanning 55 sub-industries, covering most major fields of professional work performed on a computer.",
+    "The usefulness of an answer depends on getting the facts right, and we’re continuing to make progress on factual reliability. On our internal factuality evaluation, which is based on de-identified real-world conversations where users flagged mistakes by our models, GPT‑6 Sol makes about half as many mistakes as its predecessor, approaching Astra-level reliability at much lower cost. GPT‑6 Luna also improves substantially; at higher effort levels it matches GPT‑5.6 Sol at about a hundredth its cost.",
+    "Here we evaluate factuality on de-identified ChatGPT conversations where users had flagged a factual error from a prior model. These error-inducing conversations are not representative of typical usage, where factual errors are more rare. Scores are not controlled for length; however, our verbosity sweeps showed almost no dependence on answer length.",
+    "This year, coding agents have begun tackling tasks with more complexity, scope, and duration than ever before. At OpenAI, our internal usage has grown exponentially. Valued at API prices, daily token usage has exceeded $600 for the median researcher and $7,000 for researchers at the 90th percentile ( Research acceleration: The view inside OpenAI ⁠ ). As coding agents take on longer and more demanding tasks, the cost of sustained use matters more. GPT‑6 Sol and Luna combine strong coding performance with lower API prices, giving developers more room to iterate and teams the confidence to be more ambitious about what they ask Codex to take on."
+  ],
+  "isExcerpt": true
+}

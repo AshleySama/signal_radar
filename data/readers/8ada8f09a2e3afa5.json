@@ -1,0 +1,19 @@
+{
+  "title": "Meta 开源 Astryx：面向 Agent 的 React 设计系统",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-22T00:00:00Z",
+  "url": "https://www.infoq.cn/article/He6bUhlNIuPEa99GGRYC",
+  "paragraphs": [
+    "Meta 最近宣布推出 Astryx Beta，一款由 Meta 内部经过八年开发而成的开源 React 设计系统。Astryx 基于 React 19 和 StyleX 构建，提供 150 多个具备可访问性的 UI 组件、可定制的 CSS Design Token，以及专门的 CLI 和 MCP 工具链，既面向工程师，也面向 AI Agent。",
+    "Astryx 是 Meta 开源的 React 设计系统，基于 React 19 和 StyleX 构建，提供 150+ 可访问组件、集中化 Design Token 体系及面向工程师与 AI Agent 的 CLI/MCP 工具链。其核心创新在于行为/可访问性逻辑与视觉表现解耦，样式通过 StyleX 编译为确定性原子 CSS。",
+    "Meta 的设计系统将组件的行为和可访问性合规与视觉表现解耦。后者通过集中的 Design Token 层进行定义，例如颜色调色板、字体层级和边框圆角等。",
+    "在底层，Astryx 使用 Meta 的 StyleX 编写组件样式。 StyleX 是 Meta 推出的一个 构建时 CSS-in-JS 编译器，可以生成确定性、无冲突的原子化 CSS 。组件提供 xstyle 属性，用于在编译时获得类型检查的 StyleX 样式支持：",
+    "import * as stylex from '@stylexjs/stylex' ; const overrides = stylex.create({ card: { maxWidth: 400, marginBlock: 16 }, saveButton: { alignSelf : 'flex-end' }, }); 复制代码",
+    "核心软件包 @astryxdesign/core 在发布类型化 React 组件的同时，也提供预编译的 CSS 文件。组件还原生支持 className ，因此团队可以与 Tailwind 、CSS Modules 或普通样式表无缝协作：",
+    "Astryx 的 CLI 提供了 swizzle 命令，允许开发者将组件的完整源代码导出到自己的代码仓库中。开发者可以通过 Design Token 及相关 class 来定制组件的外观。标准的 React 组合模式则允许开发者定制单个组件的行为，或者定制某个组件所有实例的行为，例如使用组件 Wrapper 模式。不过，如果定制需求需要访问未对外暴露的内部实现，例如私有状态、DOM 结构或无法访问的事件监听器。代码导出功能虽然提供了更高的定制灵活性，但也意味着开发者需要自行负责这些代码，以及由此产生的维护工作。",
+    "Astryx 表示，其通过 CLI （ @astryxdesign/cli ）和一个 MCP Endpoint 原生支持 AI 工作流。",
+    "Reddit 上的一些开发者对 Meta 赞助的框架能否获得长期维护，以及其治理方式 表示担忧 。另一些开发者已经开始将其 Token 架构和组件规范移植到其他 UI Runtime，例如 Svelte 5 和 Flutter 。",
+    "查看英文原文： Meta Open-Sources Astryx, its Agent-Ready React Design System"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Jotai 3.0 带来仅支持 ESM 的现代化包，摒弃旧版构建方式和已弃用 API",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-22T00:00:00Z",
+  "url": "https://www.infoq.cn/article/JkDJyKWiavXREdAWBvJk",
+  "paragraphs": [
+    "由 Poimandres 团队维护的 React 原子状态管理库 Jotai 发布 v3.0.0 稳定版。根据该团队的描述，这是“一个仅支持 ESM 的现代化包，既没有破坏性变更，也没有新增 API”。",
+    "Jotai v3.0.0 正式发布，全面转向 ESM，放弃 CommonJS、UMD 和 SystemJS 支持，精简构建流程并提升维护可持续性。",
+    "移除已弃用 API（atomFamily/loadable/setSelf），但无新增或变更 API；构建转为模块优先，直接读取 NODE_ENV；双包风险彻底消除。",
+    "由 Poimandres 团队维护的 React 原子状态管理库 Jotai 发布 v3.0.0 稳定版 。根据该团队的描述，这是“一个仅支持 ESM 的现代化包，既没有破坏性变更，也没有新增 API”。 发布页面 也有类似的表述，称其为“一个基本向后兼容的更新，移除了部分旧版支持和已弃用的 API”。",
+    "v3 完全放弃了 CommonJS 构建方式，仅以 ES 模块形式发布，同时移除了对 UMD 和 SystemJS 打包格式的支持，并放弃了对旧版 Node、React 和 TypeScript 的支持以及 jotai/babel 插件。该包转为采用“模块优先”的结构，支持 ES2020，直接读取 NODE_ENV 变量而非使用构建时替换，并将 Rollup 更换为其他构建工具。长期以来，维护者 Daishi Kato 一直记录着同时发布 CJS 和 ESM 版本所带来的 双包风险 。因此，仅支持 ESM 的立场可以视为这项工作的最终结论，其成果是核心代码更加精简，维护工作量也相应减少。",
+    "所谓“无破坏性变更”的声明其实带有保留条款，因为有几个公共 API 已经被移除，包括 atomFamily、loadable 以及 atom 读取函数中的 setSelf 参数，但这些功能在 v2 后期版本中早就已经被标记为已弃用，因此，遵循了相关警告的团队应该能顺利完成升级。内部构建块 API 也经过了重新设计。那些仍然通过 CommonJS 导入或依赖于已移除打包格式的项目，最有可能感受到这一变化。",
+    "对于大多数团队而言，迁移过程应是机械性的。atomFamily 现在已经移至专用的 jotai-family 包中，其 API 与原版完全一致，并新增了 atomTree 辅助函数，因此只需要进行一次导入替换即可：",
+    "// 之前(v2) import { atomFamily } from 'jotai/utils' // 之后 (v3) import { atomFamily } from 'jotai-family' 复制代码",
+    "在讨论帖“ 关于 v3 的想法 ”中，有位用户对移除 setSelf 提出了异议，他描述了一种乐观的 atomWithStorageWhileRevalidate 模式：该模式在获取最新服务器数据的同时从 localStorage 加载数据，若移除 setSelf，将无法找到合适的替代方案。在同一讨论帖中，还有人提出了一项详细的请求，希望实现一等公民级的默认存储生命周期，以便测试能重置状态而又不需要调用内部 API ——这对依赖 getDefaultStore() 的大型应用而言，确实是一个痛点。在 另一场讨论 中，Kato 确认，新功能和更深层次的破坏性变更被有意排除在了 3.0 版本之外，并发安全的原子操作和外部存储同步功能将推迟到后续的 v3.x 版本或未来的 v4 版本。",
+    "Facebook 的 Recoil 项目曾让“原子”的概念广为人知。现如今，人们普遍认为 那个项目已经过时 ，而 Jotai 成为原子模型事实上的继任者；而同属 Poimandres 团队的 Zustand 项目则牢牢占据了以存储为中心的市场，面向那些更倾向于使用单一外部存储的团队。通过将 3.0 版本定位为清理而非重构，Poimandres 团队在押注于一个更小、更现代化且原生支持 ESM 的核心，认为这对它目前所支撑的生态系统而言是更具价值的升级。",
+    "Jotai 采用原子化方法处理 React 状态，通过名为“原子（atoms）”的小单元构建状态，并将它们组合成依赖图，从而确保仅在值实际发生变化时才进行渲染更新。它不强制使用特定的实现方案，可以利用独立的存储库在 React 外部运行，而 3.0 现在已经成为稳定版本并在 npm 上发布，供准备从 v2 版本迁移的团队使用。",
+    "原文链接： https://www.infoq.com/news/2026/09/jotai-3-released/"
+  ],
+  "isExcerpt": true
+}

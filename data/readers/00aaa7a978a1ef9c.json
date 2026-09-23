@@ -1,0 +1,20 @@
+{
+  "title": "阿里 Open Code Review 登顶 GitHub Trending 周榜第一，作者李峥峰将在 QCon 上海站揭秘百万任务验证的 Agent 工程实践",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-23T00:00:00Z",
+  "url": "https://www.infoq.cn/article/ekVtt3hgufw4wCvP7Zb5",
+  "paragraphs": [
+    "如何通过确定性工程 + Agent 协同，将通用 Agent 收敛为适用于代码评审场景的垂直领域 Agent。",
+    "阿里开源的 Open Code Review 工具登顶 GitHub Trending 周榜，Star 数超 39,000，成 Alibaba Org 下最热开源项目；其采用“确定性工程 + LLM Agent”混合架构，兼顾精度与成本。",
+    "近日，阿里巴巴开源的 AI 代码审查工具 Open Code Review （GitHub: alibaba/open-code-review）连续多日登顶 GitHub Trending 日榜第一，并以单周新增超 14,000 Star 的成绩强势登顶 GitHub Trending 周榜总榜第一，大幅领先第二名 Anthropic 官方的 Claude Code。",
+    "截至发稿，项目 Star 数已突破 39,000 ，超越 Arthas、Nacos 等知名项目，成为 Alibaba GitHub Org 中 Star 数排名第一的开源项目。npm 包 @alibaba-group/open-code-review 社区下载量近百万，全球已有来自 21 个国家和地区的 181 位开发者 参与贡献。",
+    "图 1：GitHub Trending 周榜——Open Code Review 位列第一，Claude Code 第二",
+    "Open Code Review 之所以引发广泛关注，不仅因为它出身于阿里内部经过两年生产验证的官方工具（服务 2 万 + 开发者、识别数百万真实代码缺陷），更因为它走了一条与 “通用 Agent 直接 Review”截然不同的技术路线 ——确定性工程 + LLM Agent 混合架构：把文件筛选、规则匹配、行号定位这些 “不能出错” 的环节从大模型手中收回，用工程逻辑固化；只把需要语义理解的深度审查任务交给 Agent。这一设计直击当前 AI Code Review 领域最头疼的三个问题：覆盖率不足、行号定位幻觉、Token 成本失控。",
+    "作为 Open Code Review 作者，阿里巴巴高级研发工程师 李峥峰 已确认出席 2026 年 QCon 全球软件开发大会·上海站 分享《 Open Code Review：百万真实任务验证的确定性工程与 Agent 协同 》。",
+    "本次分享将结合阿里 Open Code Review 的建设实践，介绍如何通过确定性工程 + Agent 协同，将通用 Agent 收敛为适用于代码评审场景的垂直领域 Agent。分享将围绕分治并发、精准定位、规则模板引擎、工具链蒸馏、上下文分层管理等关键工程实践，探讨如何将工程逻辑与模型能力结合，让确定性的工作交给工程系统，让需要语义理解的任务交给大模型，实现更高的稳定性、更低的成本和更好的评审质量。",
+    "同时，分享还将结合百万真实任务、阿里内部 2 万余名开发者的使用数据以及 Open Code Review 开源项目实践，介绍 AI Review 在生产环境中的效果验证，并进一步探讨 AI 深度参与研发后，如何建立新的评估体系，推动 AI Code Review 从“辅助工具”走向研发流程中的质量基础设施。",
+    "除此之外，在「 AI 驱动的软件工程 」专题， 小红书客户端基础技术负责人杨凯、独立开发 casa、阿里巴巴淘天集团高级测试开发专家泠乐、快手技术专家王泽锋、哔哩哔哩技术专家张忻正、月之暗面研发工程师/开发者关系负责人唐飞虎 也将分享他们在 AI Coding、研发 Agent、工程智能化、复杂项目落地实践与研发效能建设等方向上的探索与实践。",
+    "本届大会 聚焦 Harness AI 时代的工程实践 ，从「构建 AI」到「驾驭 AI」，围绕 AI Native 架构、Agent Runtime、AI Infra、Agent 安全与可观测、Loop Engineering、具身智能与世界模型 等热门技术方向，将邀请 100+全球技术社区与产业一线实践者，共同分享 AI Native 时代最具价值的工程经验。限时 9 折优惠立减 680！查看更多详情可扫码或联系票务经理 18514549229 进行咨询。"
+  ],
+  "isExcerpt": true
+}
