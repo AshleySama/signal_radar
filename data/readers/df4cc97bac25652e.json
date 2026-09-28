@@ -1,0 +1,25 @@
+{
+  "title": "谷歌 Kotlin 版 ADK 实现与 Python 版功能对齐，支持端侧 AI",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-27T00:00:00Z",
+  "url": "https://www.infoq.cn/article/sQV4EomjPP0J3hM3lyF9",
+  "paragraphs": [
+    "谷歌发布 Kotlin 版 Agent Development Kit（ADK）1.0，一个用于在 Kotlin、Android 和 JVM/服务器应用中构建 AI 智能体的生产级框架。",
+    "谷歌发布 Kotlin 版 ADK 1.0，首个面向 Android 和 JVM 的生产级智能体开发框架，实现 Kotlin 原生支持端侧与混合式 AI。",
+    "支持层级化多智能体协作、上下文压缩与多轮对话摘要、会话状态序列化与恢复；提供原生 Kotlin API 替代 Python 实现智能体编排与人在回路流程；具备完全解耦的模型/记忆/会话后端设计。",
+    "谷歌发布 Kotlin 版 Agent Development Kit（ADK）1.0 ，这是一个用于在 Kotlin、Android 和 JVM/服务器应用中构建 AI 智能体的生产级框架，让 Kotlin 在功能上与谷歌的 Python 和 Java ADK 达到同等水平，同时增加了面向 Android 的特定能力，支持端侧和混合式 AI。",
+    "有了 ADK for Kotlin 1.0，开发者不再需要依赖 Python 来实现智能体逻辑，他们可以使用惯用的 Kotlin API 来完成编排、工具调用、持久化、记忆以及人在回路工作流。该 ADK 基于 Kotlin Multiplatform 构建，可运行在所有受支持的平台上，从服务器端应用到移动设备。谷歌表示，其架构“完全不受特定模型后端、会话提供程序或记忆系统的限制”。",
+    "ADK for Kotlin 1.0 新增了对层级化多智能体系统的支持，父智能体可以将任务委派给子智能体；上下文压缩和多轮对话，可提供自动的上下文管理和历史记录摘要，以减少 token 使用量；会话管理，支持暂停、序列化和恢复智能体状态；以及一流的 Java 互操作性。",
+    "开发者可使用 @Tool 、 @Param 这类专用注解来声明工具，KSP 会在编译期基于注解生成 Kotlin 函数的描述规约。该方案无需依赖运行时反射，从而增强了类型安全性和性能。",
+    "PiNCAMP Android 工程师 Arjun Kumar 在 LinkedIn 上针对该发布评论称 ：“借助 KSP 在编译期处理工具描述规约，能够保持移动端目标程序的快速启动。”",
+    "人在回路工作流可以帮助开发者规避意外或不当的工具调用：在执行敏感操作前，强制要求人工确认。这对于那些能够产生重大影响的工具尤为重要，例如发起银行转账。开发者只需在工具声明中设置 requireConfirmation ，即可开启确认机制。这让生成的函数具备以下能力：",
+    "处理需要用户显式批准的敏感事务，同时充分利用 Android 原生持久化服务：例如通过 Room 存储对话会话，借助 AppSearch 实现可索引记忆，以及直接在 Android 存储中读写文件。",
+    "@Tool ( name = \"transferFunds\" , requireConfirmation = true ) fun transferFunds (...) 复制代码",
+    "AI Dev Weekly 通讯 的维护者 Joske Vermeulen 分享了他关于使用 requireConfirmation 的建议：",
+    "在考虑使用智能体层级结构之前，先从单个可恢复智能体并启用工具显式确认机制开始。优先搭建单个可恢复智能体并启用工具显式确认机制，之后再考虑构建多层级智能体体系。系统能否投入生产环境更多取决于生命周期恢复能力与确定的工具边界，而非智能体的数量。",
+    "另一个关键要素是技能，开发者可通过它们来管理存储在 SKILL.md 文件中的程序性知识。这些技能采用谷歌所称的渐进式披露机制，仅在需要时动态加载。这种方法让智能体能够获取领域专属操作手册，不必每次都把完整手册全部放入模型上下文中。",
+    "此外，ADK for Kotlin 1.0 还包含了 Android 原生功能，用于构建融合端侧和云端 AI 的智能体。在端侧推理方面，框架同时支持 LiteRT-LM 和 ML Kit ，不过 ML Kit 目前仍为测试版功能。对于云端和混合 AI 场景，ADK 可与 Firebase AI Logic 集成。这使得 Android 应用能够在适当的时候在本地运行智能体，同时在需要更强大能力时无缝使用基于云的模型。",
+    "查看英文原文： https://www.infoq.com/news/2026/09/google-adk-1-0-released/"
+  ],
+  "isExcerpt": true
+}

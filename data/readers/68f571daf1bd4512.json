@@ -1,0 +1,21 @@
+{
+  "title": "DoorDash 借助多 Agent LLM 系统清理 6 万个 Feature Flag",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-26T00:00:00Z",
+  "url": "https://www.infoq.cn/article/gk4rWsQg09PWTFTZlJE3",
+  "paragraphs": [
+    "DoorDash 构建了一套多 Agent LLM 系统，用于自动清理代码库中不再活跃的 Feature Flag。该系统结合实时实验数据、工程师审批、隔离的 Git Worktree 和自动化验证。在针对 50 个过期 Feature Flag 的评估中，系统为其中 45 个生成了可用的 Pull Request，平均每次清理耗时 13.8 分钟，成本为 4.79 美元。相比之下，DoorDash 估计，人工完成一次清理需要 1 到 2 小时。",
+    "DoorDash 构建多 Agent LLM 系统，自动化识别并清理过期 Feature Flag，显著降低人工成本与耗时。系统融合实验数据、工程师审批、隔离 Git Worktree 与自动化验证，已在生产中验证有效性。",
+    "支持依赖注入式 Flag 架构的跨文件精准清理；基于 90 天无变更等规则自动识别过期 Flag；日均生成 Jira 工单驱动闭环治理。",
+    "DoorDash 构建了一套 多 Agent LLM 系统 ，用于自动清理代码库中不再活跃的 Feature Flag。该系统结合实时实验数据、工程师审批、隔离的 Git Worktree 和自动化验证。在针对 50 个过期 Feature Flag 的评估中，系统为其中 45 个生成了可用的 Pull Request，平均每次清理耗时 13.8 分钟，成本为 4.79 美元。相比之下，DoorDash 估计，人工完成一次清理需要 1 到 2 小时。",
+    "DoorDash 的实验平台在约 623 个代码仓库中管理着 6 万多个 Feature Flag，每月新增约 2,300 个。公司发现，其中有 1,000 多个 Flag 已经过期。如果某个 Flag 在 90 天内没有修改记录、仍被代码引用、尚未归档或退役，且未被明确排除在外，就会被归类为过期 Flag。系统每天都会为识别出的 Flag 创建 Jira 工单。",
+    "DoorDash 使用依赖注入式 Wrapper，这让清理工作变得复杂。Flag 的定义、客户端调用和业务逻辑可能分散在多个文件中。因此，即使是一个简单的布尔型 Flag，也可能需要修改 5 到 20 个文件，其中还包括测试文件。",
+    "现有方案已经解决了这一问题的部分难点。Uber 开源的 Piranha 使用基于抽象语法树（AST）的转换来识别并移除过期的 Feature Flag 代码。DoorDash 发现，这种方法无法覆盖其依赖注入模式，因为 Flag 与应用逻辑之间的关联属于语义层面的关系，而不是通过匹配语法结构就能直接识别的关系。Piranha 也因此构成了一种对照：它采用基于规则的方法，而 DoorDash 使用的是基于 LLM 的系统。",
+    "DoorDash 的工作流基于谷歌的 Agent Development Kit ，分为两个阶段。首先，由 Claude Sonnet 驱动的编排 Agent 从 Jira 获取过期 Flag 工单，搜索相关代码仓库，并通过 Model Context Protocol （MCP）查询实验平台，获取包括发布比例和目标值在内的元数据。工程师审核生成的报告，并确认目标值后，系统才会开始修改代码。MCP 为 AI 应用连接外部工具和资源提供了一套标准化机制。",
+    "在第二阶段，Claude Opus 驱动的清理 Agent 会在相互隔离的 Git Worktree 中运行。每个代码仓库最多可以同时运行 4 个 Agent。Agent 会定位 Flag 的所有引用，确定清理策略，修改源代码和测试，并执行构建、测试、 JaCoCo 补丁覆盖率检查以及 Detekt 静态分析。只有通过所有验证检查后，系统才会创建 Pull Request。每个 Agent 的超时时间为 1 小时，Gradle 则以禁用 Daemon 的方式运行，以防止不同 Worktree 之间共享状态。",
+    "在评估中，31 个清理任务的 Pull Request 首次提交后即被合并，14 个需要修改，另有 5 个需要工程师介入。简单 Flag 的一次性清理成功率达到 100%，中等复杂度 Flag 为 94%，复杂 Flag 为 85%。这 5 次人工介入均涉及较深的调用链，以及跨接口的参数传递。DoorDash 表示，在评估的 50 项代码变更中，没有发现 Bug 或回归问题。",
+    "DoorDash 计划为低风险清理任务增加置信度评分，并在清理完成后增加一轮代码质量检查，以识别移除 Flag 后可能出现的问题，例如变量名具有误导性等。该工作项目已被 ICSME 2026 Industry Track 收录。",
+    "查看英文原文： DoorDash Uses Multi Agent LLMs to Clean up 60,000 Feature Flags"
+  ],
+  "isExcerpt": true
+}

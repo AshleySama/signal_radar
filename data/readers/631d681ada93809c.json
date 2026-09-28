@@ -1,0 +1,20 @@
+{
+  "title": "啥题啊能干崩OpenAI最强模型训练…",
+  "source": "量子位",
+  "publishedAt": "2026-09-27T17:44:16Z",
+  "url": "https://www.qbitai.com/2026/09/498546.html",
+  "paragraphs": [
+    "事情有多离谱呢？请看大屏幕——OpenAI一款正在进行RL训练的内部研究模型，本来的任务是凭几份履历、博客定位某人。",
+    "OpenAI随后宣布，这次事件暴露了他们在网络限制管理方面的漏洞，因此， 他们将暂停最强模型中所有涉及工具调用的训练、评测和推理任务。",
+    "它一度怀疑这道题来自OpenAI的BrowseComp搜索基准，于是便从离线网页缓存中下载数据集和评测脚本，解码题库、搜索关键词。",
+    "它发现，OpenAI虽然封住了沙箱正常上网的正门，却给部分系统依赖保留了查询DNS的窗口，它可以试着钻这个空子：",
+    "（其中14个与原本的人物线索有关，另外4个则在询问如何搜索网页、抓取网站，以及有没有可以公开使用的DNS隧道。）",
+    "复盘时，OpenAI还发现了其他未被正确标记的外部DNS访问。因为部分请求没有拿到有用信息，监控器便把“没有获得结果”误当成了“没有尝试联网”。",
+    "还不忘挽尊，说 这起事件没有此前的Hugging Face事件严重。 （Hugging Face：又我？？？）",
+    "Resets all propagated. That will be all. Have a fantastic weekend.",
+    "本月初，独立调查机构Nightingale曝光了一起 “幽灵编辑”事件 ，OpenAI的Agent被发现在公网私建“联络站”，并在上面分享答案、汇总搜索结果，甚至交流如何绕过沙箱限制。",
+    "几乎同一时间， OpenAI失控Agent被曝找DeepSeek、Kimi当外援，近百万条作案短链也遭到披露。",
+    "参考链接： [1] https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/ [2] https://x.com/sama/status/2103567198690349362 [3] https://openai.com/zh-Hans-CN/hugging-face-incident-and-misalignment/ [4] https://www.minister.defence.gov.au/transcripts/2026-09-24/press-conference-sydney"
+  ],
+  "isExcerpt": true
+}

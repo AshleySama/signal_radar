@@ -1,0 +1,24 @@
+{
+  "title": "笔记本跑7000亿参数GLM！无GPU也行? SSD当显存用火爆GitHub",
+  "source": "量子位",
+  "publishedAt": "2026-09-26T17:01:00Z",
+  "url": "https://www.qbitai.com/2026/09/497624.html",
+  "paragraphs": [
+    "GitHub现在最火热的大模型开源小蜂鸟 Colibrì ，纯C实现、零引擎依赖的分层推理框架，已经狂揽 32k Star 。",
+    "于是，GLM-5.2经过int4处理后大约372GB的权重，可以在最低16GB、推荐24GB左右RAM的机器上运行，GPU甚至不是必需品。",
+    "它目前已经覆盖9个模型家族， 从GLM-5.2/5.3、DeepSeek V4 Flash、Qwen，一路支持到了975B的Inkling，以及2.8T参数的Kimi K3 。",
+    "以GLM-5.2为例。虽然整个模型足足有744B参数，但MoE并不会在生成每个token时把744B参数全部计算一遍。",
+    "Attention、Embedding、共享专家这些每次推理都要用到的Dense部分，大约17B参数，int4之后只占约9.9GB，直接常驻RAM。",
+    "模型开始生成token之后，Router先选出当前真正需要参与计算的专家；Colibrì再检查它们是否已经在高速内存中，没有命中的部分，才临时从SSD读取。",
+    "不把744B参数看作必须始终驻留在内存中的整体，而是将它变成一堆可以根据Router结果，在 SSD、RAM和VRAM之间动态调度的数据 。",
+    "事实上，在Colibrì最早那台12核CPU+25GB RAM的开发机上，GLM-5.2冷缓存时确实只有大约 0.05～0.1 token/s 。",
+    "如果机器里正好有两块SSD，Colibrì支持放置第二份模型副本，把专家读取任务分摊到不同硬盘上，并行利用两块盘的带宽。",
+    "一个专家无论已经待在VRAM里，还是临时从SSD里读取，Router的选择都不会因此改变，使用的权重精度也完全相同。",
+    "如果一路堆到6张RTX 5090，让全部专家常驻高速存储层，解码速度则可以来到5.8～6.8 token/s。",
+    "Colibrì已经提供Linux、macOS和Windows的预编译版本，不想折腾编译的话，下载对应版本解压即可；",
+    "项目已经提供预转换好的GLM-5.2 int4模型，也可以从FP8原始模型自行转换。模型放好之后，一条coli chat就能直接进入对话。",
+    "接着DeepSeek V4 Flash是284B；GLM-5.2/5.3是744B；GLM-5.3-Flash是321B；",
+    "这模型的权重需要大约1.6TB存储空间，但按照Colibrì给出的配置，RAM从 32GB+ 就能起跑，同样不强制要求GPU。"
+  ],
+  "isExcerpt": true
+}

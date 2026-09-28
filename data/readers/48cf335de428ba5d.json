@@ -1,0 +1,12 @@
+{
+  "title": "狂潮｜系统架构分析报告系列·21篇之第1篇——Apache ZooKeeper-腾讯云开发者社区-腾讯云",
+  "source": "腾讯云开发者社区 · 软件架构",
+  "publishedAt": "2026-09-25T23:25:06Z",
+  "url": "https://developer.cloud.tencent.com/article/2751237",
+  "paragraphs": [
+    "Apache ZooKeeper分布式协调系统高压场景下暴露六大动态契约缺失：Watcher事件风暴无归并、ACL变更不失效长会话、事件与zxid版本错位、消息队列无优先级导致误选主、事务复制缺反压触发全量同步、选票分裂致长时间无Leader，需通过事件分级、版本绑定、反压反馈等机制修复。",
+    "Copyright © 2013 - <!-- -->2026<!-- --> Tencent Cloud. All Rights Reserved. 腾讯云 版权所有",
+    "深圳市腾讯计算机系统有限公司 ICP备案/许可证号： 粤B2-20090059 粤公网安备44030502008569号"
+  ],
+  "isExcerpt": true
+}
