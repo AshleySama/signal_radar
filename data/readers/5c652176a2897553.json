@@ -1,0 +1,25 @@
+{
+  "title": "OpenAI光速上新GPT-6.1 Sol！一晚上25项更新，都在这里了",
+  "source": "量子位",
+  "publishedAt": "2026-09-30T07:01:05Z",
+  "url": "https://www.qbitai.com/2026/09/499246.html",
+  "paragraphs": [
+    "今天凌晨，OpenAI在旧金山举行DevDay 2026，一口气公布 25项更新，横跨ChatGPT、Codex、GPT-6模型和API等等",
+    "最最重磅的新产品是 Dots ，一个always-on agent，我愿称之为更广泛意义上的“个人Agent”",
+    "新模型 GPT-6.1 Sol 来了，重点加强了Agentic Coding、computer use和专业工作能力",
+    "官方称6.1 Sol在上述任务上的 能力接近GPT-6 Astra ，但API标准输入、输出Token价格只有后者的1/5",
+    "配套更新Ultrafast ，能氪金来买更快的模型速度，譬如Codex最高可以达到300 tokens/s，大约8倍速度；API最高约6倍",
+    "开发者这一侧， Agent底层能力进一步API化 ，Agents API获得Computer Use和Codex的一系列Agent能力",
+    "推出 Sign in with ChatGPT ，用户可以拿ChatGPT账号登录外部产品，比如Devin、Notion、OpenClaw啥的",
+    "25个新发布不一一展开了，这篇推送我决定和大家展开分享一下最重要的5个点，分别是Dots、GPT-6.1 Sol、Codex、Agents API，以及两个不容忽视的商业化动作。",
+    "因为这几个家伙基本能拼出OpenAI今年DevDay最主要的产品线—— OpenAI正在继续给Agent扩工作范围，而且这一次，连“上班时间”都一起延长了。",
+    "用户只需要先给它设定一个长期目标，Dots就能持续保留相关上下文，记住你长期关注的事项，并接手那些需要几天、几周甚至更长时间跟进的任务，记住进度、关注变化、继续跟进，直到这件事完成。",
+    "Dots可以持续关注用户反馈，发现高频问题后，自己整理需求、修Bug、跑测试，最后把完整PR和改动视频交给开发者。",
+    "做产品发布 也类似。它会逐渐了解产品定位和团队要求，产品范围变化后继续修改发布材料、调整文档，再把需要人确认的部分拿回来。",
+    "Dots可以出现在ChatGPT、Slack和Microsoft Teams中，主动汇报进度、询问问题，或者提醒哪些决定需要人处理。",
+    "目前Dots 已经开始向Pro和Business Premium用户开放 ，Enterprise、Edu和Healthcare用户需要管理员手动开启Beta。",
+    "老奥特曼还挺贴心，考虑到Agent如果要全天持续工作，除了单次任务能做到多强，单位使用成本直接决定它能不能大规模落地。",
+    "GPT-6.1 Sol是GPT-6 Sol的一次大版本升级。官方介绍，它的 智能水平接近GPT-6 Astra ，但标准输入、输出的Token费用 只有Astra的五分之一 。"
+  ],
+  "isExcerpt": true
+}

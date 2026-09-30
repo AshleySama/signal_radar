@@ -1,0 +1,25 @@
+{
+  "title": "Agent 编程能力从 10% 飙到 70%，Anthropic 新模型却遭遇灵魂拷问：我什么时候才会用它？",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "url": "https://www.infoq.cn/article/PSvHjyoJTC9bSLWYxpfF",
+  "paragraphs": [
+    "Anthropic 发布 Claude Sonnet 5.5：编程能力暴涨，但 Max 档 Token 消耗惊人",
+    "距离 Claude Opus 5.5 发布还不到一周，Anthropic 于 9 月 28 日推出 Claude Sonnet 5.5。这是 Claude 5.5 家族的第二款模型，Haiku 5.5 也将在未来几周内登场。",
+    "Anthropic 宣称，新模型的输出速度提升超过 30%，完成多数任务所需的 Token 更少，因此单任务成本最高可降低 30%。",
+    "Claude Code 创建者 Boris Cherny 还发布了一段演示，展示 Sonnet 5.5 通过 Claude Code 修复一个 Bug，并配文称：“速度提升 30%，使用量减少 30%。”",
+    "不过，Sonnet 5.5 虽然把 Sonnet 这个“中档模型”推到了接近 Opus 的位置，但当推理强度拉到最高，它对 Token 的消耗也达到了一个惊人的水平。",
+    "从 Anthropic 公布的数据看，Sonnet 5.5 的核心提升发生在 Coding Agent 场景。",
+    "其中变化最明显的是 Terminal-Bench 4.0。Sonnet 5.5 从上一代的 10.3% 跃升到 70.6%，还超过了 Opus 5.5 公布的最佳成绩。这项测试要求模型在命令行环境中自主使用工具，完成复杂的多步骤任务，考察的是完整的 Agentic Coding 能力。",
+    "CursorBench 更接近日常开发。它使用来自 Cursor 编辑器真实编程会话的任务，包含需求模糊、跨文件修改和理解现有代码库等情况。Sonnet 5.5 在这项测试中得到 55.5%，与 Opus 5.5 的 57.8%只差约两个百分点。",
+    "Anthropic 称，早期测试者最明显的感受，是 Sonnet 5.5 理解代码库的速度更快。它也更倾向于把多个工具调用批量执行，减少模型与终端之间来回交互的次数。对于 Claude Code 这类需要反复搜索、读取、修改、测试和验证的 Coding Agent，减少一步往往意味着同时减少等待时间、Token 消耗和中途出错的机会。",
+    "Lovable 的测试提供了一个更具体的观察：Sonnet 5.5 完成编程任务所需的工具调用减少约三分之一，Shell 执行次数大约减半。Base44 在 118 次真实应用构建中发现，Sonnet 5.5 平均经过 3.6 轮迭代完成一个应用，Opus 5 则需要 7.7 轮；新模型的工具调用失败次数也是所有参测模型中最少的。",
+    "这些数据表明，Sonnet 5.5 的变化不只体现在输出速度上。至少在 Anthropic 引用的早期测试中，它用更少的工具调用、Shell 运行和迭代完成了任务，减少了模型与工具之间的往返。",
+    "Sonnet 5.5 延续了 Sonnet 5 的价格：每百万输入 Token 2 美元、输出 Token 10 美元、缓存读取 0.2 美元、缓存写入 2.5 美元。",
+    "但 Artificial Analysis 的测试显示，当推理强度调到 Max 时，Sonnet 5.5 每项 Intelligence Index 任务平均生成约 19.3 万个输出 Token，是该机构测试过的模型中最高的。",
+    "这个数字比 Opus 5.5 Max 和 Sonnet 5 Max 高约 60%，约为 GPT-6 Astra Max 的 7 倍。Sonnet 5.5 Max 的单任务成本达到 7.60 美元，比 Sonnet 5 高约 50%。",
+    "作为交换，Sonnet 5.5 Max 在 Artificial Analysis Intelligence Index 中得到 56 分，只比 Opus 5.5 Max 低两分。",
+    "也就是说，Anthropic 所说的“单任务成本最高降低 30%”针对的是多数任务，并不代表把推理强度调到 Max 后仍然更省。"
+  ],
+  "isExcerpt": true
+}

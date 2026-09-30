@@ -1,0 +1,21 @@
+{
+  "title": "MariaDB 13 扩展 Oracle 兼容性，改善开发者体验与可观测性",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "url": "https://www.infoq.cn/article/vWO5oOkToq5WYFE18WiB",
+  "paragraphs": [
+    "MariaDB Community Server 版本 13.0 已达 GA（General Availability）阶段，目前已经正式稳定。此次版本带来了一系列新功能、弃用项和性能改进，包括扩展对过程式 SQL 的支持、新增 DML 能力等。",
+    "MariaDB 13.0 正式发布，重点增强对 Oracle PL/SQL 兼容性，原生支持 REF CURSOR 和 RECORD 类型，并扩展 RETURNING 子句至单表 UPDATE。",
+    "支持弱/强类型 REF CURSOR 作为包内例程参数与返回值；RECORD 可用于包内例程参数及函数返回，且可与 REF CURSOR 组合处理结构化行数据；UPDATE 支持 RETURNING + OLD_VALUE()，实现单次往返获取新旧值。",
+    "MariaDB Community Server 版本 13.0 已达 GA（General Availability）阶段 ，目前已经正式稳定。此次版本带来了一系列新功能、弃用项和性能改进，包括扩展对过程式 SQL 的支持、新增 DML 能力等。",
+    "为了让基于 Oracle PL/SQL 的企业应用能够更加平滑地迁移，MariaDB 13 原生支持 REF CURSOR 类型和 RECORD 类型，并允许将它们用于例程参数和函数返回值。",
+    "对弱类型和强类型 REF CURSOR 的支持，让 MariaDB 的游标处理方式进一步接近 Oracle PL/SQL。这些游标可以被打开、获取和关闭，也可以用作局部变量、包例程参数或包函数的返回类型。",
+    "RECORD 的支持范围也得到扩展。除了局部变量之外，现在还可以将其用于存储例程参数或存储函数返回类型。 RECORD 还可以与 REF CURSOR 搭配使用，以处理结构化的行数据。",
+    "MariaDB 13 还提供了一种更加直接的方式来处理 UPDATE 语句修改的数据：现在可以通过 RETURNING 子句返回被修改的行。结合 OLD_VALUE() ，开发者可以在一次数据库往返中同时获取修改前和修改后的值。此前 RETURNING 仅适用于 INSERT 和 DELETE ，目前对 UPDATE 的支持仍局限于单表语句。",
+    "MariaDB 13 在查询优化方面也有所改进。该版本在 MariaDB 12 引入的优化器 Hint 框架基础上继续扩展，让 Hint 在复杂查询中的使用更加方便。现在，该框架会自动为 View、CTE 和派生表分配查询块名称，因此无需显式使用 QB_NAME() ，Hint 就可以直接定位这些查询块。此外， QB_NAME 定位器还提供了一种指定路径的方式，可以定位深层嵌套的查询块，以解决仅通过名称无法定位的情况。",
+    "在可观测性和管理方面，MariaDB 13 让服务器配置和元数据更容易检查和自动化。用于通过启动选项指定 复制角色 的 init_rpl_role ，现在也作为系统变量对外提供，因此可以直接通过 SHOW VARIABLES 或 @@init_rpl_role 检查服务器的复制角色。为了以编程方式获取存储引擎特有的索引和列选项，I_S.STATISTICS 和 I_S.COLUMNS 表现在新增了 CREATE_OPTIONS 列，用于公开此前只能通过 SHOW CREATE TABLE 获取的信息。最后， I_S.SYSTEM_VARIABLES 表现在也新增了用于标识系统变量是否已弃用的列。",
+    "MariaDB 采用滚动发布模式，目标是让用户能够更快获得最新能力，而不是作为长期稳定（LTS）版本。下一 个计划中的 LTS 版本是 MariaDB 13.3。",
+    "查看英文原文： MariaDB 13 Expands Oracle Compatibility and Improves Developer Experience and Observability"
+  ],
+  "isExcerpt": true
+}

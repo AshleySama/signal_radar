@@ -1,0 +1,21 @@
+{
+  "title": "SolidStart 2：以 Vite 8 取代 Vinxi，进入维护模式后逐步完成历史使命",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "url": "https://www.infoq.cn/article/v0NAyDPc0bZ2T8HMWfv2",
+  "paragraphs": [
+    "SolidStart 是构建在细粒度响应式库 SolidJS 之上的全栈元框架，目前已经正式发布稳定版 2.0。此次版本对底层架构进行了彻底现代化改造，以直接使用 Vite 的 Environment API 取代 Vinxi 构建层。SolidStart 的创建者 Ryan Carniato 将其描述为“基于 Vite 8 对 SolidStart 进行的一次完整现代化升级，以支持 Solid 1.x”，这一版本经过一年多的开发，并经历了 25 个 Alpha、Beta 和 Release Candidate 版本后终于发布。",
+    "SolidStart 2.0 正式发布，以 Vite 8 Environment API 替代 Vinxi 构建层，实现全栈构建流程统一与现代化。底层重构依托 Rolldown 工具链，显著提升插件兼容性与 SSR 样式处理能力。",
+    "关键观点：直接集成 Vite 8 Environment API，消除客户端/服务端双构建协调开销；原生支持 Tailwind CSS v4 及 Nitro v3、Cloudflare、Netlify 部署插件；重写 CSS 处理逻辑，实现 SSR 延迟加载组件样式，彻底解决 FOUC。",
+    "SolidStart 是构建在细粒度响应式库 SolidJS 之上的全栈元框架，目前已经 正式发布稳定版 2.0 。此次版本对底层架构进行了彻底现代化改造，以直接使用 Vite 的 Environment API 取代 Vinxi 构建层。SolidStart 的创建者 Ryan Carniato 将其 描述 为“基于 Vite 8 对 SolidStart 进行的一次完整现代化升级，以支持 Solid 1.x”，这一版本经过一年多的开发，并经历了 25 个 Alpha、Beta 和 Release Candidate 版本后终于发布。",
+    "SolidStart v1 依赖 Vinxi 来协调全栈框架所需的客户端和服务器端独立构建流程，这是因为 Vite 5 当时还没有提供一套一流的配置方式来处理这两类构建。如今，随着 Vite 的 Environment API 可用，团队直接基于 Vite 8 及其由 Rolldown 驱动的工具链重构了整个框架，并以此提供了更好的插件兼容性，例如对 Tailwind CSS v4 的支持，以及与 Nitro v3 、Cloudflare 和 Netlify 部署插件的直接集成。此次发布还重新设计了 CSS 处理机制，使延迟加载的组件样式可以在服务端渲染，同时避免 v1 中曾出现的无样式内容闪烁（FOUC）。",
+    "对于现有用户而言，升级过程主要是一些机械性的调整。SolidStart v2 要求使用 Node.js 24 和 Vite 8，其中最明显的变化是：框架配置从 app.config.ts 移到了 vite.config.ts ，此外还涉及 package 导入、环境类型、服务器运行时以及中间件等方面的调整，具体内容详见 迁移指南 。",
+    "稳定版发布仅仅几天后，SolidStart 直接就进入了维护模式，这一决定与 Solid 2.0 RC 的同步推进有关。在这一版本中，团队将 Server Functions、服务层以及文件系统路由分别纳入核心，以及一个与路由器无关的独立包中。随后，团队在 公告 中宣布：“Start mode 取代 SolidStart”：",
+    "元框架的存在是为了填补框架本身留下的空白。SolidStart 的职责，就是提供核心无法提供的能力。在 2.0 的开发周期中，这些能力逐一回归到各自应该存在的位置：Server Functions 进入核心，服务层进入 Start mode，文件系统路由进入与路由器无关的独立包。完成这一过程后，SolidStart 最终剩下的，只是一个为那些已经不再需要封装的东西提供封装的包装层。",
+    "SolidStart 2.0 承担着一个非常重要的角色，那就是帮助现有项目迈向未来。更好的工具链是其中的关键，而正是这次重写工作，让我能够把相关部分提取并提升到核心中。现在，每个 Solid 项目都能从中受益，比如开发环境中不再出现 FOUC，以及 SSR 流式渲染期间能够发出预加载标签等。",
+    "我认为，随着 AI 的发展，这种解体是不可避免的。我们希望能够在一个地方找到所需的工具。当 React 本身就在提供这些能力时，就没必要再区分 React 和 Next。",
+    "SolidJS 是由 Ryan Carniato 创建的开源、细粒度响应式 JavaScript 库。它会将组件编译为直接操作 DOM 的更新代码，而不是使用虚拟 DOM。SolidStart 则是其官方元框架，在此基础上增加了服务端渲染、流式渲染、Server Functions 和文件系统路由等能力。",
+    "查看英文原文： SolidStart 2: Replaces Vinxi with a Vite 8 and Enters Maintenance as Its Role Winds Down"
+  ],
+  "isExcerpt": true
+}
