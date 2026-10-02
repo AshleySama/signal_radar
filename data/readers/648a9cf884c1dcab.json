@@ -1,0 +1,24 @@
+{
+  "title": "GitLab Duo 通过微软 Foundry 扩展自托管 AI 选项",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-09-30T00:00:00Z",
+  "url": "https://www.infoq.cn/article/cA9rSEGKphbJHIiTQKMv",
+  "paragraphs": [
+    "GitLab 扩展 GitLab Duo 自托管版本，支持微软 Foundry 模型，企业可在自选 Azure 环境内使用 GitLab 的 AI 开发能力。",
+    "GitLab Duo 自托管版新增对微软 Foundry 模型部署的支持，覆盖 GPT、Claude、Llama 和 Mistral 系列，实现模型厂商、部署位置与数据路径的自主可控。",
+    "支持跨模型厂商的功能级路由；AI 请求完全不出企业 Azure 环境；AI Gateway 解耦 GitLab Duo 与底层模型绑定。",
+    "GitLab 对 GitLab Duo 自托管版本进行了 扩展 ，支持通过 微软 Foundry 部署的模型，企业能够在自己选定的 Azure 环境中运行 GitLab 的 AI 开发能力。该集成支持的模型系列包括 OpenAI GPT 、 Anthropic Claude 、 Meta Llama 和 Mistral ，让企业能够更灵活地选择模型厂商、部署位置和数据路径。",
+    "这一更新对有数据驻留、数据主权、合规监管或网络隔离要求的组织尤其重要。企业无需将 AI 请求发送至由 GitLab 管理的模型基础设施，GitLab Duo 自托管版本可以直接使用企业自身的 AI 网关与模型部署资源。管理员由此能够更好地控制请求和响应的处理位置以及底层模型的部署方式。",
+    "该架构由三个主要组件构成：自管理的 GitLab 实例、自托管的 GitLab AI Gateway ，以及一个或多个通过微软 Foundry 托管的模型端点。网关充当 GitLab Duo 与所选模型之间的中间层，不会将 Duo 的各项功能与某一家特定模型厂商强行绑定。",
+    "该集成的一大亮点是功能级别的模型选择能力。企业能够为 GitLab Duo 的不同功能分配不同模型：例如，选用面向代码的模型提供代码建议能力，用另一套模型处理智能体任务，为更高吞吐量的任务使用更小的模型。模型部署也可以在不根本改变 GitLab 开发工作流程的情况下进行更换。",
+    "但这套自托管 AI 方案也存在关键取舍。虽然企业获得了模型与基础设施的高度灵活性，但也将更多运维责任转移给工程和平台团队。团队除维护 GitLab 环境之外，还需要管理模型部署、容量、网络、凭证、可用性以及模型全生命周期。",
+    "这也意味着模型可用并不代表一定与 GitLab Duo 兼容。微软 Foundry 目录的变化速度可能会快过 GitLab 支持模型矩阵的变化速度，因此组织需要在选择模型之前验证两个平台之间的兼容性。",
+    "GitLab 的做法顺应了一种更广泛的行业趋势：不再将 AI 开发工具和基础模型视为单一的捆绑服务。微软 Foundry 本身就提供了来自多个厂商的模型，而 GitLab 则在之上提供了开发和 DevSecOps 层。",
+    "它与其他企业开发平台有相似之处。例如， GitHub Copilot 也越来越多地支持多种底层模型，但其标准体验仍与 GitHub 的托管服务紧密集成。GitLab 的自托管模型则更加强调对 AI 基础设施和网络路径的控制。而像 Amazon Bedrock 和微软 Foundry 这类平台，虽然提供了多模型基础设施，但它们本身并不能替代 GitLab 这种集成 DevSecOps 平台。",
+    "这使得开发环境越来越像一个与模型无关的控制层：GitLab 管理开发者工作流程和 AI 功能，而组织可以决定底层使用哪些模型。",
+    "因此，本次发布的意义不仅仅在于又增加了一项模型集成。随着 AI 更深入地嵌入到软件工程中，企业需要做的决策不再局限于开发者使用哪些 AI 功能，还包括模型在哪里运行、源代码和提示词流向何处、谁控制凭据，以及哪些司法管辖区处理数据。",
+    "GitLab 与微软 Foundry 的集成为此提供部分解决方案：把 AI 模型层部署在企业自主选择的 Azure 环境中。企业级 AI 工具正在向着模型可选择、部署可管控、保障数据主权的方向演进，不再默认最优开发体验必须依赖单一集中托管式 AI 厂商。",
+    "查看英文原文： https://www.infoq.com/news/2026/09/gitlab-microsoft-foundry/"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Elastic Beanstalk 跑上 EKS，开发者质疑：为什么不把 ECS 做好？",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-01T00:00:00Z",
+  "url": "https://www.infoq.cn/article/AYXLumiEmzcCrKrRuq9B",
+  "paragraphs": [
+    "Elastic Beanstalk 新增 Cluster 模式，底层依托 EKS Auto Mode 托管集群，支持源码/Dockerfile/ECR 镜像部署，构建由 CodeBuild + Cloud Native Buildpacks 完成。集群按 VPC 子网集合自动分配，不可手动选择或调整版本与 IAM 角色。",
+    "集群自动按子网集合隔离；构建在客户账户内完成，保障环境上下文安全；可观测性原生集成 OpenTelemetry。",
+    "亚马逊云科技最近为 Elastic Beanstalk 增加了 集群模式 ，将应用程序作为容器运行在由该服务创建和运维的 Amazon EKS 集群上。该模式与基于 EC2 的环境类型并存，后者现在称为 Beanstalk Standard，并沿用相同的应用程序、版本和环境概念。相关文档还补充了发布消息中没有提及的条件，涉及部署、集群访问和隔离。",
+    "文档将其称为 Beanstalk Cluster ，面向在共享基础设施上运行一组应用程序的团队。应用程序可以采用源代码、Dockerfile 或 Amazon ECR 中容器镜像的形式提交；源代码会通过客户账户中的 AWS CodeBuild，使用 Cloud Native Buildpacks 构建为镜像。节点由 EKS Auto Mode 提供，可观测性则基于 OpenTelemetry。",
+    "客户无法自行选择集群。根据 开发者指南 ，同一账户中使用相同 VPC 子网集合的环境会共享一个集群，而使用不同子网集合的环境会获得不同集群。集群会在首次使用时创建，耗时约 10 分钟。客户无法选择集群或其 Kubernetes 版本，现有环境的子网和集群 IAM 角色也无法更改。要修正这些配置，就必须重新创建环境。",
+    "直接访问集群也不属于该模式的一部分。指南将集群基础设施访问列为由服务管理，用户需要通过 Elastic Beanstalk API、AWS CLI 或控制台进行操作。亚马逊云科技软件工程经理 Paul Pollack 在其 发布文章 中回应了供应商锁定问题：",
+    "文档还说明了在 Elastic Beanstalk 之外更改集群时会发生什么。该服务会检测到配置漂移，停止维护集群，不再向其中放置新环境，并阻止更新已经运行在该集群中的环境，直到相关变更被撤销。",
+    "部署选项也比发布博客暗示的更少。博客将不可变部署和流量拆分部署列为集群模式的优势，但架构文档只列出了默认的滚动更新和一次性全部更新， 最新动态文章 则两者都没有列出。不可变部署仍然是 Beanstalk Standard 的功能。",
+    "在隔离方面，共享集群中不同环境之间的网络流量默认会被阻止，而且无法关闭该限制。对于属于不同最终客户、运行客户无法控制的代码，或者受到要求基础设施隔离的合规制度约束的环境，指南仍建议使用不同的子网集合，从而使用不同的集群：",
+    "这一指导意见与亚马逊云科技的另一项声明同时存在：Elastic Beanstalk 符合 HIPAA 要求，并被纳入 PCI DSS、SOC、FedRAMP 和 IRAP 等项目的适用范围。",
+    "其经济性同样取决于共享机制。Elastic Beanstalk 不收取平台费用，计算资源按 EC2 费率计费，但 定价页面 列出了 Standard 模式没有的两项费用：每个集群固定的 EKS 小时费用，以及在实例费用之外收取的 EKS Auto Mode 管理费。Savings Plans 或 Spot 等 EC2 折扣无法降低这项管理费。每个负载均衡环境还会获得自己的 Application Load Balancer，并且 Pod 级指标会按资源计量。亚马逊云科技表示，这可能导致监控成本高于 Standard 模式。因此，成本节省来自共享节点；指南指出，使用独立集群的成本更高，容量利用效率也更低。亚马逊云科技自己的 概述文档 将 Standard 描述为适合数量较少或规模较小应用程序的高性价比选择，也是支持 Windows 的模式。",
+    "此次发布还引出了集群模式定位的问题。在亚马逊云科技应用集成产品负责人 Dan Ronald 的 公告 下，Datadog 的 James Eastham——同时也是一名 AWS Community Builder——询问该模式与 EKS、EKS Auto Mode、ECS、ECS Express Mode、经典 Beanstalk、Lambda 上的容器以及 Lambda Managed Instances 有何不同，并补充道：",
+    "Ronald 回复后，Eastham 接受了它与 EKS 和 Lambda 之间的区别，但仍不认同它与 ECS 之间存在足够差异：",
+    "ECS 和 Beanstalk 集群模式看起来有些过于接近，而他们本可以集中投入大量精力，把其中一项服务真正做好。",
+    "对于评估该模式的团队而言，子网集合决定了环境加入哪个集群、是否与其他环境共享基础设施，以及能够获得多大程度的成本节省，而且此后无法更改。应用程序还必须符合无状态模型，副本应当可以互换，本地存储只能是临时性的。如果省略子网配置，环境将被放入默认 VPC 的公有子网。",
+    "集群模式已在 Elastic Beanstalk 运营的所有亚马逊云科技商业区域推出，但不适用于 AWS Free Tier。用户可以通过控制台、AWS CLI、EB CLI、CloudFormation、Terraform、新的 GitHub Action 和智能体技能进行部署。"
+  ],
+  "isExcerpt": true
+}

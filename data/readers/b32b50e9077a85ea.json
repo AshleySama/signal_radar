@@ -1,0 +1,18 @@
+{
+  "title": "别再给 Agent 一个“毛坯房”了：构建 Agent 拎包入住的开发环境实践｜QCon上海",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-02T00:00:00Z",
+  "url": "https://www.infoq.cn/article/DEyrayxufObhpoeZgOKT",
+  "paragraphs": [
+    "QCon 上海站聚焦 AI Native 时代工程落地，覆盖 AI Infra、Agent Runtime、安全可观测等九大关键技术方向，汇集百个产业级实战案例。",
+    "AI Native 架构需重构系统设计范式，非仅模型集成；Agent Runtime 是生产级智能体的基础设施核心；Loop Engineering 与 Vibe Coding 代表人机协同新开发范式。",
+    "将于 10 月 22 日—24 日 举办，聚焦 Harness AI 时代的工程实践，围绕 AI Native 架构、Agent Runtime、AI Infra、Data Systems、Agent 安全与可观测、Loop Engineering、Vibe Coding、具身智能与世界模型、端云协同等前沿技术方向，邀请全球技术社区与产业一线的实践者，系统性分享前沿洞察与实战经验，共同探索 AI 从能力到系统、从实验到生产的真实路径。",
+    "在这一背景下， 2026 年 QCon 全球软件开发大会大会 · 上海站 正式启动。本次大会将于 10 月 22 日—24 日 举办，聚焦 Harness AI 时代的工程实践，围绕 AI Native 架构、Agent Runtime、AI Infra、Data Systems、Agent 安全与可观测、Loop Engineering、Vibe Coding、具身智能与世界模型、端云协同等前沿技术方向，邀请全球技术社区与产业一线的实践者，系统性分享前沿洞察与实战经验，共同探索 AI 从能力到系统、从实验到生产的真实路径。",
+    "蚂蚁集团 & Agent 工程师李俊已确认出席 “ Agent as a Service ” 专题，并发表题为 《 别再给 Agent 一个“毛坯房”了：构建 Agent 拎包入住的开发环境实践 》 的主题分享。AI Coding 把个人写码效率抬高后，整条链路仍常卡在联调：环境搭不齐、流量跑不准、问题查不清、环境养不住。根因接近阿姆达尔定律——生码只占链路一部分，环境与验证才是新瓶颈。本演讲基于大型微服务体系线下联调实践，讲述如何把既有 DEV/Stable 地图上翻为 Agent 可使用的 AI 研发环境（ADE）：以沙箱提供可日抛执行面，以 Artifact FS 统一上下文与产物，以 Agent 友好终端提供可观测可编排的行动语言。本次分享将从「给人用的 1.0–3.0」到「给 Agent 用」的选型取舍、踩坑与可量化收益，以及人机协同边界如何划。",
+    "李俊长期从事研发效能与云研发基础设施，2019 年起参与 CloudIDE／研发容器建设，后续推动自测上云与联调环境产品化。近年聚焦 Agent 时代的研发环境：如何让线下联调从「人点控制台」变为「Agent 可自主跑闭环 J。主导/参与 Al 研发环境（ADE）方向，落地沙箱、Artifact 文件系统与 Agent 友好终端等能力，服务大规模微服务与联调场景。他在本次会议的详细演讲内容如下：",
+    "给人用的控制台体验 vs Agent 可编程接口——每项都要在稳定性、成本、可观测之间取舍，且 Agent 失败模式比人更「脆」",
+    "用「沙箱 + Artifact FS + Agent 终端」拼出可写、可记、可观测的闭环，而不是只堆更多 Coding Agent 插件",
+    "除此之外，本次大会还策划了 Loop Engineering 、 千行百业 Agent 创新实践 、 Agent 自主进化：从记忆到持续学习 、 Agent as a Service 、 Vibe Coding 时代的新质量债 、 理性驾驭 AI 的 SRE 可靠性工程 、 金融 AI Native工程实践：从研发提效到业务破局 、 AI Infra：算力效率决定规模化落地 、 AI Native 架构 等 20 个专题论坛，届时将有来自不同行业、不同领域、不同企业的 100+资深专家在现场带来前沿技术洞察和一线实践经验。"
+  ],
+  "isExcerpt": true
+}
