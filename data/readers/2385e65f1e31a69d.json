@@ -1,0 +1,22 @@
+{
+  "title": "企业级 Agent Infra 架构实践：从安全沙箱到网络管控与身份治理｜QCon上海",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-03T00:00:00Z",
+  "url": "https://www.infoq.cn/article/bLB8RQ6sd3ZGQts0D4tP",
+  "paragraphs": [
+    "QCon 上海站聚焦 AI Native 时代工程落地，覆盖 AI Infra、Agent Runtime、Loop Engineering 等九大关键技术方向，汇集百余实战案例。",
+    "AI Native 架构需重构系统边界与协作范式；Agent Runtime 是生产级智能体的基础设施底座；Loop Engineering 强调人机协同闭环的可观测与可调试性。",
+    "将于 10 月 22 日—24 日 举办，聚焦 Harness AI 时代的工程实践，围绕 AI Native 架构、Agent Runtime、AI Infra、Data Systems、Agent 安全与可观测、Loop Engineering、Vibe Coding、具身智能与世界模型、端云协同等前沿技术方向，邀请全球技术社区与产业一线的实践者，系统性分享前沿洞察与实战经验，共同探索 AI 从能力到系统、从实验到生产的真实路径。",
+    "在这一背景下， 2026 年 QCon 全球软件开发大会大会 · 上海站 正式启动。本次大会将于 10 月 22 日—24 日 举办，聚焦 Harness AI 时代的工程实践，围绕 AI Native 架构、Agent Runtime、AI Infra、Data Systems、Agent 安全与可观测、Loop Engineering、Vibe Coding、具身智能与世界模型、端云协同等前沿技术方向，邀请全球技术社区与产业一线的实践者，系统性分享前沿洞察与实战经验，共同探索 AI 从能力到系统、从实验到生产的真实路径。",
+    "上汽集团 & 云计算中心架构师方宇晨已确认出席 “ Agent as a Service ” 专题，并发表题为 《 企业级 Agent Infra 架构实践：从安全沙箱到网络管控与身份治理 》 的主题分享。Agent 时代，AI 应用正在从“生成内容”快速走向“自主执行”，可运行模型生成代码，操作浏览器，调用 MCP Tool 和内部业务系统。",
+    "运行时隔离要求高。Agent 会运行模型生成的未知代码，需要同时保证文件系统和内核的隔离，传统容器隔离无法单独承担完整安全边界。",
+    "网络环境复杂。Agent 既需要访问 Internet、模型 API 还有企业内部系统，需要同时提供独立的 L3/L4 网络隔离。",
+    "以 Kubernetes Agent Sandbox 作为可信执行环境，以 OVN-Kubernetes 构建多租户网络边界，以 Istio Sidecar 配合租户级别 Egress Gateway 构建 L7 服务访问平面，以 Keycloak 建立统一的 Agent 身份体系，并进一步实现 Agent 凭证代理和动态凭证交换。",
+    "方宇晨拥有云技术领域 10 年以上的工作经验。在 Kubernetes、软件定义网络、数据中心网络和虚拟化方面拥有丰富经验。近年来，他主要致力于领导 AIK（All in Kubernetes）项目，该项目目标在 Kubernetes 中构建下一代多租户数据中心基础设施。他在本次会议的详细演讲内容如下：",
+    "企业 Agent Infra 的核心问题已经不只是“如何运行 Agent”，而是如何建立 Agent 的执行边界、身份边界和网络边界。",
+    "Agent 网络隔离不能只依赖 Kubernetes NetworkPolicy，应当给不同租户建立真正独立的网络域。构建独立的 L3/L4 网络边界",
+    "Agent 不应该直接访问企业 API 和互联网，应尽可能将 Agent 之间的访问和外部访问收敛到可控制、可观测的方式",
+    "除此之外，本次大会还策划了 Loop Engineering 、 千行百业 Agent 创新实践 、 Agent 自主进化：从记忆到持续学习 、 Agent as a Service 、 Vibe Coding 时代的新质量债 、 理性驾驭 AI 的 SRE 可靠性工程 、 金融 AI Native工程实践：从研发提效到业务破局 、 AI Infra：算力效率决定规模化落地 、 AI Native 架构 等 20 个专题论坛，届时将有来自不同行业、不同领域、不同企业的 100+资深专家在现场带来前沿技术洞察和一线实践经验。"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Java新闻汇总：GraalVM、Jakarta Data、JNoSQL、Azul Payara、WildFly、Quarkus和Atmosphere",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-04T00:00:00Z",
+  "url": "https://www.infoq.cn/article/TeFTUfEJdS3CqbpUQ97k",
+  "paragraphs": [
+    "本期的Java新闻汇总涵盖了如下主要内容：Atmosphere 4.0的GA版本发布，GraalVM、Azul Payara与Quarkus的小版本发布，WildFly 41的维护性发布，Jakarta Data与Eclipse JNoSQL的里程碑发布，2026年9月版Open Liberty的beta发布，以及GlassFish 8.0.4的Docker镜像发布。",
+    "Atmosphere 4.0等主流Java框架与运行时发布新版本；JEP 542正式定稿，新增PEM编码/解码API，支持PKCS#8与X.509格式双向转换。",
+    "Open Liberty 2026.9 beta与GlassFish 8.0.4 Docker镜像增强云原生部署能力。",
+    "本期的 Java 新闻汇总主要包含如下内容：Atmosphere 4.0 的 GA 版本发布，GraalVM、Azul Payara 与 Quarkus 的小版本发布，WildFly 41 的维护性发布，Jakarta Data 与 Eclipse JNoSQL 的里程碑发布，2026 年 9 月版 Open Liberty 的 beta 发布，以及 GlassFish 8.0.4 的 Docker 镜像发布。",
+    "JEP 542， PEM Encodings of Cryptographic Objects ，已经从 JDK 28 的 Proposed to Target 状态提升为 Targeted。该 JEP 在 JDK 25 至 JDK 27 进行了三轮预览后准备将此功能最终定稿。该功能提供了“一个用于将表示加密密钥、证书和证书吊销列表的对象编码为广泛使用的隐私增强邮件（Privacy-Enhanced Mail，PEM）传输格式，并将该格式解码回对象的 API。”该 JEP 将支持在 PEM 文本与 PKCS #8 与 X.509 二进制格式之间的转换。变更包括，将 PEM record 类重新归类为常规类，以便提供接受 Base64 编码字节数组内容的构造函数，以及将 DEREncodable 接口重命名为 BinaryEncodable ，以更准确描述存储在 PEM 文本中的二进制数据。",
+    "JDK 28 早期访问构建 版本 Build 13 发布，包含对 Build 12 的 更新 ，修复了若干 问题 。更多细节参见 发行说明 。",
+    "OmniFish 团队已为 GlassFish 8.0.4 及 GlassFish Embedded 发布了 Docker 镜像，详情及使用说明见该项目的 用户指南 。",
+    "GraalVM 25.3 版本 发布 带来若干重要功能，例如，新增的 SubstratePriorityInliningPhase 类，为 JIT 与 Native Image 模式实现优先内联器（inliner），以提升生成代码的性能，以及增强的安全加固机制，可防止攻击者将程序执行重定向到意外的代码位置。更多细节见 发行说明 。",
+    "Jakarta Data 1.1.0 的第四个里程碑发布包含缺陷修复、文档改进、依赖升级及新特性，例如，更新的 TCK 测试，通过 @OrderBy 注解指示 null 排序的能力，以及使用 Jakarta 注解规范中定义的 @Nullable 与 @Nonnull 注解改进空值安全性。更多细节见 发行说明 。",
+    "Eclipse JNoSQL 1.2.0 的第二个里程碑发布（ Jakarta NoSQL规范 的实现）带来了值得关注的变化，例如，新增的 AutoApplyConverters 类，用于扫描 Jakarta Persistence 的 AttributeConverter 接口实现，以支持在 JNoSQL 映射反射模块中自动应用转换器，以及在半结构化和键值存储实现中对 CDI 拦截器的支持，以便处理横切关注点。更多细节见 发行说明 。",
+    "Azul Payara 7.3.0 发布 ，包括 Community Edition 7.2026.8、Enterprise Edition 6.41.0 与 Enterprise Edition 5.90.0。除缺陷修复与组件升级外，三条发行线均带来了新特性：在所有 Azul Payara 版本中一致支持最新的 gRPC 1.83.1，用于自定义和过滤访问日志记录内容的新机制，以及在控制台中改进的 Azul Payara Micro 访问日志格式显示。",
+    "Open Liberty 26.0.0.9 的 beta版本发布 ，包含缺陷修复和新功能，例如，在 mcpServer-1.0 特性中对 MCP Java API（ org.mcpjava:mcp-server-api:1.0.0 ）的支持，以及对 MCP 度量的更新，使 MBean 名称现在使用其自身的 JMX ObjectName 键。后者为破坏性变更，要求开发者更新其 JMX 查询或脚本。",
+    "WildFly 41.0.1 的 发布 带来缺陷修复、组件升级及若干重要变更，例如，根据 JEP 290（ 过滤传入的序列化数据（Filter Incoming Serialization Data） ）更新了过滤器，在应用的 bin/jdk.serialFilter 文件中加入了新的拒绝名单，以及升级到支持阻止解耦目的地的最新 Apache CFX 版本，作为降低服务器端请求伪造（Server Side Request Forgery，SSRF)风险的缓解措施。更多细节参见 发行说明 。",
+    "Quarkus 3.39.0 发布 ，带来缺陷修复、依赖升级和两项新特性，也就是在 Quarkus 的 TLS Certificate Registry 扩展中支持后量子密码学（Post-Quantum Cryptography），以及由于 无反射Jackson序列化器（reflection-free Jackson serializers） 仍存在问题，撤销默认启用该特性的决定，不过该功能已有所稳定。更多细节见版本 3.39.1 和 3.39.0 的发行说明。",
+    "Quarkus 团队还发布了 Quarkus Flow 1.0.0 版本，该扩展实现了 开发工作流规范（Open Workflow Specification） 。该版本的新特性包括，可通过 YAML 或直接在 Java 代码中定义工作流的 Java DSL，与 LangChain4j 的 Agentic AI 编排，以及发出与消费云事件的能力。",
+    "Atmosphere 4 发布 （用于 JVM 上的 AI 智能体实时引擎），现在包含了可移植的 AI 智能体组件。最近的两次维护性发布包含缺陷修复和新特性，例如，通过定义于 AiConfig 类的 configureForAgent() 方法对 RUNTIME.md 工作空间设置进行作用域限制，使工作空间为默认进程提供种子，以及在 @ManagedService 注解下添加 Spring Boot 低级处理器层。更多细节见版本 4.0.69 与 4.0.68 的发行说明。"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Java新闻汇总：新的OpenJDK JEP、CDI 5.0、Spring、Open Liberty、RefactorFirst和ADK for Kotlin",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-04T00:00:00Z",
+  "url": "https://www.infoq.cn/article/KXmob0H9RXKmJxIlcAaA",
+  "paragraphs": [
+    "本期Java新闻汇总主要包括：关于预编译（ahead-of-time compilation）与结构化并发（structured concurrency）的新JEP，Jakarta CDI 5.0与ADK for Kotlin 1.0的GA发布，2026年9月版Open Liberty，TornadoVM与RefactorFirst的小版本发布，Micronaut的维护性发布，以及Groovy 6.0与Gradle 9.8的首个发布候选版本。",
+    "JEP 544（AOT编译）与JEP 543（结构化并发）同步进入Candidate阶段，前者优化JVM启动与预热性能，后者将多线程任务建模为单一结构化单元以提升可靠性与可观测性。",
+    "JEP 544首次在HotSpot中引入生产级AOT编译支持；JEP 543终结七轮预览后定稿，无功能变更；CDI 5.0、ADK for Kotlin 1.0、Groovy 6.0-RC与Gradle 9.8-RC同步发布。",
+    "本期 Java 新闻汇总主要包括：关于预编译（ahead-of-time compilation）与结构化并发（structured concurrency）的新 JEP，Jakarta CDI 5.0 与 ADK for Kotlin 1.0 的 GA 发布，2026 年 9 月版 Open Liberty，TornadoVM 与 RefactorFirst 的小版本发布，Micronaut 的维护性发布，以及 Groovy 6.0 与 Gradle 9.8 的首个发布候选版本。",
+    "JEP 544， 预先代码编译（Ahead-of-Time Code Compilation） ，已经从 JEP Draft 8335368 状态提升为 Candidate 状态。该 JEP 计划在 HotSpot JVM 启动时通过优化后的原生代码提升应用的启动与预热时间，使应用能更快达到并维持峰值性能。",
+    "JEP 543， 结构化并发（Structured Concurrency） ，已经从 JEP Draft 8389757 提升为 Candidate 状态。该 JEP 计划在经历了在 JDK 21 至 JDK 27 的七轮预览以及在 JDK 19 和 JDK 20 的两轮孵化后定稿，目前该 JEP 没有任何改动。该特性通过引入结构化并发来简化并发编程，将在不同线程中运行的相关任务组视为单一工作单元，从而简化错误处理与取消操作、提高可靠性并增强可观测性。",
+    "JDK 28 早期访问构建 版本的 Build 15 发布，包含来自 Build 14 的 更新 ，修复了若干 问题 。更多细节见 发行说明 。",
+    "在 6.0 版本发布约一周后， TornadoVM 的 6.1.0 版本发布，带来缺陷修复以及对宿主每次操作固定成本的改进：当内容相同时，跳过上传每次启动时生成的 24 字节的内核参数内核栈帧（kernel-argument kernel stack-frame）；当未入队任何内容时，则跳过流同步。更多细节见 发行说明 。InfoQ 将跟进 6.0.0 版本的详细报道。",
+    "在每周的 Hashtag Jakarta EE 博客中，Eclipse 基金会的 Jakarta EE 开发倡导者 Ivar Grimstad 对 Jakarta EE 12 提供了 更新 ：",
+    "Jakarta Contexts and Dependency Injection (CDI) 5.0 本周已被规范委员会批准，成为面向 Jakarta EE 12 的第一个规范。对于 Jakarta EE 12 而言，这是一个重要里程碑，因为 CDI 是平台上最核心的规范之一。更多规范将随后发布。",
+    "Starter for Jakarta EE 的设计已经刷新，以与 Jakarta EE网站 的设计保持一致。鼓励开发者试用该新 UI 并提供反馈。",
+    "在 2025 年 11 月初批准创建的 Jakarta Agentic AI 1.0 规范近期发布了 M1 版本并上线了新的 项目网站 。 2026年8月版的Azul Payara 成为该规范的首个实现。",
+    "Spring Tools 5.4.0 发布 ，提供了缺陷修复、对 Eclipse IDE 2026-09 的 依赖升级 以及若干新特性，例如，新增验证检查和快速修复，将组合使用的 @Controller 与 @ResponseBody 注解替换为 @RestController ，采纳 Spring Modulith 的 @ApplicationModuleListener 注解，以及启用 Claude Code 插件以渲染项目的逻辑结构。更多细节见 发行说明 。",
+    "Open Liberty 26.0.0.9 GA版本发布 ，提供了缺陷修复、多个 CVE 的修复以及若干重要变更，例如，将 MCP Server 功能（ mcp-1.0 ）从实验性提升为 GA，实现了 OAuth 2.0 Protected Resource Metadata (RFC 9728) 规范，允许开发者在使用 OpenID Connect Client（ openidConnectClient-1.0 ）时启用受保护的资源元数据。",
+    "此次发布带来不兼容变更，MCP Server 功能名从 mcpServer-1.0 更改为 mcp-1.0 ，同时 server.xml 中的配置元素从 更改为 。",
+    "Micronaut 基金会发布了 Micronaut Framework 5.1.5 和 5.1.4 版本（发布新闻分别参见 此处 与 此处 ），它们分别基于 Micronaut Core 5.1.15 与 5.1.14。主要变更包括：Micronaut Data 的补丁更新，修复三项 CVE，以及将 Netty 升级到 4.2.18.Final 以解决若干 CVE。更多细节见版本 5.1.5 与 5.1.4 的发行说明。"
+  ],
+  "isExcerpt": true
+}
