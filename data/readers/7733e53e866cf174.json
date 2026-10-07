@@ -1,0 +1,19 @@
+{
+  "title": "MCP 终于无状态了，但状态并没有消失，只是被“甩”给了应用",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-07T00:00:00Z",
+  "url": "https://www.infoq.cn/article/MwQyLYzgSiD16x36k9Ef",
+  "paragraphs": [
+    "移除 initialize/initiated 握手及 Mcp-Session-Id 标头，支持标准负载均衡器直连；引入可选 server/discover 接口供客户端探查能力；AWS Lambda 成为天然适配的部署选项。",
+    "亚马逊云科技介绍了最新版模型上下文协议（MCP）规范如何改变远程 MCP 服务器的部署方式。新规范移除了协议层会话，允许请求到达任意可用的服务器实例。这项变更消除了协议对粘性会话和共享会话存储的要求，在简化水平扩展的同时，也将状态管理及其他职责转移给了周边基础设施。",
+    "更新后的 MCP 规范移除了 initialize 和 initialized 握手流程以及 Mcp-Session-Id 标头。因此，传统负载均衡器可以将每个请求独立路由到任意服务器实例。该规范还引入了可选的 server/discover 操作，供需要在调用工具之前了解服务器能力的客户端使用。",
+    "对于亚马逊云科技上的部署而言，这可以消除专门用于维护 MCP 协议会话的基础设施。AWS Architecture Blog 作者 Anand Komandooru、Steven DeVries 和 Haleh Najafzadeh 介绍了如何用传统请求路由取代具有会话亲和性的路由，并移除仅用于保存 MCP 协议状态的会话存储。他们还将 AWS Lambda 列为一种适合请求—响应模型的部署选项，因为该协议不再要求持久化会话连接。",
+    "协议状态与应用状态之间的区别也成为社区讨论的焦点。Michael Madsen 在 LinkedIn 上谈及该规范时，将这项变化总结为：",
+    "MRTR 取代了此前需要保持流连接的服务器发起型请求，允许通过 input_required 响应及后续请求完成多步骤交互。新的 Mcp-Method 和 Mcp-Name 标头支持网关路由和限流，W3C Trace Context 则支持分布式追踪。 ttlMs 和 cacheScope 提供缓存控制能力。",
+    "亚马逊云科技将这些变更映射至其面向智能体 AI 的 Well-Architected 指南，涵盖监控、追踪、安全和工具集成。流恢复能力也已被移除，因此客户端可能需要重试被中断的操作。对于会产生副作用的工具调用，这进一步凸显了幂等性的重要性。",
+    "早期实现工作表明，现有基础设施仍然需要一条过渡路径。Apify 的 MCP 服务器项目正在现有的有会话服务器之外实现无状态支持，并通过路由和一致性测试覆盖两个协议版本。",
+    "因此，对于仍需支持旧版 MCP 客户端的部署，迁移仍然十分重要。亚马逊云科技建议在网关处追踪协议版本，并在旧版流量完全消失之前保留会话基础设施。MCP 项目还制定了一项功能生命周期策略，为弃用功能提供明确的迁移期。",
+    "原文链接： https://www.infoq.com/news/2026/09/aws-stateless-mcp/"
+  ],
+  "isExcerpt": true
+}

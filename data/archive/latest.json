@@ -1,171 +1,160 @@
 {
-  "updatedAt": "2026-10-05T03:49:02.729886Z",
+  "updatedAt": "2026-10-07T04:02:28.280395Z",
   "items": [
     {
-      "title": "DataAgent - 快手大数据生产与分析的智能化探索之路｜QCon上海",
-      "summary": "",
+      "title": "从依赖专家到开发者自助：一家银行的平台文化转型",
+      "summary": "在银行中构建协作式平台文化。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/yVWAQGCZCzI838JESA1b",
-      "publishedAt": "2026-10-05T00:00:00Z",
-      "score": 21.81,
+      "url": "https://www.infoq.cn/article/seZbK4mHm40juM4vmaDy",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "score": 20.6,
       "language": "zh",
       "track": "developer",
-      "readerFile": "./data/readers/dbc2edc7adab80ae.json"
+      "readerFile": "./data/readers/dae82cf3b35f841f.json"
     },
     {
-      "title": "企业级 Agent Infra 架构实践：从安全沙箱到网络管控与身份治理｜QCon上海",
-      "summary": "",
+      "title": "一边是 WebGPU 视觉革命，一边是浏览器垄断争议：Canvas UI 发布 35 个组件",
+      "summary": "Canvas UI 发布 35 个 HTML-in-Canvas 组件，可在实时 DOM 上叠加 WebGL 和 WebGPU 特效。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/bLB8RQ6sd3ZGQts0D4tP",
-      "publishedAt": "2026-10-03T00:00:00Z",
-      "score": 21.41,
+      "url": "https://www.infoq.cn/article/6jvNkzZCm5mjr22zr04D",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "score": 20.6,
       "language": "zh",
       "track": "developer",
-      "readerFile": "./data/readers/2385e65f1e31a69d.json"
+      "readerFile": "./data/readers/8d75dd660bd26a80.json"
     },
     {
-      "title": "GPT-6要“吃掉”3D公司？这家公司不到2年ARR翻百倍，破1亿美元",
-      "summary": "专业3D模型反而更稀缺了",
+      "title": "OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵，数学家：读不过来",
+      "summary": "三位菲尔兹奖得主：不代表认可",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/10/501451.html",
-      "publishedAt": "2026-10-04T08:53:29Z",
-      "score": 21.05,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/17fb655922dd5d25.json"
-    },
-    {
-      "title": "openJiuwen X-Router自演进模型路由技术首发，昇腾亲和，Agent越跑越省，实测减少50+%Token消耗",
-      "summary": "让每一次请求选对模型，让每一次反馈都成为下一次更优、更省的选择",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/10/500098.html",
-      "publishedAt": "2026-10-02T15:34:15Z",
-      "score": 20.99,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/35ff85a10c1faefe.json"
-    },
-    {
-      "title": "Java新闻汇总：新的OpenJDK JEP、CDI 5.0、Spring、Open Liberty、RefactorFirst和ADK for Kotlin",
-      "summary": "本期Java新闻汇总主要包括：关于预编译（ahead-of-time compilation）与结构化并发（structured concurrency）的新JEP，Jakarta CDI 5.0与ADK for Kotlin 1.0的GA发布，2026年9月版Open Liberty，TornadoVM与RefactorFirst的小版本发布，Micronaut的维护性发布，以及Groovy 6.0与Gradle 9.8的首个发布候选版本。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/KXmob0H9RXKmJxIlcAaA",
-      "publishedAt": "2026-10-04T00:00:00Z",
-      "score": 20.61,
-      "language": "zh",
-      "track": "developer",
-      "readerFile": "./data/readers/ddaa101deedf612a.json"
-    },
-    {
-      "title": "Java新闻汇总：GraalVM、Jakarta Data、JNoSQL、Azul Payara、WildFly、Quarkus和Atmosphere",
-      "summary": "本期的Java新闻汇总涵盖了如下主要内容：Atmosphere 4.0的GA版本发布，GraalVM、Azul Payara与Quarkus的小版本发布，WildFly 41的维护性发布，Jakarta Data与Eclipse JNoSQL的里程碑发布，2026年9月版Open Liberty的beta发布，以及GlassFish 8.0.4的Docker镜像发布。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/TeFTUfEJdS3CqbpUQ97k",
-      "publishedAt": "2026-10-04T00:00:00Z",
-      "score": 20.61,
-      "language": "zh",
-      "track": "developer",
-      "readerFile": "./data/readers/3b6cb3a26947e556.json"
-    },
-    {
-      "title": "Agent 的记忆不在对话里：把企业数仓沉淀为可治理的共享语义记忆｜QCon上海",
-      "summary": "",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/M4mgbKf4RDv5AKTwQvFH",
-      "publishedAt": "2026-10-04T00:00:00Z",
-      "score": 20.61,
-      "language": "zh",
-      "track": "developer",
-      "readerFile": "./data/readers/79d754568cd66e19.json"
-    },
-    {
-      "title": "限时28天！OpenAI承诺没新功能就重置，网友：只想要Opus",
-      "summary": "有改进就体验，没改进就重置，横竖不亏。",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/10/501700.html",
-      "publishedAt": "2026-10-05T10:50:46Z",
+      "url": "https://www.qbitai.com/2026/10/501749.html",
+      "publishedAt": "2026-10-07T09:05:13Z",
       "score": 20.0,
       "language": "zh",
       "track": "regular",
-      "readerFile": "./data/readers/d0a21cd5ee938559.json"
+      "readerFile": "./data/readers/f09ac0179e826f3b.json"
     },
     {
-      "title": "Cloudflare 将 1.1.1.1 DNS 缓存的内存占用削减了 100TB",
-      "summary": "Cloudflare 重新设计了其 1.1.1.1 解析器所使用的 DNS 缓存的内存表示，将每个条目的基准占用空间减少了 56%，并在整个服务器集群中释放了约 100 TB 的工作集内存。",
+      "title": "MCP 终于无状态了，但状态并没有消失，只是被“甩”给了应用",
+      "summary": "无状态 MCP 取消亚马逊云科技服务器部署中的会话亲和性要求。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/XWJ8G6GaFmNL74xpSgjU",
+      "url": "https://www.infoq.cn/article/MwQyLYzgSiD16x36k9Ef",
+      "publishedAt": "2026-10-07T00:00:00Z",
+      "score": 19.8,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/7733e53e866cf174.json"
+    },
+    {
+      "title": "用 Harness 工程打造 SRE 可控的生产环境｜QCon上海",
+      "summary": "",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/WvTYmUCLl28HKFvWHpZ2",
+      "publishedAt": "2026-10-07T00:00:00Z",
+      "score": 19.8,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/b553604578ca30b1.json"
+    },
+    {
+      "title": "刚刚，诺贝尔物理奖一人独揽！",
+      "summary": "南极洲甚至有一座高地以他名字命名",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/501746.html",
+      "publishedAt": "2026-10-06T18:44:58Z",
+      "score": 19.54,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/6039fbb05f962b89.json"
+    },
+    {
+      "title": "不er，咋陶哲轩也成AI减速派了？？",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/501736.html",
+      "publishedAt": "2026-10-06T15:59:17Z",
+      "score": 19.4,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/32fad2b85e38b7dd.json"
+    },
+    {
+      "title": "OpenAI「疯狂28天」首日，这都发了些啥啊…",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/501726.html",
+      "publishedAt": "2026-10-06T14:45:40Z",
+      "score": 19.34,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/38e9f19da1062a81.json"
+    },
+    {
+      "title": "AI + SRE ≠ AISRE：AI 如何真正进入生产运维闭环｜QCon上海",
+      "summary": "",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/u70P77XPmsXmRBciu6fL",
+      "publishedAt": "2026-10-06T00:00:00Z",
+      "score": 18.6,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/3b6a6f6ff8f8516b.json"
+    },
+    {
+      "title": "刚刚，诺贝尔奖颁给光遗传学！",
+      "summary": "从绿藻里的光开关，到控制神经元",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/501720.html",
+      "publishedAt": "2026-10-05T18:37:01Z",
+      "score": 18.33,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/bf1c90c271e25946.json"
+    },
+    {
+      "title": "刚刚，Hinton发了首篇RSI论文",
+      "summary": "AI已经开始真正进入「造下一代AI」的流水线",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/501705.html",
+      "publishedAt": "2026-10-05T12:42:52Z",
+      "score": 18.03,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/d3da23348f9ba982.json"
+    },
+    {
+      "title": "C2PA 不够可信？苹果把照片签名塞进传感器，却把信任交给了自家云",
+      "summary": "Apple Reference Image 在传感器端为照片签名，将图像溯源的信任基础从 C2PA 转向传感器。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/8lQVsmY9e7zdJsKcfPzE",
       "publishedAt": "2026-10-05T00:00:00Z",
-      "score": 19.81,
+      "score": 17.4,
       "language": "zh",
       "track": "developer",
-      "readerFile": "./data/readers/2fdf906ecb793642.json"
+      "readerFile": "./data/readers/512602275b6ad39c.json"
     },
     {
-      "title": "AI算力硬合作，马斯克还是更相信中国制造",
-      "summary": "一种混搭的可能：英特尔继续供先进工艺，即前端用14A；后端再接台积电，来补工厂运营、良率、封装这些能力。",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/10/501605.html",
-      "publishedAt": "2026-10-04T14:12:22Z",
-      "score": 19.32,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/d8195ce58ea0db28.json"
-    },
-    {
-      "title": "最火AI岗位FDE：月薪5万，都干这些…",
-      "summary": "什么是FDE？它会一直存在吗？",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/10/501506.html",
-      "publishedAt": "2026-10-04T14:05:35Z",
-      "score": 19.31,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/5692f92354392dc5.json"
-    },
-    {
-      "title": "丘成桐新论文致谢了GPT和Claude",
-      "summary": "44年前被亲自列入问题清单",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/10/499991.html",
-      "publishedAt": "2026-10-02T15:27:03Z",
-      "score": 18.98,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/4d23593880a57110.json"
-    },
-    {
-      "title": "DeepSeek扩招！弹性计算团队大量HC，尤其需要资深工程师",
-      "summary": "岗位JD甩了篇技术报告",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/10/501381.html",
-      "publishedAt": "2026-10-03T15:54:43Z",
-      "score": 18.2,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/44d7715d2cfab269.json"
-    },
-    {
-      "title": "A model guide for the GPT-6 family",
-      "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.",
+      "title": "Sharing AI progress in mathematics",
+      "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
       "source": "OpenAI",
-      "url": "https://openai.com/index/practical-guide-building-gpt-6",
-      "publishedAt": "2026-10-02T16:15:00Z",
-      "score": 24.02,
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "publishedAt": "2026-10-06T12:00:00Z",
+      "score": 26.2,
       "language": "en",
       "track": "regular",
-      "readerFile": "./data/readers/c38af6e5cae43e23.json"
+      "readerFile": "./data/readers/00427e47df5ef306.json"
     },
     {
-      "title": "Constraints that make developers faster",
-      "summary": "Ryan chats with Julien Verlaguet, CEO at Skip Labs, about finding the balance between human tolerance and tooling constraints, the spectrum of typed programming languages, and building cost-effective tooling for AI agents.",
-      "source": "Stack Overflow Blog",
-      "url": "https://stackoverflow.blog/2026/10/02/constraints-that-make-developers-faster/",
-      "publishedAt": "2026-10-02T07:40:00Z",
-      "score": 18.59,
+      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+      "summary": "",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+      "publishedAt": "2026-10-06T19:57:04Z",
+      "score": 24.6,
       "language": "en",
-      "track": "developer",
-      "readerFile": "./data/readers/331d06e43722099c.json"
+      "track": "regular",
+      "readerFile": "./data/readers/c11a83f73b42d756.json"
     }
   ],
-  "background": "./assets/backgrounds/scientific-archive.png"
+  "background": "./assets/backgrounds/paper-signal.png"
 }

@@ -1,0 +1,23 @@
+{
+  "title": "一边是 WebGPU 视觉革命，一边是浏览器垄断争议：Canvas UI 发布 35 个组件",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-06T00:00:00Z",
+  "url": "https://www.infoq.cn/article/6jvNkzZCm5mjr22zr04D",
+  "paragraphs": [
+    "Canvas UI 发布 35 个 HTML-in-Canvas 组件，可在实时 DOM 上叠加 WebGL 和 WebGPU 特效。",
+    "Canvas UI 是首个基于 HTML-in-Canvas API 构建的开源 UI 组件库，支持 GPU 加速的实时 DOM 渲染与着色器特效。",
+    "提供 35 个跨框架组件，均含 WebGL（GLSL）和 WebGPU（WGSL）双后端实现；采用 drawElementImage 捕获可交互 DOM 并保留可访问性；以源码形式通过 shadcn 注册表分发。",
+    "Canvas UI 是由 React Bits 作者 David Haz 推出的一款开源组件库。它是首个基于实验性 HTML-in-Canvas API 构建的组件库，可以在真实、可交互的页面内容上运行 GPU 特效。",
+    "该组件库提供了 35 个组件 ，包括由指针驱动的流体、火焰、玻璃透镜、ASCII 滤镜、VHS 颗粒和粒子显现效果。每种效果都提供使用 GLSL 实现的 WebGL 版本，以及通过 vgpu 使用 WGSL 实现的 WebGPU 版本 ，并为 React、Solid、Preact、Vue 和 Svelte 提供封装，同时还支持无依赖的原生 TypeScript。",
+    "大多数组件并不是绘制一张静态位图，而是使用 Chrome 的 html-in-canvas API，在 Canvas 中布局实时 DOM，通过 drawElementImage 捕获内容，将其上传为纹理，再利用着色器进行变形处理。文本仍然可以选择，链接依旧能够点击，内容也会保留在 无障碍树 中。这些组件并非以软件包形式发布，而是通过一个兼容 shadcn 的注册表，以源代码形式分发：",
+    "要获得完整体验，需要在 Chrome 中启用 canvas-draw-element 标志，或者使用一个 源试用 令牌。该源试用从 Chrome 148 持续到 Chrome 150，并且令牌只能绑定到一个域名。在其他环境中， html-in-canvas 特效会回退为普通 GPU 叠加层，或者保持被包裹内容的原样渲染；3D 对象组件则可以在所有环境中运行。",
+    "由于代码会被直接复制到项目仓库中，升级时需要重新运行安装命令，并处理本地修改。切换渲染器通常只需将已安装的文件替换为注册表中带有 -webgpu 后缀的版本，同时添加 vgpu 和 @webgpu/types 。项目 文档 还指出，Chrome 150 对 texElementImage2D 和 copyElementImageToTexture 的修改不需要迁移，因为内容捕获通过 2D API 完成，纹理上传则使用标准的 texImage2D 或 copyExternalImageToTexture 。",
+    "shadcn 称这是他们见过的 最令人印象深刻的注册表之一 ， Chrome for Developers 账号也表示，很高兴看到 html-in-canvas 为新框架赋能。Flavio Copes 在一篇 详细拆解文章 中称赞了那些并不华丽但十分扎实的工程实现：Liquid 组件离开屏幕可视区域时，会通过 IntersectionObserver 停止动画循环；它会遵循 prefers-reduced-motion 设置，并在组件卸载时释放纹理、程序和事件监听器。他建议使用一个足够亮眼的特效，而不是同时堆上六个，并避免在仪表盘、结账流程和文档网站中使用这些效果。",
+    "在 Hacker News 上，一名评论者看到演示页面中的提示横幅后，对这种仅限 Google 浏览器使用的能力表示怀疑：",
+    "标准化流程要求先有实现，之后才能制定标准。WHATWG 相关议题中最近的评论分别来自 Jake Archibald（Mozilla）和 Anne van Kesteren（Apple）。这不是 Google 单方面推动的项目。",
+    "Paper Shaders 提供从 npm 安装的零依赖 Canvas 着色器，但这些着色器只能以纹理形式位于内容后方或周围。同一作者开发的 React Bits 则直接为 DOM 添加动画。Canvas UI 是唯一将页面本身作为着色器输入的方案，这也正是它依赖 Safari 和 Firefox 尚未实现的功能的原因。",
+    "该项目采用 MIT 许可证加 Commons Clause，允许商业使用，但不允许转售这些组件。 代码仓库 的 Star 数已经超过 4600，组件注册表也已 支持 MCP ，允许智能助手通过 shadcn MCP 服务器浏览并安装组件。",
+    "原文链接： https://www.infoq.com/news/2026/09/canvas-ui-webgl/"
+  ],
+  "isExcerpt": true
+}
