@@ -1,0 +1,23 @@
+{
+  "title": "Claude新模型发布！跑分暴击GPT-6 Luna，价格比梁文谷还便宜，OpenAI只能送重置卡挽尊",
+  "source": "量子位",
+  "publishedAt": "2026-10-08T09:04:00Z",
+  "url": "https://www.qbitai.com/2026/10/501832.html",
+  "paragraphs": [
+    "单论跑分，直接超越两大前“斩杀线”DeepSeek V4.1Flash和GLM-5.3-Flash，成为新的小模型守门员。",
+    "不过Haiku5.5的价格还有条件，提示词在10万token以内的请求（占Haiku 4.5请求量的90%），输入输出价格直接砍90%；超过10万token的部分，只砍50%。",
+    "这样一来，除了缓存命中的输入这一项，Haiku 5.5的价格也比DeepSeek-V4.1 Flash便宜了。",
+    "至此Opus 5.5管复杂推理、Sonnet 5.5管通用执行、Haiku 5.5管跑量和速度，群贤毕至，只差Fable了。",
+    "看OSWorld 2.1（测agent操作真实电脑完成多步任务）：Low档42.0%准确率、单次成本$0.07；Max档72.4%、$0.61。Haiku 4.5只有Max档15.7%、$1.45，",
+    "GDPval-AA v2.1（测44个职业的真实专业工作）也是类似曲线：Low档Elo 1125、$0.01；Max档1620、$0.87。4.5的Max档只有735、$0.24。",
+    "不过Haiku 5.5换了tokenizer（和Sonnet 5.5、Opus 5.5同款），同样任务会多耗费token，所以实际省的钱比标价折扣少亿点点。",
+    "Terminal-Bench 4.0上Haiku 5.5拿39.2%，Sonnet 5.5拿70.6%。复杂多步编码、跨文件重构、长周期自主规划方面差距非常清楚。",
+    "比如Cognition的Devin用Opus 5.5做主模型、Haiku 5.5做子智能体，FrontierCode组合跑到了66.2%，比两个模型各自单跑都高。",
+    "temperature、top_p、top_k全部锁定默认值，依赖采样参数做创意控制或多样化生成的应用要改逻辑。",
+    "计算机操作工具版本也更新了，从computer_20250124换成computer_toolset_20260801，接口格式和返回结构可能都不同。",
+    "Sonnet 5.5的缓存读取从$0.20/M降到$0.10/M，Anthropic称大多数agent任务因此成本降约20%。",
+    "Max和Team订阅用户本周起可以领取API额度，Max 5x每月$100，Max 20x每月$200，Team最多$500/月在团队内共享。",
+    "参考链接： [1] https://www.anthropic.com/claude-haiku-5-5 [2] https://x.com/AI_Screening/status/2107906044915749274?s=20"
+  ],
+  "isExcerpt": true
+}

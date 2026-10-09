@@ -1,0 +1,25 @@
+{
+  "title": "为迎接 iPhone Duo，iOS 开发者需要对应用做出哪些调整",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-07T00:00:00Z",
+  "url": "https://www.infoq.cn/article/CFbVqLXwQvbbhiTMy83e",
+  "paragraphs": [
+    "iPhone Duo 新形态要求 iOS 应用彻底适配多屏、多态、多尺寸场景，Xcode 27.1 是构建兼容应用的必要工具链。",
+    "需弃用硬编码屏幕尺寸，改用容器相对布局；必须测试外屏/内屏/部分折叠三类形态及各方向旋转响应；旧版 Xcode 构建应用无法突破状态栏与摄像头区域限制。",
+    "随着折叠屏 iPhone Duo 即将推出，iOS 开发者需要 调整自己的应用，以确保其能够正常运行 ，适配这款新设备的外屏、更大的内屏以及部分折叠状态。开发者还需要考虑导航和工具栏的变化、摄像头行为以及新增的保留区域。",
+    "为了充分利用 iPhone Duo 上所有可用的屏幕空间，开发者应使用 Xcode 27.1。使用旧版 Xcode 构建的应用无法延伸至状态栏和摄像头区域下方。",
+    "由于 iPhone Duo 支持多种屏幕尺寸、布局和方向，你的应用需要从容适应所有这些情况。请检查应用在外屏和内屏上的显示效果，以及设备闭合、展开或部分折叠时的表现。在每种形态下旋转 iPhone Duo，观察应用布局如何响应。",
+    "为了让应用在 iPhone Duo 上正常运行，开发者应避免依赖固定的 iPhone 屏幕尺寸，例如 UIScreen.main.bounds 。视图应改为相对于其容器确定尺寸。Apple 建议使用标准布局容器，包括 SwiftUI 堆栈、导航视图和分栏视图、标准标签栏以及 UIKit Auto Layout。这种方式可以确保所有视图根据可用空间的变化自动适配，无论设备正在使用外屏、完全展开的内屏，还是带有摄像头遮挡的部分折叠形态。",
+    "此外，Apple 也不建议开发者根据 userInterfaceIdiom 或 UIInterfaceOrientation 做出布局决策。应用应改为依赖尺寸类，即 观察 horizontalSizeClass 和 verticalSizeClass 的变化 ，使应用 UI 适应不同尺寸。",
+    "iPhone Duo UI 的一项重大变化是工具栏和导航栏的位置：在某些设备形态下，它们可能垂直显示在屏幕侧边。使用 UIToolbar 、 UINavigationBar 或 UITabBar 创建自定义导航或工具栏的应用，可能无法正确适配。在这种情况下，Apple 建议使用标准导航和工具栏 API：在 SwiftUI 中为 NavigationStack 或 NavigationSplitView 添加 toolbar(content:) 修饰器；在 UIKit 中，则为已添加到导航控制器的视图控制器设置工具栏项目。",
+    "如前所述，iPhone Duo 还引入了新的保留区域。这些区域对应将屏幕分隔为不同部分的折痕，以及摄像头等硬件组件遮挡应用内容的区域。",
+    "框架提供的视图和容器会自动进行调整，以避开折痕或内屏上的前置摄像头，但你的自定义视图需要采用灵活的方法来识别分隔区域和遮挡区域。[…] 内屏前置摄像头启用时可能会遮挡视图，而外屏前置摄像头始终会遮挡视图。",
+    "开发者可以在 SwiftUI 中使用 reservedRegions(kind:options:layoutDirectionBehavior:) ，在 UIKit 中使用 reservedRegions(kind:options:) ，获取所有保留区域。",
+    "最后，开发者还应考虑到，iPhone Duo 可以通过外屏摄像头、内屏摄像头和后置摄像头拍摄照片与视频。打开、闭合或旋转设备都可能改变当前启用的摄像头。开发者可以 根据摄像头朝向选择合适的摄像头 。",
+    "应用开发者 Steve Troughton-Smith 在 Mastodon 上对 Apple 的公告作出了批评性回应，称“ 这就像一个全新平台突然发布，却只提前一个月通知 ”。用户 David 也表达了类似看法，他“想知道未来几个月究竟会有多少应用愿意适配 Duo”。",
+    "iOS Dev Weekly 编辑 Juan Marin 指出， 这并不是 iOS 开发者第一次面对类似要求 ：",
+    "漂亮设备的问题在于，它们到来时总会带着作业，而作业永远是我们的。[…] 每一次，Apple 都提前多年告诉我们应该如何准备。每一次，我们中的大多数人却都是事后才开始行动。",
+    "不过，他也承认，大家早已知道“ UIScreen.main.bounds 是一个只等某款设备出现便会暴露的 Bug，而现在，这款设备终于来了”。"
+  ],
+  "isExcerpt": true
+}

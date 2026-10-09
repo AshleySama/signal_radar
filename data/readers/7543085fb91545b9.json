@@ -1,0 +1,18 @@
+{
+  "title": "Kimi 现代高速开源治理的 AI Native 实践｜QCon上海",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-09T00:00:00Z",
+  "url": "https://www.infoq.cn/article/832RV3o8ireEdJpO9H4v",
+  "paragraphs": [
+    "QCon 上海站聚焦 AI Native 时代工程落地，覆盖 AI Infra、Agent Runtime、Loop Engineering 等九大关键技术方向，汇集百余实战案例。",
+    "AI Native 架构需重构系统边界与协作范式；Agent Runtime 是生产级智能体的基础设施底座；Loop Engineering 强调人机协同闭环的工程化度量与迭代。",
+    "将于 10 月 22 日—24 日 举办，聚焦 Harness AI 时代的工程实践，围绕 AI Native 架构、Agent Runtime、AI Infra、Data Systems、Agent 安全与可观测、Loop Engineering、Vibe Coding、具身智能与世界模型、端云协同等前沿技术方向，邀请全球技术社区与产业一线的实践者，系统性分享前沿洞察与实战经验，共同探索 AI 从能力到系统、从实验到生产的真实路径。",
+    "在这一背景下， 2026 年 QCon 全球软件开发大会大会 · 上海站 正式启动。本次大会将于 10 月 22 日—24 日 举办，聚焦 Harness AI 时代的工程实践，围绕 AI Native 架构、Agent Runtime、AI Infra、Data Systems、Agent 安全与可观测、Loop Engineering、Vibe Coding、具身智能与世界模型、端云协同等前沿技术方向，邀请全球技术社区与产业一线的实践者，系统性分享前沿洞察与实战经验，共同探索 AI 从能力到系统、从实验到生产的真实路径。",
+    "月之暗面研发工程师/开发者关系负责人唐飞虎已确认出席 “ AI 驱动的软件工程 ” 专题，并发表题为 《 Kimi 现代高速开源治理的 AI Native 实践 》 的主题分享。AI Coding 让代码生产速度大幅提升，但 Issue、PR、合规、安全等治理环节仍依赖人工，逐渐成为研发效率的新瓶颈。",
+    "她本次分享将结合 Kimi Agent Harness 在开源场景的实践，介绍开源治理智能体 Mira 如何把 AI 从“发现问题”推进到“解决问题”：自动完成 Issue 分诊、PR Review、依赖与许可证扫描、安全漏洞响应，并通过渐进式授权、人机协同和全链路审计，让 Agent 真正进入生产治理流程。",
+    "分享将重点拆解从通用 Agent 到垂直治理 Agent 的工程实践，以及如何解决“敢不敢让 AI 动手”这一核心问题，并通过真实治理数据展示 Agent 对响应效率、维护者负担和治理质量的实际提升，探讨 AI Native 时代开源治理的新范式。",
+    "解决 Agent 生产落地最大的信任问题：通过渐进式授权 + 人机协同 + 全链路审计，让 AI “敢做事、做错可追溯”",
+    "除此之外，本次大会还策划了 Loop Engineering 、 千行百业 Agent 创新实践 、 Agent 自主进化：从记忆到持续学习 、 Agent as a Service 、 Vibe Coding 时代的新质量债 、 理性驾驭 AI 的 SRE 可靠性工程 、 金融 AI Native工程实践：从研发提效到业务破局 、 AI Infra：算力效率决定规模化落地 、 AI Native 架构 等 20 个专题论坛，届时将有来自不同行业、不同领域、不同企业的 100+资深专家在现场带来前沿技术洞察和一线实践经验。"
+  ],
+  "isExcerpt": true
+}

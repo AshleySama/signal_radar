@@ -1,0 +1,22 @@
+{
+  "title": "不等Gemini 4了！谷歌发布办公Agent，支持调用Claude",
+  "source": "量子位",
+  "publishedAt": "2026-10-09T08:16:56Z",
+  "url": "https://www.qbitai.com/2026/10/502083.html",
+  "paragraphs": [
+    "今天凌晨，Google Cloud发布了一篇名为《Welcome to Gemini at Work 2026： Introducing the Gemini agent》的长文，由Google Cloud CEO Thomas Kurian亲自署名，集中介绍了Gemini在企业Agent领域的一系列更新。",
+    "它可以帮你查资料、写邮件、做PPT、分析数据、编写和运行代码，还能跨应用调用工具，自行规划任务，必要时召集多个子Agent一起干活。",
+    "它可以自己搜索和整理资料、分析相关数据，在Google Sheets中建立财务模型，再调用Google Slides生成一份演示文稿。",
+    "谷歌现在允许企业为Gemini创建一个长期存在、具有明确工作职责的身份，让它像团队中的其他成员一样参与日常协作。",
+    "而且AI同事配置了独立的Google Workspace账号、企业邮箱、日历、Google Drive存储空间……还能出现在公司的通讯录里。",
+    "首先上手门槛约等于无，其次创建完成后，团队成员便可以像对待普通同事一样，邀请它加入Google Chat群聊，或者在文档中@它。",
+    "Gemini Agent会从阅读过的文档、与人的交流以及同其他Agent的协作中积累知识，并将其组织成结构化知识库。",
+    "这里还有个细节，Gemini Agent甚至可以 自己编写Skills ，把工作过程中学到的方法保存下来，供后续任务使用。",
+    "现阶段，它可以在Google自家的Gemini系列，以及Anthropic的Claude系列模型之间进行动态选择，未来还计划支持更多闭源和开源模型。",
+    "Dots拥有独立的云端电脑，支持7×24小时运行，能够记住用户的长期目标和工作习惯，还可以连接超过4000个应用。",
+    "OpenAI也在探索面向企业岗位的专业Dots，让Agent拥有独立身份和职责，不过这部分目前主要处于早期企业试点阶段。",
+    "Gemini Agent可以利用Gmail、Docs、Sheets、Calendar等应用中的业务上下文，理解员工正在做什么。",
+    "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026/"
+  ],
+  "isExcerpt": true
+}
