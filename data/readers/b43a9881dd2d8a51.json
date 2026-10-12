@@ -1,0 +1,23 @@
+{
+  "title": "用不着Ctrl+F了！全新AI论文工具，帮你在原文献里海里捞针",
+  "source": "量子位",
+  "publishedAt": "2026-10-11T17:04:31Z",
+  "url": "https://www.qbitai.com/2026/10/502644.html",
+  "paragraphs": [
+    "除了能自动生成一版带参考文献的初稿以外，Open Academic Paper Gen还有个你必须关注的点——",
+    "但问题在于，有时候观点、论文是真的，可一旦把（AI给的）“观点”放回全文里，结合上下文语境去看，就会发现，作者可能压根不是那个意思。",
+    "所以，为了解决这个问题，Open Academic Paper Gen在拿到文献全文之后，会进一步定位相关段落，判断这篇文献到底能不能支撑对应观点。",
+    "总体来看，Open Academic Paper Gen是一套生成论文初稿的多智能体工作流，把从选题到导出的过程，拆成了九个阶段：",
+    "它就会从这个主题中拆出具体的研究问题，再生成对应的中英文关键词，去OpenAlex、Crossref、Semantic Scholar和arXiv里搜索论文。",
+    "搜回来的文献会进一步去重、评分，再由模型筛选相关性。遇到相关性较高的论文，还会顺着它的参考文献，以及后来引用它的研究继续找。",
+    "Open Academic Paper Gen会从问题、方法、数据和视角几个维度评估切入点，指出文献池中最接近的已有工作，并给出审稿人可能提出的质疑。",
+    "初稿写完，再进入引用核验和模拟审稿，最后可以导出 Markdown 或 LaTeX，以及 RIS、BibTeX 等参考文献格式。",
+    "在具体的运行方式上，默认模式下Open Academic Paper Gen会在主要阶段停下来，等你审查、编辑、确认后再往下走。",
+    "目前项目支持OpenAI和智谱GLM，但论点核验、无引用陈述检查和模拟审稿这几个环节，仍然需要 OpenAI API Key。",
+    "所以，整体看下来，比起“一键写完论文”，Open Academic Paper Gen把文献整理、证据定位和引用自查串起来的思路的确很灵性。",
+    "尤其是面对 AI 写出来的观点和论据，总觉得“好像有道理，但又不敢直接信”的时候，能把对应原文找出来，至少多了一个回去核实的抓手。",
+    "By the way，这个项目来自个人开发者 猫叔 。除了Open Academic Paper Gen，他此前还发布过AI编剧、AI研究等多个项目。",
+    "参考链接 [1]https://github.com/mmlong818/open-academic-paper-gen"
+  ],
+  "isExcerpt": true
+}

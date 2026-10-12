@@ -1,0 +1,15 @@
+{
+  "title": "智谱新模型，490 tokens/s！",
+  "source": "量子位",
+  "publishedAt": "2026-10-12T10:37:04Z",
+  "url": "https://www.qbitai.com/2026/10/502649.html",
+  "paragraphs": [
+    "而按照Artificial Analysis的测速，GLM-5.3-Flash在Z.ai API上的输出速度约为60 tokens/s。",
+    "在这份目录中，GLM-5.3-Highspeed上下文窗口为100万token，最大生成token上限为131,072，约128k；还划分了low、high、max三档思考强度配置。",
+    "此外，也有网友在reddit上讨论过这款新模型，并猜测它是否与OpenCode上的匿名模型 Omen Alpha 有关。",
+    "有人说它就是GLM-5.3-Highspeed，也有人猜GLM-5.3-Omni、GLM-5.4-Flash。",
+    "今年5月，智谱推出了 GLM-5.1-highspeed ，模型输出速度为400tokens/s，在当时基本也是刷新了全球大模型厂商API的速度上限。",
+    "这回的GLM-5.3-Highspeed如果真能达到490 TPS的水平，那对于长程任务来说，速度也是相当可观的了。"
+  ],
+  "isExcerpt": true
+}

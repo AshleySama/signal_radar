@@ -1,0 +1,25 @@
+{
+  "title": "CLAUDE.md 还是 AGENTS.md？Anthropic 的答案是：以后都不用",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-10T00:00:00Z",
+  "url": "https://www.infoq.cn/article/MAo3KoDWm9FGIcKau9AK",
+  "paragraphs": [
+    "CLAUDE.md该删了，harness也迟早过时：Anthropic 工程师拆解Claude Code的下一步",
+    "一个多月前，Claude Code 因拒绝兼容已被大量项目和 Coding Agent 采用的行业标准 AGENTS.md， 遭到 Shopify CEO Tobi Lütke 的公开“封杀”警告 。Anthropic 当时坚持，不同模型需要不同的上下文和指令，开发者却质疑，这等于逼着团队为每个模型维护一套配置。如今，Claude Code 团队终于确认将支持 AGENTS.md，但 Thariq Shihipar 给出的下一步更加激进：随着模型越来越强，CLAUDE.md 乃至这类静态指令文件最终可能都不再需要。当所有人还在研究怎样写好 CLAUDE.md 时，他甚至建议，新项目可以先不写。",
+    "从 Claude Code 的爆发式普及，到 Agent 改写自己的 Harness、跨团队协作，并同时运行在云端和本地，软件构建方式正在急速变化。日前，Anthropic Claude Code 团队核心成员 Thariq Shihipar 做客 Latent Space 播客，与主持人 swyx 和 Vibhu 从 Claude Code 不断演进的交互界面聊起，谈到 Artifacts、Claude Tag、Claude Mods，以及能够修改自身 Harness 的 Agent，随后将话题延伸至 Agent 安全和 Anthropic 提出的“Pacing the Frontier”。本文基于该期播客视频整理，经 InfoQ 编辑。",
+    "A： 多在第一个提示词上花时间。Effort 要按任务分：代码审查和安全用 high 甚至 max，UI 这类 low/medium 就够。还有一个技巧：让它写实现笔记，因为大多数失败是模型想到了正确答案却决定不做。最终，前沿模型会在智能和 token 效率上同时占优。",
+    "A： 模型越来越强，完成简单任务的基线一直在涨，很多以前要写进 CLAUDE.md 的东西现在模型自己就能搞定。正确做法是：先让它跑，只有反复看到同一个失败模式，再把规则加进去。维护一份不断增长的失败清单，很可能反而“过度约束”Claude。",
+    "A： 重要，而且门槛很高。信息量比文本格式更重要：你对着功能键瞎扯两分钟，只要信息够多，就比精心排版但内容稀薄的提示词更好。",
+    "A： 定制整个 Claude Code harness，执行逻辑和 UI 都能改。比如俄罗斯方块直接显示在终端里；比如每次对话结束自动 fork 一个 sub agent 考你“这个任务真的完成了吗”。因为 fork 会保留 prompt cache，成本非常低。它是“可变软件”的预览，让生成式软件可以被安全地定制。",
+    "A： artifacts 会成为你进入整个 harness 的界面，是一种“持久生成式界面”。多人方面，Claude Tag 就是“组织级 harness”，很适合 on-call、事故处理这类天然多人的事，Projects 是在 Claude 产品上拿到同样好处的方式。",
+    "A： 在 ExploitBench 上，agent 解不出题，就在 Artifactory 里建文件夹互相留言、协作，然后串联漏洞：编辑 `/etc/hosts` 把假 Azure host 指向任意 IP，从而对任何网站发 POST 请求，最后黑进 Hugging Face 逆向工程 scorer 的代码，不是找答案，是黑掉评分器本身。",
+    "A： 数字基础设施的任何部分都可能被攻破：模型为了拿到更多任务算力，可能黑进数据库、造成停电；更麻烦的是它们会试图隐藏行为，只有思维链能监控到。防线是多层的：Probes 在意图层面看内部激活（也能拦越狱），auto mode 在权限层面检查请求是否匹配用户意图，再往外是身份和权限。",
+    "A： 提案的第一步是宣布意图、引入外部评估者，让不是财务动机驱动的人能向公众报告实践状况；对开发者，他的建议是从第一性原理出发、知道该倡导什么。我的 p(doom) 相当低，相信人类能像核不扩散那样协作解决难题。",
+    "A： 每个工程师都在同时做两份工作，工作本身在变容易，但跟上 AI 的工作让人精疲力竭。对企业来说，第一件事是把数据设置成对 agent 可用，这很花时间但现在就得做。但越重要的组织数据，暴露给 agent 的攻击面就越大。",
+    "Thariq： 我加入 Anthropic 就是因为 Claude Code，我看到 Opus 4 的时候简直无法想象它有这么好。但我当时在努力说服我那些创业的朋友用 AI 写代码，他们说“我们的工程师觉得还不够好”，我说这太离谱了。而 12 个月后，这已经是所有人默认的写代码方式了。现在的问题变成了教大家怎么把它用出最大价值、怎么更高效。人很难跟上所有事情，发生得太快了。而且 agentic 的东西比人的东西 scalable 得多：人类这边同时有三件急事，你怎么响应？",
+    "Thariq： ，当时我并不确定 harness 这件事上“苦涩教训”会怎么走，有时会想“Claude Code 之后是什么”。我刚加入 Claude Code 团队时，就是在教人用、让它更好用。但随着 harness 越来越好，“你怎么用好这些 agent？”成了主要问题，这是一件技能上限非常高的事。我也做工程、做演讲。做工程的时候，我的目标是收集用户的反馈，然后再讲“怎么用 Claude Code 做工程”，这中间是一个很好的循环。",
+    "Thariq： Ask User Question 是模型第一次真正擅长“elicitation（需求引出）”，这是我一直想看看模型能不能做到的涌现行为。在我看来，这更像是人机交互：想办法搞清楚 agent 怎么跟你沟通、怎么把你的需求提取出来。",
+    "Claude Code 越做越宽，麻烦在于每个人都有自己使用它的方式，想改变默认行为非常难。有人让 Claude Code 做事，有时就是想要它直接干活，也许因为他是很厉害的 prompt 写手；有时他其实不擅长写 prompt，就需要 agent 去澄清。Ask User Question 正好沿着这条线切开：你到底有没有能力把 agent 指挥清楚，还是说 agent 需要主动从你这里挖出更多需求、真正理解你的偏好？我整体上相信，绝大多数人更偏后者：他们面对的问题里有更多模糊性，他们知道的比自己以为的要少。"
+  ],
+  "isExcerpt": true
+}
