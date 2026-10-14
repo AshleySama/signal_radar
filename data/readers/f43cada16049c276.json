@@ -1,0 +1,23 @@
+{
+  "title": "Cursor 使用基于 S3 的 WAL，将 Git 存储扩展到每秒 300 多次 Push",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-13T00:00:00Z",
+  "url": "https://www.infoq.cn/article/QPf1GXbpDxhcCHHP4xfo",
+  "paragraphs": [
+    "Cursor 开发的 Git 存储架构 Continuity，可以用 S3 上的预写日志（Write-Ahead Log，WAL）作为数据的最终依据，而不再依靠副本之间的协调来保证一致性。在合成测试中，Cursor 在最多使用 100 个副本时，读取能力能够随副本数量线性增长；使用 S3 Express One Zone 时，每秒处理的 Push 请求超过 300 次。这套架构既能应对 CI 负载繁重的大型代码仓库，也能支持 Coding Agent 创建的大量小型仓库。",
+    "Cursor 提出 Continuity 架构，以 S3 WAL 为单一事实来源替代多副本协调，实现 Git 存储强一致性与线性可扩展读取。",
+    "采用 WAL 持久化先行策略，Push 确认前确保数据已落盘；批处理优化 S3 PUT 延迟；读吞吐随副本数线性增长，实测超 300 QPS（S3 Express One Zone）。",
+    "Cursor 开发的 Git 存储架构 Continuity ，可以用 S3 上的预写日志（Write-Ahead Log，WAL）作为数据的最终依据，而不再依靠副本之间的协调来保证一致性。在合成测试中，Cursor 在最多使用 100 个副本时，读取能力能够随副本数量线性增长；使用 S3 Express One Zone 时，每秒处理的 Push 请求超过 300 次。这套架构既能应对 CI 负载繁重的大型代码仓库，也能支持 Coding Agent 创建的大量小型仓库。",
+    "要支撑大规模 Git 托管，离不开本地 Git 仓库和 packfile（打包文件）。 GitHub 的 Spokes 架构 通过维护多个 NVMe 副本来提供存储能力，并使用 三阶段提交 更新 Git 引用。各副本由此保持同步，读取请求也可以交给任意一个副本处理。不过，副本越多，协调操作带来的开销就越大。",
+    "Continuity 采用了不同的思路：将 S3 上的 WAL 作为持久化存储的事实来源。Cursor 会把 Push 上传的数据写入 S3，并将相应的引用更新记录到 WAL 中。只有所需数据完成持久化后，系统才会确认 Push 成功，确保请求得到确认时，数据已经可靠存储。此外，Cursor 还会对操作进行批处理，降低 S3 PUT 请求的延迟对吞吐量的影响。",
+    "Cursor 工程师 Vicent Martí 表示，本地 NVMe 上的 Git 仓库只是温缓存，并非权威副本。系统通过 Rendezvous Hashing（会合哈希）选择优先处理请求的节点，同时利用 S3 上的原子比较并交换（Compare-and-Swap）操作，让任意服务器都能接受 Push 请求。如果本地没有相应的仓库副本，系统也可以根据 WAL 重新生成仓库。",
+    "WAL 更新通过 UDP Gossip 协议在节点间传播，系统则通过带条件的 S3 读取来校验副本状态。Cursor 称，这类读取的平均耗时不到 10 毫秒。即使 Gossip 消息丢失，也不会影响数据正确性，因为 S3 始终是事实来源。",
+    "这种存储设计也引发了与数据库架构的比较。高级软件工程师 Maksim Al Dandan 在 相关讨论 中指出，Continuity 相当于把 Git 存储当作数据库来设计。在这一思路下，Push 的一致性保证、Force Push 涉及的事务，以及时间点恢复（Point-in-Time Recovery）等问题，都值得进一步关注。",
+    "Casey Lee 是 Liatrio 的 CTO，曾在 AWS 工作。他在 相关评论 中强调了这一架构转变：S3 中的 WAL 才是事实来源，本地 NVMe 只负责缓存。Lee 同时指出，Cursor 公布的性能数据尚未经过独立验证。",
+    "Continuity 也改变了副本扩展和 Git 压缩的处理方式。Cursor 表示，单体仓库（monorepo）可以为 CI 工作负载扩展到数百个副本；对于暂时没有活动的仓库，则可以等到需要时再生成本地副本。Git 压缩只由主副本执行，其他副本直接从 S3 下载压缩后生成的 packfile。这样做减少了重复的 CPU 开销，但会增加带宽消耗。",
+    "在使用 Cursor 自己的 everysphere 单体仓库进行的合成测试中，使用 S3 Standard 时，系统每秒最多可处理 120 次 Push；换用 S3 Express One Zone 后，每秒处理量超过 300 次。当吞吐量进一步提高时，Git 压缩成为新的性能瓶颈。Cursor 表示，测试中的 Push 操作满足线性一致性要求，且数据在请求得到确认前就已持久化到外部存储；Clone 操作也始终保持一致性。",
+    "Continuity 将一致性保障的核心从副本层转移到了持久化对象存储。它不再要求多个副本通过同步协调来维持一致状态，而是让各个本地仓库独立地向 S3 中记录的状态收敛。相应地，系统需要依靠存储校验和异步传播来保证副本状态，并付出额外的带宽成本，以减少副本之间的协调开销。",
+    "查看英文原文： Cursor Uses S3 WAL to Scale Git Storage to More than 300 Pushes per Second"
+  ],
+  "isExcerpt": true
+}
