@@ -1,0 +1,22 @@
+{
+  "title": "亚马逊云科技推出 CloudWatch Omni：不仅监控系统，还要评估 AI 是否靠谱",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-15T00:00:00Z",
+  "url": "https://www.infoq.cn/article/5GOXqmJaGKbukSIWU4Uf",
+  "paragraphs": [
+    "CloudWatch Omni 是面向 AI 智能体的可观测性平台，聚焦非确定性行为下的质量归因与根因分析，通过端到端追踪与多维评估（正确性、检索、工具选择等）替代传统指标监控。",
+    "支持 OpenInference/ADOT 开放标准；兼容主流智能体框架；集成 Braintrust/DeepEval/Ragas 等第三方评估器。",
+    "最近推出的 Amazon CloudWatch Omni 是一个 AI 优先的可观测性平台 ，旨在通过统一环境监控、评估和排查应用程序及自主 AI 智能体的问题。",
+    "亚马逊云科技高级专业解决方案架构师 Daniel Abib 表示，对于传统应用程序，延迟、错误、CPU 和可用性等指标通常足以帮助识别运维问题。 但对于 AI 智能体，一次执行即使在技术层面成功，仍有可能产生错误结果 ，例如使用错误的工具、检索到质量较差的信息，或者选择成本高得没有必要的执行路径：",
+    "智能体的行为具有非确定性：即使标准指标没有显示任何错误，提示词的变化也可能导致响应质量下降。团队需要花费数小时手动审查多个系统中的日志，却仍然无法确定发生了什么变化，也不知道变化的原因。",
+    "为解决这一挑战，Omni 会捕获端到端追踪数据，评估正确性、连贯性、检索效果和工具选择，并允许用户比较提示词、根据生产流量构建测试数据集、运行实验以及检测回归。",
+    "它支持多种智能体框架，包括 LangChain、LangGraph、CrewAI、OpenAI SDK、Strands 和 Vercel AI SDK。它还采用 OpenInference 和 AWS Distro for OpenTelemetry（ADOT） 等开放标准，并与 Amazon Bedrock AgentCore 集成。在评估方面，CloudWatch Omni 还支持 Braintrust、DeepEval 和 Ragas 等第三方评估器。",
+    "Amazon CloudWatch Omni 提供统一可观测性，将传统微服务、云基础设施以及生成式 AI 和智能体工作负载纳入同一个体系，提供统一视图。它原生支持 OpenTelemetry，使现有遥测数据无须复杂的重新配置即可接入 Omni。它还提供双工作区：一方面，运维人员可以在传统 AWS Management Console 之外，通过单点登录（SSO）使用独立的 Web 体验；另一方面，开发者可以使用免费、本地且易于使用的 IDE 扩展，该扩展同时支持 VS Code 和 Kiro。",
+    "CloudWatch Omni 还支持 AI 驱动的调查功能，允许用户通过自然语言查询日志、指标和追踪数据，从而识别拓扑问题并定位根本原因。",
+    "亚马逊云科技副总裁 Chet Kapoor 在 LinkedIn 上这样概括这款新工具 ：它“可以帮助你主动发现问题、追踪其根本原因，并在同一个平台中找出智能体、应用程序和基础设施的改进空间”。亚马逊云科技前首席安全顾问 Jorg Huser 同样指出：“能够解释智能体为何采取某项行动的统一视图，是在大规模应用中维持信任的唯一方式。”",
+    "最后，德意志银行 DevOps 主管工程师 Florin Lungu 强调 ，CloudWatch Omni“支持开放标准，并提供用于质量保证的内置评估器”。",
+    "虽然 CloudWatch Omni 可能最适合运行在亚马逊云科技上的应用程序，但还有多种其他可观测性工具和平台将追踪、评估、提示词实验和数据集结合起来，重点面向智能体应用。其中包括 LangChain LangSmith 、 LangFuse 、 Arize AI Phoenix 等。",
+    "原文链接： https://www.infoq.com/news/2026/09/aws-cloudwatchomni-observability/"
+  ],
+  "isExcerpt": true
+}

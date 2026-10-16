@@ -1,0 +1,25 @@
+{
+  "title": "Archestra 发布 OpenAPPA，用于防范提示词注入或模型幻觉引发的数据外泄",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-15T00:00:00Z",
+  "url": "https://www.infoq.cn/article/LQCqiPUzgZyB3v24rsNO",
+  "paragraphs": [
+    "OpenAPPA 是一款开源安全引擎，运行于智能体提示词与执行循环之外，通过确定性规则强制执行数据访问控制，显著降低提示词注入与幻觉导致的数据外泄风险。",
+    "基于 Bench-Corp 与 AgentThreatBench 测试，其攻击成功率归零，显著优于 Claude Auto-Mode（10%）和微软 FIDES（31%）。",
+    "确定性规则替代概率化分类器，避免因模型不可靠或数据遮蔽导致的策略失效；支持跨工具调用的数据流追踪；直击审批疲劳下自动审核模型的固有缺陷。",
+    "Archestra 发布 OpenAPPA ，这是一款开源的安全引擎，旨在阻止由提示词注入或模型幻觉引发的数据外泄。OpenAPPA 在智能体的提示词与执行循环之外运行。其配置定义了数据源、 访问对象 、 信任等级 、 权限主体 等概念，以及与之相关的确定性安全强制执行规则。团队在安全基准测试 Bench-Corp （20 项多步骤企业工作流）和 AgentThreatBench 中测得攻击成功率为 0， https://code.claude.com/docs/en/auto-mode-config 的攻击成功率为 10%， 微软 FIDES 为 31%。",
+    "业界应对审批疲劳的办法是用第二个模型来判断每次工具调用：Claude Code 的自动模式、Codex 的自动审核，以及其他 自动模式 。",
+    "从设计上看，它们无法跨工具调用追踪数据流。由于分类器本身可能遭受提示词注入，Harness 会对分类器隐藏工具输出，因此判断模型根本看不到数据。",
+    "由于这种概率化的设计，即使是最优秀的模型也止步于 99.3% ：在数百万次调用场景中，0.7% 的概率就意味着大量的数据泄露事件。",
+    "一方面，智能体很擅长绕开简单但常用的防护手段，例如工具白名单/黑名单：被禁止的 rm -rf 命令可能会被等效的 Python 脚本替代。另一方面，为防范激进的智能体而不断扩充黑名单、采用过度严苛的策略会降低可用性（例如，智能体虽然没有泄露数据，但受限制而无法成功完成任务）。OpenAPPA 的 GitHub 仓库提醒开发者：",
+    "Archestra 希望通过其提出的智能体权限策略代数（Agentic Permissions Policy Algebra，APPA）来解决严格强制执行与运营实用性之间的矛盾，相关内容在论文中进行了阐述，论文作者为 Arseny Kravchenko 、 Vadim Liventsev 、 Innokentii Konstantinov 、 Ildar Iskhakov 和 Matvey Kukuy ，论文地址：[ https://arxiv.org/abs/2607.24625 ]( https://arxiv.org/abs/2607.24625)。",
+    "OpenAPPA 通过一个可插拔引擎实现了这个方案，引擎在智能体循环之外执行，阻止底层大语言模型查看、协商或绕过策略规则。安全策略采用单个 配置文件的形式，详细定义了数据源、 访问对象 、 信任等级 、 权限主体 。",
+    "OpenAPPA 会同时标记并监控访问对象（被授权的数据消费方集合）与信任等级（数据可信核验程度）。标签基于格代数实现单调组合：标签只会变得更加严格；读取受限记录会缩小可访问对象范围；读取未经核验的外部网页会降低信任等级。",
+    "每个工具契约定义了三个主要运行属性： requires （运行该工具所需的访问对象身份与信任等级）、 delta （工具返回数据时施加的限制变更）、 effects （成功操作的审计日志）。",
+    "下面这个例子通过 get_ticket_from_crm 读取工单，会将这条执行链路的访问对象限制为 internal （内部）。后续调用 process_internal_data ，就要求访问对象必须属于 internal 。",
+    "[[policy.tool]] name = \"get_ticket_from_crm\" delta = { audience = [ \"internal\" ] } [[policy.tool]] name = \"publish_update\" requires = { audience = { contains = [ \"public\" ] } } [[policy.tool]] name = \"process_internal_data\" requires = { audience = { within = [ \"internal\" ] } } 复制代码",
+    "下面这个例子， read_web_page 工具返回的结果会被标记为 suspicious （可疑）。OpenAPPA 在收到 read_web_page 的返回结果后会阻止执行 apply_db_migration ，因为该操作要求数据必须为 trusted （可信）。",
+    "[ policy ] version = 2 trust_chain = [ \"suspicious\" , \"trusted\" ] [[policy.tool]] name = \"read_web_page\" delta = { trust = \"suspicious\" } [[policy.tool]] name = \"apply_db_migration\" requires = { trust = \"trusted\" } 复制代码"
+  ],
+  "isExcerpt": true
+}

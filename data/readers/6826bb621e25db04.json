@@ -1,0 +1,21 @@
+{
+  "title": "Istio 1.31 拥抱 AI 智能体，却先宣布“告别”Google Cloud",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-15T00:00:00Z",
+  "url": "https://www.infoq.cn/article/JxVNJwhmsB1YYKmgD9KU",
+  "paragraphs": [
+    "Istio 1.31 新增 Agentgateway Waypoint，并将发布制品迁出 Google Cloud。",
+    "Istio 1.31 引入 istio-agentgateway-waypoint GatewayClass，首次在 ambient 模式下支持 agentgateway 作为七层 waypoint 代理；同步终止 Google Cloud 镜像与 Helm 仓库分发，要求用户在 12 月前完成迁移；新增对 Kubernetes 1.32–1.36 的正式支持。",
+    "支持 agentgateway（Rust 实现，兼容 MCP 协议）作为 waypoint 数据平面；Waypoint 流量迁移仍为 Alpha，API 不稳定；弃用 GCR 及 Google 托管 Helm 仓库，强制迁移至 registry.istio.io。",
+    "8 月 31 日发布的 Istio 1.31 允许团队使用新的 istio-agentgateway-waypoint GatewayClass，在 ambient 网格中将 agentgateway 作为七层 waypoint 代理运行。",
+    "同一版本停止向 Google Cloud 发布容器镜像和 Helm Chart。仍在使用 gcr.io/istio-release 、registry.istio.io 或由 Google 托管的 Helm 仓库的团队，应在 10 月 13 日下一次计划内断供测试之前完成迁移，这些服务将在 12 月退役。Istio 1.31.0 支持 Kubernetes 1.32 至 1.36。",
+    "这项 waypoint 支持以 1.30 中新增的实验性纯网关集成为基础。 Agentgateway 是一个面向智能体流量构建的 Rust 数据平面，由 Solo.io 捐赠给 Linux 基金会，除了普通 HTTP 外，还能处理 模型上下文协议 等协议。Istio 1.31 还修复了 agentgateway 后端的 ListenerSet 处理和 mTLS 连接问题。 Waypoint 之间的流量迁移 目前处于 Alpha 阶段，维护者警告称，其标签、注解和行为都可能发生变化。",
+    "这种流量迁移机制也是新增功能。服务或命名空间可以通过 use-waypoint-canary 标签，在主 waypoint 之外指定一个金丝雀 waypoint，然后使用 use-waypoint-canary-weight 注解，将可配置比例的新建网格内连接发送到金丝雀 waypoint，而不需要修改客户端。已经建立的连接不会迁移，因此长连接可能会延迟流量拆分效果的显现。",
+    "9 月 21 日发布的 Istio 1.31.1 修复了一个问题：仅被引用为金丝雀的 agentgateway waypoint 无法获得引用它们的服务所对应的路由和策略，导致迁移过去的连接被拒绝。该补丁还包含安全修复，并修正了 ALLOW_ANY_DYNAMIC_DNS 在纯 IPv6 集群中的转发问题。",
+    "对于大型网格，两项流量管理新功能尤为突出。DestinationRule 和 MeshConfig 新增的 zoneAwareLbSetting 字段允许 Envoy 将请求路由到下游代理所在可用区内的端点，并且仅在本地容量耗尽时才将流量溢出到其他可用区。这一决策由 Envoy 自动完成，不再需要 localityLbSetting 所要求的静态百分比配置。ALLOW_ANY_DYNAMIC_DNS 出站模式会在请求发出时，根据 HTTP Host 标头解析主机名，从而无需为每个外部目标编写 ServiceEntry。",
+    "在安全方面，COMPLIANCE_POLICY 环境变量新增 fips-140-3 值，可将 TLS 限制为 1.2 或更高版本，并仅允许使用符合 FIPS 标准的密码套件以及 P-256 和 P-384 曲线。 变更说明 明确指出，Go 组件必须使用 Go 1.24 或更高版本构建，并采用 GOFIPS140=v1.0.0 或更高的已验证版本；仅设置运行时策略并不足够。AuthorizationPolicy 新增的 trustDomains 和 notTrustDomains 字段，可以根据从对等端证书中取得的信任域匹配或排除请求。",
+    "这次托管平台变更要求仍在使用现有仓库的团队采取行动。Microsoft 的 Steven Jin 和 Solo.io 的 Keith Mattix 于 8 月 21 日在 Istio 博客 中写道：“由于资金模式发生变化，今年 Istio 正在将全部基础设施从 Google Cloud Platform 迁移到 Amazon Web Services。”下一次计划内断供测试将在 10 月 13 日 15:00 至 18:00（UTC）期间停用旧端点；最终测试将从 12 月 8 日 15:00（UTC）持续至 12 月 9 日 15:00（UTC）。验证镜像签名的团队还需要考虑密钥轮换：迁移指南列出了适用于 1.31.0 的 istio-key.pub，以及适用于 1.31.1 及后续版本的 istio-key-v2.pub。在 跟踪此事的 GitHub Issue 中，有人询问该项目为什么选择 Docker Hub 而不是 GHCR，Jin 回应称：“GHCR 存在一些未公开的限制。”他还补充道：“按照我们目前的使用量，我认为我们很容易就会超过那些限制。”",
+    "原文链接： https://www.infoq.com/news/2026/10/istio-1-31-agentgateway/"
+  ],
+  "isExcerpt": true
+}

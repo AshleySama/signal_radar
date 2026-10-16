@@ -1,0 +1,17 @@
+{
+  "title": "响应速度比Claude Code快3倍，实现真正无限上下文！APUS AI开源Reflex Agent",
+  "source": "量子位",
+  "publishedAt": "2026-10-14T11:32:48Z",
+  "url": "https://www.qbitai.com/2026/10/503165.html",
+  "paragraphs": [
+    "10月13日，APUS AI（麒麟合盛网络技术股份有限公司）宣布开源Personal Agent产品Reflex Agent",
+    "10月13日，APUS AI（麒麟合盛网络技术股份有限公司）宣布开源Personal Agent产品Reflex Agent。该产品基于自研开源决策模型Reflex构建Harness，并结合Continuum记忆引擎，通过模型驱动Harness核心控制逻辑，实现更高效的决策与长周期任务执行。",
+    "据APUS AI实验室实测，Reflex Agent在相关测试场景中的响应速度最快可达Claude Code、Codex等主流Agent的3倍。",
+    "与主要依赖代码和提示词组织Harness的传统方案不同，Reflex Agent由决策模型Reflex承担模型路由、技能选择、结果审查和执行监督等决策工作，并通过“决策—执行—反馈—再决策”的循环，推动任务持续向前。APUS AI将这一工作机制称为Loop Working（循环工作），强调Agent不只回答问题，更要围绕用户目标持续行动。",
+    "在记忆能力上，Reflex Agent结合Continuum记忆引擎，通过无限记忆持续积累任务信息、无损记忆保留原始内容及关联、无损输入让相关历史信息尽可能以原始内容参与决策。 这使Agent能够在长周期任务中按需检索和调用历史信息，减少对压缩摘要的依赖，为实现真正的无限上下文提供支撑。这里的“无限上下文”并非突破单次模型调用的输入长度限制，而是让Agent的记忆与任务周期不再完全受限于单次窗口。",
+    "此次开源是APUS AI探索Loop Working、构建Personal Agent的重要一步。Reflex Agent采用MIT协议开源，提供桌面端、Web和SDK，开发者可体验、复现并扩展。",
+    "Reflex Agent项目地址：https://github.com/APUS-AI-Lab/APUS-Reflex-Agent",
+    "Reflex决策模型：https://huggingface.co/apus-ailab/APUS-Reflex"
+  ],
+  "isExcerpt": true
+}
