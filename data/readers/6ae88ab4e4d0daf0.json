@@ -1,0 +1,25 @@
+{
+  "title": "Aspire 13.6 新增持久化仪表盘遥测功能，并支持第一方 Java 和 Rust 托管",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-18T00:00:00Z",
+  "url": "https://www.infoq.cn/article/4BUR4DmMxSBxyzYh6Fxz",
+  "paragraphs": [
+    "9 月 29 日，微软发布了 Aspire 13.6。该版本为仪表盘新增了持久化遥测数据和运行历史记录，同时支持停靠式终端和数据库 REPL，并新增 Java 和 Rust 的原生托管能力以及两项预览版 Azure 集成。",
+    "Aspire 13.6 引入仪表盘本地 SQLite 持久化、Native AOT 发布、停靠式终端及多数据库 REPL 支持，并增强 .NET 协同构建与 Azure 集成能力。",
+    "支持 SQLite 存储运行快照与遥测，保留最多十次只读运行记录；TerminalService API 实现 AppHost 终端嵌入；WithRepl 启用真实凭据的可写数据库交互。",
+    "9 月 29 日，微软发布了 Aspire 13.6 。该版本为仪表盘新增了持久化遥测数据和运行历史记录，同时支持停靠式终端和数据库 REPL，并新增 Java 和 Rust 的原生托管能力以及两项预览版 Azure 集成。此外，该版本还带来了 .NET 项目协同构建、可移植的卷路径、全新的 CLI 和 Visual Studio Code 工作流，以及若干破坏性变更。",
+    "现在，仪表盘 将资源快照和遥测数据存储在一个 SQLite 数据库中 。当由 AppHost 启动时，它会默认启用 Run persistence 功能，并为每个应用程序保留最多十次运行记录。已完成的运行记录为只读状态。如发布说明所述，该数据库没有加密或授权层，而且 Aspire 不会在数据目录上设置 Windows ACL。",
+    "控制台日志、结构化日志和跟踪信息的 默认限制 均提高至 10 万条。此外，仪表盘现在以 Native AOT 可执行文件 的形式发布，并且迁移到了 Fluent UI Blazor v5。",
+    "此外，AppHosts 现在可以通过实验性的 TerminalService API 在仪表盘停靠栏中打开自己的终端。PostgreSQL、MySQL、MongoDB、SQL Server、Redis 和 Valkey 资源上新增的 WithRepl 选项可以打开容器中捆绑的客户端。根据发布说明，这些 REPL 使用资源的真实凭据，而且不是只读的。因此，除非开发者主动启用，否则它们将保持禁用状态。",
+    "有两项托管集成是作为预发布包推出的。 Aspire.Hosting.Java 支持可执行 JAR 文件、Maven 和 Gradle 封装器、Spring Boot 以及 Quarkus。 Aspire.Hosting.Rust 通过 AddRustApp 支持 Cargo 应用程序。",
+    "var builder = DistributedApplication.CreateBuilder(args); builder.AddRustApp( \"api\" , \"../rust-api\" ) .WithHttpEndpoint(env: \"PORT\" ) .WithExternalHttpEndpoints(); builder.Build().Run(); 复制代码",
+    "正如发布说明中所述，这两项功能均基于 Aspire Community Toolkit 的工作成果。此外，该版本还新增了 Azure Connector 命名空间和 Azure Container Apps 沙箱 。需要注意的是，这两项功能都需要具备 Azure 订阅的预览版访问权限。",
+    "正如先前的报道， AddDotnetProject 现在将兼容项目放入了共享的还原和构建组中，为的是避免重复还原。项目和可执行文件的卷挂载 新增了一个 env 参数 。因此，应用程序可以在本地及部署后通过读取同一个环境变量来获取其数据路径。",
+    "TypeScript AppHost 会从其所在的目录加载 appsettings.json 文件。 Deno 2 及更高版本 可以运行 TypeScript AppHost。",
+    "CLI 命令 aspire run 和 aspire start 新增了 - -launch-profile 选项。从源代码中可以看出，现在，aspire new 和 aspire init 中的 智能代理设置 默认未勾选 Aspire MCP 服务器。也就是说，MCP 需要手动启用。 Visual Studio Code 扩展 允许编码代理启动和停止 AppHost，并在 Aspire 面板中添加了部署和发布操作。",
+    "还有一项兼容性变更是，当有证书可用时， MongoDB 资源在本地运行时现在会使用 TLS 。这取代了此前明文形式的默认设置。Cosmos DB 模拟器默认使用基于 Linux 的 vNext 镜像 。而且如前所述，现有的经典模拟器数据不会被保留。",
+    "升级后， Azure Front Door 的源名称 会发生变化，而包含连字符的连接名称将获得 一个可移植的环境变量别名 ，部分部署目标会自行生成该别名。",
+    "该版本的其他更新包括 Azure Container Apps Express 环境、Microsoft Foundry Toolboxes、MongoDB 副本集、Blazor WebAssembly 调试功能，以及移除了 GitHub Models 集成 。"
+  ],
+  "isExcerpt": true
+}

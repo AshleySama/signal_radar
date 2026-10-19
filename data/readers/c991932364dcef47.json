@@ -1,0 +1,20 @@
+{
+  "title": "突发！DeepSeek新模型发布，超级性价比斩杀一切",
+  "source": "量子位",
+  "publishedAt": "2026-10-17T20:21:09Z",
+  "url": "https://www.qbitai.com/2026/10/504067.html",
+  "paragraphs": [
+    "新模型训练时针对DeepSeek Harness进行了专项优化，在提升任务表现的同时，缩短任务运行时间、减少输出消耗和token费用。",
+    "和上一版V4.1 Flash相比，1017版本在各项基准测试里几乎是整齐抬头，代码、Agent任务等能力都有明显提升。",
+    "官方把这个叫做“性能—费用的帕累托改进”，以前想让Agent把活儿干得更好，通常得接受它多想一会儿、多跑几步、多吐点Token。",
+    "从官方放出的DeepSWE测试来看，V4.1-Flash-1017已经在多个Agent框架下，把性能和成本之间的边界继续往外推了一截。",
+    "几个小时前 ，就有眼尖的网友发现，DeepSeek的模型列表中，曾短暂出现“DeepSeek V4.1 Flash-1017”一项。",
+    "有网友发现，deepseek-flash接口返回的系统指纹已经从“ aeb56401ca74e127821c4f9126dcb669”变成了“e72d3c7f663d3e1383b00b3884cb4501”。",
+    "DeepSeek自研搜索引擎正式推出 Search 和 Fetch 两个API接口，前者负责搜网页，后者用来读正文。",
+    "目前用户已经可以在DeepSeek Harness、Claude Code或Codex中使用DeepSeek API时调用到，而且 限时到11月1日免费 。",
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "https://modelscope.cn/models/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "参考链接： [1] https://mp.weixin.qq.com/s/X-5kbBkedQ5Oct9byUunag [2] https://x.com/aitrackerbot/status/2111295736411300047 [3] https://x.com/yugen_matuni/status/2111336985554227345 [4] https://x.com/hakmgpt/status/2111314470433947988 [5] https://x.com/hakmgpt/status/2111314427416895798 [6] https://api-docs.deepseek.com/guides/search/"
+  ],
+  "isExcerpt": true
+}

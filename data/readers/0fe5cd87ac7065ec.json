@@ -1,0 +1,13 @@
+{
+  "title": "打造生产级的 Agent｜QCon上海",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-19T00:00:00Z",
+  "url": "https://www.infoq.cn/article/oZHrjYAsXvjOZXRwLt6T",
+  "paragraphs": [
+    "2026 年 QCon 全球软件开发大会大会 · 上海站 将于 10 月 22 日—24 日 举办，聚焦 Harness AI 时代的工程实践，围绕 AI Native 架构、Agent Runtime、AI Infra、Data Systems、Agent 安全与可观测、Loop Engineering、Vibe Coding、具身智能与世界模型、端云协同等前沿技术方向，邀请全球技术社区与产业一线的实践者，系统性分享前沿洞察与实战经验，共同探索 AI 从能力到系统、从实验到生产的真实路径。",
+    "阿里巴巴技术总监许晓斌已确认出席 “ Agent as a Service ” 专题，并发表题为 《 打造生产级的 Agent 》 的主题分享。随着 Agent 在过去两年飞速的发展，越来越多的企业用使用 Agent 上线许多系统和服务；随着用户的增多，或者本身服务就是一个关键的生产系统，Agent 行为的可靠性成为了关键问题。此次演讲重点围绕这个挑战分析阿里巴巴是如何设计我们的 Agent 运行时架构，进而一步步地让 AI 能够逐渐承担越来越多的生产系统的交付和运维工作。",
+    "许晓斌，阿里巴巴技术风险和效能部技术总监，负责研发和基础设施平台，有多年管理经验。《Maven 实战》作者，关注 AI Coding，分布式架构，技术管理。",
+    "除此之外，本次大会还策划了 Loop Engineering 、 千行百业 Agent 创新实践 、 Agent 自主进化：从记忆到持续学习 、 Agent as a Service 、 Vibe Coding 时代的新质量债 、 理性驾驭 AI 的 SRE 可靠性工程 、 金融 AI Native工程实践：从研发提效到业务破局 、 AI Infra：算力效率决定规模化落地 、 AI Native 架构 等 20 个专题论坛，届时将有来自不同行业、不同领域、不同企业的 100+资深专家在现场带来前沿技术洞察和一线实践经验。"
+  ],
+  "isExcerpt": true
+}

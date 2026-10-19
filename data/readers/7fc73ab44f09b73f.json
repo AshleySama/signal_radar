@@ -1,0 +1,19 @@
+{
+  "title": "清华开源！智能体操作系统任务成本降83%，AI记忆可查可改",
+  "source": "量子位",
+  "publishedAt": "2026-10-17T20:10:35Z",
+  "url": "https://www.qbitai.com/2026/10/503935.html",
+  "paragraphs": [
+    "这套名叫 PilotDeck 2.0 的系统，由清华大学THUNLP实验室联合面壁智能、OpenBMB等团队共同推出。",
+    "而PilotDeck 2.0瞄准的，恰好就是这些让人头大的老bug—— 记忆管理、任务执行，以及模型调用成本 。",
+    "在Workbuddy Bench评测表现上，PilotDeck使用Qwen3.6-35B-A3B得分79.1，也优于Claude Code (77.3)。",
+    "能把既定任务跑完，还能在执行过程中主动发现潜在的候选任务，并在全部搞定之后，把成果落地为本地文件，附带一份完整的进展与总结报告。",
+    "在自媒体社媒运营场景的实测中，如果不做省钱路由，全流程跑Claude Opus 4.5，单次费用高达$12.58。",
+    "而开启智能路由后，主Agent负责顶层规划走Opus 4.5，子Agent负责文本润色降级到Sonnet 4.5。",
+    "而在PilotDeck的路由编排下，采用主Sonnet 4.6+子MiniMax-M2.7的主强子弱架构，综合得分飙到了70.6，成本只要$3.15。",
+    "对了，PilotDeck采用AGPL-3.0开源许可证，支持macOS、Linux和Windows，也提供Docker部署方式。",
+    "参考链接： [1] https://github.com/OpenBMB/PilotDeck [2] https://x.com/OpenBMB/status/2110364065822646570",
+    "AI基准设计要达到四个目标：统一的一个分数、可变的问题规模、具有实际的人工智能意义、评测程序包含必要的多机通信"
+  ],
+  "isExcerpt": true
+}

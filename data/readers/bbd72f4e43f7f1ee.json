@@ -1,0 +1,14 @@
+{
+  "title": "AI says you’re right, formal methods say you’re wrong",
+  "source": "Stack Overflow Blog",
+  "publishedAt": "2026-10-16T07:40:00Z",
+  "url": "https://stackoverflow.blog/2026/10/16/formal-methods-say-you-re-wrong/",
+  "paragraphs": [
+    "Ryan is joined by Gabriela Moreira, CEO at Quint, about why formal specification languages like TLA+ are essential for catching system design flaws before writing code, how Quint brings developer-friendly syntax and executability to formal methods, and the ways trace validation and model-based testing can verify AI-generated code against real-world production data.",
+    "<!--[-->Quint<!--]--> is an open-source, executable specification language and toolchain based on TLA+ that enables engineers to model, simulate, and verify system behaviors using an intuitive, programmer-friendly syntax.",
+    "Connect with Gabriela on <!--[-->LinkedIn<!--]--> and <!--[-->X<!--]--> .",
+    "Congrats to Populist badge winner <!--[-->Alex K.<!--]--> for winning the badge on their answer to <!--[-->SQL Server: Select Top 0?<!--]--> .",
+    "Get The Stack Overflow Podcast at your favorite listening service."
+  ],
+  "isExcerpt": true
+}

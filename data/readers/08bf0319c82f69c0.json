@@ -1,0 +1,25 @@
+{
+  "title": "Meta 联手苹果推出全美最强开源模型，编码基测输给智谱、Kimi",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-18T00:00:00Z",
+  "url": "https://www.infoq.cn/article/EuYOPRUBAeBgBGBu5ktk",
+  "paragraphs": [
+    "Meta 开源 Muse Spark Open 模型，8160 亿参数稀疏 MoE 架构，支持百万级上下文与多模态输入（文本/图/音/视），专为长程智能体任务设计，需双 M5 Ultra Mac Studio 本地部署。",
+    "支持跨模态理解但无原生生成能力；端到端工具调用与失败恢复是核心智能体能力；编程基准弱于智谱、Kimi 等竞品。",
+    "当地时间 10 月 15 日，Meta 宣布开放 Muse Spark Open 模型权重，将软件工程、长程任务执行和多步推理作为主要应用方向。与模型权重一同受到关注的，是其本地运行方案：通过 MLX 框架，开发者可以在两台搭载 M5 Ultra 的 Mac Studio 上部署这一模型。",
+    "Muse Spark Open 采用稀疏混合专家架构，总参数量达到 8160 亿，每个 token 激活约 420 亿参数，支持 1,048,576 token 上下文。模型可以接收文本、图片、音频和视频，输出则为文本。因此，它能够理解截图、视频和录音，但不能据此理解为具备原生图片、音频或视频生成能力。",
+    "这套能力组合指向的是需要持续操作的工作流程。模型不仅要理解用户意图，还要规划步骤、调用工具、检查执行结果，并在工具失败后调整行动。",
+    "Meta 的模型卡将端到端智能体任务、代码编写与调试、长程工具调用列为主要用途，同时也包括合成数据生成和模型输出评估。",
+    "在官方演示中，Meta 使用由 Muse Spark Open 驱动的 Muse Code，在本地完成了开源 Mastodon 客户端 Ice Cubes 的 iOS 开发工作，涉及修复问题、添加功能和完整构建。",
+    "另一项演示则让模型操作 DaVinci Resolve，逐帧检查素材，挑选片段并进行竖屏裁剪。这些案例展示了模型连接真实软件的方向，但仍属于官方展示，不能直接推导为所有同类任务均可无人值守完成。",
+    "性能方面，Meta 公布的结果显示，Muse Spark Open 在 JobBench 上得分为 61.8，MCP-Atlas 为 89.2，OSWorld Verified 为 80.4；编程相关测试中，Terminal-Bench 2.1 为 76.4，DeepSWE 1.1 为 60。",
+    "值得一提的是，在 Terminal-Bench 2.1 和 DeepSWE 1.1 测试中，Muse Spark Open 得分低于国产开源模型 GLM 5.3 max 和 Kimi K3 max。",
+    "本地部署是此次发布的一项重要看点，不过，420 亿激活参数并不意味着只需要容纳一个 420 亿参数模型的内存。稀疏架构减少了每个 token 参与计算的参数量，完整权重仍需加载。按照官方文档，BF16 版本权重约为 1.65 TB，NVFP4 版本约为 537 GB，此外还要为 KV Cache、激活值和运行时开销预留空间。",
+    "官方给出的 GPU 部署示例中，BF16 版本使用 8 张 B300，NVFP4 版本使用 4 张 B300。具体配置还取决于加速器内存、互联条件、上下文长度和并行策略。",
+    "这里不得不提一嘴，“可以本地运行”意味着开发者获得了控制部署位置的选择，并不意味着普通笔记本已经能够承担这类模型。",
+    "苹果公布的相关研究还展示了四台 Mac Studio 的分布式推理结果：Muse Spark Open 的生成速度超过每秒 36 个 token。",
+    "对于不准备自建硬件的团队，Muse Spark Open 也提供托管访问路径。官方列出的生态伙伴包括 Baseten、Fireworks AI、Groq、Modal、Nebius、Together AI 和 OpenRouter；部署工具覆盖 SGLang、vLLM、TensorRT-LLM、llama.cpp 和 MLX 等。开发者可以先通过 API 验证任务效果，再评估是否值得自行部署。",
+    "另一个需要注意的点是，Muse Spark Open 采用 Muse Model License，开放权重并不等于没有商业使用条件。许可证允许在满足条款的前提下使用、修改、微调、蒸馏和分发模型，并要求相关产品或文档展示指定归属标识。"
+  ],
+  "isExcerpt": true
+}
