@@ -1,0 +1,19 @@
+{
+  "title": "Claude新模型曝光！能跳出思维定势，修Bug治标又治本",
+  "source": "量子位",
+  "publishedAt": "2026-10-20T09:09:43Z",
+  "url": "https://www.qbitai.com/2026/10/504314.html",
+  "paragraphs": [
+    "例如，一个人可能会要求模型修复一个单一的bug，而模型可能会去识别导致该bug的根本类问题，并询问是否应该修复整个类问题，这位使用过该模型的人表示。",
+    "如果用户询问关于如何投资股票的建议，它不会建议老套的查看市盈率高，而是会提出自己创造性的算法来预测未来的股票表现。",
+    "Carbon在编程任务上优于Argon，在需要视觉理解的任务上继续表现更好，如分析视频或测试前端页面功能（得益于用了Youtube数据训练）。",
+    "Carbon在谷歌内部编程平台Jetski上向员工开放了数日，体验过的员工认为“感觉与Opus 5.5相当”，但还需要更多测试。",
+    "在Carbon内测的表现泄露后，谷歌员工Vedant Misra发帖回应“你听说过递归自我改进（RSI）吗”。",
+    "那么之前很多人怀疑6.1 Sol其实是Terra改个名字发出去，看来猜错了。原来6.1 Sol只是单纯的与5.6 Sol比升级不大啊。",
+    "因为他们打算把ChatGPT的Chat/Work和Codex模式合并在一起，那么就需要一个更便宜的模型给免费用户用。",
+    "COBOL支持⁠超过40%的银行系统、80%的面对面信用卡交易和95%的ATM交易，而Fortran用于天气预报⁠和核反应堆安全分析⁠。",
+    "在迁移COBOL程序到其他语言的测试中，GPT‑6.1 Sol在low档达到86.6% 的准确率，而GPT‑5.6 Sol只有5.4%。在更高的推理档位下，准确率达到97.9%，几乎把测试刷穿了。",
+    "参考链接： [1] https://x.com/kimmonismus/status/2112242007062233122?s=20 [2] https://x.com/maxxrubin_/status/2112256163761016977?s=20 [3] https://openai.com/index/low-resource-programming-languages/"
+  ],
+  "isExcerpt": true
+}
