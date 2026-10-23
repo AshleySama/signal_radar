@@ -1,0 +1,25 @@
+{
+  "title": "DeepSeek开源最新推理框架：单集群日吞吐155万亿Token，KVCache可保存7天",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-21T00:00:00Z",
+  "url": "https://www.infoq.cn/article/NBXP966Bz3eqr6Qidvaf",
+  "paragraphs": [
+    "DeepSeek 开源高性能云推理框架 DeepInfer 及配套 Token 编解码组件 deepseek-recipe，已支撑 V4.1 Flash 模型日均 155 万亿 Token 的线上服务。",
+    "支持跨厂商硬件（NVIDIA/昇腾）、分布式推理与推测解码等前沿优化；吞吐达 155T Token/天，单卡收益 38 美元/小时；deepseek-recipe 实现 API 协议与模型 token 的精准对齐。",
+    "10 月 20 日，DeepSeek 宣布正式开源大规模云服务推理框架 DeepInfer。该框架已经用于 DeepSeek V4.1 Flash 的大规模线上推理服务。",
+    "据介绍，DeepInfer 集成了高性能算子和深度优化的推理引擎，支持分布式推理、推测解码、SWA Bounded Replay、结构化输出等能力，并能够运行在 NVIDIA 与华为昇腾平台上。按照 DeepSeek 公布的数据，目前基于这套系统运行的单一集群服务吞吐已经达到每天 155 万亿 Token，按谷价计算，整体收入达到每卡每小时 38 美元。",
+    "DeepSeek 同时开源了生产级 Token 编解码组件 deepseek-recipe，用于在主流大模型 API 协议和模型 Token 之间进行高效、准确转换，其处理逻辑与 DeepSeek 官方 API 完整对齐，从而使第三方部署能够尽可能获得与官方服务一致的 API 体验。",
+    "deepseek-recipe： https://github.com/deepseek-ai/deepseek-recipe",
+    "不过，这并不是 DeepSeek 全部线上推理基础设施的完整开放版本。DeepSeek 明确表示，KVCache 管理与负载均衡组件因为与内部基础设施耦合较深，相关代码目前尚未完整开源。此次披露的重点，是 V4.1 Flash 推理系统的整体架构和关键实现方式，以及这些组件在真实大规模在线服务中的设计逻辑。",
+    "DeepSeek 介绍，V4.1 Flash 推理系统在设计之初确定了三个核心目标：兼容不同厂商计算芯片；围绕常见硬件组织 Prefill 与 Decode；以及让 KVCache 能够保留 72 小时以上，从而减少重复计算。",
+    "在具体部署中，DeepSeek 使用常见的 8 卡服务器承担 Prefill，并使用 64-128 卡超节点承担 Decode。两者不再被视为同一种计算负载，而是分别按照不同特点设计计算、通信和调度策略。",
+    "这一架构延续了 DeepSeek-V3、R1 时代的部分设计，但进一步将视觉编码器、Prefill 与 Decode 分离部署，使三个阶段能够独立分配资源，并分别优化首 Token 延迟（TTFT）和 Token 间延迟（TBT）。在混合专家模型（MoE）部分，Prefill 通常采用 2-8 路专家并行和数据并行，而 Decode 则扩大至 64-128 路 Wide-EP，以通过更大的批处理规模提高 GPU 矩阵计算效率。",
+    "PD 分离后，两类资源需求比例会随着线上流量实时变化。如果提前设定固定比例，就会在部分时段产生排队，而另一类机器则出现空转。因此，DeepSeek 在集群层加入自动扩缩容机制：Prefill 侧根据未命中 Token 数判断需要多少实例，Decode 侧根据当前实际计算请求数估算需求，扩缩容过程设有上下界和调整速率限制。",
+    "对于大 EP 部署中长尾请求导致的资源浪费，Decode 实例收到下线通知以后不会立刻退出，而是进入 1 分钟宽限期。宽限期结束后，如果仍然存在尚未完成的请求，系统会把对应请求和它们的 KVCache 一次性转发给其他实例继续进行 Decode。部署时还会额外保留冗余配额。一部分机器处于 Ready 状态但暂未分配，用作突发扩容库存；与此同时，在线实例数量始终会比理论需求更多。当配额占用率高于 0.8 时，系统直接禁止缩容。",
+    "容错方面，DeepSeek 并没有试图把实例重启时间压到极短。实际错误重启仍然是分钟量级，整体容错依赖“冗余配额 + 请求级重新路由”的组合。",
+    "大规模 EP 部署下，一个实例中的所有 GPU 构成一个通信域，只要其中任何一张卡发生故障，整个实例都可能无法继续工作。重新启动时，为了继续利用其他健康 GPU，平台会重新统计可用卡数量，并按照实际获得的健康 GPU 数重新确定 EP Size。",
+    "数据并行、专家并行、Prefill、Decode 和视觉编码都需要不同的负载均衡器，DeepSeek 因此分别开发了 Prefill Load Balancer、Decode Load Balancer、Vision Encoder Load Balancer 和 Expert-Parallel Load Balancer。",
+    "例如，Prefill 会根据输入长度分成小于 16K、16K-64K、64K-256K 以及超过 256K 四档，并根据实际计算负载动态分配引擎数量；Decode 则同时观察请求数量和 KVCache 总长度，将长短请求分配至不同卡上，以降低部分设备等待造成的吞吐损失。"
+  ],
+  "isExcerpt": true
+}

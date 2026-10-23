@@ -1,0 +1,182 @@
+{
+  "updatedAt": "2026-10-23T03:09:44.705992Z",
+  "items": [
+    {
+      "title": "企业 AI 越用越复杂，如何用一个 Gateway 管好模型、Agent 和成本？｜ 技术趋势",
+      "summary": "Cortex AI Gateway 是 Snowflake 面向企业 AI 基础设施打造的集中式控制平面。它通过单一端点提供受治理的模型推理、动态模型路由、MCP 工具治理、可观测性、安全护栏和成本控制能力，让平台团队能够统一查看组织内所有 AI 客户端和 Agent 的运行情况。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/v85ey09UlxhCDH4r3RS3",
+      "publishedAt": "2026-10-22T00:00:00Z",
+      "score": 26.64,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/6061dcd46c4a5bfe.json"
+    },
+    {
+      "title": "既能“做选择题”，也能“做填空题”——星辰意图理解模型Xing4.0-29B-Intent发布",
+      "summary": "中电信人工智能科技有限公司星辰通用人工智能实验室正式发布并开源意图理解专用模型 Xing4.0-29B-Intent",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/504832.html",
+      "publishedAt": "2026-10-22T15:11:14Z",
+      "score": 25.4,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/de46add1373038e9.json"
+    },
+    {
+      "title": "又一国产决策模型发布：面向企业高频判断任务，23 项开源基测准确率超过微软和 JEV",
+      "summary": "LingDT-Decision-1.0，提供4B和27B两个参数规模版本。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/wyGrRsTrfHM7i9MhuV5P",
+      "publishedAt": "2026-10-22T00:00:00Z",
+      "score": 24.64,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/aeb2ffbec8d2659d.json"
+    },
+    {
+      "title": "上下文语言模型：通过自主管理上下文提升性能、降低计算成本",
+      "summary": "Meta、MIT 与华盛顿大学研究者提出 CLM（上下文语言模型），该方法可让语言模型自主管理、编辑自身上下文。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/Pwu4FNskSB2cbKV9BZKq",
+      "publishedAt": "2026-10-23T00:00:00Z",
+      "score": 23.84,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/eea0aac0c56d3fed.json"
+    },
+    {
+      "title": "又一国产决策模型发布！准确率超过微软和Jev等决策模型",
+      "summary": "10月22日，蚂蚁数科正式发布决策模型 LingDT-Decision-1.0。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/504879.html",
+      "publishedAt": "2026-10-22T17:07:05Z",
+      "score": 23.5,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/dfd02e8c10946ab0.json"
+    },
+    {
+      "title": "面向 Qwen 系列模型线性注意力的高性能优化实践",
+      "summary": "自 Qwen-3.5 采用混合注意力结构以来，Qwen 系列模型的线性注意力层 GDN 在训练与推理中的开销日益显著。基于 TileLang 的高性能线性注意力算子库 FlashQLA 显著优化了预训练与端侧推理效率，本文为其背后的技术实践揭秘。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/o9OcWNkkwgKvsZmgY45d",
+      "publishedAt": "2026-10-22T00:00:00Z",
+      "score": 22.64,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/0ed328777121fbec.json"
+    },
+    {
+      "title": "LeCun押注的世界模型，中国一家清华系公司已经做进了机器人",
+      "summary": "世界模型赛道新看点：千诀隐变量可辨识性方向的研究，比LeCun相近工作早一年，不堆画面预测，主打物理规律与跨本体复用。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/504653.html",
+      "publishedAt": "2026-10-21T15:15:05Z",
+      "score": 22.2,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/6a161c5da62b293f.json"
+    },
+    {
+      "title": "DeepSeek开源最新推理框架：单集群日吞吐155万亿Token，KVCache可保存7天",
+      "summary": "按谷价计算，整体收入达到每卡每小时38美元。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/NBXP966Bz3eqr6Qidvaf",
+      "publishedAt": "2026-10-21T00:00:00Z",
+      "score": 21.44,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/34eebb73284a047d.json"
+    },
+    {
+      "title": "AI把整个软件生态打成筛子，全栈开发者的至暗时刻",
+      "summary": "当你引以为傲的全栈技术栈彻底沦为“漏洞全家桶”，赛博大逃杀真的开始了。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/glAvFT7PWdZ53mbgPbgC",
+      "publishedAt": "2026-10-22T00:00:00Z",
+      "score": 20.64,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/059da8718047c863.json"
+    },
+    {
+      "title": "Cloudflare 两个月两改追踪定价，开发者该如何控制成本？",
+      "summary": "Cloudflare Traces 将代理层转换为 OpenTelemetry Span，并引入按数据量计费的新模式。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/hy9SMIBOjwjdZ4JduMzL",
+      "publishedAt": "2026-10-22T00:00:00Z",
+      "score": 20.64,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/255997852c8aac83.json"
+    },
+    {
+      "title": "多智能体协同重构医疗AI！清华AIR孵化：医生AI分身“坐诊”医院",
+      "summary": "医疗AI质变时刻",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/504734.html",
+      "publishedAt": "2026-10-21T19:30:59Z",
+      "score": 20.42,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/b9dc1a91e45ba855.json"
+    },
+    {
+      "title": "生数科技Motubrain团队将直播Physical AI训练全流程，持续半个月",
+      "summary": "10月21日，生数科技世界模型团队正式开启Motubrain 2.0训练全流程公开直播",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/504730.html",
+      "publishedAt": "2026-10-21T17:45:22Z",
+      "score": 20.33,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/cd2dfd00bf8737e6.json"
+    },
+    {
+      "title": "实探宁德时代总部：“去宁化”是喊太大声了",
+      "summary": "电池开发，分工远比想象复杂",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/504618.html",
+      "publishedAt": "2026-10-21T12:35:56Z",
+      "score": 20.07,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/ad6983f680634adc.json"
+    },
+    {
+      "title": "特斯拉利润腰斩，一夜跌没“通用汽车”！马斯克：FSD在中国也会遥遥领先",
+      "summary": "FSD一年增长70万付费用户",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/504841.html",
+      "publishedAt": "2026-10-22T15:14:48Z",
+      "score": 19.4,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/56e6627035f351c4.json"
+    },
+    {
+      "title": "OpenAI models are coming to Google Cloud",
+      "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/openai-models-google-cloud",
+      "publishedAt": "2026-10-21T12:00:00Z",
+      "score": 29.04,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/95dedf578de78f3e.json"
+    },
+    {
+      "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+      "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+      "publishedAt": "2026-10-21T07:00:00Z",
+      "score": 26.79,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/de9db6f384cbc788.json"
+    }
+  ],
+  "background": "./assets/backgrounds/paper-signal.png"
+}
