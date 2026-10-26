@@ -1,0 +1,10 @@
+{
+  "title": "Securing our frontier model training environment",
+  "source": "OpenAI",
+  "publishedAt": "2026-10-23T10:00:00Z",
+  "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+  "paragraphs": [
+    "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming."
+  ],
+  "isExcerpt": true
+}

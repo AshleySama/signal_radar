@@ -1,0 +1,25 @@
+{
+  "title": "Java 近期新闻：Grails 8、Open Liberty、GlassFish、Infinispan、LangChain4j、Spock",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-25T00:00:00Z",
+  "url": "https://www.infoq.cn/article/BHWP4JJDeExZZWsifFlg",
+  "paragraphs": [
+    "本文是Java 近期新闻，内容涉及：Grails 8、Open Liberty、GlassFish、Infinispan、LangChain4j、Spock。",
+    "ZGC 堆自适应调整、ZGC 启动/预热优化、结构化并发三者均进入 JDK 28 目标功能阶段，其中结构化并发完成全部预览与孵化流程正式转正。",
+    "ZGC 堆大小将依据资源竞争与应用负载动态伸缩；ZGC 启动时物理内存获取与准备效率显著提升；结构化并发以作用域为单位统一管理线程任务生命周期。",
+    "JEP 546（ ZGC 堆大小自适应调整 ）已经从候选状态 提升 至 Proposed to Target 状态，并被列为 JDK 28 的目标功能。该 JEP 提议“增强 Z 垃圾收集器，使其能够根据可用的资源、应用程序的需求以及与该应用程序争夺相同资源的邻近应用程序的需求，自适应地调整堆的大小。” 该提案的评审于 2026 年 10 月 14 日星期三结束。",
+    "JEP 545（ 利用 ZGC 加快启动和预热 ）已经从候选状态 提升 至 Proposed to Target 状态，并被列为 JDK 28 的目标功能。该 JEP 提议“通过增强 Z 垃圾回收器，使其能够更快速、高效地根据应用程序的需求获取和准备物理内存，从而改善应用程序的启动和预热过程”。该提案的评审于 2026 年 10 月 14 日星期三结束。",
+    "JEP 543（ 结构化并发 ）已经从候选状态 提升 至 Proposed to Target 状态，并被列为 JDK 28 的目标功能。在经过七轮预览（从 JDK 21 到即将发布的 JDK 27）以及两轮孵化（在 JDK 19 和 JDK 20 中）后，该 JEP 没有对该功能做任何修改，而只是最终将其确定下来。该功能通过引入结构化并发来简化并发编程，旨在“将运行在不同线程中的相关任务组视为单一工作单元，从而简化错误处理和取消操作，提高可靠性，并增强可观察性”。评审于 2026 年 10 月 13 日星期二结束。",
+    "JEP 547（ 惰性常量第四个预览版 ）已经从 JEP Draft 8389764 提升 至候选状态。该 JEP 在 JDK 25、JDK 26 以及即将发布的 JDK 27 中经历了三轮预览后，现在推出了第四个预览版，内容未作任何更改。该功能原名为“稳定值和计算常量”（Stable Values and Computed Constants），引入了“计算常量”的概念，其定义为最多初始化一次的不可变值容器。该常量既具备 final 字段的性能和安全优势，又在初始化时机方面提供了更大的灵活性。随着 JDK 26 的发布，名称从“稳定值”变成了“惰性常量”，为的是更准确地体现其高级用例的意图。",
+    "JDK 28 的 早期访问构建 Build 19 发布，它是 Build 18 的 升级 ，修复了各种 问题 。要了解关于这个构建的更多细节，请参阅 发布说明 。",
+    "GlassFish 8.0.5 发布，带来了 Bug 修复、文档改进、依赖项升级以及一些新功能，包括：更新了 ZipPayloadImpl 类，根据 ZIP64 Extra Fields（JDK-8302483）规范，在 extra 头中包含 Header ID 和 Data Size 值；优化大型和小型应用程序的部署时间。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "Apache Grails 8.0.0 发布 ，带来了 Bug 修复、文档改进、依赖项升级以及以下新功能：JDK 21 和 Gradle 9.7 为最低支持版本；所有控制器现在均作为 REST 资源，通过请求而非映射来解析 Controller； Grails Promises 现在基于 Spring Boot Task Executor 运行。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "TornadoVM 7.2.0 和 7.1.0 发布，带来了以下值得注意的变更：在 KernelContext 类中新增了 mmaLoadA() 和 mmaLoadB() 方法，分别返回 HalfFloat 类的 8 元素和 4 元素片段； 此外， CUDACommandQueue 、 CUDAEvent 和 CUDAHandles 类也进行了更新，现在能够准确报告内核启动和数据传输的驱动程序调度时间。要了解有关该版本的更多详细信息，请参阅 7.2.0 和 7.1.0 版本的发布说明。",
+    "Open Liberty 26.0.0.10 GA 版本 发布，带来了以下内容：Bug 修复；对 JDK 27 的支持；针对影响 Open Liberty 各项功能 的七个 CVE 的修复。开发者需要注意，由于 G1 现在已经成为所有环境中默认的垃圾回收器 ，在受限环境中运行 Open Liberty 的用户可能会遇到与早期 Java 版本不同的垃圾回收行为。",
+    "Infinispan 16.3.0（代号 Tripel Karmeliet ，寓意“稳健”） 发布 ，带来了 Bug 修复、文档改进、依赖项升级以及以下新功能：在合并分区时，采用更高效的基于哈希的冲突检测和解决机制；增强配置功能，实现属性存储的持久化，使其在重启后仍然能保留；优化日志记录功能，减少日志噪音。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "LangChain4j 1.22.0 的正式版本（连同第 32 个 Beta 测试版）提供了 Bug 修复、文档改进、依赖项升级以及以下新功能：一个新的 BedrockBatchChatModel 类，实现了 Bedrock 批量推理 API 中的核心接口 BatchChatModel ；新增 OpenAiDecisionModel 和 OpenAiOfficialDecisionModel 类，用于支持 OpenAI Decisions API 。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "基于 Micronaut Core 5.2.15 的 Micronaut Framework 5.2.2 发布，更新 Netty 至 4.2.19.Final 版本，并修复了 16 个 CVE 漏洞，包括 HTTP 请求/响应走私以及 HTTP、HTTP/2 和 HTTP/3 编解码器中的无界资源消耗问题。此外， Micronaut Data 和 Micronaut Test Resources 模块也进行了补丁更新。要了解有关该版本的更多详细信息，请参阅 发布说明 。",
+    "Spock 2.5.0 发布，带来了 Bug 修复和一些新功能，包括：支持 Groovy 6 和 Spring Framework 7；对 TooManyInvocationsError 类进行了改进，使其可以报告未满足预期的交互，使开发者能更轻松地诊断调用不匹配问题；支持在 where: 代码块中声明 final 局部变量。要了解有关该版本的更多详细信息（包括破坏性变更），请参阅 发布说明 。"
+  ],
+  "isExcerpt": true
+}

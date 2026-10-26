@@ -1,0 +1,21 @@
+{
+  "title": "React 19.3 新增 browser() API，使“仅客户端渲染”成为一等公民",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-24T00:00:00Z",
+  "url": "https://www.infoq.cn/article/jNX6EAzqP34xRjqUMU1N",
+  "paragraphs": [
+    "React 19.3 于 9 月 9 日在 npm 上发布，除了稳定的 View Transitions 和 Fragment Refs 外，还悄悄加入了一个规模较小但广受好评的新功能 react-dom browser() API，允许组件正式选择不进行服务器端渲染。",
+    "React 19.3 引入 `react-dom/browser()` API，使组件可声明式跳过服务器端渲染，解决因访问浏览器专属 API（如 localStorage、window）导致的水合不匹配问题。该 API 与 `use()` 协同，在服务端暂停执行，客户端恢复，语义清晰且无需手动判断环境。",
+    "支持 SSR 场景下精准控制浏览器专属逻辑的执行时机；消除 `typeof window !== 'undefined'` 等防御性检查引发的水合错误；与 Suspense 集成自然，无需额外状态管理。",
+    "React 19.3 于 9 月 9 日在 npm 上发布 ，除了稳定的 View Transitions 和 Fragment Refs 外，还悄悄加入了一个规模较小但广受好评的新功能 react-dom browser() API ，允许组件正式选择不进行服务器端渲染。Aurora Scharff 分享了相关文档，并 宣布 该 API 已经上线，用户可以在 Canary 通道中使用：该通道将值传递给 use() 方法后，组件便会在服务器端暂停执行。",
+    "该功能针对的问题对任何从事服务器端渲染（SSR）的人来说都很熟悉。读取 localStorage、window 或设备时区的组件无法在服务器端生成有意义的 HTML，而现有的解决方法都比较笨拙。开发者要么在 effect 内部切换一个已挂载（mounted）标志，要么通过 typeof window !== ‘undefined’ 来控制渲染——当服务器端渲染与客户端首次渲染不一致时，这种模式会导致水合不匹配的问题。",
+    "import { use } from 'react' ; import { browser } from 'react-dom' ; function LocalTime ( ) { use ( browser ()); return {new Intl.DateTimeFormat().resolvedOptions().timeZone} ; } 复制代码",
+    "在服务器端渲染期间，use(browser()) 会暂停组件的渲染，并将最近的 Suspense 边界中的备用内容保留在 HTML 中。在浏览器中，它会返回 undefined，这样组件会在水合后正常渲染。该方法必须由客户端组件调用，并位于 Suspense 边界内，否则服务器端渲染会失败。由于 use() 可以位于条件表达式之后，所以组件仅在必要时才进行延迟渲染，例如，当加载器（loader）提供了 initialData 时，数据钩子会在服务器端进行渲染；否则，则选择跳过该渲染路径。React 还添加了 onBrowserBailout 回调函数和可选的 reason 参数，以便开发团队能够准确报告服务器端渲染被跳过的位置。",
+    "该变更最初以 React 核心 PR 的形式推出，This Week in React 将其 描述 为“消除了那些在服务器抑制错误的蹩脚的变通方案”。在跟踪该功能的 问题记录 中，一位贡献者写道，他们“对 browser() API 感到非常兴奋，因为它用比以往更简洁的方法解决了仅限客户端组件的问题”。在谈及此次发布时，一位开发者 称 ，对于“是否应在服务器端获取数据”这一难题，这种条件性数据获取是“我所见过的、最优雅的解决方案”。",
+    "该方案也缩小了与框架专属“逃生舱”机制之间的体验差距。长期以来，Next.js 用户一直通过 next/dynamic 使用 dynamic(() => import(‘./C’), { ssr: false })，而 Astro 则提供了 client:only 指令，但这两者都与各自的打包工具做了绑定。browser() 将这一功能整合到了 React 中，因此它适用于任何 SSR 配置，而不仅仅局限于单一框架。",
+    "升级只需要按照 React 19 升级指南 ，将版本号相应地调整为 react@19.3 和 react-dom@19.3 即可。不过， 用户指南 仍然将 browser() 标记为仅限 Canary 通道。因此，在生产环境中使用前，请先确认你的发布通道。",
+    "React 是一个用于构建用户界面的开源 JavaScript 库，最初由 Facebook 创建，目前由 Meta 联合庞大的贡献者社区共同维护。它推广了基于组件的模型，将用户界面描述为有状态的函数，并为 Next.js 和 Remix 等服务器端及全栈框架以及通过 React Native 构建的原生应用提供了技术支撑。自 2013 年首次发布以来，它已经成为使用最广泛的前端工具之一。最新版本进一步加强了服务器端渲染、Suspense 以及基于 browser() API 的并发功能。",
+    "原文链接： https://www.infoq.com/news/2026/10/react-19-3-browser-api/"
+  ],
+  "isExcerpt": true
+}

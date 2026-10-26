@@ -1,0 +1,25 @@
+{
+  "title": "何时应使用 Liquid Clustering？湖仓布局策略基准测试",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-24T00:00:00Z",
+  "url": "https://www.infoq.cn/article/lkefSu7SjjIHL1Fmk0Pv",
+  "paragraphs": [
+    "Delta Lake 上 Liquid Clustering 在点查、时间范围聚合与大型聚合中延迟最低，应作为多变查询场景的默认存储布局；ZOrdering 仅在过滤列严格匹配聚类键且高选择性时占优。",
+    "ZOrder 日期列非首键时，时间范围查询比简单日期分区慢78%；Liquid Clustering 自动维护局部有序性，无需人工调优；分区仍是最轻量、最可预测的范围剪枝方案。",
+    "对于湖仓分析系统而言，并不存在一种放之四海皆准的最佳存储布局。在 Delta Lake 上针对四种工作负载类型进行的基准测试中，Liquid Clustering 在点查询、时间范围聚合和大型聚合方面均实现了最低延迟。对于查询模式多样或不断演变的团队而言，Liquid Clustering 应作为默认选择。ZOrdering 仅在稳定、高选择性的多谓词工作负载中表现更好，而且前提是过滤列与聚类键完全匹配。",
+    "在磁盘数据组织方面， 分区 、 ZOrdering 和 Liquid Clustering 各自采用了截然不同的方法；了解它们之间的权衡取舍，是你根据工作负载选择合适方案的关键。我有两项引人注目的发现，因为它们与通常对这些布局的描述相悖，而且可能正是这类问题在悄无声息地拖累生产系统的性能。",
+    "当日期列在 ZOrder 聚簇表达式中作为二级或三级键时，与简单的按日期分区的表相比，时间范围查询的性能会差许多——在本基准测试中，其速度慢了 78%。连续的日期值分散在多个文件中，破坏了分区天然提供的范围扫描效率。如果你的团队对多个列做了 ZOrder 排序，而且日期并非第一个键，那么这几乎肯定会影响你的时间范围查询性能。",
+    "当查询谓词能与一组稳定的过滤列精确匹配时，ZOrder 的文件剪枝效果接近最优，而 Liquid Clustering 在扫描多出十倍的数据时，运行速度可能变成五分之一。Liquid Clustering 采用更广泛的局部优化策略，以牺牲确定性剪枝为代价换取工作负载的灵活性。当查询范围狭窄而且可预测时，这种权衡恰恰会成为一种负担。",
+    "这些测试结果之所以重要，是因为物理数据布局是湖仓工程中影响最为深远却鲜少被讨论的决策之一，而分区、ZOrdering 和 Liquid Clustering 之间的权衡通常仅从概念上进行了描述，并没有通过实际测量来验证。",
+    "大多数已经发表的对比研究要么来自 Databricks 自己，要么是基于第一性原理推导出的权衡分析，并未针对实际的查询行为进行度量。本次基准测试所探讨的问题，直接源于我在 TCS 英国分公司（民用航空航天领域）和 IBM（壳牌海事）设计 Delta Lake 平台时实际遇到的生产挑战。在这些场景中，数据布局决策会直接影响管道服务水平协议（SLA）的合规性以及云计算的成本。",
+    "我的实际建议是：在确定布局策略之前，请针对你自身数据的一个具有代表性的样本，将最常用的三种查询模式分别应用于分区、ZOrdered 和 Liquid Clustered 这三种配置。下面的结果来自一项受控基准测试。该测试使用真实的 Databricks 查询配置文件，在包含 5000 万条记录的数据集上，针对四种分析型工作负载类型对这三种布局策略进行了比较。这些结果可能会让你感到惊讶，就像当初让我感到惊讶一样。",
+    "本文中最具实践价值的见解，或许是一个看似简单却极具洞察力的诊断性问题——在确定任何布局策略之前，实践者都应该自问：我的热门查询是否总是根据相同的两到三个列进行筛选？仅凭对这一问题的回答，就能判断复合分区究竟能带来实质性的收益，还是会引入不必要的复杂性。",
+    "如果答案是“是”，即这些列是已知的而且很稳定，那么就应该仅对这些列使用 ZOrder，从而确保选择性最高的列排在首位。如果答案是否定的，或者查询模式可能发生变化，那么就应该将 Liquid Clustering 设为默认选项。在四种工作负载类型中，Liquid Clustering 在其中三种中表现更优，并且消除了手动调度 OPTIMIZE 带来的运维开销。 GitHub 上提供了一个用 Python 编写的决策辅助工具。",
+    "customer_id INT uniform distribution, range 12 , 000 , 000 txn_date DATE spanning 20192023 region STRING categorical: EU, US, APAC, LATAM (skewed toward EU/US) amount FLOAT rightskewed, simulating highvalue outliers product_cat STRING categorical, 12 categories 复制代码",
+    "这种均匀分布与偏态分布的混合是刻意设计的，其参数是根据生产日志中实测的访问频率模式进行校准的。具体而言，选择诸如客户细分市场的 Zipf α = 1.2 以及 80/20 热分区划分等偏度参数，为的是匹配实际工作负载中观察到的查询量分布。这些数值不是随意选的，而是源自生产环境的遥测数据——其中排名前 20% 的客户细分市场始终占查询流量的约 80%，这样可以确保合成数据集能够反映现实世界中的热分区和需求偏度。",
+    "Partitioned table df. write . format ( 'delta' ).partitionBy( 'txn_date' ).saveAsTable( 'lc_partitioned' ) ZOrdered table spark.sql( 'OPTIMIZE lc_zorder ZORDER BY (customer_id, region, txn_date)' ) Liquid Clustered table spark.sql( '' ' CREATE TABLE lc_liquid CLUSTER BY (customer_id, region, txn_date) AS SELECT * FROM source_data '' ') 复制代码 工作负载 GitHub 上提供了所有的查询。",
+    "Liquid Clustering 实现了 1.003 秒的最低延迟，比分区基线快了 49%，尽管它扫描的原始数据量比 ZOrder 更多。这是第一个反直觉的结果，即读取的字节更多反而带来了更好的性能。其原因在于文件内部的顺序局部性。Liquid Clustering 采用的希尔伯特曲线组织方式，能更有效地将相关 customer_id 值集中在同一个文件中，可以减少磁盘寻道开销、提高扫描吞吐量。ZOrder 虽然通过文件剪枝减少了读取的字节数，但访问更多文件所产生的开销抵消了这一优势。",
+    "Liquid Clustering 再次以 659 毫秒的延迟创下了最低纪录。ZOrder 的表现比分区基线差：ZOrder 耗时 1.845 秒，而分区方法仅需 1.038 秒，速度慢了 78%。ZOrder 的聚类键为 (customer_id, region, txn_date)，这使得 txn_date 成为三级键。这种设计会将顺序日期值分散到不同的文件中，破坏了简单分区所天然具备的日期范围扫描效率。如果你的团队对多个列进行 ZOrder 排序，而且日期并非第一个键，那么这几乎肯定会影响你的时间范围查询性能。"
+  ],
+  "isExcerpt": true
+}

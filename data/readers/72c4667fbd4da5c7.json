@@ -1,0 +1,23 @@
+{
+  "title": "CircleCI 正式发布 Machine Runner Orchestrator",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-26T00:00:00Z",
+  "url": "https://www.infoq.cn/article/y7YQmP1p42Uj69H1C6uf",
+  "paragraphs": [
+    "CircleCI 正式发布 Machine Runner Orchestrator 1.0.0。该版本可以根据 CI 工作负载需求，自动对自托管的机器运行器虚拟机进行弹性扩展。",
+    "CircleCI 正式发布 Machine Runner Orchestrator 1.0.0 。该版本可以根据 CI 工作负载需求，自动对自托管的机器运行器虚拟机进行弹性扩展。这次发布扩展了此前发布的 Runner Provisioner 预览版，支持通过单次部署处理 CPU、GPU 和 ARM 工作负载，并支持在 GKE、AKS 和 EKS 上运行的 Kubernetes 环境，以及基于 KubeVirt 的集群。",
+    "这次发布旨在解决自托管持续集成（CI）基础设施面临的一个常见挑战：在不为峰值需求永久配置机器的情况下，确保有足够的运行器资源可以应对构建和测试活动的突发需求。该编排器会监控 CircleCI 工作负载的需求，并据此动态地配置和释放运行器，使企业既能保持对底层计算环境的控制，又能使运行器资源配置更加灵活。CircleCI 表示，该功能已经包含在其自托管运行器的所有套餐中，无需额外付费。",
+    "早期版本主要侧重于配置机器运行器，但新版的编排器能够通过单次部署管理多种资源类型。这在多类型持续集成（CI）工作负载环境中尤为重要：传统 CPU 构建可以与 GPU 密集型工作负载以及基于 ARM 的构建共存，而不需要为每类工作负载分别安装单独的编排器。",
+    "其底层架构也反映出，Kubernetes 作为 CI 基础设施控制平面的应用日益广泛。Machine Runner Orchestrator 不再要求使用特定的 Kubernetes 发行版，而变成支持三大托管 Kubernetes 平台—— Google Kubernetes Engine 、 Azure Kubernetes Service 和 Amazon Elastic Kubernetes Service ——以及 KubeVirt 环境。这使得平台团队在编排层的运行位置上有了更大的灵活性，而实际的 CI 运行器仍然基于物理机运行。",
+    "Machine Runner Orchestrator 所处的层级与 Karpenter 和 Cluster Autoscaler 等 Kubernetes 节点自动缩放器不同。Kubernetes 节点自动缩放主要针对无法调度 Pod 的情况，并据此调整底层集群的容量。例如，Karpenter 会根据待处理的工作负载来配置节点，还可以对节点生命周期进行整合或做其他处理。",
+    "而 CircleCI 的编排器则运行在 CI 运行器层。其目的是确保注册为 CircleCI 运行器的机器能够根据 CI 任务的需求进行扩展。因此，在基于 Kubernetes 的架构中，这两种方法可以协同工作：Kubernetes 管理托管编排组件的基础设施，而 CircleCI 管理可以用于执行 CI 工作负载的机器资源。",
+    "CircleCI 并非唯一一家将自托管的 CI 执行转向 Kubernetes 原生自动缩放的公司。GitHub 的 Actions Runner Controller （ARC）提供了一个 Kubernetes 操作符，用于编排和缩放自托管的 GitHub Actions 运行器。其运行器伸缩集可以根据工作流需求自动增加或减少运行器容量，并在处理任务时创建和删除临时运行器。",
+    "两者的主要区别在于执行模型。GitHub ARC 主要将临时运行器环境作为 Kubernetes 管理的工作负载来创建，而 CircleCI 的 Machine Runner Orchestrator 则专门针对机器运行器的虚拟机。这使得 CircleCI 的方法特别适用于两类 CI 工作负载：需要虚拟机级隔离的，或是需要标准运行器容器难以复现的能力，但同时仍然使用 Kubernetes 作为编排控制平面。",
+    "对于现有的预览版用户而言，向 1.0 版本的过渡并非完全无感。CircleCI 已经正式将该产品从 runner-provisioner 更名为 machine-runner-orchestrator，并相应地更新了相关的 Helm 图表、容器镜像仓库和 Packagecloud 仓库。现有安装无法就地升级：CircleCI 要求用户先卸载之前的部署，再安装新的 1.0.0 包。",
+    "这会在迁移过程中造成短暂的运营中断。CircleCI 警告称，在移除旧部署并安装新部署期间，与已配置资源类型关联的运行器将处于离线状态。因此，企业在升级生产环境的 CI 基础设施时，需要考虑到这一点，而不能将此次发布视为常规的就地软件更新。",
+    "1.0.0 版本还修复了 Go gRPC 实现中的两个高危漏洞：CVE-2026-84304（该漏洞涉及通过 HTTP/2 帧碎片化导致堆内存耗尽）和 CVE-2026-84445（当请求缺少 :authority 或 Host 头时，该漏洞可能导致程序崩溃）。",
+    "1.0 版本的发布使 CircleCI 进一步朝着将多种资源类型与基于 Kubernetes 的编排相结合，并支持主流托管型 Kubernetes 平台的模式迈进。因此，对于平台工程团队而言，这一引人注目的转变不仅仅是新增一个运行器功能，而是 CI 执行能力作为独立可扩展的基础设施层的出现；该层能够以与现代平台扩展应用程序工作负载几乎相同的方式，响应软件交付需求。",
+    "原文链接： https://www.infoq.com/news/2026/10/circleci-machine-runner/"
+  ],
+  "isExcerpt": true
+}
