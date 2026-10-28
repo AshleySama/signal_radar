@@ -1,0 +1,10 @@
+{
+  "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+  "source": "OpenAI",
+  "publishedAt": "2026-10-26T13:45:00Z",
+  "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+  "paragraphs": [
+    "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes."
+  ],
+  "isExcerpt": true
+}

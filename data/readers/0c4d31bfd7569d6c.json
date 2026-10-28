@@ -1,0 +1,20 @@
+{
+  "title": "Backstage 1.55 新增脚手架任务恢复功能，并移除已废弃的目录 API",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-26T00:00:00Z",
+  "url": "https://www.infoq.cn/article/hilBQCk7QcvclfrgZbSf",
+  "paragraphs": [
+    "Backstage 1.55 版本引入脚手架任务自动恢复能力，支持从崩溃或超时中断处续执行，并要求动作具备幂等性或检查点机制；同时完成搜索模块向 Elasticsearch 8 迁移及废弃 API 清理。",
+    "任务恢复通过新配置项 `scaffolder.taskRecovery` 启用，替代三个实验性标记；恢复过程保留任务密钥并持久化中间输出；工作区序列化需独立提供程序，生产环境推荐 GCP 等外部存储。",
+    "Backstage 项目发布开发者门户框架 1.55 版本 ，为崩溃或超时的软件模板任务添加了自动恢复功能。新版本还移除了一批已废弃的目录 API，并将搜索模块迁移至 Elasticsearch 8，因此平台团队在升级前需要处理多项重大变更。",
+    "任务恢复功能通过新增的 scaffolder.taskRecovery 配置段来启用。开启后，脚手架会从最后完成的步骤恢复任务，在任务到达终态前保留任务密钥，并持久化已完成步骤的输出，供后续步骤读取。发布说明提醒，被恢复任务所执行的动作应当具备幂等性或使用检查点，因为恢复后的任务可能会重复执行某个动作。新配置段替代了三个实验性标记，这三个标记仍可作为备用方案使用。",
+    "该功能满足了一个长期存在的需求。2025 年 4 月，在一条 跟踪脚手架任务重试的 GitHub Issue 中，Manoj Azad 写道：“目前不得不重新运行整个脚手架流程，不仅不方便，从技术角度来看也有问题。” 1.55 版本的功能覆盖了因崩溃或超时中断的任务，解决了上述需求中的一部分。",
+    "工作区序列化是可选的，需要单独的提供程序模块。新的数据库提供程序有 50 MB 限制，适用于开发环境，发布说明建议生产环境安装使用 GCP 模块或类似的外部存储。",
+    "大部分升级工作量集中在处理重大变更上。目录后端移除了 catalog.enableRelationsCompatibility 选项，实体关系现在仅返回 targetRef ，同时移除了已废弃的 CodeOwnersProcessor 和 AnnotateScmSlugEntityProcessor ，推荐改用社区模块。Elasticsearch 模块现在要求 Elasticsearch 8.19 或更高版本，但 AWS 与 OpenSearch 提供程序不受影响；读取原始客户端响应的自定义代码需要修改。TechDocs 不再加载不在内置白名单内的 MkDocs 插件，如果团队需要额外插件，必须在 techdocs.generator.mkdocs.dangerouslyAllowAdditionalPlugins 中显式列出。其他重大变更涉及 Backstage UI 链接组件、GitHub 代码库创建动作、增量摄取权限以及 Sentry 脚手架动作。",
+    "多项变更聚焦于治理与性能提升。最早在 1.54.6 补丁版本 引入的 scaffolder.requireScmUserCredentials 选项要求受支持的 GitHub、GitLab、Bitbucket 和 Azure DevOps 动作使用用户提供的凭证。拒绝未知权限的权限策略现在必须显式允许 scaffolder.template.dry-run 才能保证模板试运行正常工作。Veepee 高级 SRE Michael Todorovic 修改了 GitLab 合并请求与推送动作 ，改为在本地对比文件。他写道：“ publish:gitlab:merge-request 在自建 GitLab 上需要耗时 5 至 15 秒。结果发现几乎所有时间都消耗在动作向 GitLab 查询它本已拥有的信息。”这个改动将一个包含数百个文件仓库的 API 请求量从约 300 次减少到 10 次以内，原本 5 至 15 秒的步骤缩短至约 3 秒。目录、搜索、TechDocs 等核心插件现在仅在页面渲染时才加载页面，减小了应用初始打包体积。",
+    "自 9 月 15 日起，维护者已经发布了三个补丁版本。 1.55.1版本 修复了新的 backstage-cli pm verify-patches 命令和新前端系统的 TechDocs 附加组件；而 1.55.2 和 1.55.3 版本修复了 TechDocs 对 MkDocs Markdown 扩展配置的处理逻辑。",
+    "该版本还列出了 7 个软件包的安全修复，包括 OIDC、Cloudflare Access 认证提供程序以及代理后端。Cloudflare Access 提供程序现在需要在配置中填写应用受众标识。下一个次要版本已经进入预发布阶段， 1.56.0-next.2 已于 10 月 6 日发布。",
+    "查看英文原文： https://www.infoq.com/news/2026/10/backstage-1-55-task-recovery/"
+  ],
+  "isExcerpt": true
+}

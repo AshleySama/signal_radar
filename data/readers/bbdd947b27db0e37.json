@@ -1,0 +1,21 @@
+{
+  "title": "Docker Cloud Sandboxes在笔记本和云端之间提供一致的沙箱抽象",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-27T00:00:00Z",
+  "url": "https://www.infoq.cn/article/gXKvW3g4KXhTTiIaJFkl",
+  "paragraphs": [
+    "Docker Cloud Sandboxes为在Docker管理的基础设施上运行AI编码智能体（AI coding agents）提供了安全的托管执行环境。该平台基于硬件强制隔离的microVM构建，提供了一致的执行环境和统一的CLI工作流，使工作负载能够在本地机器与云端之间无缝迁移。",
+    "Docker Cloud Sandboxes 是面向 AI 编码智能体的云端 microVM 托管执行环境，支持长周期、多实例并行任务的无缝迁移与统一管理。它延续本地 Sandboxes 的硬件级隔离模型与 CLI 接口，解决笔记本硬件限制导致的执行中断问题。",
+    "提供硬件强制隔离的云端 microVM 执行环境；支持本地与云端沙箱一键迁移；统一 CLI 管理，实现长时任务无人值守运行。",
+    "Docker Cloud Sandboxes为在Docker管理的基础设施上运行AI编码智能体（AI coding agents）提供了安全的托管执行环境 。该平台基于硬件强制隔离的 microVM 构建，提供了一致的执行环境和统一的 CLI 工作流，使工作负载能够在本地机器与云端之间无缝迁移。",
+    "Docker Cloud Sandboxes 是 Docker Sandboxes 的演进版本。Docker 于今年早些时候推出了 Docker Sandboxes，旨在提供本地的 microVM 环境，让编码智能体能够自主且安全地运行。然而，Docker 指出，开发者现在越来越多地并行运行多个长周期任务，这产生了对超越本地机器限制的持久化、可扩展执行环境的需求。",
+    "当智能体仅进行短时突发工作时，人们关注的是模型能否将任务连贯地执行下去。如今，当它们的工作时长达到数小时，问题就变成了这些工作究竟在哪里发生。笔记本电脑是围绕人设计的：合上盖子它就会休眠，使用电池时它会降速，当你移动时它会断开网络连接。",
+    "借助 Cloud Sandboxes，开发者只需一条命令即可在本地和云端执行环境之间迁移沙箱，从而实现“同时运行十几个智能体，每个运行 5 小时、10 小时甚至 21 小时，而无需人工监视”。Cloud Sandboxes 采用与本地 Docker Sandboxes 相同的隔离模型，并通过相同的 CLI 进行管理。这使得开发者可以在本地启动任务，在需要更多资源时将其迁移到云端，或者在下班前将任务移交给云端。另一个关键使用场景是将数十个任务并行化，每个任务都在其独立的云端沙箱中运行。",
+    "除了 Cloud Sandboxes，Docker 还发布了多个套件（Kits），这些是根据 D Docker Sandbox Kit Specification 规范定义的预配置、预构建的沙箱。在最新的 Kits v3 规范中，Kits 不再被视为单独的构件，而是打包为标准 OCI 镜像。这使得它们可以像其他 Docker 镜像一样使用（包括使用 build 和 pull 命令），并可作为构建更复杂 Kits 的基础。",
+    "在评论这一发布时，德意志银行首席 DevOps 工程师 Florin Lungu 表示，他认为“ 这项创新允许在microVM中进行安全、自主的编码 ，从而增强了我们工作流的灵活性，这非常有趣”。",
+    "然而，Reddit 用户 CircumspectCapybara指出，沙箱化仅解决了部分问题 ：“任何有实际用处的智能体工作负载都需要将其沙箱化的智能体连接到有限的外部服务”，以便访问“它在现实生活中实际会调用的工具、真实的库或工件，以及它可能尝试从 PyPI、Docker Hub 或 Hugging Face 拉取的内容”。这即使在智能体被限制在沙箱内部时也会带来潜在的攻击面：“它们可以只与被授予访问权限的有限服务通信，并在留在沙箱内的同时，通过这种通信破坏这些服务。”",
+    "最后，Hacker News 读者 ongedierte 也 表达了同样的担忧 ，认为“传统沙箱不会是正确的抽象层”，并且“基于对象能力（object capabilities）构建约束机制，并能够精确限制智能体以何种方式访问哪些资源，才是未来的发展方向”。",
+    "查看英文原文： Docker Cloud Sandboxes Provide a Consistent Sandbox Abstraction Across Laptop and Cloud"
+  ],
+  "isExcerpt": true
+}

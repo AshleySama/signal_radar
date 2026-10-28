@@ -1,0 +1,25 @@
+{
+  "title": "Kubernetes 1.37发布：稳定版Metrics API和Beta版Rootless Kubelet",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-27T00:00:00Z",
+  "url": "https://www.infoq.cn/article/TrI8l3CYeAJER9tgR5Jt",
+  "paragraphs": [
+    "云原生计算基金会（CNCF）宣布发布Kubernetes 1.37，该版本名为“Garhwal”，重点强调稳定性、安全性以及AI/ML工作负载优化。",
+    "Kubernetes 1.37（Garhwal）正式发布Metrics API，强化稳定性与AI/ML工作负载支持；新增工作负载感知调度Alpha能力及Pod级检查点/恢复功能。",
+    "Metrics API进入GA，统一支撑HPA/VPA及kubectl top等关键运维能力；InPlacePodVerticalScalingSchedulerPreemption支持高优先级Pod原地扩缩抢占调度；Pod级checkpoint/restore提供运行时内存与进程树快照能力。",
+    "云原生计算基金会（CNCF）发布了 Kubernetes 1.37 版本，该版本命名为“Garhwal”，重点强调稳定性、安全性以及 AI/ML 工作负载优化。",
+    "1.37 版本的一个主要特性是 Metrics API 正式发布（general availability，GA）。metrics.k8s.io API 提供了一种监控和衡量节点与 Pod 健康状况的统一方式，从而支持 水平Pod自动扩缩容器（Horizontal Pod Autoscaler，HPA） 、 垂直Pod自动扩缩容器（Vertical Pod Autoscaler，VPA） 等自动扩缩容功能，以及 kubectl top 等命令。",
+    "本次发布中的 Alpha 特性包括工作负载感知调度。该 功能门控（feature gate） 名为 InPlacePodVerticalScalingSchedulerPreemption ，使调度器能够通过抢占低优先级工作负载，腾出已满载节点上的资源，从而让处于等待状态的高优先级应用进行原地（in-place）规格调整，使其能够得到调度执行。",
+    "1.37 版本中新增的 Pod 级 检查点（checkpoint）与恢复（restore） 特性，让 kubelet 能够创建检查点并从中恢复 Pod，使从业者更容易对运行中的容器的内存、进程树等进行快照，以便于进行调试或安全分析。",
+    "另一项进入 Alpha 阶段的功能是 StatefulSet 滚动更新的 Recreate 策略。这种针对 StatefulSet 的部署选项会删除所有的现有 Pod。该 功能标志 默认处于关闭状态，允许在更新过程中对卡住或处于等待状态的 Pod 进行干净恢复，而无需手动删除 Pod。",
+    "在 Kubernetes 1.37 中，HorizontalPodAutoscaler 的 缩容至零（scale-to-zero） 支持升级为 Beta 并默认启用。这有助于降低成本，尤其是在云环境中需要使用 GPU 的 AI/ML 工作负载的场景。",
+    "此外，用户命名空间（user namespace）或 Rootless模式 下的 Kubelet 在本次发布中也升级为 Beta。 KubeletInUserNamespace 功能门控默认启用，允许 kubelet 等核心节点组件借助 Linux 用户命名空间，以非 root 身份在主机上运行，其目的在于降低容器逃逸攻击的影响。",
+    "韧性watchcache初始化（Resilient watchcache initialization） 在 1.37 版本中正式发布（GA）。在此之前，当 kube-apiserver 在大型集群中重启或失去缓存连接时，它会向 etcd 发起大量请求，造成性能问题并可能导致控制平面宕机。启用该默认的功能门控后，kube-apiserver 将安全地委派限定的请求，并以 HTTP 429 响应拒绝其余请求，从而优雅地提示请求过多。",
+    "CNCF 大使、Megazone Corp 技术布道师 Hoon Jo 在近期一篇 LinkedIn 帖子 中强调了该特性的重要性。",
+    "韧性 watchcache 初始化已经稳定并锁定开启，使 kube-apiserver 不会在启动时向 etcd 发起洪峰请求。",
+    "此外， Pod证书（pod certificates） 在 1.37 版本中升级为稳定版本（stable）。这为 Pod 之间的安全通信提供了原生支持，无需依赖外部工具即可在内部服务之间引导建立 mTLS。",
+    "Kubernetes 1.37 版本共包含 67 项增强，其中 27 项 Alpha 特性、23 项升级为 Beta、16 项正式发布或已稳定、1 项弃用或移除。",
+    "有关 Kubernetes 1.37 发布的更多信息，用户可参阅官方发布说明与 发布说明 和 文档 ，获取增强、弃用与移除项的完整列表。"
+  ],
+  "isExcerpt": true
+}

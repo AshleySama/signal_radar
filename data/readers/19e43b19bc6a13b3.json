@@ -1,0 +1,25 @@
+{
+  "title": "KV Cache砍掉99%，单卡吞吐飙6倍，港科CMU联手岩山科技开源新模型",
+  "source": "量子位",
+  "publishedAt": "2026-10-26T14:45:25Z",
+  "url": "https://www.qbitai.com/2026/10/505407.html",
+  "paragraphs": [
+    "更夸张的是，一张80GB显卡同时跑512路长推理，输出吞吐达到12124 tokens/s，是源模型的6.42倍。",
+    "而且推理能力也基本保住了，AIME 2024—2026平均一次通过率达到82.9%，而参评的有界状态模型即便做到14B，最好也只有18.8%。",
+    "现在的模型，动不动就要思考几万token；Agent更是能连续工作几十轮，搜索结果、代码、工具调用记录不断往上下文里塞。",
+    "以Qwen3.5-4B为例，每个token要新增32 KiB的KV Cache。推理到64K，一条序列就是2 GiB；推理到256K，就是8 GiB。",
+    "测试设定是32K输入、32K输出，所有模型都在单张Hopper 80GB GPU上跑，各自取实测最快的批大小。",
+    "源模型Qwen3.5-4B最快的配置是批大小64，只有1889 tokens/s；Gemma 4 E4B、MiniCPM5-2B、LFM2.5-2.6B也都在1700到2200 tokens/s之间。",
+    "打个比方：如果让Qwen3.5-4B也同时跑完这512条序列，光是生成结束时的KV Cache就要1 TiB，约等于13张80GB显卡的显存。",
+    "在4K到32K输入、输出两两组合的16种负载上，批大小从32一路加到512，加权解码吞吐从4128涨到12497 tokens/s，显存峰值始终没碰到单卡上限。",
+    "四种输入长度平均下来，EdgeRock的吞吐是Qwen3.5-4B的4.94倍，是LFM2.5-2.6B的7.18倍。",
+    "团队拿EdgeRock-4B和16个有界状态模型做了对比，涵盖GDN、RWKV、Mamba等路线，其中三个是14B级别。",
+    "AIME 2024–2026上，EdgeRock-4B平均一次通过率82.9%；对照组里最强的RWKV-7 G1j 13.3B只有18.8%，AHN-GDN Qwen2.5 14B是11.4%。",
+    "在29项文本基准中，EdgeRock-4B在其中24项排名有界状态模型第一；29项等权均值比该指标上最强的基线AHN-GDN Qwen2.5 14B高出23.8个百分点。",
+    "就像攀岩者把岩锚钉进岩壁，后面的每一步都有可靠的支点，RMA把推理途中真正重要的细节“钉”在一个固定容量的锚点库里，需要时直接读取。",
+    "架构上，EdgeRock-4B基于Qwen3.5-4B改造：保留24个Gated DeltaNet层，把8个全注意力层换成1024窗口的滑动窗口注意力，外加独立的RMA模块。",
+    "在256段16K至130K token的长上下文上，每段问4个问题，涵盖检索、状态更新、跨文档信息组合和变量绑定：",
+    "论文地址： https://rockmatrix.ai/documents/edgerock-report-zh.pdf GitHub： https://github.com/rockmatrix-ai/EdgeRock Hugging Face： https://huggingface.co/rockmatrix-ai/EdgeRock"
+  ],
+  "isExcerpt": true
+}
