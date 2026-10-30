@@ -1,0 +1,18 @@
+{
+  "title": "Grafana Tempo 3.1 新增基于查询的追踪数据脱敏功能以及支持采样机制的 TraceQL 指标",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-29T00:00:00Z",
+  "url": "https://www.infoq.cn/article/YVwtY6Jwdu0IB84tDC9m",
+  "paragraphs": [
+    "Tempo 3.1 基于 Rhythm 架构强化 Kafka 集成，引入 TLS/SASL 支持、TraceQL 脱敏查询、实验性采样校正提示，并默认启用 vParquet5，指标查询性能提升约 2 倍。",
+    "Kafka 成为微服务部署默认数据分发层，Ingester/Compactor 被调度器+Worker 替代；复制因子降至 1 可显著压缩存储开销；单体模式仍绕过 Kafka。",
+    "Grafana Labs 发布 了 Tempo 3.1，这是基于 3.0 架构 的首次小版本更新。该版本为 Kafka 客户端添加了 TLS 及额外的 SASL 机制，允许运维人员通过 TraceQL 查询而非 trace ID 列表来脱敏追踪信息，并引入了一项实验性的查询时提示功能，用于对采样数据的 TraceQL 指标进行校正。此外， vParquet5 也已经成为默认的块格式。据 Grafana 称，简单指标查询的运行速度现在接近原来的两倍。",
+    "该版本基于 6 月发布的 Tempo 3.0 构建，并将 Kafka 兼容架构（代号为 Rhythm）设为微服务部署的默认方案。在该设计中，分发器将数据写入 Kafka 主题。块构建器（Block-builder）通过订阅该主题将 Parquet 块写入对象存储；实时存储（live-store）则通过订阅该主题来提供最新的追踪数据。摄入器（Ingester）和压缩器（compactor）已被移除，取而代之的是后端调度器和工作节点（worker）。Grafana 表示，将复制因子从 3 降至 1，可以将存储空间从追踪数据量的 3 到 3.5 倍减少到仅保留一份副本。单体模式仍然不使用 Kafka。",
+    "由于 Kafka 现在已经成为关键路径，所以 3.0 客户端的限制便成了问题。它仅支持通过未加密连接使用 SASL PLAIN，因此任何要求使用 TLS 的 broker 都会拒绝它。Tempo 3.1 增加了 TLS 支持，包括可选的 mTLS，以及 SCRAM-SHA-256、SCRAM-SHA-512、OAUTHBEARER 和 AWS_MSK_IAM。新增的 client_rack 选项启用了机架感知式数据获取（KIP-392），因此块构建器、实时存储和指标生成器都可以从自身可用区内的副本中读取数据，从而避免跨区传输费用。该功能要求 broker 有配置好的机架 ID。新增的 producer_compression 选项支持 none、gzip、snappy、lz4 或 zstd；如果未设置，则默认为 snappy。Grafana 指出，该功能结合 TLS，使得 Azure Event Hubs 可以作为后端使用，因为它仅支持 gzip 格式。这三项更改均来自社区贡献者。",
+    "3.0 版本通过 tempo-cli redact 引入了追踪数据脱敏功能，而在此之前需要逐一列出追踪 ID。诸如令牌或账号之类的敏感值通常会出现在大量追踪信息中，多到几乎无法全部列举。在 3.1 版本中，该命令支持 TraceQL 查询，并新增了 --dry-run 选项，从而可以在不修改数据块的情况下统计匹配项。Grafana 将语法限制为一个 Span 集过滤器。它对 resource.* 和 span.* 属性进行等值比较，并支持 && 和 || 运算符。这是因为重写操作无法撤销。--start 和 --end 标志用于缩小时间范围，这一点至关重要，因为在应用脱敏期间，Tempo 会暂停该租户的压缩操作。Grafana 提示：旧版工作节点会忽略时间窗口，并在接收到的每个数据块中移除所有的匹配项，而且不会报错。只有在全部调度器和工作节点都升级到 3.1 版本后，才能使用这些标志。",
+    "TraceQL 指标（自 3.0 版本起正式发布）有三项变更。首先，带有 (extrapolate=true) 的实验性提示会根据 tracestate 中的采样率进行数值缩放。这遵循的是 OpenTelemetry 的概率采样规则。在采样率为 50% 时，每个存储的 Span 计数为 2。如果未记录采样率，则 Span 计数为 1。因此，部分采用该功能不会对其他服务造成影响。此规则适用于：rate、count_over_time、sum_over_time、avg_over_time、histogram_over_time、quantile_over_time 和 compare，但不适用于 min_over_time 或 max_over_time。该功能需要 vParquet4 或更高版本，而且读取采样率的方式与 3.0 版本中 metrics-generator 的 enable_tracestate_span_multiplier 设置相同。因此，即席查询和预聚合序列的结果应保持一致。其次，指标查询与标量之间现在支持 +、-、* 和 / 运算。因此，错误率查询可以简化为单个查询。第三，3.0 版本中处于实验阶段的“仅 Span ”提取路径现在对 vParquet5 数据块默认启用。在一项预热测试中，{ } | rate() 的执行时间略超原时间的一半。",
+    "其他新增功能包括在 trace-by-ID v2 端点上增加了一个实验性的 Span 裁剪选项。该选项将相似的叶节点 Span 合并为一个包含计数和持续时间统计信息的汇总 Span。该端点还新增了 TraceQL 过滤功能。一个新增的实验性 POST /api/v2/traces/diff 端点可比较两个追踪记录，并能返回紧凑的摘要，而非 Span 级别的补丁。该功能通过 gcx、tempo-cli 以及 Tempo MCP 服务器对外提供。Grafana 表示，更小的有效载荷有助于基于大型语言模型（LLM）的调查分析。指标生成器在过期的服务图边上新增了 unmatched_span_kind 标签，支持重命名的 OpenTelemetry db.system.name 属性，并引入了标签缓冲池。Grafana 报告称，在其服务图基准测试中，该功能将每个 Span 的内存分配降到了零。",
+    "原文链接： https://www.infoq.com/news/2026/10/grafana-tempo-31/"
+  ],
+  "isExcerpt": true
+}

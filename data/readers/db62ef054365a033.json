@@ -1,0 +1,25 @@
+{
+  "title": "腾讯 AI Lab 又一核心骨干去向确认！“王者绝悟”前技术负责人叶德珩加入字节 Seed",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-30T00:00:00Z",
+  "url": "https://www.infoq.cn/article/u23wUVUDcFqL7hLBWXuW",
+  "paragraphs": [
+    "叶德珩确认加入字节跳动 Seed 团队，专注基础模型研究；个人主页新增未公开的 SeedXxx 模型及 ui-voyager 等生成媒体智能体系统。",
+    "腾讯 AI Lab R4 团队已解散，其原负责人转岗字节，标志大厂基础模型人才流动加速；SeedXxx 模型处于早期阶段，“P&C for now”表明技术细节暂未披露；ui-voyager、omni-reasoner 等项目指向具身智能与多模态交互新方向。",
+    "近日，前腾讯 AI Lab R4 部门合伙人、“王者绝悟”技术负责人叶德珩（Deheng Ye）在个人主页更新了职业信息，确认已加入字节跳动 Seed 团队，担任研究员，从事基础模型（Foundation Models）相关研究。",
+    "I am a Researcher at ByteDance Seed working on foundation models.",
+    "在项目经历中，除腾讯时期的“绝悟”系列外，还新增了 SeedXxx 模型，并标注“P&C for now”，意味着相关信息目前尚未公开。",
+    "页面还提到了生成媒体方向的智能体系统，包括 ui-voyager、omni-reasoner 和 proact。",
+    "今年 3 月 22 日，雷峰网在《腾讯 AI Lab 撤销背后：俞栋离职是最大导火索》一文中披露，叶德珩已于 2 月离开腾讯。当时，他所在的 R4 团队成立尚不足半年。其离职后，团队被调整至薄列峰负责的多模态体系。",
+    "公开履历显示，他于 2016 年在新加坡南洋理工大学取得计算机科学博士学位，随后于 2016 年至 2017 年在微软从事博士后研究，方向涉及代码理解与生成。",
+    "2021 年，腾讯曾在官方人物报道中专门介绍叶德珩。当时，他担任腾讯技术工程事业群悟空 AI 团队负责人，带领团队将机器学习技术应用到《王者荣耀》等复杂游戏场景。",
+    "相较于围棋等回合制环境，《王者荣耀》具有连续决策、高维动作空间、多角色协作、实时对抗等特点。智能体不仅要完成局部操作，还需要在动态环境中处理长期策略与团队协作问题。",
+    "2020 年，叶德珩等人的研究成果《Mastering Complex Control in MOBA Games with Deep Reinforcement Learning》介绍了在复杂 MOBA 游戏中应用深度强化学习的方法。相关工作涉及动作空间优化、策略学习与高性能训练系统。",
+    "2022 年，叶德珩作为作者之一参与的论文《JueWu-MC: Playing Minecraft with Sample-efficient Hierarchical Reinforcement Learning》发表于 IJCAI，研究如何让 AI 在《我的世界》这类开放环境中高效学习复杂任务。",
+    "这类研究与今天的 Agent 有一定的技术关联：智能体需要理解环境、规划行动、完成子任务，并根据反馈不断调整策略。",
+    "但两者不能简单等同。游戏强化学习所积累的技术经验，是否以及如何迁移到当下的基础模型训练，需要结合具体项目判断。",
+    "2024 年的论文《More Agents Is All You Need》探索通过增加参与采样和投票的智能体数量，提高大语言模型在部分任务上的表现。",
+    "他在最新个人主页中写道，自己曾在 2025 年之前成为腾讯 AI 体系内最年轻的 Leader、Director 和 Research Partner。"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,193 @@
+{
+  "updatedAt": "2026-10-30T04:08:56.436773Z",
+  "items": [
+    {
+      "title": "谷歌推出 EnvHarness，支持自进化智能体动态环境学习",
+      "summary": "谷歌研究人员开源 EnvHarness 框架，它可依据智能体短板动态调整训练环境，且不用改动智能体、环境与评估系统。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/FJqN3mFVyN1lMqHOiegs",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "score": 25.79,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/d4073f79934a18f9.json"
+    },
+    {
+      "title": "Chainguard 推出面向 AI 编码智能体的安全工作区与安全校验能力",
+      "summary": "Chainguard 发布两款测试版产品，用于运行和测试开发者与 AI 智能体编写的代码。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/UNli8x0wc8XUNjI5ETya",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "score": 25.79,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/c132b8d66f28bf49.json"
+    },
+    {
+      "title": "STEPX Neo 发布两周即迎首次升级，智能体能力持续释放",
+      "summary": "阶跃终端旗下大模型原生智能体手机 STEPX Neo 在发布两周后即迎来首次升级",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/506554.html",
+      "publishedAt": "2026-10-29T17:58:26Z",
+      "score": 25.49,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/a7910cb6e3eece02.json"
+    },
+    {
+      "title": "微软承诺将 Maia 推向数吉瓦级推理部署，但其效率指标引发质疑",
+      "summary": "从 2027 年开始，微软将把 Azure Maia 系列的部署规模扩大至数吉瓦级，使其 “成为微软各项产品和服务的主要推理系统”。支撑这一计划的架构设计对数据传输机制作出了相当详细的说明，但作为此次发布核心卖点的效率指标，却缺乏同样明确的定义。业内从业者也对此提出了质疑。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/Lg6RgMudjiWIVQllmz8a",
+      "publishedAt": "2026-10-29T00:00:00Z",
+      "score": 24.59,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/e8f84e2e7156e77e.json"
+    },
+    {
+      "title": "Personal Agent走向真实任务，蚂蚁百灵开源 Ling-3.1-flash-1019",
+      "summary": "10月28 日，蚂蚁集团旗下百灵大模型正式开源 Ling-3.1-flash-1019。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/505928.html",
+      "publishedAt": "2026-10-28T12:04:48Z",
+      "score": 24.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/72b797aa006bc68a.json"
+    },
+    {
+      "title": "Claude Code 撑起史上最大 IPO，被封号不退费的中国开发者撑起那 5%“脏收入”",
+      "summary": "Claude Code 是 Anthropic 招股书里最亮的招牌，那 5%–7% 的“违规收入”里，有多少是中国开发者的年费？",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/lCw5JBglbgZj9BYeZChS",
+      "publishedAt": "2026-10-28T00:00:00Z",
+      "score": 23.39,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/4931f863ba772e67.json"
+    },
+    {
+      "title": "刚刚，扩散模型杀进Agent主场！350亿参数，速度比Jev快一倍",
+      "summary": "用扩散模型怎么做做Agent？",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/505934.html",
+      "publishedAt": "2026-10-29T10:18:28Z",
+      "score": 23.11,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/3ccdb25a8e3b2a8a.json"
+    },
+    {
+      "title": "Grafana Tempo 3.1 新增基于查询的追踪数据脱敏功能以及支持采样机制的 TraceQL 指标",
+      "summary": "Grafana Labs 发布了 Tempo 3.1，这是基于 3.0 架构的首次小版本更新。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/YVwtY6Jwdu0IB84tDC9m",
+      "publishedAt": "2026-10-29T00:00:00Z",
+      "score": 22.59,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/775cb69410e85807.json"
+    },
+    {
+      "title": "买车送终身AI？智己LS8纯电版25万起！全系线控底盘宁德时代标配",
+      "summary": "Momenta世界模型上车",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/506569.html",
+      "publishedAt": "2026-10-30T08:19:06Z",
+      "score": 22.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/ca08f5cbc51a21e6.json"
+    },
+    {
+      "title": "4 条提示词，如何把 98 条产品评论变成工程决策依据 ｜ 技术实践",
+      "summary": "我们如何用四条提示词、一次 Notebook 会话，借助 Snowflake Cortex AI Functions 和 Hex，将 98 条产品评论转化为已发布的安全情报应用。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/5EaQcXCgMWaZaRvFBeoh",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "score": 21.79,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/810260d0a796ace8.json"
+    },
+    {
+      "title": "腾讯 AI Lab 又一核心骨干去向确认！“王者绝悟”前技术负责人叶德珩加入字节 Seed",
+      "summary": "腾讯 AI Lab 在今年3月成为历史，原有研究骨干的去向正陆续浮出水面。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/u23wUVUDcFqL7hLBWXuW",
+      "publishedAt": "2026-10-30T00:00:00Z",
+      "score": 21.79,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/db62ef054365a033.json"
+    },
+    {
+      "title": "中国MaaS市场TOP2，商汤大装置再度蝉联",
+      "summary": "在大模型私有化市场，商汤大装置以9.4%的市场份额，再次稳居第二位",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/506550.html",
+      "publishedAt": "2026-10-29T17:52:05Z",
+      "score": 21.49,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/e2e73d2081d62467.json"
+    },
+    {
+      "title": "奥特曼和Dario同台唱rap！Genspark新视频Agent上线，零基础也能拍短剧",
+      "summary": "All in one、任何人都能用",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/506478.html",
+      "publishedAt": "2026-10-29T14:53:19Z",
+      "score": 21.34,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/bbc84bbd1e8d601e.json"
+    },
+    {
+      "title": "24万开卖！理想重造i6，李想：目标全球畅销",
+      "summary": "理想今年最后一场发布会，自研电池芯片全部上车",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/506246.html",
+      "publishedAt": "2026-10-29T08:59:26Z",
+      "score": 21.04,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/8b6dd74b01bdd291.json"
+    },
+    {
+      "title": "AI流程怎么验收？从输入契约到验收样例的设计-腾讯云开发者社区-腾讯云",
+      "summary": "先用一个业务动词定义可验收范围，建立输入契约、人工确认节点及完成依据。设计样例须覆盖允许执行和阻止执行两类情况，人工确认应关联版本并支持失效重判。交付清单分为范围、配置、操作材料和验收记录四组，用指定格式记录“通过/未通过/待核对”，由使用者在授权样本上走通流程，避免宽泛需求导致理解偏差。",
+      "source": "腾讯云开发者社区 · 软件架构",
+      "url": "https://developer.cloud.tencent.com/article/2770766",
+      "publishedAt": "2026-10-28T15:28:32Z",
+      "score": 16.17,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/c984cd7782ef561a.json"
+    },
+    {
+      "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+      "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+      "publishedAt": "2026-10-28T13:15:00Z",
+      "score": 29.06,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/a395c7da350b5086.json"
+    },
+    {
+      "title": "Legora is building the agentic operating system for legal work",
+      "summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/legora",
+      "publishedAt": "2026-10-28T09:30:00Z",
+      "score": 28.87,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/709cc8e2bd467b79.json"
+    }
+  ],
+  "background": "./assets/backgrounds/scientific-archive.png"
+}
