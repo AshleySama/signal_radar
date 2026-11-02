@@ -1,0 +1,21 @@
+{
+  "title": "当 AI 能读懂二进制，闭源软件还剩多少护城河？",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-01T00:00:00Z",
+  "url": "https://www.infoq.cn/article/8mCjWWFLdjDA2vb51QZs",
+  "paragraphs": [
+    "REA 是一个开源逆向工程智能体框架，通过 MCP 协议桥接 Claude Code/Codex 与 Ghidra、Hopper、IDA 等工具，支持对二进制、Electron、JavaScript 和 .NET 程序集的自动化静态分析与假设验证。",
+    "Reverse Engineer Anything （REA）是一个开源项目，在 GitHub 上已获得超过 20 万个 Star。它将 Claude Code 和 Codex 等编码智能体与 Ghidra、Hopper、IDA 等逆向工程工具连接起来，让开发者能够检查编译后的二进制文件、追踪函数调用，并调查应用程序如何实现特定功能。",
+    "REA 使用 MCP 服务器向智能体开放逆向工程工具。智能体可以查询反汇编器、检查函数和交叉引用、追踪程序行为，并针对二进制文件反复验证假设。该工具还支持对 JavaScript 和 Electron 应用以及 .NET 程序集进行静态分析，并利用分析结果指导后续调查。REA 在本地运行，也没有声称能够恢复原始源代码。",
+    "GitHub 上的 展示案例 演示了 REA 如何追踪 Notion 的 Electron 剪贴板实现 ，如何从经典游戏 DX-Ball 中重建声音声像定位函数，并通过测试匹配全部 3205 个原始 x86 用例和编译后函数的全部 63 个字节，以及如何从 DOS 游戏 Touhou 4 的 16 位代码中恢复弹幕环的角度计算逻辑。",
+    "在 Hacker News 上，一些从业者质疑，与直接让 AI 编码智能体安装并使用 Ghidra 相比，该项目究竟增加了什么。Ghidra 是美国国家安全局开发的一款开源工具，用于分析编译后的程序。另一些用户则表示，与过去通过 AI 智能体使用逆向工程工具的尝试相比，REA 带来了更好的结果。Hacker News 用户 revelationnow 则 写道 ：",
+    "REA 并不局限于 Ghidra。它还支持 Hopper ，一款原生 macOS 反汇编与逆向工程工具，以及 IDA ，一款用于分析多种处理器架构和平台可执行代码的反汇编器和调试器。JavaScript 和 .NET 检查则无需原生分析引擎即可运行。",
+    "在 Reddit 上，一些独立开发者担心，AI 辅助逆向工程可能会 让他人更容易复制他们的游戏和应用程序 、绕过付费功能，并在未经许可的情况下利用其成果牟利。另一些用户则在 讨论希望逆向分析哪些硬件 ，以及可以利用分析结果构建什么。AMD 总监 Sreekanth Pannala 指出 ：",
+    "十年时间带来的变化真大！我们已经从软件为王、硬件只是商品的时代，走到了硬件为王、专有软件越来越容易被替代的时代。",
+    "REA 采用宽松的 MIT 许可证发布，支持合法的逆向工程、研究、分析和重建。用户有责任取得必要授权，并遵守适用法律。Persistent Intelligence Project 的创建者 Cleverson Santos 在 LinkedIn 上 警告称 ：",
+    "这是一条模糊的边界！我并不赞成越过这些界线——而且这才刚刚开始。所有为了帮助人类而创造的东西，最终都会以某种方式被用来对付人类！希望我的看法没有过于极端，这也不是批评，只是对哪些界线应该或不应该跨越的一点观察。",
+    "该项目作者使用 morluto 这一网名，其真实姓名尚未公开。他还发布了 Awesome Reverse Engineering ，其中收录了有关二进制文件、应用程序、固件、文件格式和协议的逆向工程工具与学习资源。",
+    "https://www.infoq.com/news/2026/10/reverse-engineer-anything/"
+  ],
+  "isExcerpt": true
+}

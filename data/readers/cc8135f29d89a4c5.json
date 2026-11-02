@@ -1,0 +1,25 @@
+{
+  "title": "TornadoVM 7 支持 Java 应用程序运行原生 GPU 工作负载",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-02T00:00:00Z",
+  "url": "https://www.infoq.cn/article/X8cwbyO4O3tS1jTTdtBq",
+  "paragraphs": [
+    "TornadoVM 是一个面向 Java 的开源异构 GPU 编程框架。其 7.3 版现已发布，这是该项目的一个重要里程碑。",
+    "TornadoVM 7.3 发布，支持 Java 程序在多核 CPU 和 GPU 上自动加速，无需修改 JVM，兼容主流 JDK 发行版。它通过编译 Java 源码为 OpenCL/Metal 后端代码，实现跨硬件平台的统一开发与部署。",
+    "支持 Java 应用零侵入式 GPU 卸载；内存管理自动桥接 Java 堆与加速器；提供“编写一次、跨 CPU/GPU/NVIDIA/Apple Metal 部署”能力。",
+    "TornadoVM 是一个 面向 Java 的开源异构 GPU 编程框架 。其 7.3 版本现在已经发布，这是该项目的一个重要里程碑。",
+    "TornadoVM 可以在多核 CPU 和 GPU 上自动加速 Java 程序。它并非要取代现有的 JVM，而是与现有的 JVM 协同工作，并在 Java 中提供了一个丰富的 GPU 编程生态系统，可以与任何主流的 JDK 发行版（如 OpenJDK、Graalvm、Temurin 或 Zulu）配合使用。",
+    "它将 Java 代码卸载到硬件后端，管理 Java 堆与加速器之间的内存，并运行生成的计算内核。这使其成为现代云和机器学习工作负载的一个有用的构建块。",
+    "在开发过程中，TornadoVM 会将 Java 源代码编译为 OpenCL 和 Apple Metal 后端代码。其设计理念是：开发者可以在笔记本电脑上开发并利用本地可用的硬件资源，随后将代码部署到配备 Nvidia GPU 的服务器上，从而实现显著的性能提升——对于现代机器学习工作负载而言，这是一种“编写一次，到处运行”的实现方式。",
+    "第 7 版带来了一些架构上的变更。后端现在使用 Foreign Function & Memory（FFM）API 取代了 Java Native Interface（JNI）。实验性的 JVM 编译器接口（JVMCI）依赖项也被移除。据开发团队介绍，TornadoVM 现在“通过反射 + ASM + Unsafe 层获取所有编译器元数据”。它在所有受支持的 JDK（21、25、26 和 27）上统一采用了这一处理路径。",
+    "该版本还通过优化 CUDA 后端深化了与 Nvidia 生态系统的集成。这包括对 cuTile 编程模型的支持（通过新的 TileContext），以及能够直接从 TornadoVM 任务图（ TaskGraphs ）中调用 cuBLAS 和 CUTLASS 等 CUDA 库。开发者可以根据性能和可移植性需求，将 JIT 生成的内核替换为 CUDA 库调用，或将两者串联起来。同样，TornadoVM 也通过混合 API 为苹果公司的 MXL 库添加了相同的功能。最后，该版本还新增了对多 GPU 执行的支持。",
+    "并非所有的 Java 计算都能从卸载中获益。最适合卸载的是数据并行工作负载，例如迭代之间没有依赖关系的循环，因为它们可以在加速器上并行运行。",
+    "TornadoVM 最新版本的目标之一就是构建一个符合 Java 编程惯例的 JVM 环境，以便访问 Nvidia 针对不同硬件平台优化过的库。其目的是让 Java 开发者能够利用线性代数、快速傅里叶变换（用于信号分析）、深度神经网络以及针对稀疏矩阵的手动优化矩阵乘法等功能。TornadoVM 已经与 Quarkus、Lang4j、Flink、Spring AI 等库实现集成，并可以通过 SDKMan 获取。",
+    "以 Apache Flink 与 TornadoVM 的集成为例，其核心思路是：开发者像往常一样使用 Table API 编写标准查询，并通过一个配置标志来标明该查询可能需要在 GPU 上进行加速。",
+    "随后，当计算任务到达任务管理器时，框架会检查其所在节点中是否有可用的 GPU；如果可用，则连接到库提供程序——该提供程序会分析查询的中间表示（IR），判断该计算是否确实适合在 GPU 上执行。",
+    "总的来说，TornadoVM 为 Java 程序员提供了四种针对 Nvidia GPU 的编程方式。首先是并行 API，那实际上只是对循环进行注解，并向编译器提供提示，表明该循环有可能被并行化。从长远来看，这个简单的 API 并不足以让生产级应用程序达到预期的性能。因此，它又增加了其他 API，如内核上下文 API 和前文提到的 TileContext。",
+    "随着 7.3 版本的发布，TornadoVM 团队推出了 jitLLM v2.0——这是基于 TornadoVM 构建的下一代 Java AI 推理引擎。该团队将 jitLLM 定位为在性能上可以与 llama.cpp 和 Ollama 直接竞争的产品，而且以单个 JAR 文件的形式发布。",
+    "TornadoVM 和 jitLLM 均通过 Beestream.ai 进行商业化推广。 Beestream.ai 是 TornadoVM 团队创立的一家衍生公司。"
+  ],
+  "isExcerpt": true
+}

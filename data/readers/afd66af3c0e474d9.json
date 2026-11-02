@@ -1,0 +1,25 @@
+{
+  "title": "一边拥抱 JDK 27，一边保留 JDK 21：Helidon 开启双轨发布",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-10-31T00:00:00Z",
+  "url": "https://www.infoq.cn/article/qRZCxTQbL1CwAUy28Zm8",
+  "paragraphs": [
+    "Helidon 27 首次采用 Oracle “Tip 与 Tail”双轨开发模型，以 JDK 27 为 Tip 基线并同步演进，同时维持 Helidon 4.5.5 作为 JDK 21/25 兼容的稳定 Tail 版本。",
+    "Tip/Tail 模型明确分离创新与稳定性：Helidon 27 对应前沿 Java 特性与 OpenJDK 发布节奏；Helidon 4.5.5 聚焦安全修复与 LTS 支持；JVP 生态整合 JavaFX 27、Jipher 20 等组件。",
+    "Helidon 27 的 发布 ，标志着 Helidon 首次采用 Oracle 的 “Tip 与 Tail”库开发模型 ：Tip 采用最新的 Java 技术，Tail 则提供更加稳定和安全的基线。该版本与 JDK 27 的发布 同步，变更包括重构原有的编程模型，以及引入两个新模块： Helidon Messaging 和 Helidon Data JDBC 。",
+    "Helidon 27 充当 Tip，这意味着：它与 JDK 27 保持一致；采用最新的 Java 功能；并将按照当前 OpenJDK 的发布节奏持续更新。因此，Helidon 28 将随 JDK 28 于 2027 年 3 月发布。",
+    "仍采用大家熟悉的 Helidon 语义化版本管理方式的 Helidon 4.5.5 充当 Tail，这意味着：它将 Helidon 4.5 LTS 维持在 JDK 21 基线上，同时支持 JDK 25；优先处理严重 Bug、安全修复和经过谨慎选择的向后移植；并为开发团队提供生命周期更长的生产基线。",
+    "Helidon 27 在 Java Verified Portfolio （JVP）体系下维护。JVP 是一套由 Oracle 提供支持的技术生态系统，最初于 JavaOne 2026 上发布 ，其中还包括 JavaFX 27 、 Jipher 20 和 Java Platform Extension Visual Studio Code 。",
+    "Helidon 最初名为 J4C（Java for Cloud），其设计目标是简单和快速，最初包含两种编程模型：Helidon SE 和 Helidon MP。此次发布引入了新的 Helidon Core ，取代 Helidon SE，并提供两种新的编程模型：Imperative 和 Declarative。顾名思义，Imperative 与传统的 Helidon SE 类似，允许开发者使用“普通的”Java 创建应用程序，无需依赖注入或注解。Declarative 则允许开发者使用依赖注入和注解，在构建时生成命令式代码和装配逻辑。",
+    "Helidon MicroProfile 取代了传统的 Helidon MP，并已迁移为独立项目。它将继续支持 MicroProfile 和 Jakarta EE 规范，并沿用 Helidon 的语义化版本管理方式。",
+    "Helidon SE Integrations 也已迁移为独立项目，并更名为 Helidon Extensions 。每个扩展都将按照各自的发布生命周期独立维护。",
+    "Helidon Messaging 是一个简化传统消息处理的新消息层，它避开了 MicroProfile Reactive Messaging 规范等响应式 API。开发者可以使用普通的阻塞式 Java，与 Kafka、JMS 或 Apache Pulsar 等不依赖特定连接器的通道进行交互，这些通道通过配置和可插拔连接器完成绑定。",
+    "Helidon Data JDBC 提供了一个统一 API，用于处理数据仓库查询，并作为传统对象关系映射（ORM）之上的抽象层。借助这一机制，包含查询定义的接口可以在编译时转换为实现类。Helidon Data JDBC 支持 Jakarta Persistence 规范及其对应实现： EclipseLink 和 Hibernate ORM 。",
+    "Helidon SE 于 2018 年 9 月首次推出 ，提供了三项用于创建微服务的核心 API——Web 服务器、配置和安全——供开发者构建基于微服务的应用程序。Helidon MP 则实现了多项 MicroProfile 规范。",
+    "多年来，Helidon 随 Java 社区共同演进，陆续增加了对以下技术的支持：GraalVM；Java Persistence Architecture（现为 Jakarta Persistence）；Micronaut Data；Kotlin；MicroStream（现为 EclipseStore）；以及 IntelliJ IDEA。",
+    "Helidon 2.0 于 2020 年 6 月发布 ，在 Helidon SE 中引入了用于配合 Web 服务器使用的 Web 客户端和数据库客户端，并新增了 命令行工具 （CLI）。",
+    "Helidon 3.0 于 2022 年 7 月发布 ，带来了以下变化：将 JDK 17 作为最低版本；实现 MicroProfile 5.0 和部分 Jakarta EE 9.1 规范；支持 JEP 290“过滤传入的序列化数据” ，因此默认禁用反序列化；更新 Helidon SE 路由 API；推出新的 项目启动器 ；以及更新 CLI。",
+    "最初基于 Netty 的 Helidon Web 服务器用于 1.0 至 3.0 版本系列。代号为 Helidon Níma 的新 Web 服务器基于 JEP 444“虚拟线程” ，并于 2023 年 10 月随 Helidon 4.0 的发布 一同推出。"
+  ],
+  "isExcerpt": true
+}

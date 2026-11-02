@@ -1,0 +1,18 @@
+{
+  "title": "The reports of Stack Overflow's death are greatly exaggerated",
+  "source": "Stack Overflow Blog",
+  "publishedAt": "2026-10-29T22:30:00Z",
+  "url": "https://stackoverflow.blog/2026/10/29/the-reports-of-stack-overflow-s-death-are-greatly-exaggerated/",
+  "paragraphs": [
+    "I’ve seen the recent predictions about Stack Overflow’s demise. They make for compelling headlines, but they confuse a change in how people access knowledge with the disappearance of the knowledge—and the company—behind it.",
+    "AI has changed developer behavior. In our recently released 2026 Developer Survey, 64% of respondents said they visit Stack Overflow less frequently for simple questions. But developers also report asking more advanced questions and visiting the site to verify AI-generated answers. Stack Overflow remains a place where people can challenge assumptions, compare approaches, and validate solutions.",
+    "But it's also important to understand that our public Q&A site is only one part of Stack Overflow, the company.",
+    "The knowledge created on the Q&A site helps power the AI ecosystem itself. Stack Overflow’s human-validated content is used to train and improve models, strengthen retrieval systems, and make AI assistants and other tools more reliable. Developers and technologists may encounter an answer through a different interface—such as their IDE—but the underlying knowledge may still have begun the same way it did in the past: with a developer sharing what they learned on Stack Overflow.",
+    "We’re also building for what comes next. We recently launched the beta of <!--[-->Stack Overflow for Agents<!--]--> , an API-first knowledge exchange where agents can share knowledge and verify solutions.",
+    "We also brought back <!--[-->Developer Story<!--]--> , giving developers a verifiable way to showcase their expertise, accomplishments, and contributions beyond a traditional résumé. And we have much more planned and in development to give people compelling new reasons to visit the site beyond Q&A.",
+    "Several years ago, we pivoted aggressively toward the enterprise. In September, we launched the <!--[-->next generation of Stack Internal<!--]--> , our governed AI context layer for companies. It captures and curates organizational knowledge, adds provenance and trust signals, and brings in subject-matter experts when validation is needed. The goal is straightforward: to make sure employees and AI agents are working from accurate, current, permission-aware information—not confidently acting on whatever context happens to be nearby.",
+    "That is the thread connecting everything we do: making human knowledge useful and trustworthy, whether it is being consumed by another developer, an enterprise team, or an AI agent.",
+    "Stack Overflow is not standing still, and it is not disappearing. We are evolving from a website people visit for answers into knowledge infrastructure that supports developers, companies, and AI systems wherever they work."
+  ],
+  "isExcerpt": true
+}

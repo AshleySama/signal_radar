@@ -1,0 +1,182 @@
+{
+  "updatedAt": "2026-11-02T04:07:10.246810Z",
+  "items": [
+    {
+      "title": "刚刚，DeepSeek重磅开源：Agent底座架构！",
+      "summary": "AI已经自己找到Bug并提交PR",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/506904.html",
+      "publishedAt": "2026-10-31T21:49:44Z",
+      "score": 24.49,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/53329debad3f5e10.json"
+    },
+    {
+      "title": "TornadoVM 7 支持 Java 应用程序运行原生 GPU 工作负载",
+      "summary": "TornadoVM 是一个面向 Java 的开源异构 GPU 编程框架。其 7.3 版现已发布，这是该项目的一个重要里程碑。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/X8cwbyO4O3tS1jTTdtBq",
+      "publishedAt": "2026-11-02T00:00:00Z",
+      "score": 23.79,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/cc8135f29d89a4c5.json"
+    },
+    {
+      "title": "三年前布局，今年爆火丨西湖大学成立新中心",
+      "summary": "西湖世界模型研究中心成立",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507076.html",
+      "publishedAt": "2026-11-01T21:28:10Z",
+      "score": 23.67,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/4a0fe19cbd272393.json"
+    },
+    {
+      "title": "英伟达团队基于 MiniMax H3 开源视频增强方案，最高支持 4K 重生成",
+      "summary": "英伟达与麻省理工学院团队，在 Hugging Face 发布了视频增强项目 Open-H3-Regenerate-2K 的模型权重",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/506743.html",
+      "publishedAt": "2026-10-30T15:31:11Z",
+      "score": 22.97,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/5d096e437ca717a4.json"
+    },
+    {
+      "title": "CI 出错后，谁来把关？Buildkite 的智能体新思路",
+      "summary": "Buildkite 新增限定作用域的密钥和智能体 CI 工具。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/WmlATgJudjwPKqHf4QgX",
+      "publishedAt": "2026-11-02T00:00:00Z",
+      "score": 21.79,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/356b04dc04148102.json"
+    },
+    {
+      "title": "Claude紧急叫停！暗改Harness禁止逆向游戏",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507038.html",
+      "publishedAt": "2026-11-01T21:09:55Z",
+      "score": 21.65,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/d19ad0628a8ab9e5.json"
+    },
+    {
+      "title": "清华姚期智团队新作：代数世界模型，让AI像牛顿一样思考",
+      "summary": "让AI像牛顿一样思考",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507031.html",
+      "publishedAt": "2026-11-01T16:02:37Z",
+      "score": 21.4,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/156f3096451c0f9a.json"
+    },
+    {
+      "title": "一边拥抱 JDK 27，一边保留 JDK 21：Helidon 开启双轨发布",
+      "summary": "Helidon 27 重构编程模型，并新增消息与数据模块。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/qRZCxTQbL1CwAUy28Zm8",
+      "publishedAt": "2026-10-31T00:00:00Z",
+      "score": 21.39,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/afd66af3c0e474d9.json"
+    },
+    {
+      "title": "GitHub Actions Runner Controller 0.15.0 致力于实现大规模场景下的可靠性",
+      "summary": "GitHub 发布 Actions Runner Controller (ARC) 0.15.0 版本，为在 Kubernetes 上运行自托管 GitHub Actions 运行器的组织带来了可靠性、可扩展性和可观测性方面的改进。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/tNLFh02J0koQswlY5Oqe",
+      "publishedAt": "2026-10-31T00:00:00Z",
+      "score": 21.39,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/96de64f9543f19ce.json"
+    },
+    {
+      "title": "Jev新成果，再次引爆开源",
+      "summary": "再次“性价比屠夫”",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/506922.html",
+      "publishedAt": "2026-11-01T12:18:37Z",
+      "score": 21.21,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/b43e5028ae56ce29.json"
+    },
+    {
+      "title": "Claude新模型曝光：新Fable，新Opus…",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/10/506674.html",
+      "publishedAt": "2026-10-30T13:50:44Z",
+      "score": 20.89,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/57d3518f27f4417b.json"
+    },
+    {
+      "title": "当 AI 能读懂二进制，闭源软件还剩多少护城河？",
+      "summary": "REA 项目将 AI 智能体引入二进制分析。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/8mCjWWFLdjDA2vb51QZs",
+      "publishedAt": "2026-11-01T00:00:00Z",
+      "score": 20.59,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/e17889f326dc80f5.json"
+    },
+    {
+      "title": "移动身份系统的密码学基础：ISO/IEC 18013-5 企业架构蓝图",
+      "summary": "一个 SDK 就能接入数字身份？真正的问题，恰恰被 SDK 藏起来了。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/9aUBUMmhC4s5mEJgXHDL",
+      "publishedAt": "2026-11-01T00:00:00Z",
+      "score": 20.59,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/d3a5c860416350b8.json"
+    },
+    {
+      "title": "如果 AI 幻觉也有预算，超支之后该怎么办？",
+      "summary": "Grafana 将 SLO 和错误预算应用于 AI 智能体行为。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/z8vQa2zzGyLiTxIZ8PXH",
+      "publishedAt": "2026-11-01T00:00:00Z",
+      "score": 20.59,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/8974207dc103cae3.json"
+    },
+    {
+      "title": "Making it easier for websites to express AI training preferences",
+      "summary": "OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+      "publishedAt": "2026-10-30T09:30:00Z",
+      "score": 19.67,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/84abd1857de5dfd9.json"
+    },
+    {
+      "title": "The reports of Stack Overflow's death are greatly exaggerated",
+      "summary": "I’ve seen the recent predictions about Stack Overflow’s demise. They make for compelling headlines, but they confuse a change in how people access knowledge with the disappearance of the knowledge—and the company—behind it.",
+      "source": "Stack Overflow Blog",
+      "url": "https://stackoverflow.blog/2026/10/29/the-reports-of-stack-overflow-s-death-are-greatly-exaggerated/",
+      "publishedAt": "2026-10-29T22:30:00Z",
+      "score": 1,
+      "language": "en",
+      "track": "developer",
+      "readerFile": "./data/readers/430da85fa6995840.json"
+    }
+  ],
+  "background": "./assets/backgrounds/scientific-archive.png"
+}
