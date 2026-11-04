@@ -1,0 +1,182 @@
+{
+  "updatedAt": "2026-11-04T04:38:53.107133Z",
+  "items": [
+    {
+      "title": "AI 复刻 Adobe 系列软件开发者坦言：项目远未准备就绪",
+      "summary": "开发者用 Claude Opus 5.5 开发 7 款 Adobe 开源替代工具，项目实际可用度仅 45%，完全对标原版还需 2300 至 4100 小时 AI 智能体工时。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/a2X4KVOXOt6lACRv8IWh",
+      "publishedAt": "2026-11-03T00:00:00Z",
+      "score": 26.57,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/4ad8f1a98e3b6098.json"
+    },
+    {
+      "title": "构建面向 Agentic 推理的下一代 LLM 推理引擎",
+      "summary": "TokenSpeed 从立项到版本迭代的完整技术路径",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/YwAayF1ylWb7oN4P0lyC",
+      "publishedAt": "2026-11-03T00:00:00Z",
+      "score": 22.57,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/4f230293e2958815.json"
+    },
+    {
+      "title": "从模型调用到任务交付：MaaS 如何走进 Agent 生产",
+      "summary": "应用拐点已经到来，模型正以泛办公场景为代表，向更多场景加速渗透。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/zZutPTX8bsr6NWQYNC3A",
+      "publishedAt": "2026-11-03T00:00:00Z",
+      "score": 22.57,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/d76af12ed004a7b3.json"
+    },
+    {
+      "title": "Anthropic团队零Rust经验起步，靠Claude完成核心API跨语言重构：CPU省40%，延迟降20%",
+      "summary": "当 Claude 开始承担大量编码工作，Anthropic 的工程师正在转向哪些更难的问题？",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/IMWM7ZXDi99sMiUVZBIF",
+      "publishedAt": "2026-11-03T00:00:00Z",
+      "score": 22.57,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/c15023e8086d156d.json"
+    },
+    {
+      "title": "“别再像 2024 年那样用 Claude 了！”Claude Cowork 工程负责人：有些 Skill 删掉反而更好",
+      "summary": "有人用 AI 写邮件，有人用 AI 造火箭。同一个模型，交给它的任务不同，发挥出来的能力也大不相同。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/xaWSKT3MlZjbuJw16Vem",
+      "publishedAt": "2026-11-03T00:00:00Z",
+      "score": 22.57,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/8f0b0826413a4bb2.json"
+    },
+    {
+      "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
+      "summary": "能指挥Agent干活，还能控制智能家居",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507107.html",
+      "publishedAt": "2026-11-02T14:08:04Z",
+      "score": 22.07,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/71d58f4e198e363b.json"
+    },
+    {
+      "title": "让Agent首次拥有“视听双流记忆”：openJiuwen Agent-Memory看懂长视频，关键事件一个不落",
+      "summary": "长视频记忆精度飙升，问答时延最高降97%",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507533.html",
+      "publishedAt": "2026-11-04T10:49:02Z",
+      "score": 22.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/4930107de9b722ac.json"
+    },
+    {
+      "title": "大模型会击穿具身智能吗？稚晖君带领团队深刻复盘并解答",
+      "summary": "具身智能进入部署态，智元如何打通技术与生产力之间的链条？",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/bFKTeyCOlydWMYi91H4q",
+      "publishedAt": "2026-11-04T00:00:00Z",
+      "score": 21.77,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/7cf487b7f14d17cc.json"
+    },
+    {
+      "title": "智己LS8纯电版背后：8年研发底盘，两大厂联合开发电池",
+      "summary": "两位CTO，关起门来吵架",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507473.html",
+      "publishedAt": "2026-11-03T20:57:35Z",
+      "score": 21.62,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/7715ad33c91eec79.json"
+    },
+    {
+      "title": "模型谁都买得到，拉开差距的是AI生产力系统",
+      "summary": "AI的下一程是生产力系统之争",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507448.html",
+      "publishedAt": "2026-11-03T19:13:49Z",
+      "score": 21.53,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/31346adcac7629fb.json"
+    },
+    {
+      "title": "别再迷信 Agent 的自主性了",
+      "summary": "企业 Agent 真正的壁垒，不在模型？",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/UMvAAwoFByxvWLLVVJYY",
+      "publishedAt": "2026-11-02T00:00:00Z",
+      "score": 21.37,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/7c51597d5e070f78.json"
+    },
+    {
+      "title": "纯语音Personal Agent来了！或许，这就是乔布斯心中的Siri",
+      "summary": "终于，有了一个可以触摸的起点",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507419.html",
+      "publishedAt": "2026-11-03T14:55:30Z",
+      "score": 21.31,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/1b989df1def36719.json"
+    },
+    {
+      "title": "小米斩获乌镇峰会双料大奖：小米集团获“杰出贡献奖”，小米具身基座模型获“领先科技奖”",
+      "summary": "11月3日，小米方面披露，小米集团获得2026世界互联网大会“杰出贡献奖”创新突破类奖项",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507396.html",
+      "publishedAt": "2026-11-03T13:16:35Z",
+      "score": 21.23,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/f64ac08bcee067c9.json"
+    },
+    {
+      "title": "爱诗科技PixVerse 与 OpenAI 共同推出产品集成和创作者教育计划，高效打通 AI 创意全流程",
+      "summary": "近日，爱诗科技（AIsphere）旗下模型和开放平台PixVerse 与 OpenAI 宣布开启深度合作",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507313.html",
+      "publishedAt": "2026-11-03T09:46:55Z",
+      "score": 21.06,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/04ee5ea2d0db419b.json"
+    },
+    {
+      "title": "Qodo builds context into AI code review with Codex",
+      "summary": "Qodo brings company knowledge and coding standards into Codex, helping developers catch P0 issues across repositories before opening a pull request.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/qodo-codex-plugin",
+      "publishedAt": "2026-11-02T00:00:00Z",
+      "score": 26.37,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/4094d4340f9e66f9.json"
+    },
+    {
+      "title": "Accelerating engineering for the physical world",
+      "summary": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+      "publishedAt": "2026-11-03T12:00:00Z",
+      "score": 26.17,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/25493a43cba550c7.json"
+    }
+  ],
+  "background": "./assets/backgrounds/scientific-archive.png"
+}
