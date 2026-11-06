@@ -1,0 +1,25 @@
+{
+  "title": "谷歌 Data Agent Kit 正式发布：安全防护分为 Skill 与 IAM",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-04T00:00:00Z",
+  "url": "https://www.infoq.cn/article/UtKS9EofSoyd2P7Otx7e",
+  "paragraphs": [
+    "谷歌上线免费开源的 Data Agent Kit，借助 MCP 打通编码智能体与谷歌数据云服务，提供两类不同的安全防护：智能体主动校验能力、IAM 强制拒绝策略。",
+    "Data Agent Kit 是谷歌开源的 MCP 工具集，使编码智能体可安全接入 BigQuery、Bigtable 等 15+ 数据云服务，并内嵌数据治理与运维最佳实践。",
+    "支持 BigQuery Graph、Spark 托管服务等新后端；通过技能集合+MCP 服务器双组件架构 bridging 智能体与真实数据环境；解决“写得出 SQL，但不知数据上下文”这一关键断点。",
+    "谷歌近期 正式发布 Data Agent Kit，结束了整个夏季的预览。它免费、开源，可以安装到非谷歌编码智能体中。它提供两种控制方式，这种差异在生产环境中至关重要。",
+    "Data Agent Kit 是一个 MCP 工具集，能够将智能体连接到超过十五项谷歌数据云服务，外加谷歌提供的技能，指导智能体完成 BigQuery SQL 优化、Bigtable 行键设计等实践。它运行在 Antigravity、Claude Code、Codex、Cursor 和兼容 VS Code 的编辑器中，并预装在 Cloud Shell 和 Cloud Workstations 中。",
+    "Data Agent Kit 部署在编码智能体与谷歌数据云服务之间，包含两个组件：承载最佳实践指引的技能集合，以及对外暴露实时元数据和工具的 MCP 服务器。（来源： 谷歌官方博客 ）",
+    "随着正式版发布，谷歌新增支持 BigQuery Graph、Bigtable 和 Apache Spark 托管服务。产品经理 Arun Nair 与开发者布道师 Jeff Nelson 在发布博文中提到，它填补了智能体原生能力的一个空白：智能体虽然能写出不错的 SQL，但它不知道“有哪些表、表如何分区、哪些表是团队可信的，或是昨夜的任务为什么失败”。",
+    "插件仓库 包含了 37 个技能，基于 Apache 2.0 协议，每个技能的元信息都标注谷歌为发布方。它有版本管理规范，9 月 29 日发布 1.0.0，10 月 13 日发布 1.1.0，团队可以锁定固定版本使用。",
+    "在这些技能中， accidental-data-loss-prevention 可以阻止智能体执行破坏性操作。它的描述以“STOP AND VERIFY”作为开头，告诉智能体在执行任何不可逆操作之前“必须获得用户的明确许可”，列出了 DROP TABLE、TRUNCATE、无 WHERE 子句或使用 1=1 的 DELETE、针对生产存储桶的存储删除、 gcloud projects delete 以及 KMS 密钥销毁等。流程为：暂停操作、说明影响、等待用户确认。",
+    "在 LinkedIn 帖子 中被问及是否可以将只读查询与修改基础设施的工具隔离开时，Nelson 回答说这是在 IAM 中处理的，而不是在智能体层面单独处理：可以通过身份模拟让智能体以只读服务账号运行，或是使用“IAM 拒绝策略，拦截所有 tool.isReadOnly 为 false 的 MCP 工具”。",
+    "api.getAttribute( 'mcp.googleapis.com/tool.isReadOnly' , false ) == false 复制代码 它拒绝 mcp.googleapis.com/tools.call 权限，可在组织、文件夹或项目级别生效。配套属性支持 resource.service 和 tool.name 。",
+    "这有三个限制。被阻止的工具仍然出现在 tools/list 中，因此智能体能看到它无法使用的功能，只在调用时才知道。这些控制仅涵盖谷歌云 MCP 服务器，不包括其他。而且 resource.service 和 tool.name 仅在 gcloud 中可用，控制台中没有。",
+    "AI 解决方案架构师 Amel Habira 阅读文档后比较看好，他提到短期凭证、只读标记以及在智能体运行 Notebook 单元格前给出告警。他写道：",
+    "接入 MCP 只是比较简单的一环。生产环境的核心边界是权限范围加上可重试安全执行：当智能体超时后重试写入，或是运行中途表结构发生变更时会发生什么？",
+    "他补充说，IAM 和试运行涵盖了授权和预检，“但它们不会告诉智能体超时写入是否已提交。完善的返回结果应当包含幂等键、提交状态和可回滚性。”Data Agent Kit 的工具结果目前并不包含这些信息。",
+    "微软选择了另一种方案。处于公开预览阶段的 Agent 365 与 Azure API Management 的 MCP 治理集成 将治理策略统一放在 Microsoft 365 管理后台，在网关层强制执行。按工具拦截功能需要预览套餐，应用程序密钥作用于 网关级别 ，对所有模型和工具生效。谷歌基于客户已在使用的 IAM 体系进行工具鉴权，并传播用户身份，从而支持行级、列级安全策略。"
+  ],
+  "isExcerpt": true
+}

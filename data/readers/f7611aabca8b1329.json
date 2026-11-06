@@ -1,0 +1,22 @@
+{
+  "title": "谷歌发布 ML Drift：为各类 GPU 加速端侧 AI 推理",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-05T00:00:00Z",
+  "url": "https://www.infoq.cn/article/hHzARIJTeqoqYpjNKEuq",
+  "paragraphs": [
+    "ML Drift 是谷歌开源的跨平台 GPU 推理引擎，专为端侧 AI 设计，统一抽象 OpenGL ES、OpenCL、Metal 和 WebGPU，支撑 LiteRT 运行时。",
+    "支持五维张量、张量虚拟化着色器与可扩展自定义算子；针对 Arm/Intel/高通 GPU 深度优化；提供传统 ML 稳定性与生成式 AI 峰值性能兼顾的推理基座。",
+    "谷歌发布 ML Drift，一个开源、跨平台的 GPU 计算引擎，专为端侧 AI 和机器学习推理而设计 。它采用 Apache 2.0 许可，抽离了不同 GPU 硬件和底层 API 的复杂性，支持 OpenGL ES、OpenCL、Metal 和 WebGPU。",
+    "ML Drift 是为 LiteRT 提供动力的核心 GPU 加速引擎。谷歌将其开源后，开发者可以为各类应用构建自定义图形渲染与推理运行时，应用范围涵盖传统计算机视觉、音频和深度处理，以及生成式 AI 等场景。",
+    "谷歌表示，ML Drift 旨在为可移植性和性能建立新的基础，提供“传统 ML 的稳定性和前沿生成式 AI 的峰值性能”。",
+    "为实现这一目标，相较于旧版 TFLite GPU 委托，ML Drift 引入了多项技术改进：基于张量虚拟化实现统一着色器、支持可扩展自定义算子、原生支持五维张量。它还针对 Arm、Intel 和高通技术公司的 GPU 进行了硬件专属优化，以此充分利用现代 GPU 的硬件资源。",
+    "ML Drift 通过 Dawn （Chromium 的 WebGPU 实现）将桌面端推理支持扩展到 Windows 和 Linux，同时保留 macOS 上原生 Metal 后端支持。Dawn 提供了统一的 API 模型，可复用 WebGPU 的硬件抽象层，开发者无需直接对接 DirectX、Vulkan 这类平台专属图形 API。",
+    "谷歌使用 Gemma 模型在开发者级工作站硬件上对 ML Drift 进行了基准测试，报告显示其内存开销比其他框架（包括 llama.cpp 和 MLX LM）低 12%。谷歌还强调，ML Drift 已通过 Chrome、YouTube Shorts、Photos 和 Meet 等应用在数百万台设备上运行。",
+    "对于 YouTube Shorts，ML Drift 让 Android 和 iOS 平台上基于分割算法的特效平均帧延迟最高降低了 40%。对于谷歌 Photos，计算摄影与图像分割流水线提速最高可达 2 秒。Adobe Lightroom 和 Photoshop 的特定 AI 照片编辑功能（如选择主体、选择天空和自适应人像）性能提升最高达 30%。最后，Snapchat 在 Android 上基于 ML 驱动的人脸和风格生成特效模型延迟降低了 30%，从而能够使用更大的扩散模型。",
+    "无需通过布局 Hack 就能原生支持 5D 张量，对于在边缘 GPU 上运行空间模型和 Transformer 模型来说是重大利好。将逻辑张量和物理内存分配解耦能够显著减少在线推理过程中的内存碎片化。",
+    "Tensorust 创始人兼开发者 Matthew Charles Vladislav Busel 质疑“ 它与 Core ML 在新 iPhone 上的延迟和内存表现 ，毕竟这是目前大多数人的交付目标平台”，但谷歌并未提供任何对比数据。",
+    "随着 ML Drift 的发布，谷歌将停止更新旧版 TensorFlow Lite GPU 委托。为与现有模型保持向后兼容，谷歌建议迁移至 LiteRT ML Drift GPU 加速器。应用开发者可以使用 LiteRT ML Drift 加速器 ，GPU 和系统工程师可以通过其 底层 C++ API 构建自定义 GpuModel 计算图并编写自定义着色器。",
+    "查看英文原文： https://www.infoq.com/news/2026/10/google-ml-drift/"
+  ],
+  "isExcerpt": true
+}

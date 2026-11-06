@@ -1,182 +1,182 @@
 {
-  "updatedAt": "2026-11-04T04:38:53.107133Z",
+  "updatedAt": "2026-11-06T04:53:15.351134Z",
   "items": [
     {
-      "title": "AI 复刻 Adobe 系列软件开发者坦言：项目远未准备就绪",
-      "summary": "开发者用 Claude Opus 5.5 开发 7 款 Adobe 开源替代工具，项目实际可用度仅 45%，完全对标原版还需 2300 至 4100 小时 AI 智能体工时。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/a2X4KVOXOt6lACRv8IWh",
-      "publishedAt": "2026-11-03T00:00:00Z",
-      "score": 26.57,
-      "language": "zh",
-      "track": "developer",
-      "readerFile": "./data/readers/4ad8f1a98e3b6098.json"
-    },
-    {
-      "title": "构建面向 Agentic 推理的下一代 LLM 推理引擎",
-      "summary": "TokenSpeed 从立项到版本迭代的完整技术路径",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/YwAayF1ylWb7oN4P0lyC",
-      "publishedAt": "2026-11-03T00:00:00Z",
-      "score": 22.57,
-      "language": "zh",
-      "track": "developer",
-      "readerFile": "./data/readers/4f230293e2958815.json"
-    },
-    {
-      "title": "从模型调用到任务交付：MaaS 如何走进 Agent 生产",
-      "summary": "应用拐点已经到来，模型正以泛办公场景为代表，向更多场景加速渗透。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/zZutPTX8bsr6NWQYNC3A",
-      "publishedAt": "2026-11-03T00:00:00Z",
-      "score": 22.57,
-      "language": "zh",
-      "track": "developer",
-      "readerFile": "./data/readers/d76af12ed004a7b3.json"
-    },
-    {
-      "title": "Anthropic团队零Rust经验起步，靠Claude完成核心API跨语言重构：CPU省40%，延迟降20%",
-      "summary": "当 Claude 开始承担大量编码工作，Anthropic 的工程师正在转向哪些更难的问题？",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/IMWM7ZXDi99sMiUVZBIF",
-      "publishedAt": "2026-11-03T00:00:00Z",
-      "score": 22.57,
-      "language": "zh",
-      "track": "developer",
-      "readerFile": "./data/readers/c15023e8086d156d.json"
-    },
-    {
-      "title": "“别再像 2024 年那样用 Claude 了！”Claude Cowork 工程负责人：有些 Skill 删掉反而更好",
-      "summary": "有人用 AI 写邮件，有人用 AI 造火箭。同一个模型，交给它的任务不同，发挥出来的能力也大不相同。",
-      "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/xaWSKT3MlZjbuJw16Vem",
-      "publishedAt": "2026-11-03T00:00:00Z",
-      "score": 22.57,
-      "language": "zh",
-      "track": "developer",
-      "readerFile": "./data/readers/8f0b0826413a4bb2.json"
-    },
-    {
-      "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
-      "summary": "能指挥Agent干活，还能控制智能家居",
+      "title": "腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一",
+      "summary": "11月 5 日，腾讯宣布因 Hy4 调用激增，WorkBuddy 已进行十倍扩容",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/11/507107.html",
-      "publishedAt": "2026-11-02T14:08:04Z",
-      "score": 22.07,
+      "url": "https://www.qbitai.com/2026/11/507967.html",
+      "publishedAt": "2026-11-06T10:00:11Z",
+      "score": 26.0,
       "language": "zh",
       "track": "regular",
-      "readerFile": "./data/readers/71d58f4e198e363b.json"
+      "readerFile": "./data/readers/e15769ca5c01e8ab.json"
     },
     {
-      "title": "让Agent首次拥有“视听双流记忆”：openJiuwen Agent-Memory看懂长视频，关键事件一个不落",
-      "summary": "长视频记忆精度飙升，问答时延最高降97%",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/11/507533.html",
-      "publishedAt": "2026-11-04T10:49:02Z",
-      "score": 22.0,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/4930107de9b722ac.json"
-    },
-    {
-      "title": "大模型会击穿具身智能吗？稚晖君带领团队深刻复盘并解答",
-      "summary": "具身智能进入部署态，智元如何打通技术与生产力之间的链条？",
+      "title": "谷歌 Data Agent Kit 正式发布：安全防护分为 Skill 与 IAM",
+      "summary": "谷歌上线免费开源的 Data Agent Kit，借助 MCP 打通编码智能体与谷歌数据云服务，提供两类不同的安全防护：智能体主动校验能力、IAM 强制拒绝策略。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/bFKTeyCOlydWMYi91H4q",
+      "url": "https://www.infoq.cn/article/UtKS9EofSoyd2P7Otx7e",
       "publishedAt": "2026-11-04T00:00:00Z",
-      "score": 21.77,
+      "score": 25.36,
       "language": "zh",
       "track": "developer",
-      "readerFile": "./data/readers/7cf487b7f14d17cc.json"
+      "readerFile": "./data/readers/610210caf7625ea0.json"
     },
     {
-      "title": "智己LS8纯电版背后：8年研发底盘，两大厂联合开发电池",
-      "summary": "两位CTO，关起门来吵架",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/11/507473.html",
-      "publishedAt": "2026-11-03T20:57:35Z",
-      "score": 21.62,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/7715ad33c91eec79.json"
-    },
-    {
-      "title": "模型谁都买得到，拉开差距的是AI生产力系统",
-      "summary": "AI的下一程是生产力系统之争",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/11/507448.html",
-      "publishedAt": "2026-11-03T19:13:49Z",
-      "score": 21.53,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/31346adcac7629fb.json"
-    },
-    {
-      "title": "别再迷信 Agent 的自主性了",
-      "summary": "企业 Agent 真正的壁垒，不在模型？",
+      "title": "谷歌发布 ML Drift：为各类 GPU 加速端侧 AI 推理",
+      "summary": "谷歌推出开源跨平台 GPU 计算引擎 ML Drift，面向端侧 AI 与机器学习推理场景。",
       "source": "AI 前线 / InfoQ 中文",
-      "url": "https://www.infoq.cn/article/UMvAAwoFByxvWLLVVJYY",
-      "publishedAt": "2026-11-02T00:00:00Z",
-      "score": 21.37,
+      "url": "https://www.infoq.cn/article/hHzARIJTeqoqYpjNKEuq",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "score": 24.56,
       "language": "zh",
       "track": "developer",
-      "readerFile": "./data/readers/7c51597d5e070f78.json"
+      "readerFile": "./data/readers/f7611aabca8b1329.json"
     },
     {
-      "title": "纯语音Personal Agent来了！或许，这就是乔布斯心中的Siri",
-      "summary": "终于，有了一个可以触摸的起点",
+      "title": "不靠堆砌数据，让机器人看懂真实物理世界 | 招商局狮子山实验室发布「驭物™ Lion-ER-35B-A3B」具身推理模型",
+      "summary": "仅激活3B参数，十项基准全线提升！",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/11/507419.html",
-      "publishedAt": "2026-11-03T14:55:30Z",
-      "score": 21.31,
+      "url": "https://www.qbitai.com/2026/11/507586.html",
+      "publishedAt": "2026-11-04T18:08:38Z",
+      "score": 24.26,
       "language": "zh",
       "track": "regular",
-      "readerFile": "./data/readers/1b989df1def36719.json"
+      "readerFile": "./data/readers/1e6f2ae7c668b9f9.json"
     },
     {
-      "title": "小米斩获乌镇峰会双料大奖：小米集团获“杰出贡献奖”，小米具身基座模型获“领先科技奖”",
-      "summary": "11月3日，小米方面披露，小米集团获得2026世界互联网大会“杰出贡献奖”创新突破类奖项",
+      "title": "三条AI技术路线终将合流？智象创始人梅涛提出智能体化的世界模型",
+      "summary": "走向“智能体化世界模型”。",
       "source": "量子位",
-      "url": "https://www.qbitai.com/2026/11/507396.html",
-      "publishedAt": "2026-11-03T13:16:35Z",
+      "url": "https://www.qbitai.com/2026/11/507834.html",
+      "publishedAt": "2026-11-05T17:37:40Z",
+      "score": 23.44,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/63dc60d2e4de5bee.json"
+    },
+    {
+      "title": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA",
+      "summary": "11月5日，百度正式开源最新基座模型文心5.5 Flash Base",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507787.html",
+      "publishedAt": "2026-11-05T15:15:13Z",
+      "score": 23.32,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/8c59ee075106aa14.json"
+    },
+    {
+      "title": "基于本体+知识+Harness+Datat Agent的智能体完整落地链路！",
+      "summary": "Data + AI 技术实践巡展 · 上海站",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507696.html",
+      "publishedAt": "2026-11-05T10:01:51Z",
+      "score": 23.06,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/3c40aaf7e6e47fbb.json"
+    },
+    {
+      "title": "模型之外，腾讯还在补什么？",
+      "summary": "WorkBuddy、腾讯文档、ima、ADP、WAND、天籁语音大模型、TDSQL Nexa、无境、AgentHosting、Agent Runtime、TokenHub 等数十款产品集中亮相，构成了一次规模宏大的 Agent 生产力产品版图集中检阅。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/UMlHzxNiS9tFfG9KadYs",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "score": 22.56,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/32d2c044fbf53fc2.json"
+    },
+    {
+      "title": "Claude Code 产品负责人Cut Wu 官宣加入 OpenAI",
+      "summary": "Cat Wu 是 Claude Code 早期核心团队成员之一",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/cDERcarozbrsCBNs5sWM",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "score": 22.56,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/2b2e4138b3dfa08b.json"
+    },
+    {
+      "title": "“超脑”统一指挥，“狼族”协同作战：京东物流打造供应链 AI 机器人军团",
+      "summary": "京东物流致力于打造全球最大规模的具身机器人应用军团，目前已在供应链领域落地了应用场景最多、规模最大、品类最全的自研与联合开发机器人集群。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/1YeowHagkg1Or6wwy23P",
+      "publishedAt": "2026-11-06T00:00:00Z",
+      "score": 21.76,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/be05517fa633a284.json"
+    },
+    {
+      "title": "2026 年 PyTorch 大会：谷歌和 Meta 开源 TorchTPU，在 TPU 上原生支持 PyTorch",
+      "summary": "在圣何塞举行的 2026 年 PyTorch 北美大会上，谷歌和 Meta 开源了 TorchTPU——这是谷歌张量处理单元（TPU）的原生 PyTorch 后端。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/5s2oa0BLlgR8fplkq2uK",
+      "publishedAt": "2026-11-06T00:00:00Z",
+      "score": 21.76,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/c5a1f264d8edc1fc.json"
+    },
+    {
+      "title": "从仓储到配送，全程由 AI“指挥”：京东物流“超脑”3.0 的工业级 AI 实践",
+      "summary": "“超脑”大模型3.0是物流行业首个从仓储到配送全程由AI“指挥”的工业级大模型应用集成体，也是 AI 大模型在供应链全链路全流程最大规模的应用。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/jBdvoUXheWN0oe6NfklO",
+      "publishedAt": "2026-11-06T00:00:00Z",
+      "score": 21.76,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/e6336058870431f9.json"
+    },
+    {
+      "title": "网易发力互动式讲题Agent：有道“欧拉讲题”上线，推翻行业“搜题生意”，开卷“讲题力”",
+      "summary": "网易有道推出互动式数学讲题Agent「欧拉讲题」，已在应用市场上线",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507822.html",
+      "publishedAt": "2026-11-05T16:48:32Z",
+      "score": 21.4,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/5cb71e75969b4a61.json"
+    },
+    {
+      "title": "以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划",
+      "summary": "像雇人一样雇机器人",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507767.html",
+      "publishedAt": "2026-11-05T13:25:37Z",
       "score": 21.23,
       "language": "zh",
       "track": "regular",
-      "readerFile": "./data/readers/f64ac08bcee067c9.json"
+      "readerFile": "./data/readers/2a433192d76fe3a8.json"
     },
     {
-      "title": "爱诗科技PixVerse 与 OpenAI 共同推出产品集成和创作者教育计划，高效打通 AI 创意全流程",
-      "summary": "近日，爱诗科技（AIsphere）旗下模型和开放平台PixVerse 与 OpenAI 宣布开启深度合作",
-      "source": "量子位",
-      "url": "https://www.qbitai.com/2026/11/507313.html",
-      "publishedAt": "2026-11-03T09:46:55Z",
-      "score": 21.06,
-      "language": "zh",
-      "track": "regular",
-      "readerFile": "./data/readers/04ee5ea2d0db419b.json"
-    },
-    {
-      "title": "Qodo builds context into AI code review with Codex",
-      "summary": "Qodo brings company knowledge and coding standards into Codex, helping developers catch P0 issues across repositories before opening a pull request.",
+      "title": "Cult.fit builds operational muscle with Codex",
+      "summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
       "source": "OpenAI",
-      "url": "https://openai.com/index/qodo-codex-plugin",
-      "publishedAt": "2026-11-02T00:00:00Z",
-      "score": 26.37,
+      "url": "https://openai.com/index/cultfit-builds-with-codex",
+      "publishedAt": "2026-11-05T20:00:00Z",
+      "score": 26.56,
       "language": "en",
       "track": "regular",
-      "readerFile": "./data/readers/4094d4340f9e66f9.json"
+      "readerFile": "./data/readers/bbd492caba72ca54.json"
     },
     {
-      "title": "Accelerating engineering for the physical world",
-      "summary": "Discover how ChatGPT and Codex are helping engineers accelerate CAD, PCB design, simulation, and other workflows across the physical world.",
+      "title": "Introducing Images 2.6",
+      "summary": "Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.",
       "source": "OpenAI",
-      "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
-      "publishedAt": "2026-11-03T12:00:00Z",
-      "score": 26.17,
+      "url": "https://openai.com/index/introducing-images-2-6",
+      "publishedAt": "2026-11-04T00:00:00Z",
+      "score": 26.36,
       "language": "en",
       "track": "regular",
-      "readerFile": "./data/readers/25493a43cba550c7.json"
+      "readerFile": "./data/readers/295354ff422b0d4d.json"
     }
   ],
-  "background": "./assets/backgrounds/scientific-archive.png"
+  "background": "./assets/backgrounds/paper-signal.png"
 }

@@ -1,0 +1,25 @@
+{
+  "title": "2026 年 PyTorch 大会：谷歌和 Meta 开源 TorchTPU，在 TPU 上原生支持 PyTorch",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-06T00:00:00Z",
+  "url": "https://www.infoq.cn/article/5s2oa0BLlgR8fplkq2uK",
+  "paragraphs": [
+    "在圣何塞举行的 2026 年 PyTorch 北美大会上，谷歌和 Meta 开源了 TorchTPU——这是谷歌张量处理单元（TPU）的原生 PyTorch 后端。",
+    "TorchTPU 是谷歌与 Meta 联合开源的 PyTorch 原生 TPU 后端，取代需侵入式修改的 PyTorch/XLA，实现 model.to(\"tpu\") 级别简易迁移。其目标是使 TPU 与 CPU、GPU 并列成为 PyTorch 一等公民，支撑 LLM 推理负载向云端 TPU 规模化迁移。PyTorch 基金会强调工作负载可移植性已成为智能体时代基础设施核心诉求。",
+    "TorchTPU 消除 PyTorch/XLA 的源码侵入性依赖；支持 LLM 推理工作负载在 TPU 上规模化部署；响应“任意芯片、任意云、任意智能体”互操作需求。",
+    "在圣何塞举行的 2026 年 PyTorch 北美大会上，谷歌和 Meta 开源 了 TorchTPU——这是谷歌张量处理单元（TPU）的原生 PyTorch 后端。在 10 月 21 日的主题演讲中，Meta 软件工程师 Zongwei Zhou 表示，Meta（该公司于 2016 年创建了 PyTorch）计划利用该后端将更大规模的 LLM 工作负载迁移到 TPU 上。",
+    "TorchTPU 取代了 PyTorch/XLA，后者是 2020 年推出的一款惰性张量桥接库。根据公告，该库“需要对源代码进行侵入性修改”。这个新推出的后端旨在让模型移植变得像将 model.to(“cuda”) 改为 model.to(“tpu”) 一样简单。谷歌云在其 公告 中写道，“借助 TorchTPU，TPU 将与 GPU 和 CPU 一起成为 PyTorch 的原生选项。”该公告由 Core ML/AI 工程副总裁 Bill Jia 共同撰写。",
+    "在两场阐述市场需求的演讲之后，Jia 与 Zhou 共同发表了题为“智能体时代的工作负载可互换性：将原生 PyTorch 带入云端 TPU”的主题演讲。PyTorch 基金会执行董事 Mark Collier 表示，推理已经取代训练，成为数据中心最大的工作负载，从而催生了“对 token 的巨大需求”。Collier 将社区的目标描述为开发一种开源软件，使模型能够“在任何云端的任何芯片上运行，并且能够连接到任何智能体”。该基金会的主题演讲幻灯片展示了市场发展的迅猛速度：DeepSeek 的 Flash 模型在 37 天内将成本降低了 60%，而 Kimi K3 用不到 33 天的时间在相同的硬件上将运行速度提高了 68%。",
+    "Agentic AI 基金会执行董事 Mazin Gilbert 表示，2026 年 2 月 6 日，智能体 token 消耗量已经超过人类消耗量。此后，智能体 token 消耗量增长了 14 倍，而人类消耗量仅增长了 2.8 倍。Gilbert 说，“所以基本上，这是一条呈‘曲棍球杆’状的爆发式增长曲线。”在重复使用这些数据前，从业者应该核实其适用范围，因为这些 公开数据 仅来自一个平台——OpenRouter。",
+    "演讲者表示，由于 TorchTPU 集成到了 PyTorch 的底层调度器中，所以 Hugging Face 的模型可以开箱即用。vLLM 和 SGLang 推理引擎可以原生运行，而 TorchTitan 支持面向大规模训练的密集型、专家混合型和扩散型模型。Ray 和 llm-d 可以在 Kubernetes 上的多个主机间扩展 TPU 工作负载。已开源的代码库共有四个：TorchTPU、vLLM-TorchTPU、SGLang-TorchTPU 和 TorchTitan。",
+    "Jia 展示了 TPU 芯片超过 8000 个时的近线性扩展能力。随着集群规模的扩大，单芯片吞吐量基本保持恒定。谷歌公布的结果包括在 8192 个 TPU v7x 芯片上运行的 Qwen3 235B 专家混合模型，模型 FLOPs 利用率为 28%。该公告坦率地指出，这一行代码的修改仅仅是一个起点：",
+    "仅凭这个简单的改动还无法达到 TPU 的峰值性能，因为模型的结构、分片和运算可能更适合 GPU 架构；不过，模型应该可以开箱即用。",
+    "对于这一调优缺口，谷歌给出的解决方案是增加智能体数量。在演讲的末尾，Jia 宣布了 TPU 代理套件。目前，该套件已经在 GitHub 上开放预览，可以集成到编码框架中，自动完成环境接入、故障诊断与性能调优工作。",
+    "Zhou 表示，Meta 的 PyTorch 团队与谷歌共同开发了 TorchTPU，“旨在让 TPU 成为 PyTorch 的第一类原生目标”，并指出这是出于生产环境对性能、可靠性和可维护性的需求。所有这些都是开源的，今天就可以使用，而这仅仅是个开始。”在谷歌云的公告中，Meta PyTorch 工程总监 Jana van Greunen 阐述了这一举措的动机：",
+    "谷歌并非孤例。亚马逊云科技于 10 月 20 日宣布公开测试其 Trainium 芯片的原生 PyTorch 后端 TorchNeuron ，代码只需要修改为 .to(‘neuron’)。这两个后端均通过 PyTorch 用于自定义硬件的扩展点 PrivateUse1 进行注册。TorchNeuron 的首个版本目前尚存在一些不足： The Next Web 报道称，它目前尚不支持动态输入形状，而且跳过了约 22000 个 PyTorch 测试用例。在 为 Forkast 撰写的一篇分析文章 中，Blair Hayes 指出，供应商锁定现象并未消失，只是发生了转移：",
+    "在 Hacker News 上， 关于 TorchTPU 发布的讨论帖 获得了 379 分。网友们既松了一口气，又抱有现实的疑虑。一位评论者写道，“我还记得当年为了让 PyTorch 在 TPU 上运行，不得不与 XLA 周旋的日子，看来我们终于获得了官方支持！”还有人询问究竟在哪里能买到 TPU。一位曾代表公司考察过谷歌本地部署版 TPU 的评论者则态度比较冷静：“我们评估过这些产品，但决定继续使用 Nvidia，至少再用一代。”",
+    "可移植性也是数据中心之外的卖点。在关于使用 ExecuTorch 部署机器人策略的会议上，来自 Meta 的 Anthony Shoumikhin 和 Jacob Szwejbka 指出，从训练到设备，这些策略可以全程保留在 PyTorch 中，不需要转换技术栈。同样的量化方案和运算符图可以在 NVIDIA Jetson TensorRT、Intel OpenVINO 等目标平台上运行。",
+    "训练分会场从成本角度给出了具体数据。来自 RadixArk 的 Yueming Yuan 在介绍 Miles 强化学习框架时表示，将两个对数概率计算融合为一个内核，使这个步骤的速度提高了 10 倍以上。在一次大规模运行中，Delta 更新将每次权重同步所需传输的数据量从 62 GB 减少到了 1 GB 以下。"
+  ],
+  "isExcerpt": true
+}

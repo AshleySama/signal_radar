@@ -1,0 +1,19 @@
+{
+  "title": "Claude Code 产品负责人Cut Wu 官宣加入 OpenAI",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-05T00:00:00Z",
+  "url": "https://www.infoq.cn/article/cDERcarozbrsCBNs5sWM",
+  "paragraphs": [
+    "Cat Wu 作为 Claude Code 核心产品负责人，已从 Anthropic 离职并加入 OpenAI，将负责核心产品管理。她曾主导 Claude Code 从内部工具演进为面向开发者的正式产品，并参与 Cowork 项目。",
+    "Anthropic 核心产品人才流向 OpenAI，反映大模型公司对工程化落地能力的争夺加剧；Claude Code 的产品化路径具备可复用的方法论价值；AI 编程工具正从辅助编码向智能体协作演进。",
+    "刚刚，Claude Code 产品负责人 Cat Wu 官宣加入 OpenAI，上周五刚从 Anthropic 离职。",
+    "她在 x 上写道：“我将加入 OpenAI，负责核心产品的产品管理！我非常尊重 OpenAI，因为它向世界证明了 Scaling 是可行的，它让超过十亿人受益于 AI，并且它坚信优秀的产品是其使命的核心。 我很高兴能与 Tibo 以及 OpenAI 的全体员工一起协作。我们将携手打造能够为您和您的团队提供支持的智能体，让您始终掌控全局，从而腾出更多时间陪伴您热爱的人，从事您热爱的工作。 需要学习的东西很多，需要构建的东西也很多。请继续提供您的反馈！”",
+    "11 月 4 日，Cat Wu 在社交平台 X 发文，宣布自己已离开 Anthropic，上周五（10 月 30 日）是她在公司的最后一个工作日。",
+    "Cat Wu 是 Claude Code 早期核心团队成员之一。2024 年，她加入 Anthropic，参与 Claude Code 的产品开发，并与该产品的创造者 Boris Cherny 一同推动 Claude Code 从内部实验工具发展为面向开发者的 AI 编程产品。她此前还负责 Anthropic 的 Cowork 产品。",
+    "在离职声明中，Cat Wu 回忆了自己第一次使用 Claude Code 的经历。当时，她让模型搭建一个强化学习环境，虽然花了几十个小时不断引导，但全程没有亲手编写一行代码。",
+    "她还谈到 Claude Code 在过去两年间的变化：早期用户需要手动批准大多数操作，主要利用 AI 回答问题或编写测试；如今，Claude 已能够执行大规模代码迁移，甚至构建全新产品。",
+    "Cat Wu 表示，参与打造 Claude Code 是一段难忘的职业经历，并感谢了 Claude Code、Cowork 和 Tag 团队。",
+    "值得一提的是，这并非 Cat Wu 第一次离开 Anthropic。2025 年，她曾与 Claude Code 创始人 Boris Cherny 一同短暂加入 AI 编程公司 Cursor，随后又重返 Anthropic，如今则再次离职，转投竞争对手 OpenAI。"
+  ],
+  "isExcerpt": true
+}

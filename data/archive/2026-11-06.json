@@ -1,0 +1,182 @@
+{
+  "updatedAt": "2026-11-06T04:53:15.351134Z",
+  "items": [
+    {
+      "title": "腾讯 Hy4 调用激增已十倍扩容，Agent 能力开源模型第一",
+      "summary": "11月 5 日，腾讯宣布因 Hy4 调用激增，WorkBuddy 已进行十倍扩容",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507967.html",
+      "publishedAt": "2026-11-06T10:00:11Z",
+      "score": 26.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/e15769ca5c01e8ab.json"
+    },
+    {
+      "title": "谷歌 Data Agent Kit 正式发布：安全防护分为 Skill 与 IAM",
+      "summary": "谷歌上线免费开源的 Data Agent Kit，借助 MCP 打通编码智能体与谷歌数据云服务，提供两类不同的安全防护：智能体主动校验能力、IAM 强制拒绝策略。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/UtKS9EofSoyd2P7Otx7e",
+      "publishedAt": "2026-11-04T00:00:00Z",
+      "score": 25.36,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/610210caf7625ea0.json"
+    },
+    {
+      "title": "谷歌发布 ML Drift：为各类 GPU 加速端侧 AI 推理",
+      "summary": "谷歌推出开源跨平台 GPU 计算引擎 ML Drift，面向端侧 AI 与机器学习推理场景。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/hHzARIJTeqoqYpjNKEuq",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "score": 24.56,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/f7611aabca8b1329.json"
+    },
+    {
+      "title": "不靠堆砌数据，让机器人看懂真实物理世界 | 招商局狮子山实验室发布「驭物™ Lion-ER-35B-A3B」具身推理模型",
+      "summary": "仅激活3B参数，十项基准全线提升！",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507586.html",
+      "publishedAt": "2026-11-04T18:08:38Z",
+      "score": 24.26,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/1e6f2ae7c668b9f9.json"
+    },
+    {
+      "title": "三条AI技术路线终将合流？智象创始人梅涛提出智能体化的世界模型",
+      "summary": "走向“智能体化世界模型”。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507834.html",
+      "publishedAt": "2026-11-05T17:37:40Z",
+      "score": 23.44,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/63dc60d2e4de5bee.json"
+    },
+    {
+      "title": "百度开源文心5.5 Flash Base，多基准测试刷新同尺寸模型 SOTA",
+      "summary": "11月5日，百度正式开源最新基座模型文心5.5 Flash Base",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507787.html",
+      "publishedAt": "2026-11-05T15:15:13Z",
+      "score": 23.32,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/8c59ee075106aa14.json"
+    },
+    {
+      "title": "基于本体+知识+Harness+Datat Agent的智能体完整落地链路！",
+      "summary": "Data + AI 技术实践巡展 · 上海站",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507696.html",
+      "publishedAt": "2026-11-05T10:01:51Z",
+      "score": 23.06,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/3c40aaf7e6e47fbb.json"
+    },
+    {
+      "title": "模型之外，腾讯还在补什么？",
+      "summary": "WorkBuddy、腾讯文档、ima、ADP、WAND、天籁语音大模型、TDSQL Nexa、无境、AgentHosting、Agent Runtime、TokenHub 等数十款产品集中亮相，构成了一次规模宏大的 Agent 生产力产品版图集中检阅。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/UMlHzxNiS9tFfG9KadYs",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "score": 22.56,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/32d2c044fbf53fc2.json"
+    },
+    {
+      "title": "Claude Code 产品负责人Cut Wu 官宣加入 OpenAI",
+      "summary": "Cat Wu 是 Claude Code 早期核心团队成员之一",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/cDERcarozbrsCBNs5sWM",
+      "publishedAt": "2026-11-05T00:00:00Z",
+      "score": 22.56,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/2b2e4138b3dfa08b.json"
+    },
+    {
+      "title": "“超脑”统一指挥，“狼族”协同作战：京东物流打造供应链 AI 机器人军团",
+      "summary": "京东物流致力于打造全球最大规模的具身机器人应用军团，目前已在供应链领域落地了应用场景最多、规模最大、品类最全的自研与联合开发机器人集群。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/1YeowHagkg1Or6wwy23P",
+      "publishedAt": "2026-11-06T00:00:00Z",
+      "score": 21.76,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/be05517fa633a284.json"
+    },
+    {
+      "title": "2026 年 PyTorch 大会：谷歌和 Meta 开源 TorchTPU，在 TPU 上原生支持 PyTorch",
+      "summary": "在圣何塞举行的 2026 年 PyTorch 北美大会上，谷歌和 Meta 开源了 TorchTPU——这是谷歌张量处理单元（TPU）的原生 PyTorch 后端。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/5s2oa0BLlgR8fplkq2uK",
+      "publishedAt": "2026-11-06T00:00:00Z",
+      "score": 21.76,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/c5a1f264d8edc1fc.json"
+    },
+    {
+      "title": "从仓储到配送，全程由 AI“指挥”：京东物流“超脑”3.0 的工业级 AI 实践",
+      "summary": "“超脑”大模型3.0是物流行业首个从仓储到配送全程由AI“指挥”的工业级大模型应用集成体，也是 AI 大模型在供应链全链路全流程最大规模的应用。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/jBdvoUXheWN0oe6NfklO",
+      "publishedAt": "2026-11-06T00:00:00Z",
+      "score": 21.76,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/e6336058870431f9.json"
+    },
+    {
+      "title": "网易发力互动式讲题Agent：有道“欧拉讲题”上线，推翻行业“搜题生意”，开卷“讲题力”",
+      "summary": "网易有道推出互动式数学讲题Agent「欧拉讲题」，已在应用市场上线",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507822.html",
+      "publishedAt": "2026-11-05T16:48:32Z",
+      "score": 21.4,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/5cb71e75969b4a61.json"
+    },
+    {
+      "title": "以“真实工作”检验机器人价值，XROGO在CeMAT ASIA发布机器人到岗计划",
+      "summary": "像雇人一样雇机器人",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507767.html",
+      "publishedAt": "2026-11-05T13:25:37Z",
+      "score": 21.23,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/2a433192d76fe3a8.json"
+    },
+    {
+      "title": "Cult.fit builds operational muscle with Codex",
+      "summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/cultfit-builds-with-codex",
+      "publishedAt": "2026-11-05T20:00:00Z",
+      "score": 26.56,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/bbd492caba72ca54.json"
+    },
+    {
+      "title": "Introducing Images 2.6",
+      "summary": "Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-images-2-6",
+      "publishedAt": "2026-11-04T00:00:00Z",
+      "score": 26.36,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/295354ff422b0d4d.json"
+    }
+  ],
+  "background": "./assets/backgrounds/paper-signal.png"
+}
