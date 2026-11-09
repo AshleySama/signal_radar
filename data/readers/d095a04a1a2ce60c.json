@@ -1,0 +1,22 @@
+{
+  "title": "租户隔离做了四层，就能放心了吗？工程师提醒：还得看得见边界是否生效",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-08T00:00:00Z",
+  "url": "https://www.infoq.cn/article/zTFVgklcTFZvgE2fkV7A",
+  "paragraphs": [
+    "ReadyOn 在 Amazon EKS 上构建了覆盖 Kubernetes、计算、网络与数据四层的租户隔离架构，支撑其处理敏感薪资与组织数据的 Harmony 平台。该设计通过命名空间、专用 Karpenter 节点池、VPC 安全组及独立 Aurora 实例实现纵深隔离，并经多阶段威胁模型验证未发现跨租户横向移动路径。",
+    "ReadyOn 介绍了其运行在 Amazon Elastic Kubernetes Service（EKS）上的 Harmony 劳动力智能平台所采用的 四层租户隔离架构 。该设计结合 Kubernetes 命名空间、专用 Karpenter 节点池、Amazon VPC 安全组和每租户独立的 Amazon Aurora 数据库，从 Kubernetes、计算、网络和数据四个层面限制跨租户访问。",
+    "Harmony 为企业客户处理薪资数据、组织层级和运营分析。 ReadyOn 将其控制措施对应到一个包含 10 个阶段的多租户威胁模型，尤其关注租户工作负载遭入侵后的横向移动。该公司表示，迄今为止，对抗性演练尚未发现成功的跨租户路径。",
+    "斯坦福大学商学院教授 Mohammad Akbarpour 在一篇讨论 ReadyOn 安全架构的 LinkedIn 帖子 中，将更广泛的挑战描述为：",
+    "Sparq 的 亚马逊云科技 首席工程师 William Antonio G 也强调了多个租户共享基础设施时安全模型发生的变化。他在一篇讨论该架构的 LinkedIn 帖子 中写道：",
+    "第一层为每个租户使用专用的 Kubernetes 命名空间，并配置 RBAC、资源配额、准入控制和默认拒绝的网络策略。ReadyOn 使用 Argo CD ApplicationSets 根据基于 Git 的配置生成这些资源，为各租户提供相同的基线控制措施，并自动纠正未经授权的变更。",
+    "第二层隔离计算资源。Karpenter 通过双污点策略为每个租户预置专用节点池。Pod 必须同时容忍用于标识租户的污点和用于标识工作负载类型的污点，才能被调度。准入控制器还会验证请求的容忍配置是否与命名空间所属租户相符。",
+    "第三层将控制措施延伸到 Kubernetes 之下。每租户独立的 VPC 安全组将数据库连接限制在对应租户的节点池，而 Kubernetes 网络策略则在命名空间之间实施默认拒绝。EKS API 端点设为私有，并通过 VPN、OpenID Connect 和多因素身份验证访问。",
+    "第四层通过专用 Aurora 集群隔离租户数据，而不是依赖共享数据库中的行级过滤。ReadyOn 还使用限定租户作用域的 AWS Secrets Manager 路径、通过 IAM Roles for Service Accounts 获取的短期凭证，以及专用的可观测性后端。",
+    "亚马逊云科技文档指出，Kubernetes 命名空间、RBAC、配额和网络策略提供的是逻辑隔离，并不能阻止工作负载共享底层节点。当需要更强的工作负载隔离时，亚马逊云科技建议使用节点选择器、亲和性规则，或污点与容忍配置。",
+    "在 LinkedIn 上 评论 这一架构的工程师 Juan Pablo Gaviria 认为，追踪数据需要将工作负载身份与数据库和网络层面的控制措施关联起来，才能暴露不同控制措施之间的缺口。",
+    "因此，ReadyOn 保留了共享的 EKS 环境，同时将租户边界从 Kubernetes 扩展到调度、亚马逊云科技 网络和专用数据基础设施。该架构将这些控制措施视为相互重叠的防线，而不是假设任何单独一层都能提供完整的隔离。",
+    "https://www.infoq.com/news/2026/10/readyon-four-layer-isolation/"
+  ],
+  "isExcerpt": true
+}

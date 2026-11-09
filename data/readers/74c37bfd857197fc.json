@@ -1,0 +1,25 @@
+{
+  "title": "Don’t Build the Reusable Component Yet",
+  "source": "Stack Overflow Blog",
+  "publishedAt": "2026-11-05T16:02:13Z",
+  "url": "https://stackoverflow.blog/2026/11/05/don-t-build-the-reusable-component-yet/",
+  "paragraphs": [
+    "Founded in 2008, Stack Overflow’s public platform is used by nearly everyone who codes to learn, share their knowledge, collaborate, and build their careers.",
+    "Everyone who ever worked in frontend knows what kind of advice they are going to receive: to make things reusable. Find similar screens, create an abstracted component. Now, enjoy the little pleasure of deleting extra code. However, sometimes there are cases when I would like to say the exact opposite of this, for a short period of time, at least. Not only does the creation of an abstracted component mean higher costs of coding but also higher costs of coordination.",
+    "Duplication can easily be removed, but a wrong abstraction can be expensive to undo.",
+    "In old days, there were three workflows, where I had to perform an “item action,” which consisted of workflow approval (\"Do you really need this item?\"), workflow change (\"Change item's settings\"), and workflow movement (\"Move item from/to managed area\").",
+    "There was nothing unusual about the interface for these actions – item list, select, confirm, and show the results. Same tables, pop-ups, and toasts. It just seemed ridiculous to create three almost identical actions; so, I decided to create only one.",
+    "What I did not understand back then is that the similarities were only on the surface. I have not understood how each of those processes deals with partial failure, what are the requirements for each of them, and what information should be gathered for auditing purposes. Approval of an item action is an assertion about the future (\"I will need this item\"). Modification occurs instantly. Relocation requires another system to accept the request, and that system may reject it.",
+    "The first iteration only featured one object that was important. After several weeks, it became more or less like this (an illustration, not the actual code):",
+    "type ItemActionProps = { item: Item; mode: \"approve\" | \"change\" | \"move\"; variant?: \"inline\" | \"dialog\" | \"bulk\"; showDetails?: boolean; requireReason?: boolean; onSpecialCase?: (item: Item) => boolean; };",
+    "function ItemAction({ item, mode, variant, showDetails, requireReason, onSpecialCase }: ItemActionProps) { if (mode === \"move\" && onSpecialCase?.(item)) { return ; // only moves need this } const needsReason = mode === \"change\" || requireReason; // ...three submit paths, three error shapes, one component } All those were justified additions. The formula was that each additional screen came with a justification why this particular component could not be changed. Each additional requirement on the moves required a new flag. If that flag was cumbersome, the other alternative was a change of shared behavior, and then it had to be verified that approvals and changes still work.",
+    "Any change to the confirmation procedure could no longer be done by the owner of the workflow, but would require agreement from all three owners, the reviewer who knew all the modes, and test cases for all the combinations of mode and variant. An alteration in one area led to an argument about all the others.",
+    "Indeed, there are multiple advantages for applying the earlier mentioned approach to abstraction. Cleaner code is good code. The diff that allows eliminating two hundred lines of code deserves to be appreciated. The consistency seems to be another rational way of approaching the design.",
+    "In this case, all you have is the information in the current state. Many other similar cases show you that many cases have some common attributes. However, they cannot tell you about the differences between them, because the differences will be evident in the future: new policy, new audit finding, new integration that does not behave as you expected.",
+    "This means that the abstraction is based on current similarities, while any differences will have no other thing to do but to serve as flags.",
+    "However, until the pattern is repeated three times with the same reason for changing, wait. In the meantime, simply grab the code and let each screen evolve on its own.",
+    "This second half is equally important as the first half. Two codes share the same reason for change when a single decision made by a single individual changes both at the same time. Take a look at these:",
+    "// Same reason to change: one product decision about how dates look. formatExpiry(item.expiresAt) // approve, change and move screens"
+  ],
+  "isExcerpt": true
+}

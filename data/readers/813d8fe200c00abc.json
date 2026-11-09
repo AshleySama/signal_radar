@@ -1,0 +1,25 @@
+{
+  "title": "抢跑DeepSeek！硅谷华人把下一代Agent Harness造出来了！？",
+  "source": "量子位",
+  "publishedAt": "2026-11-07T13:01:17Z",
+  "url": "https://www.qbitai.com/2026/11/508264.html",
+  "paragraphs": [
+    "设想一下，AI可以同时推进1000、10000、100000个任务，多到人都看不过来时，Agent到底该变成什么样子？",
+    "就在前几天，DeepSeek Harness团队甩出一篇重磅文章，针对这一痛点给出了下一代Super-agent的架构设想：",
+    "早在年初，就把Super-agent底层的 「单Router+多Worker」 架构和四大核心特质，跑到了自家产品Comma里。",
+    "甚至他们还更进一步，直接向单Session接管一切后的上下文诅咒开刀，让Agent长期记忆、持续学习，始终在线：",
+    "在这个人人都在高喊Personal Agent的时代，一支硅谷华人团队，提前把科幻电影里的「贾维斯」带进了现实。",
+    "如此「难绷」的一幕，其指向的正是DeepSeek Harness团队在Super-agent文章中提到的核心痛点——",
+    "连续代表着记忆与上下文贯通，高效来自多Worker并行协作，主动代表自主推进任务，持久则支撑长期在线及自主修复。",
+    "DeepSeek描绘的下一代Agent蓝图，硅谷华人团队 AFK AI 早在半年前，就已经沿着相似的方向做出了 Comma 。",
+    "在底层架构上，两个Agent玩家也形成了颇为默契的共识：单 Session+Router（主脑）+多Worker（执行者）。",
+    "哪怕后台有几十个Agent同时开工，用户也只管在一个对话框里交代事情、验收成果，再也不用满屏切窗口、挨个催进度。",
+    "当一个长期存在的Session开始接管越来越多的工作，人类的注意力问题解决了，但Agent自身的记忆瓶颈又出现了。",
+    "前面提到，Super-agent的一大架构特点，就是让常驻Router统筹全局，多个上下文隔离的Worker并行执行任务。",
+    "他们官方给的一个例子，是同一开发任务跨IM与GitHub无缝推进，AI能主动监听群聊还能自动提交PR，be like：",
+    "而且Comma打通的范围还相当广，像 微信、Signal、iMessage、Linear 这些通信渠道我们都能接入～",
+    "不仅如此，Comma还支持安全自部署、BYOK及接入Codex、Claude Code，统一监督任务、跨端协同管理。",
+    "甚至在公司场景下，其还可以通过IM里的Comma Bot下达任务，让连接的员工电脑提供所需的本地工作环境，并通过权限及信息流控制约束访问范围。"
+  ],
+  "isExcerpt": true
+}
