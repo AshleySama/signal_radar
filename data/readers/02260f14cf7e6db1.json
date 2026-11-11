@@ -1,0 +1,25 @@
+{
+  "title": "成本仅1/3！Meta 新模型 Muse Ember 硬刚 Claude Haiku 5.5",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-10T00:00:00Z",
+  "url": "https://www.infoq.cn/article/Ou4l4aD7zvUzXWXsWJfY",
+  "paragraphs": [
+    "Muse Ember 是 Meta 推出的轻量级 AI 模型，专为高频率、高 token 消耗的 AI Agent 任务优化，在工具调用、编程子任务、长文档解析等场景中实现单位成本下的更高智能产出。",
+    "聚焦推理效率与单任务成本，实测智能指数/成本比优于 Claude Haiku 5.5 和 GPT-6 Luna；在效率前沿曲线上处于当前最优位置；支持通过 Meta Model API 与 Muse Code 即时调用。",
+    "昨夜，Meta 正式发布新一代轻量级 AI 模型 Muse Ember。据介绍，这是 Meta 迄今推出的体积最小、效率最高的模型，主要面向复杂推理执行，以及 AI Agent 在日常工作中需要反复处理的任务，包括工具调用、编程子任务、任务路由、信息提取和长文档解析等。",
+    "Meta CEO 扎克伯格在 x 上发文写道：“这是我们最小的模型，在同类模型中，每美元所能提供的智能更高。它专为智能体全天重复执行的高 token 消耗型工作而打造：工具调用、编码子任务、路由、信息提取和长文档解析。今天起可在 Meta Model API 和 Muse Code 中使用。”",
+    "Meta 在官方博客中表示，根据 Artificial Analysis 的评测结果，Muse Ember 在不同推理强度下的智能表现与成本比优于 Claude Haiku 5.5 和 GPT-6 Luna。它能够以约三分之一的成本，达到 Claude Haiku 5.5 最高推理强度下的接近水平，并超过 GPT-6 Luna 所有推理档位的成绩。",
+    "更值得关注的是，Muse Ember 在 Artificial Analysis 智能指数与单任务成本构成的效率前沿上占据了有利位置：在相近或更低的单任务成本下，没有其他参评模型取得更高的智能指数。",
+    "这意味着，Meta 此次并不打算让一款小模型承担所有复杂任务，而是试图解决 Agent 规模化应用中的另一个问题：当 AI 系统每天需要执行成千上万次工具调用、代码修改和信息处理任务时，如何把每次执行的成本降下来？",
+    "在 Artificial Analysis 智能指数测试中，Muse Ember 最高推理强度下的成绩约为 36 分，与 Claude Haiku 5.5 的 36 分持平，高于 GPT-6 Luna 的 28 分。",
+    "按照 Meta 展示的测试数据，在接近最高智能水平的配置下，Muse Ember 的单任务成本约为 0.136 美元，而 Claude Haiku 5.5 最高配置约为 0.411 美元。换言之，Muse Ember 的成本约为后者的 33%，相当于降低了约 67%。",
+    "根据 Meta 汇总的评估数据，在企业工作流自动化测试 AutomationBench-AA 中，Muse Ember 取得 37.8% 的成绩，GPT-6 Luna 和 Claude Haiku 5.5 分别为 20.2% 和 13.9%。",
+    "在衡量端到端 Agent 任务执行能力的 Agents' Last Exam 中，Muse Ember 得分为 61.6%，高于另外两款模型的 57.1% 和 57.0%。",
+    "编程方面，Muse Ember 在 Terminal-Bench 4.0 中取得 40.9% 的成绩，略高于 Claude Haiku 5.5 的 39.2%，明显高于 GPT-6 Luna 的 16.4%。",
+    "不过，Muse Ember 并非在全部测试项目中领先。例如，在衡量真实工程任务及代码可合并性的 FrontierCode 2.0-AA 中，Claude Haiku 5.5 取得 34.9%，而 Muse Ember 为 27.2%。",
+    "目前，Muse Ember 已通过 Meta Model API 开放，正式定价为每百万输入 Token 0.10 美元、每百万输出 Token 0.50 美元。",
+    "在正式发布前，Meta 已邀请多家合作伙伴测试 Muse Ember，覆盖企业文档处理、编程、软件工程以及高吞吐量 Agent 任务等场景。",
+    "其中，企业内容管理平台 Box 的 AI 产品副总裁 Yashodha Bhavnani 表示，Muse Ember 在 Box AI Complex Work Eval 中展现出了较好的准确率、速度和 Token 效率。"
+  ],
+  "isExcerpt": true
+}

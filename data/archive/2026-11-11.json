@@ -1,0 +1,182 @@
+{
+  "updatedAt": "2026-11-11T04:28:41.649432Z",
+  "items": [
+    {
+      "title": "触觉也能 Token 化！蚂蚁灵波发布通用触觉模型，把“具身原生”推进到机器人指尖",
+      "summary": "蚂蚁灵波开源触觉基础模型，让机器人“手感”跨硬件、跨模型、跨任务复用。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/W7VPoeNBPX4y2u72WAGM",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "score": 24.58,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/571c6809eb0001bc.json"
+    },
+    {
+      "title": "腾讯混元跻身最强开源模型！一手实测Hy4：搭配WorkBuddy，多模态Agent交付力拉满",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/507843.html",
+      "publishedAt": "2026-11-09T16:44:00Z",
+      "score": 24.21,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/5d497975e4844ec4.json"
+    },
+    {
+      "title": "基元律动发布NeoHorse-1.5-Flash Preview，Agent模型RSI进入第二轮迭代",
+      "summary": "11月5日，基元律动（TokenRhythm）发布Agent原生模型NeoHorse-1.5-Flash Preview。",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/508603.html",
+      "publishedAt": "2026-11-09T13:09:23Z",
+      "score": 24.03,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/da5717d7f399b8ea.json"
+    },
+    {
+      "title": "基于 AgentKit 重塑研发协作：从编码提效到组织效能跃迁｜AICon北京",
+      "summary": "AI Coding 提升了个人编码效率，但需求澄清、方案评审、环境准备、测试与发布仍依赖多人串联，组织交付效率未必同步提升。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/I49cXCJFBpOW3PcgPTW3",
+      "publishedAt": "2026-11-11T00:00:00Z",
+      "score": 23.78,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/2b6022a8999091af.json"
+    },
+    {
+      "title": "英伟达机器人开源撞上Fable 5.2发布！Jim Fan：不是寒冬是夏天",
+      "summary": "",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/509032.html",
+      "publishedAt": "2026-11-10T18:35:38Z",
+      "score": 23.51,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/5ea7d15a7a7c81ce.json"
+    },
+    {
+      "title": "从“一脑多机”到“一脑多手”，蚂蚁灵波开源LingBot-Touch触觉基础模型",
+      "summary": "11月10日，蚂蚁灵波科技开源触觉基础模型LingBot-Touch",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/508996.html",
+      "publishedAt": "2026-11-10T15:57:45Z",
+      "score": 23.37,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/973a673ed0c1066f.json"
+    },
+    {
+      "title": "成本仅1/3！Meta 新模型 Muse Ember 硬刚 Claude Haiku 5.5",
+      "summary": "这次，Meta 是想来个“以小搏大”了。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/Ou4l4aD7zvUzXWXsWJfY",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "score": 22.58,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/02260f14cf7e6db1.json"
+    },
+    {
+      "title": "openJiuwen首发Agent Device Foundation，重新定义Agent与物理世界的交互方式",
+      "summary": "今天的 Agent 已经可以写代码、查资料、调用 API、操作软件。当 Agent 逐步走出屏幕，会发生什么？",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/dLF01VxLUZpLX40Wmlv7",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "score": 22.58,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/cae4dfcdc5c31d69.json"
+    },
+    {
+      "title": "Anthropic 重做源代码管理系统：提交量增长 12 倍，传统架构开始失效",
+      "summary": "Anthropic 如何为 AI 驱动的软件开发重新设计源代码管理。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/sBjhhysFKZibZpXQZEGy",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "score": 22.58,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/bc4de2086918ee2a.json"
+    },
+    {
+      "title": "ADD 资产驱动开发：让 AI Coding 懂业务、守规范、稳架构、实现端到端交付｜AICon北京",
+      "summary": "AI Coding 工具能力持续迭代，但存在三大天然局限：缺乏企业私域认知（工程规范、业务上下文、共享依赖关系）、上下文窗口容量有限、生成结果具有概率性误差。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/rsMuS4cuc2ir68ulGgEs",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "score": 22.58,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/67b900bf496d8cbc.json"
+    },
+    {
+      "title": "Airbnb 借助 Chronon 将推荐延迟从两天缩短至秒级",
+      "summary": "Airbnb 为开源特征平台 Chronon 新增推送模式与近实时模型转换能力，可在房客产生行为后数秒内更新序列推荐嵌入向量。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/yuRNB72KsEbjGYSkV7FY",
+      "publishedAt": "2026-11-10T00:00:00Z",
+      "score": 22.58,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/6a3897058aa87dfc.json"
+    },
+    {
+      "title": "百度文心首次披露RSI进展：ERNIE Evolve已用于最新模型研发，文心5.5 Flash 或将近期发布",
+      "summary": "11月9日，百度文心首次披露 RSI 最新进展",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/508746.html",
+      "publishedAt": "2026-11-09T17:48:04Z",
+      "score": 22.27,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/af59cf519d58c05d.json"
+    },
+    {
+      "title": "千问办公2.0发布，首个支持多人与Agent协作的Team Agent来了",
+      "summary": "11月9日，千问办公发布2.0版本",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/508694.html",
+      "publishedAt": "2026-11-09T16:34:03Z",
+      "score": 22.2,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/1ea6002e9048371c.json"
+    },
+    {
+      "title": "AI接管一家8万Star开源公司，写代码、派任务、查Bug全包了",
+      "summary": "Worker不够了主管Agent还能自己招！",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/508607.html",
+      "publishedAt": "2026-11-09T13:47:58Z",
+      "score": 22.07,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/f70bff34c8e83460.json"
+    },
+    {
+      "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+      "summary": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/control-room",
+      "publishedAt": "2026-11-09T13:00:00Z",
+      "score": 27.03,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/952d2516af2e9054.json"
+    },
+    {
+      "title": "Closing the AI guidance gap in education",
+      "summary": "New ThinkYoung research and lessons from OpenAI’s EMEA education partnerships on supporting teachers, AI literacy, and independent learning.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/closing-ai-guidance-gap-education",
+      "publishedAt": "2026-11-10T09:00:00Z",
+      "score": 24.03,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/69d4d9d74efa0162.json"
+    }
+  ],
+  "background": "./assets/backgrounds/paper-signal.png"
+}
