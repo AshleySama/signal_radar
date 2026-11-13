@@ -1,0 +1,25 @@
+{
+  "title": "国产大模型又杀出一匹黑马，引发硅谷关注！",
+  "source": "量子位",
+  "publishedAt": "2026-11-13T12:47:18Z",
+  "url": "https://www.qbitai.com/2026/11/509576.html",
+  "paragraphs": [
+    "Latent Space选的对手还是OpenRouter上最热门的两款Flash模型：DeepSeek V4.1 Flash 1017和GLM 5.3 Flash。",
+    "没想到，这次被拉来和两个头部模型同台较量的Naive-N0.5-Flash，还真交出了一份颇有竞争力的成绩单——",
+    "作为Latent Space全新测评栏目的首期主角，中国公司NaiveAI的开源模型 Naive-N0.5-Flash 也值得说说。",
+    "其直接把DeepSeek V4.1 Flash 1017和GLM 5.3 Flash拉了出来，这两款都是OpenRouter上极受欢迎的Flash模型。",
+    "从综合表现来看， Naive-N0.5-Flash介于DeepSeek V4.1 Flash（1017）与GLM 5.3 Flash之间，跻身国产主流模型的头部竞争区间。",
+    "这也意味着在完整项目生成任务上，Naive-N0.5-Flash取得了和两款头部Flash模型的公开评测不相上下的成绩。",
+    "编程硬刚DeepSeek，速度冲到2100 Token/s 当然，公开跑分只是一方面，模型的真实表现，还得靠实测成绩说话。",
+    "按照官方数据，模型标准模式下单用户输出速度约为50 Token/s，切换到极速模式，最高可达2000 Token/s。",
+    "单秒峰值约 2100 Token/s ，思考阶段约 984 Token/s ，正式作答时更是达到了 1816 Token/s 。",
+    "更有体感的是响应时间：开启思考模式后，Naive-N0.5-Flash的中位响应时间仅 3.1秒 ，DeepSeek为10.1秒。",
+    "换句话说，同样一次请求，Naive-N0.5-Flash的耗时比DeepSeek缩短约69%，响应快了约 3.3倍 。",
+    "△左：Naive-N0.5-Flash (thinking) 右：DeepSeek V4.1 Flash 1017（high） 第二项任务，是生成能够「实时交互」的3D生长树。",
+    "这一轮，Naive-N0.5-Flash (thinking)与DeepSeek V4.1 Flash 1017（high）表现接近，两者开启思考模式后均生成了质量较高的作品。",
+    "而Naive-N0.5-Flash能够与DeepSeek保持相近的完成质量，也说明其在场景建模、动态效果和交互逻辑等更复杂的编程任务中，已经具备了相当扎实的实现能力：",
+    "△左：Naive-N0.5-Flash (thinking) 右：DeepSeek V4.1 Flash 1017（high） 最后一项任务，进一步考验模型的「图形编程」能力。",
+    "Latent Space要求三款模型将经典图形学教程《Ray Tracing in One Weekend》转化为浏览器中的实时光线追踪应用。"
+  ],
+  "isExcerpt": true
+}

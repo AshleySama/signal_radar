@@ -1,0 +1,25 @@
+{
+  "title": "谷歌最强模型 Gemini 4 Carbon 全面开放：一夜重写 OpenCode 桌面应用、价格仅为 Fable 5.2 的 1/4",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-11T00:00:00Z",
+  "url": "https://www.infoq.cn/article/YiANe38yfSYitvZOtab0",
+  "paragraphs": [
+    "Gemini 4 Carbon 正式向开发者、企业、科研人员及消费者全面开放，标志着 Google 将大模型竞争焦点从问答能力转向端到端复杂任务执行。",
+    "三项 Agent 评测（CursorBench 4.0、WANDR、AutomationBench）均位列第一；任务完成成本较次优外部模型低超2倍；开放覆盖 AI Studio、Gemini for Business、Antigravity 及 Ultra 订阅服务。",
+    "刚刚，Google CEO Pichai 在 x 上宣布，旗下旗舰模型 Gemini 4 Carbon 正式向开发者、企业、科研人员和消费者扩大开放。",
+    "10 月 28 日，Google 首次公布 Carbon 时，重点展示了其在网络安全、软件工程和长程任务方面的能力，但使用范围主要限制在特定网络安全防御团队。如今，这款模型终于走出受限测试阶段，开始进入 Google AI Studio、Gemini for business、Google Antigravity，以及面向 Google AI Ultra 订阅用户的 Gemini 应用和搜索 AI Mode。",
+    "这次开放，相比此前大模型发布时强调知识问答、数学推理和代码生成能力，Google 这次将真实工作场景放在了更显眼的位置。",
+    "根据官方披露，Gemini 4 Carbon 在 CursorBench 4.0、Perplexity WANDR 和 Zapier AutomationBench 三项面向真实工作流程的评测中均排名第一，完成任务的成本比表现次优的外部模型低超过 2 倍。这三项评测分别涉及 AI 编程、信息检索与复杂任务执行，以及跨企业应用的业务流程自动化。",
+    "其中，Zapier AutomationBench 测试模型能否在真实业务工具和工作流中完成自动化任务。Google DeepMind 公布的成绩显示，Carbon 得分为 53.9%，超过 Gemini 4 Argon 的 51.3%、Claude Opus 5.5 的 42.5% 和 GPT-6 Astra 的 41.4%。",
+    "在更加偏向代码和系统操作的 Terminal-Bench 4.0 测试中，Carbon 取得 65.2% 的成绩，高于 Argon 的 57.1% 和 GPT-6 Astra 的 59.1%。",
+    "在面向长上下文推理的 GraphWalks 测试中，Carbon 的 F1 分数达到 96.2%，而 Argon 为 84.2%。这项测试的上下文范围为 256K 至 1M Token，主要考察模型在长距离信息关联与图结构搜索任务中的表现。",
+    "Anthropic 于 11 月 9 日发布 Claude Fable 5.2 后，Artificial Analysis 的最新综合评测排名已经发生变化。在其发布版本对比中，Claude Fable 5.2 最高推理配置的 Intelligence Index 得分达到 65，而 Gemini 4 Carbon 的 high 配置得分为 60。",
+    "在 FrontierSWE v2 真实软件工程任务中，Claude Fable 5.2 取得 69.9%，Carbon 则为 61.2%。也就是说，不同模型在代码修改、终端任务、企业工作流和长程推理等场景中的表现已经出现明显分化。",
+    "此外，Google 官方也明确指出，Gemini 4 Argon 仍然更适合大多数常规软件工程和知识工作任务，Carbon 则主要用于需要深入推理、复杂调试和长时间验证的高难度工作。",
+    "按照官方说法，在上述三项工作流评测中，Carbon 的单任务成本比表现次优的外部模型低超过 2 倍。对于需要频繁调用模型、执行大量工具操作的企业而言，这一指标可能比单纯的基准测试得分更有现实意义。",
+    "在此次发布中，Google 宣布为 Antigravity 预览推出 /swarm 功能。简单来说，开发者不再需要让一个 Agent 独立完成所有工作，而是可以通过一条提示词，调度多个 Agent 同时处理不同任务，并实时查看各自的执行进度。",
+    "例如，让 Carbon 负责复杂的软件架构设计、任务协调及代码审查，再把相对简单的工作分配给速度更快、成本更低的模型。多个 Agent 可以在隔离的工作空间中并行执行任务，还可以引入专门负责对抗性验证的 Agent，对代码修改结果进行检查。",
+    "这样的设计，试图解决当前 AI 编程面临的一个现实问题：即使单个模型的编程能力越来越强，它仍然可能在长时间执行任务时偏离目标，或者在修改一个模块时破坏另一个模块。"
+  ],
+  "isExcerpt": true
+}

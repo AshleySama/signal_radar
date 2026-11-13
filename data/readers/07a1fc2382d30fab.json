@@ -1,0 +1,25 @@
+{
+  "title": "Google 终于让 PyTorch 原生跑上 TPU，开发者：“早该如此！”",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-12T00:00:00Z",
+  "url": "https://www.infoq.cn/article/Fikt82HLToqb6ZANB2xj",
+  "paragraphs": [
+    "Google 与 Meta 开源 TorchTPU，为 Google TPU 带来原生 PyTorch 支持。",
+    "TorchTPU 是 Google 与 Meta 联合推出的 PyTorch 原生 TPU 后端，实现低侵入式迁移与即时执行优先支持。相较 PyTorch/XLA，它消除了显式编译区域、大幅降低延迟，并原生兼容命令式执行与新兴分布式原语。",
+    "支持 cuda→tpu 设备替换与 nccl→tpu_dist 后端切换；提供 torch.accelerator.current_accelerator 统一加速器识别 API；无需重写计算逻辑即可启用 TPU 硬件优化。",
+    "TorchTPU 是由 Google 与 Meta 合作开发的开源项目，为 Google TPU 提供原生 PyTorch 后端 。它让 PyTorch 工作负载只需少量代码修改即可在 TPU 硬件 上执行，并支持即时执行、编译执行、分布式计算以及硬件专属优化。",
+    "Google 于 2020 年开始通过 PyTorch/XLA 支持 PyTorch 工作负载在 TPU 上运行，该方案使用了 JAX、 XLA 和延迟张量。Google 表示，这种方式存在明显不足：",
+    "关键问题在于，PyTorch/XLA 需要对源代码进行侵入式修改，以显式定义可编译区域；编译延迟十分严重；不支持 PyTorch 原生的命令式（“即时”）执行模式；并且在支持 PyTorch 生态中新兴的分布式计算原语方面进展滞后。",
+    "TorchTPU 采用了一种截然不同的方法，将即时执行列为最高优先级，让现有 PyTorch 工作负载只需少量代码修改即可运行。",
+    "具体而言，从 GPU 迁移到 TPU，需要将 cuda 设备替换为 tpu ，并将 nccl 分布式后端替换为 tpu_dist 。开发者也可以使用新的 torch.accelerator.current_accelerator API 识别可用的加速器，如以下代码片段所示。",
+    "import torch import torch.distributed as dist def main () : device = torch.device( \"cuda\" ) # -> device = torch.accelerator.current_accelerator dist.init_process_group(backend= \"nccl\" ) # -> dist.init_process_group() rank = dist.get_rank() word_size = dist.get_world_size() ... model = model.to(device) ... 复制代码",
+    "TorchTPU 支持三种即时执行模式：Strict、Debug 和 DeferAndFuse。DeferAndFuse 是一种新的即时执行与编译执行混合模式，Google 声称它“可以比 Strict Eager 快 50% 以上，同时降低 HBM 峰值内存占用”。",
+    "为了测试 TorchTPU 无需修改即可运行现有 PyTorch 模型的能力，Google 构建了一条集成流水线，在从 v5e 开始的多代 TPU 硬件上，以即时和编译两种模式评估约 5,000 个 Hugging Face 模型，覆盖 500 多种架构。",
+    "我们采用一套基于语料库分层和架构均衡选择的稳健测试方法。该方法使用两级选择流程，在现实采用情况与广泛的架构多样性之间取得平衡，既避免重复测试细微变体，又确保真实生产权重得到充分评估。",
+    "为了验证 TorchTPU 的性能，Google 运行了一个使用标准 PyTorch 实现、拥有 300 亿参数的 Muse Glimmer 模型。在单枚 TPUv7 芯片上，序列长度为 5120 时，推理吞吐量达到每秒 25,700 个 Token；序列长度为 10,240 时，达到每秒 22,400 个 Token。在训练方面，使用四枚 TPUv7 芯片时，序列长度分别为 5120 和 10,240 的吞吐量达到每秒 5,600 和 4,600 个 Token。",
+    "Google 还使用 Qwen3 MoE 235B 进行了训练工作负载实验，将规模从 1,024 枚 TPUv7 芯片扩展到 8,192 枚。在推理方面，Google 表示，使用 vLLM 运行大规模 MoE 工作负载可以提供具有竞争力的单位成本性能。",
+    "其他用户指出，Google 除了通过 GCP 提供 TPU，还会将其出售给“ 用于本地部署的企业客户 ”，其中包括 Anthropic ，而 Meta 未来也可能跟进 。",
+    "TorchTPU 仍处于早期阶段，因此还在持续演进。该项目的路线图包括动态形状、编译性能、算子覆盖、强化学习和量化等方面的工作。更多详细信息请参阅原始公告，其中对 TorchTPU 的架构和范围进行了更加全面的介绍。"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,182 @@
+{
+  "updatedAt": "2026-11-13T04:50:59.963809Z",
+  "items": [
+    {
+      "title": "谷歌推出 LiteRT Tensor API，用于构建、定制与优化端侧机器学习模型",
+      "summary": "谷歌发布轻量级 C++ 接口 LiteRT Tensor API，支持开发者直接为端侧构建、定制和优化机器学习模型。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/joYjCTbwWFSkbACK5lje",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "score": 27.76,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/3875a8a4c8f2fed3.json"
+    },
+    {
+      "title": "谷歌发布首款决策模型 Gemini Decision 1：9 项测试拿下 7 项第一，准确率最高92.2%",
+      "summary": "与一些仅展示基准成绩的新模型不同，谷歌此次还披露了 Gemini Decisions API 在内部产品中的应用案例。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/E7QKIMUz3h0G0IE5Paii",
+      "publishedAt": "2026-11-12T00:00:00Z",
+      "score": 26.56,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/3a9078fd16154bf1.json"
+    },
+    {
+      "title": "Docker 呼吁通过隔离与治理保障智能体安全",
+      "summary": "Docker 发布指南，介绍当 AI 智能体在人工监督有限的情况下浏览网页、运行代码、调用工具时会产生的五大安全风险。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/1pCuIRtm5HYwTyR4fIhA",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "score": 23.76,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/ed13c7107c2e24fe.json"
+    },
+    {
+      "title": "多模态“源神”！MiniMax开源SOTA生图模型，原生4K，一张两毛",
+      "summary": "「CAD拆解」",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/509440.html",
+      "publishedAt": "2026-11-12T19:36:20Z",
+      "score": 23.54,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/9ce01a17e019ed9e.json"
+    },
+    {
+      "title": "谷歌最强模型 Gemini 4 Carbon 全面开放：一夜重写 OpenCode 桌面应用、价格仅为 Fable 5.2 的 1/4",
+      "summary": "从金融报告到复杂数据分析，AI 开始进入高精度知识工作。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/YiANe38yfSYitvZOtab0",
+      "publishedAt": "2026-11-11T00:00:00Z",
+      "score": 23.36,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/4312e73e5fb17c7d.json"
+    },
+    {
+      "title": "Google 终于让 PyTorch 原生跑上 TPU，开发者：“早该如此！”",
+      "summary": "Google 与 Meta 开源 TorchTPU，为 Google TPU 带来原生 PyTorch 支持。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/Fikt82HLToqb6ZANB2xj",
+      "publishedAt": "2026-11-12T00:00:00Z",
+      "score": 22.56,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/07a1fc2382d30fab.json"
+    },
+    {
+      "title": "智能体 AI 架构中记忆、知识与上下文的系统化方案",
+      "summary": "本文指出，打造可靠的智能体 AI 架构，核心是依靠上下文引擎预处理信息，区分上下文、记忆和知识，采用分层记忆、治理知识库与令牌预算机制，并给出各类架构反模式的应对方案。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/COuPKpA6rTf05C6JM10y",
+      "publishedAt": "2026-11-12T00:00:00Z",
+      "score": 22.56,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/a55b5f101c337239.json"
+    },
+    {
+      "title": "纯代码造《后室》，116秒切20种画风！文心新模型玩嗨了",
+      "summary": "模型即将开源",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/509224.html",
+      "publishedAt": "2026-11-11T20:43:54Z",
+      "score": 22.39,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/f5e6b2458743ecbe.json"
+    },
+    {
+      "title": "大模型都能控机器人，Human Data还得怎么卷？",
+      "summary": "让触觉教视觉，原来Human Data还能这么玩！",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/509468.html",
+      "publishedAt": "2026-11-13T11:31:25Z",
+      "score": 22.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/2bb0c0a6ffde7631.json"
+    },
+    {
+      "title": "国产大模型又杀出一匹黑马，引发硅谷关注！",
+      "summary": "中国大模型黑马杀进头部梯队",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/509576.html",
+      "publishedAt": "2026-11-13T12:47:18Z",
+      "score": 22.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/ef9fb1b6fe24cb7e.json"
+    },
+    {
+      "title": "GFlow：面向游戏设计的多 Agent 协作与验证实践｜AICon北京",
+      "summary": "游戏设计涉及玩法规则、数值平衡与交互叙事，目标开放、产物相互依赖，质量也难以通过单一指标判断。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/dkQAAL0SSdhIq1h61eKx",
+      "publishedAt": "2026-11-13T00:00:00Z",
+      "score": 21.76,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/d0e3ea2f52cf545c.json"
+    },
+    {
+      "title": "从通用大模型到学习过程智能，AI如何真正进入课堂？",
+      "summary": "银河智学首席科学家邓澍军博士发表主题演讲",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/509404.html",
+      "publishedAt": "2026-11-12T18:45:33Z",
+      "score": 21.5,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/8bcb3bdfd90af281.json"
+    },
+    {
+      "title": "让AI真正懂业务：璇玑如何成为企业AI的语义基础设施",
+      "summary": "企业 AI 的难题，不只是模型够不够强",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/509349.html",
+      "publishedAt": "2026-11-12T17:34:06Z",
+      "score": 21.44,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/203ead1ccfc13e5b.json"
+    },
+    {
+      "title": "“双十一”机器人在物流仓“埋头苦干”：昆腾动力开启具身智能规模化获客与交付阶段",
+      "summary": "跨境称重量方等场景完成PMF验证并出现客户复购，新一代构型机器人计划12月底发布",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/509281.html",
+      "publishedAt": "2026-11-12T09:45:04Z",
+      "score": 21.05,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/c1b3c3ae46228862.json"
+    },
+    {
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "source": "OpenAI",
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "publishedAt": "2026-11-12T20:00:00Z",
+      "score": 26.56,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/67672a694e389b29.json"
+    },
+    {
+      "title": "Gondola doubles revenue as its team builds more with Codex",
+      "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
+      "source": "OpenAI",
+      "url": "https://openai.com/business/customer-stories/gondola",
+      "publishedAt": "2026-11-12T12:00:00Z",
+      "score": 26.16,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/b9840fd67063a36a.json"
+    }
+  ],
+  "background": "./assets/backgrounds/scientific-archive.png"
+}
