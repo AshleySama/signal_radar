@@ -1,0 +1,182 @@
+{
+  "updatedAt": "2026-11-16T04:32:08.971674Z",
+  "items": [
+    {
+      "title": "GitLab 19.5 发布，将智能体开发纳入可治理的 DevOps 平台能力",
+      "summary": "GitLab 19.5 于 10 月 15 日发布，聚焦智能体软件开发与治理：GitLab MCP 服务端正式 GA，并拓展外部 AI 智能体和 GitLab 的交互能力。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/0IpE2EOypcqMFtL7z4z1",
+      "publishedAt": "2026-11-15T00:00:00Z",
+      "score": 26.57,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/6b146f9ed5ba4d6a.json"
+    },
+    {
+      "title": "提速2.48倍且画质不掉线，AI视频“降本增效”有了新解法",
+      "summary": "是石科技最新发布多模态模型服务",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/510369.html",
+      "publishedAt": "2026-11-16T11:07:39Z",
+      "score": 24.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/0786a3bea140cb34.json"
+    },
+    {
+      "title": "AI 硬件能玩出多少新花样？这场黑客松正在寻找 20 支开发者团队",
+      "summary": "What If Lab AI 硬件创意黑客松招募中，邀你动手实现奇思妙想。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/ExwZoqvAjY423YKaXcpw",
+      "publishedAt": "2026-11-16T00:00:00Z",
+      "score": 23.77,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/0cc77fb2babd21bd.json"
+    },
+    {
+      "title": "openJiuwen发布RSI原生AgentOS，让Agent自由变身，持续迭代！",
+      "summary": "想要什么功能，让Agent自己开发",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/509653.html",
+      "publishedAt": "2026-11-13T14:54:44Z",
+      "score": 22.92,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/f1990f275b63c360.json"
+    },
+    {
+      "title": "「史上最严」湿实验预测基准发布！推理拉满、算力翻5倍也白搭",
+      "summary": "斯坦福、哈佛、康奈尔……十余家顶尖团队齐坐一桌了",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/510232.html",
+      "publishedAt": "2026-11-14T17:58:22Z",
+      "score": 22.27,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/cd9e3aa4df660d34.json"
+    },
+    {
+      "title": "谷歌奇袭英伟达：整柜TPU外售加速交付，推理每美元性能领先GB200五成",
+      "summary": "“英伟达一家独步天下的日子快要结束了”",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/510349.html",
+      "publishedAt": "2026-11-16T08:00:31Z",
+      "score": 22.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/a465ee80dc969f45.json"
+    },
+    {
+      "title": "Super Agent 进群：今年11.11，多了个会主动干活的“数字人队长”",
+      "summary": "京东11.11大促系列内容",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/myl5Mcw3iyCYv3ZJ3hwQ",
+      "publishedAt": "2026-11-16T00:00:00Z",
+      "score": 21.77,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/12b2e408e063d9eb.json"
+    },
+    {
+      "title": "AI 自动写 PR，模型反而最简单：Inkitt 如何应对 Webhook 重复、CI 失败与合并冲突",
+      "summary": "Inkitt 构建可恢复的智能体编排系统，一次性生成 PR。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/YRXscVHsTh0g6CVCJJ0D",
+      "publishedAt": "2026-11-14T00:00:00Z",
+      "score": 21.37,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/4f3f8fd35a4f9c36.json"
+    },
+    {
+      "title": "从提效到扩能：AI 驱动小团队的能力突破与组织演进｜AICon北京",
+      "summary": "在早期的多智能体探索中，高梓耕团队先通过提示词与程序编排串联任务规划、Agent 选择和执行，随后通过工具调用建立主智能体向子智能体委派任务的机制。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/eTz8pt2LoALMvzvxj4aa",
+      "publishedAt": "2026-11-14T00:00:00Z",
+      "score": 21.37,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/d7d6fd9ef6b4378b.json"
+    },
+    {
+      "title": "Yelp AI 助手融合原生 UI 与服务端驱动 UI",
+      "summary": "Yelp 为 AI 助手采用混合 UI 架构，融合原生移动端控件与服务端驱动对话渲染，支持跨平台界面快速变更。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/1N801doFOEl2Swqey5Jy",
+      "publishedAt": "2026-11-15T00:00:00Z",
+      "score": 20.57,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/3dee063b9c7521d0.json"
+    },
+    {
+      "title": "闭环 AI 自我进化：从 Skill、Harness 到模型训练与评估｜AICon北京",
+      "summary": "RetriEvolver 展示了自我演进在异构检索系统中的应用成效。",
+      "source": "AI 前线 / InfoQ 中文",
+      "url": "https://www.infoq.cn/article/fZSEkDatL9xajG8PVi7G",
+      "publishedAt": "2026-11-15T00:00:00Z",
+      "score": 20.57,
+      "language": "zh",
+      "track": "developer",
+      "readerFile": "./data/readers/545097578bb79723.json"
+    },
+    {
+      "title": "黄仁勋筹备重返英伟达",
+      "summary": "硅谷支持者开始行动",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/510358.html",
+      "publishedAt": "2026-11-16T08:12:50Z",
+      "score": 20.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/eca79c5717a2db67.json"
+    },
+    {
+      "title": "今天截止！2026年度AI表彰，错过再等一年！",
+      "summary": "量子位在寻找“能干”的答案",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/510382.html",
+      "publishedAt": "2026-11-16T11:19:53Z",
+      "score": 20.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/6c7e53702de3a841.json"
+    },
+    {
+      "title": "没搞过一天研发的他，50岁以华为董事的身份退休了",
+      "summary": "50岁，以“华为董事”之名退休，又有几人？",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/11/510404.html",
+      "publishedAt": "2026-11-16T11:54:30Z",
+      "score": 20.0,
+      "language": "zh",
+      "track": "regular",
+      "readerFile": "./data/readers/a6c0746ed218a4e2.json"
+    },
+    {
+      "title": "Introducing ChatGPT Wallet",
+      "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "publishedAt": "2026-11-13T15:00:00Z",
+      "score": 25.92,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/7d4d71d056da0286.json"
+    },
+    {
+      "title": "Our new blog for science",
+      "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/our-new-blog-for-science",
+      "publishedAt": "2026-11-15T22:00:00Z",
+      "score": 24.67,
+      "language": "en",
+      "track": "regular",
+      "readerFile": "./data/readers/33b95c2112c46efd.json"
+    }
+  ],
+  "background": "./assets/backgrounds/paper-signal.png"
+}

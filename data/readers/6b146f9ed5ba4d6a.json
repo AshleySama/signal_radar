@@ -1,0 +1,25 @@
+{
+  "title": "GitLab 19.5 发布，将智能体开发纳入可治理的 DevOps 平台能力",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-15T00:00:00Z",
+  "url": "https://www.infoq.cn/article/0IpE2EOypcqMFtL7z4z1",
+  "paragraphs": [
+    "GitLab 19.5 于 10 月 15 日发布，聚焦智能体软件开发与治理：GitLab MCP 服务端正式 GA，并拓展外部 AI 智能体和 GitLab 的交互能力。",
+    "GitLab 19.5 正式发布 GitLab MCP 服务器，通过 Model Context Protocol 向外部 AI 智能体开放平台能力，并强化治理与权限控制。",
+    "支持 Claude Code、Cursor 等 MCP 兼容工具调用 GitLab Duo Agent Platform 工作流；新增群组发现、CI/CD 构件检查等 MCP 工具；管理员可按需暴露工具集以实现最小权限代理。",
+    "GitLab 19.5 于 10 月 15 日发布，将智能体软件开发和治理作为平台核心： GitLab MCP 服务器正式可用，同时扩展了外部 AI 智能体与 GitLab 交互的方式。",
+    "该版本允许 Claude Code 、 Cursor 等兼容 MCP 的工具访问更多 GitLab 工具目录，并调用 GitLab Duo Agent Platform 的智能体和工作流。与此同时，GitLab 增加了对外部智能体的治理控制，让安全团队能够了解哪些智能体正在被使用、谁在使用、针对哪些项目。",
+    "正式可用的 GitLab MCP 服务器通过 Model Context Protocol 为智能体开放 GitLab 平台能力。新增工具允许智能体发现群组、检查单个 CI/CD 构件文件，以及启动或监控 GitLab Duo 智能体和工作流。管理员还可以选择暴露哪些 MCP 工具集，从而减少不必要的工具以及它们占用的上下文。",
+    "为智能体提供所有可用工具会增加上下文消耗，也会增加模型可能执行的操作数量。工具集筛选是一种轻量化的最小权限代理设计方案。",
+    "GitLab.com 还引入了 MCP 速率限制：免费版用户每分钟 60 次请求，Premium 和 Ultimate 用户每分钟 600 次，重连与重试请求同样计入限额。",
+    "此前， AI 治理仪表盘 主要关注 GitLab Duo Agent Platform 的智能体。GitLab 19.5 允许通过 GitLab CLI 连接 Claude Code、Cursor 和 Codex 等工具。配置完成后，组织可以记录符合条件的智能体会话，包括用户、智能体、项目和时间信息，这些活动会与 GitLab 自身的智能体一起显示。审计事件还可以流式传输到 SIEM 系统。",
+    "这不只是提供一个 MCP 端点，而是迈出了重要一步：连通性提供能力，而治理决定了这种能力能否在组织规模下安全使用。",
+    "GitLab Duo CLI 新增了自动模式，允许智能体执行工具而无需为每个 Shell 命令、Git 操作或 MCP 调用请求批准。该功能默认关闭，可在实例、群组和项目级别进行控制，明确标记为“始终拒绝”（Always Deny）的工具仍会被阻止。",
+    "/goal 命令也正式可用。开发者只需描述一个开放式目标，GitLab Duo 就会交由受治理的流程完成代码实现与结果核验。",
+    "这些功能共同推动 GitLab 向智能体驱动开发模式演进：开发者只需要表达意图，由智能体在开发环境中自动执行多步任务。",
+    "该版本同时正式发布 GitLab Secrets Manager 。它基于 OpenBao 构建，与现有 GitLab 群组和项目权限集成，将密钥作用范围限定于需要它们的任务内，并为密钥操作生成审计事件。",
+    "GitLab 还扩展了安全配置模板能力，企业可以统一配置密钥检测（Secret Detection）、静态应用安全检测（SAST）的参数，例如排除路径、分析器镜像、全历史扫描等，不必在每个项目的 CI/CD 文件中重复配置。",
+    "GitLab 的发展方向和 GitHub 策略越来越相似：把 代码智能体变称软件生命周期的参与方 。但 GitLab 的侧重点是将外部智能体接入自身现有的 DevSecOps 治理体系。"
+  ],
+  "isExcerpt": true
+}
