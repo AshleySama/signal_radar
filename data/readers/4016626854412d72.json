@@ -1,0 +1,20 @@
+{
+  "title": "Varlock 发布了 Bumpy：一种基于文件、可替代 Changesets 的版本控制方案",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-17T00:00:00Z",
+  "url": "https://www.infoq.cn/article/SR3rNIg8NsPC3tWq48EM",
+  "paragraphs": [
+    "Bumpy 是一款由 Varlock 团队开发的、支持单体库（monorepo）的现代化版本管理和变更日志工具。它自称是 Changesets 的继任者，正在逐渐受到关注",
+    "Bumpy 是 Varlock 团队推出的现代化 monorepo 版本管理工具，定位为 Changesets 的演进替代方案，已解决其 120+ 长期未决问题。它复用 Changesets 工作流但深度扩展协议支持与发布控制能力。",
+    "支持 workspace:/catalog: 协议全覆盖（npm/pnpm/Yarn/Bun）；提供按包定制发布目标（VS Code 扩展、Docker、JSR）；内置可配置三阶段依赖传播算法。",
+    "Bumpy 是一款由 Varlock 团队开发的、支持单体库（monorepo）的现代化版本管理和变更日志工具。它自称是 Changesets 的继任者，正在逐渐受到关注。该项目由创建者 Theo Ephraim 于 2026 年 4 月通过一条 Show HN 帖子 首次公布，目前以 @varlock/bumpy 包的形式发布，并声称已经解决了其前身存在的 120 多个未解决的问题。",
+    "Bumpy 遵循大家熟悉的 Changesets 工作流。贡献者只需要在 .bumpy/ 目录下放置一个简短的 Markdown 格式的 bump 文件，其中声明应发布哪些包、发布级别以及变更日志说明。这些文件可以在拉取请求（PR）差异中进行审查，并由持续集成（CI）合并为一个发布拉取请求，然后在请求合并时生效。示例如下：",
+    "这两款工具的差异不只是表面看上去那样。Bumpy 全面支持 npm、pnpm、Yarn 和 Bun 中的 workspace: 及 catalog: 协议，提供针对 VS Code 扩展、Docker 镜像或 JSR 目标的 按包自定义发布命令 ，并配备了一个可配置的三阶段 依赖传播算法 ，允许团队决定同级依赖版本升级如何在其依赖图中级联传播。其持续集成（CI）流程也更为精简，只需要两个命令——bumpy ci check 和 bumpy ci release——即可直接在标准的 GitHub Actions 工作流中运行，无需安装 GitHub App，也无需依赖单独的 Action 仓库。",
+    "1.14 版本新增了 基于分支的预发布通道 ，其中，预发布版本在发布时生成，而且从未提交到 Git。该设计旨在解决 Changesets 预发布文档 中记录的用户反馈问题。该文档指出，Changesets 的预发布模式“非常复杂”，而且其状态“非常难以修复”。另一大亮点是 AI 集成。Bumpy 提供了一个 代理技能 ，可以引导大型语言模型（LLM）检查 Git 变更、识别受影响的包，并通过 bumpy add 生成版本号递增文件。该技能可以通过 Vercel Labs skills CLI 、GitHub CLI 或作为 Claude Code 插件进行安装。",
+    "Show HN 论坛上的一条帖子 坦率地指出，该项目“是使用 AI 编写的，但经过了精心设计”。团队还提到，该工具目前已经被用于发布 Varlock 以及超过 25 个相关的库和插件。在关于多语言单体库的另一条帖子中，bumpy 被描述为一款能够“在自定义发布过程中对变更集进行修复”的工具。有正在进行迁移评估的团队已经 提交了问题单 ，指出了诸如 Yarn 4.10 目录检测等不足之处。",
+    "随着 2026 年 8 月 Changesets v3 版本 的发布，市场竞争日趋激烈。该版本解决了 Bumpy 最初旨在解决的许多长期存在的问题。 Bumpy 自身的差异文档 与 v3 进行对比，称其为“一次实质性的清理”，同时指出了在可配置传播、目录、自定义发布目标和预发布工作流方面仍然存在的差距。与 semantic-release 相比，Bumpy 保留了基于文件的模型，但新增了 bumpy generate 命令。当团队希望兼顾两种风格时，该命令可以从分支提交中生成 bump 文件。",
+    "Bumpy 采用 MIT 许可，使用 TypeScript 构建，可以通过 npm 上的 @varlock/bumpy 包获取，完整源代码和文档均已经发布在 GitHub 上。",
+    "原文链接： https://www.infoq.com/news/2026/11/bumpy-Changesets-alternative/"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Java 近期资讯：TornadoVM 8.0、JNoSQL、Endive、JReleaser、JBang、LangChain4j 与 Quarkus Almanac",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-18T00:00:00Z",
+  "url": "https://www.infoq.cn/article/oSiN27BaersaKQcQGdaa",
+  "paragraphs": [
+    "JDK 28 第22个早期构建版发布，含多项问题修复；TornadoVM 8.0.0 引入纯Java编译器TC，替代Graal Compiler与JVMCI，支持零代码修改生成CUDA C++/OpenCL C/Metal SL。",
+    "TC兼容现有TaskGraph、@Parallel等API；启动优化整合GraalVM Native Image与JEP 516；编译目标覆盖GPU异构生态主流后端。",
+    "JDK 28 早期访问构建版 的 第 22 个构建版 于上周发布。与第 21 个构建版相比，它包含多项 更新 ，其中包括对多个 问题 的修复。有关此次发布的更多详情，可参阅 发布说明 。",
+    "TornadoVM 8.0.0 发布 了名为 TornadoVM Compiler（TC）的全新纯 Java 编译器，可将 Java 内核编译为 CUDA C++、OpenCL C 或 Metal Shading Language。它取代了过去十年间一直是 TornadoVM 重要组成部分的 Graal Compiler 和 Java 级 JVM 编译器接口 （JVMCI）。使用 TC 时，开发者无须修改代码。 TaskGraph 、 TornadoExecutionPlan 和 KernelContext 等类，以及 @Parallel 和 @Reduce 等注解，都可以与 TC 配合使用。",
+    "TornadoVM 现在还利用 GraalVM Native Image，以及 Project Leyden 旗下的 JEP 516—— 支持任意 GC 的提前对象缓存 ——来改善启动时间。有关此次发布的更多详情，可参阅 发布说明 。",
+    "作为 Jakarta NoSQL 和 Jakarta Data 规范的兼容实现， Eclipse JNoSQL 1.2.0 发布了多项值得关注的变化，包括：新增支持向量数据库的 VectorTemplate 接口；集成 Milvus 、 Qdrant 和 Weaviate 向量数据库以支持向量搜索；以及新增用于处理时间序列数据的流式时间查询操作。有关此次发布的更多详情，可参阅 发布说明 。",
+    "Endive 1.2.0 的 发布 带来了错误修复、依赖升级和新功能，包括：解释器在 JDK 11 及更高版本上默认支持 SIMD 指令，无须额外添加或配置；改进其实验性提前编译（AOT）编译器 Redline ，使原生内存对 GC 更友好；以及持续改进 Endive Component Model ，这一 WebAssembly 组件模型设计与规范 的实现用于支持 Endive 运行时。有关此次发布的更多详情，可参阅 发布说明 。",
+    "JBang 0.143.0 发布了错误修复、文档改进和两项新功能：由于 SDKMan 不支持 Windows，改用 mise-en-place ；以及新增用于执行特定版本别名的统一语法。有关此次发布的更多详情，可参阅 发布说明 。",
+    "JReleaser 1.27.0 的 发布 带来了错误修复、文档改进、依赖升级和新功能，包括：支持通过 Java 模块调用和／或加载 JReleaser Tool Provider ；改进提交消息中链接了 GitHub Issue 时的变更日志生成；以及移除使用 XPath 解析 POM 文件的方式，因为将 JReleaser 打包为原生镜像时曾因此出现问题。有关此次发布的更多详情，可参阅 发布说明 。",
+    "LangChain4j 1.23.0 的正式版（以及第 33 个测试版）发布，带来了错误修复、文档改进、依赖升级和新功能，包括：新增 OllamaDecisionModel 类，以支持在 Ollama 中运行的决策模型；以及新增 ConfidenceCascadePlanner 类，作为一种基于置信度级联决策模型的智能体模式。有关此次发布的更多详情，可参阅 发布说明 。",
+    "Hibernate ORM 8.0.0 的 第四个测试版 带来了错误修复和多项值得关注的变化，包括：可以直接在带有 Jakarta Persistence @ManyToOne 和 @OneToOne 注解的关联上声明 @Filter 和 @SQLRestriction 注解，包括通过连接表映射的关联；以及新增 @GeneratorOptimizer 注解，可“直接在标识符字段或 getter 上，为序列或表标识符生成选择标准优化器”。",
+    "Hibernate Reactive 5.1.0 和 5.0.0 分别发布了 第一个和第三个测试版 ，带来了错误修复和多项值得关注的变化，包括：新增用于管理 Hibernate Reactive、Hibernate ORM 和 Vert.x SQL 客户端版本的平台物料清单（BOM）；以及在启动期间检查版本，确保类路径上的 Hibernate ORM 和 Vert.x SQL 客户端不低于所支持的最低版本。这两个版本都兼容 Hibernate ORM 8.0.0.Beta4。",
+    "JobRunr 9.0.3 发布了错误修复、文档改进、依赖升级，以及一项新功能：更新 JobHandler 类，以改进 JobZooKeeper 类的日志消息。有关此次发布的更多详情，可参阅 发布说明 。",
+    "Gradle 9.9.0 的首个候选发布版带来了多项值得关注的变化，包括： Kotlin DSL 脚本可以借助 Kotlin Build Tools API 进行增量编译，以提升构建性能；新增可应用于未声明为方法的 JUnit Platform 测试的 测试过滤器 ；以及改进 Problems API ，为 Problems 接口提供预定义的问题分组层级。有关此次发布的更多详情，可参阅 发布说明 。",
+    "Quarkus 团队 推出 了 Quarkus Almanac ，这是一款供开发者比较两个版本之间变化的工具。可比较的变化包括配置属性、受管理的依赖项、扩展，以及 Quarkus JAR 文件中类的 API。开发者最早可以追溯到 Quarkus 0.0.1 于 2018 年 11 月发布时的版本。",
+    "https://www.infoq.com/news/2026/11/java-news-roundup-oct26-2026/"
+  ],
+  "isExcerpt": true
+}

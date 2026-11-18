@@ -1,0 +1,23 @@
+{
+  "title": "File Mover Express：亚马逊云科技发布用于 S3 文件传输的开源工具",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-17T00:00:00Z",
+  "url": "https://www.infoq.cn/article/i0a4s8Cf7WMxcZha74kF",
+  "paragraphs": [
+    "最近，亚马逊云科技发布了 File Mover Express，这是一款基于 Apache 2.0 许可的开源应用程序，用于在本地系统与 Amazon S3 之间传输大文件。",
+    "File Mover Express 是亚马逊云科技开源的跨平台大文件迁移工具，专注本地与 S3 间高性能、可靠传输。其守护进程架构解耦传输与 UI，支持多端控制与 OIDC 认证。",
+    "支持线速传输与自动调优的并行引擎；守护进程可部署于任意机器（含 EC2），GUI/CLI 远程加密控制；基于 Go + TypeScript/Angular 实现，原生集成 MCP 与 OIDC。",
+    "最近， 亚马逊云科技发布了 File Mover Express ，这是一款基于 Apache 2.0 许可的开源应用程序，用于在本地系统与 Amazon S3 之间传输大文件。该工具支持 macOS、Windows 和 Linux 系统，具备并行传输、自动性能调优、重试、暂停和恢复以及文件完整性验证等功能。",
+    "File Mover Express 旨在“以线速将媒体文件传输到 S3”，支持自动调优的并行传输、暂停和恢复、桌面图形界面、可编写脚本的命令行界面，以及从受监控文件夹的自动上传。",
+    "该项目主要采用 Go 语言开发传输引擎，并使用 TypeScript 结合 Angular 开发图形界面。它还支持通过 MCP 与 AI 助手集成，以及基于 OIDC 的身份提供商身份验证。亚马逊云科技高级解决方案架构师 Provanshu Dey 、高级软件工程师 Asbjorn Kjaer 、解决方案架构师 Matthew Muccio 以及高级客户解决方案经理 Ross Dickson 解释道：",
+    "File Mover Express 的核心是一个基于守护进程的传输引擎，它将传输操作与桌面会话解耦。该守护进程可以在你选择的任何机器上运行，无论是工作站、数据中心服务器，还是 Amazon Elastic Compute Cloud (Amazon EC2) 实例。而且，你可以通过加密且受密码保护的连接，从拖放式图形用户界面 (GUI) 或可编写脚本的命令行界面（CLI）对其进行控制。",
+    "媒体团队经常在本地存储和云之间传输数太字节的资源。通常，这些传输面临着紧迫的截止期限，而且相关流程必须在发起传输的用户或设备断开连接后仍然能继续进行。传统的传输客户端可能会在桌面会话结束时停止运行，而商业替代方案则可能带来许可费用、专有协议或第三方基础设施的问题。File Mover Express 支持上传和下载，使团队能够将大文件传输到 Amazon S3，并将其检索回来进行编辑、审核或恢复。",
+    "File Mover Express 将大文件分割为多个数据块，并利用多部分上传技术进行并行上传。在自动调优模式下，它会根据可用连接情况动态调整并行流的数量和数据块大小，以优化吞吐量。传输过程还支持可配置的重试机制，以及文件级的暂停和恢复功能。Dey、Kjaer、Muccio 和 Dickson 补充道：",
+    "File Mover Express 提供了多种安全功能，包括传输中的文件加密、静止状态下的文件加密以及控制平面加密。所有传输均采用 HTTPS 协议，对 S3 存储桶的访问由 AWS 身份与访问管理（IAM）进行管控，并遵循已记录的最小权限策略……对于采用集中式身份管理的团队，File Mover Express 支持通过 OpenID Connect（OIDC）实现单点登录。",
+    "File Mover Express 会在后台计算校验和，并将它们缓存到本地，以便在文件没有变化时重复使用。它支持 MD5、XXHash、XXHash64 和 XXH3，可以在兼容性和哈希性能之间进行选择。对于传输到远端存储桶的情况，用户可以启用 S3 传输加速，而带宽限制则有助于控制网络使用量。在 LinkedIn 上，Dickson 写道 ：",
+    "将大型媒体文件迁移到云端不应该成为你一天中最耗时的环节。正因如此，我们亚马逊云科技团队中的一群人开发了 File Mover Express……对于媒体行业中需要传输摄像机存储卡、日常素材或交付成果的任何人来说，它可以解决这些常见的痛点。",
+    "该项目的源代码 已经在 GitHub 上开源，并且同时提供了适用于 macOS、Windows 和 Linux 的预编译包。",
+    "原文链接： https://www.infoq.com/news/2026/11/aws-s3-file-transfer/"
+  ],
+  "isExcerpt": true
+}
