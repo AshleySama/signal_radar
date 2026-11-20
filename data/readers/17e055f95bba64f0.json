@@ -1,0 +1,24 @@
+{
+  "title": "Gemini新模型Neon箭在弦上，网友：遍历元素周期表？",
+  "source": "量子位",
+  "publishedAt": "2026-11-18T17:41:55Z",
+  "url": "https://www.qbitai.com/2026/11/510922.html",
+  "paragraphs": [
+    "据模型追踪账号AI Tracker Bot显示，Gemini网页应用代码中新出现了gemini-4-neon，且与此前的gemini-4-argon、gemini-4-carbon等模型标识在一起。",
+    "这个订阅层级在代码中被标记为TIER_NEON，用量页面上显示的名称是“Gemini Ultra”，但内部又与普通Ultra作了区分。",
+    "还有网友扒出，这个Neon对应着upsell_MODE_CATEGORY_PRO，其中的Upsell是软件产品中常见的付费升级逻辑。",
+    "这条线索让Neon的定位更加扑朔迷离了……因为此前有人猜测，Neon可能是一款新的Flash-Lite轻量模型。",
+    "9月30日，Google首次公布 Gemini 4 Argon（氩） ，主打复杂软件工程、深度推理、企业知识工作和网络安全等高难度任务。",
+    "10月28日， Gemini 4 Carbon（碳） 接棒亮相，作为更强的前沿模型，着重提升长程Agent任务、代码和网络安全。",
+    "11月12日， Gemini 4 Hydrogen（氢） 又来了。模如其名，强调速度与效率，主打日常Coding和Agent工作流。",
+    "11月14日，有爆料者声称，Google正在Arena上测试Krypton，还晒出了它生成的代码和动画效果，甚至说它已经接近Claude Opus 5.5了。",
+    "没过多久，爆料者又自己打脸说，先前测试的其实是更高推理强度的Gemini 4 Hydrogen……轰轰烈烈的炒作罢了。",
+    "但实际上如果按照元素最本质的排列方式，原子序数来排的话，是Hydrogen（1）→ Carbon（6）→ Argon（18）。",
+    "按英文字母来排的话，由于Google之前内部测试过Barium（钡），所以Argon→ Barium→ Carbon倒是对的。但Hydrogen来了之后也不能这么排了。",
+    "比如Argon（氩），名字源于希腊语中“懒惰、不活跃”的意思，氩属于化学性质稳定的稀有气体。这与这款模型在 网络安全防御、复杂软件工程 的能力有一定内涵上的契合感。",
+    "至于Neon（氖），它源于希腊语中的“新的”（Neo），“霓虹”这个词也是从这儿来的。 或许也可以从这个角度期待一下这款模型的定位。",
+    "还有人发现，自己的Google Workspace账户和AI Pro账户，一边能用Carbon，另一边还停留在Argon。",
+    "不仅是付费层级，别忘了谷歌还有6个模型使用入口——AI Studio、Gemini API、Gemini for Business、Gemini App、Google Search、Antigravity。"
+  ],
+  "isExcerpt": true
+}

@@ -1,0 +1,20 @@
+{
+  "title": "谷歌发布用于机器人控制、仿真和策略优化的 Gemini 4 Argon",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-20T00:00:00Z",
+  "url": "https://www.infoq.cn/article/S4LH5Z9zcbLokm5uNSKR",
+  "paragraphs": [
+    "谷歌发布了 Gemini 4 Argon，并将其定位为一款通用物理推理模型，适用于机器人控制、 Real2Sim 场景构建、机器人视频多模态标注以及迭代策略优化，而非单一的末端执行器策略。",
+    "Gemini 4 Argon 是谷歌发布的通用物理推理模型，聚焦具身智能任务，支持机器人控制、Real2Sim 场景重建、视频标注与策略优化。其在 ERQA 基准达 87% 纯推理得分，真实环境任务成功率从 56% 提升至 75%。模型通过 Gemini API 及 Google AI Ultra 向用户开放。",
+    "Argon 在 MuJoCo 环境训练后可驱动 Spot 完成脚踏板任务；支持基于视觉坐标与 HTTP 运动原语的机械臂控制；单图合成领域随机化 MuJoCo 场景用于 VLA 微调。",
+    "谷歌发布了 Gemini 4 Argon ，并将其定位为一款通用物理推理模型，适用于机器人控制、 Real2Sim 场景构建、机器人视频多模态标注以及迭代策略优化，而非单一的末端执行器策略。",
+    "在已发布的提示词中，在 MuJoCo 孪生环境中进行训练后，Argon 引导波士顿动力公司的 Spot 机器人完成了脚踏板任务；利用视觉坐标和 HTTP 运动原语操控比较简单的机械臂；通过 Gemini Omni 视频世界模型实现闭环控制。Real2Sim 示例从遥操作视频重建出 MuJoCo 场景；标注提示则对演示视频进行标注，实现行为克隆。谷歌还报告称，他们从一张 RGB 照片中合成了领域随机化 MuJoCo 场景，借此对视觉-语言-动作策略进行了微调，并且指出，在相应的真实环境中，成功率从 56% 提升到了 75% 。",
+    "谷歌报告称，在“具身推理问答（ ERQA ）”基准测试中，Argon 仅凭纯推理（不借助辅助工具）便取得了 87% 的得分，并表示该结果在这项测试中领先于其他前沿模型。Argon 向 Google AI Ultra 订阅用户开放，也可以通过付费的 Gemini API 获取，其模型 ID 为 gemini-4-argon（ 详见 Gemini API 模型文档 ）。该机器人技术博文中使用了针对特定任务的大段提示词、坐标网格、运动原语和验证器，因此辅助结构成了被测系统的一部分，而谷歌只是公布了单个的 VLA 案例，并未公布各项演示的失败率。",
+    "谷歌的 Gemini 4 Argon 机器人演示案例，不仅会从视觉的维度校准仿真孪生体，还会针对真实世界的物理接触事件做专项调优。这正是我会重点检查的部分：一个场景可能看起来很逼真，但其中的物理行为却可能不正确。对于机械操作而言，匹配接触时的实际行为与匹配像素同样重要。",
+    "此外，针对这个周流传的关于 Video-to-Sim-to-Real 的说法，名为 pulpmatrix 的开发者呼吁保持信息来源的严谨性：",
+    "Video-to-Sim-to-Real 技术是真实存在的，这一点谷歌的开发博客 Gemini 4 Argon for Robotics 已经证实（MuJoCo 孪生模型，ERQA 达 87%）。不过，玉米洞（Cornhole",
+    "专门的视觉-语言-动作系统，诸如 OpenVLA 类 策略、 Physical Intelligence 的 π 系列模型 以及配套 Isaac 工具链的 NVIDIA GR00T ，针对机器人在具身场景下的动作预测进行了优化，通常是依赖于大型遥操作或模拟语料库。场景到模拟（Scene-to-sim）和生成式世界工具、World Labs 风格的重建、NVIDIA DreamDojo 风格的动作视频以及 Isaac Sim 数字孪生，则侧重于环境合成或视频预测，但未必具备谷歌提示词中展示的完整控制与质量控制（QC）闭环。在空间感知和规划领域，谷歌此前的工作，如 Gemini Robotics-ER，始终是一条重要的研究线。从架构评审的角度来说，关键问题在于：一个前沿模型加上复杂的提示词体系，能否取代由 VLA、模拟器和标注服务组成的管道。",
+    "原文链接： https://www.infoq.com/news/2026/11/google-gemini-argon/"
+  ],
+  "isExcerpt": true
+}

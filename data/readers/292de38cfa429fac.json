@@ -1,0 +1,22 @@
+{
+  "title": "OpenBSD 8.0 带来了更广泛的硬件支持、安全性增强以及虚拟化改进",
+  "source": "AI 前线 / InfoQ 中文",
+  "publishedAt": "2026-11-20T00:00:00Z",
+  "url": "https://www.infoq.cn/article/ENG8g3E0RX3IiuvgD7BG",
+  "paragraphs": [
+    "OpenBSD 8.0 是一次重大升级，带来了更广的硬件兼容性、更强的安全性、更大的虚拟地址空间，以及对现代架构的支持。",
+    "OpenBSD 8.0 显著扩展硬件支持与安全能力，重点提升虚拟地址空间、多核虚拟机、RISC-V 向量扩展及 ARM64 休眠加密性能。",
+    "支持 AMD64 下 512 GB 虚拟地址空间，适配高显存 GPU；vmm/vmd 支持 64 vCPU 客户机及增强虚拟硬件兼容性；RISC-V 新增 V 扩展与高级中断架构支持。",
+    "OpenBSD 8.0 是一次重大升级 ，带来了更广的硬件兼容性、更强的安全性、更大的虚拟地址空间，以及对现代架构的支持，包括对 Intel Arc A 系列显卡的支持、ARM64 休眠功能、RISC-V 改进以及增强的虚拟机支持。",
+    "OpenBSD 8.0 在硬件和虚拟化方面的关键改进包括： AMD64 内核的虚拟地址空间 从 4 GB 扩展至 512 GB，使其能够映射拥有超过 4 GB 显存的显卡； 通过 vmm/vmd 支持多处理器虚拟机，每个客户机最多可以拥有 64 个虚拟 CPU，并改进了虚拟硬件和客户机兼容性； 扩展了对 RISC-V 的支持 ，包括 “V” 向量扩展和高级中断架构（Advanced Interrupt Architecture），从而提升了与新型处理器和平台的兼容性；支持 arm64 休眠模式，同时利用 AES 指令实现了更快的交换加密。",
+    "尽管 OpenBSD 8.0 引入了对基于 DG2/Alchemist 架构的英特尔 Arc A 系列 GPU 的支持，但 NVIDIA GPU 仍然不在支持之列 ，部分原因在于 NVIDIA 并未像对 Linux 和 FreeBSD 那样，为 OpenBSD 提供专有二进制驱动程序。",
+    "OpenBSD 8.0 还扩展了外设支持，包括 riscv64 K3 PCIe/USB3 组合 PHY、SpacemiT K3 SoC 和 PCIe 控制器，以及 Intel E610、Panther Lake 和 Wildcat Lake 以太网设备。该版本还为三星高级 BIOS 接口（SABI）、Rockchip OTP 存储器以及三星笔记本电池监控器提供了新的驱动程序。无线适配器的支持范围也得到了显著扩展，包括在 qwz 驱动中对高通技术公司 WCN7850 无线网络的支持。",
+    "OpenBSD 8.0 中的 httpd 守护进程包含多项增强，包括支持 自定义 HTTP 头 、 用于请求过滤的头信息拦截/丢弃规则 、 经过改进的 HTTPS 默认加密算法 ，以及静态文件缓存控制。",
+    "新版本集成了 LibreSSL 4.4.0 ，针对 AIX、FreeBSD、macOS、MinGW、NetBSD 尤其是 Windows 系统，引入了大量兼容层修复，同时还进行了多项内部改进。此外，该版本还带来了 OpenSSH 10.6 ，禁用了基于 LZ77 的 SSH 压缩功能，并拒绝在命令行用户名中使用 $ 和 \\ 字符，以缓解潜在的 shell 注入漏洞。除此之外，该版本还包含其他多项增强功能。",
+    "关于这个新版本，Hacker News 上有一个帖子主要讨论了 OpenBSD 的几个重要方面。 用户 ctolsen 强调了该系统的简洁性及其对传统 Unix 哲学的遵循：",
+    "OpenBSD 给人的感觉正是 *nix 系统应有的样子。初次运行 ps aux 时，只列出大约 10 条。pf 设计得非常合理。man 页一如既往地出色。对安全与密码学的重视、服务管理、pledge/unveil 功能……",
+    "使用 OpenBSD 已近 20 年的 用户 nanolith 盛赞该系统在升级过程中的稳定性和一致性 ，并且指出：“它非常稳定，以至于我在升级时几乎察觉不到变化，除非特意去找。”不过， 他也指出 ，鉴于 OpenBSD 不支持 ZFS、Btrfs 或 GeFS 等高级文件系统，对于大型服务器而言，它可能并非最佳选择。",
+    "原文链接： https://www.infoq.com/news/2026/10/openbsd-8-released/"
+  ],
+  "isExcerpt": true
+}
